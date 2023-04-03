@@ -1,0 +1,23 @@
+<div class="d-lg-flex justify-content-between w-100 info-list-item">
+    <div class="left-info-group">
+        <div class="list-icon logo-image my-auto ">
+            <ng-content select="[itemlogo]"></ng-content>
+        </div>
+        <div class=" list-info info-container d-flex flex-grow-1 justify-content-between my-auto mx-2">
+            <ng-content select="[itemInfo]"></ng-content>
+        </div>
+    </div>
+    <div class="my-auto">
+
+    </div>
+    <div class="list-item-action ml-md-auto my-auto d-md-flex justify-content-lg-between justify-content-lg flex-grow-1">
+        <div class="my-auto info-right-group d-md-flex justify-content-lg-end flex-grow-1">
+            <ng-content select="[itemInfoCenter]"></ng-content>
+            <ng-content select="[rightInfo]"></ng-content>
+        </div>
+        <div class="my-auto">
+            <ng-content select="[command]"></ng-content>
+        </div>
+
+    </div>
+</div>

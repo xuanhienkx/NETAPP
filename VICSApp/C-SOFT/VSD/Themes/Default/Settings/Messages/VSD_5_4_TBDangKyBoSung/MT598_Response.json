@@ -1,0 +1,130 @@
+[
+    {
+        "tag": "20",
+        "parts": [
+            {
+                "name": "IntReferenceNumber",
+                "length": 16 
+            }
+        ]
+    },
+    {
+        "tag": "12",
+        "parts": [
+            {
+                "name": "SubMessageType",
+                "length": 3
+            }
+        ]
+    },
+    {
+        "tag": "77E",
+        "parts": [
+            {
+                "name": "Proprietary",
+                "length": 73,
+                "default": "ISSU"
+            }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "23G",
+        "parts": [
+            {
+                "name": "MessageFunction",
+                "length": 4,
+                "default": "NEWM"
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "PREP",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "CreatedDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "TRAD",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "TradingDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "35B",
+        "parts": [
+            {
+                "name": "IsinCode",
+                "length": 12,
+                "optional": true,
+                "start": "ISIN ",
+                "end": "<BrLine>"
+            },
+            {
+                "name": "CountryCode",
+                "length": 2,
+                "optional": true,
+                "start": "/",
+                "end": "/"
+            },
+            {
+                "name": "Code",
+                "end": "<BrLine>"
+            }
+        ]
+    },
+    {
+        "tag": "22F",
+        "qualifier": "ISSU",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "IndicatorType",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "36B",
+        "qualifier": "SETT",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "SecurityType",
+                "length": 4
+            },
+            {
+                "name": "TotalIssue",
+                "length": 15,
+                "type": "Integer"
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "GENL" }
+        ]
+    }
+]

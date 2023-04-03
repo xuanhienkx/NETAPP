@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetServiceVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Inquiry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InquiryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InquiryResult" type="tns:InquiryResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InquiryResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="AvailBalance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="BankBalance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="BankAvailBalance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="LocalBalance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="LocalAvailBalance" type="s:decimal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Result">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Successful" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InquiryOnline">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InquiryOnlineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InquiryOnlineResult" type="tns:InquiryAmountResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InquiryAmountResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="AvailBalance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="BankBalance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="BankAvailBalance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="LocalBalance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="LocalAvailBalance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastTimeInquiry" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="InquiryOffline">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InquiryOfflineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InquiryOfflineResult" type="tns:InquiryAmountResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Hold">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="taskCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HoldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HoldResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnHold">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="taskCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnHoldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UnHoldResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HoldWithFixError">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="taskCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HoldWithFixErrorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HoldWithFixErrorResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnHoldWithFixError">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="taskCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnHoldWithFixErrorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UnHoldWithFixErrorResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="messageId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="time" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPaymentResult" type="tns:PaymentResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PaymentResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="XmlData" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isHold" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionResult" type="tns:PaymentResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendPaymentResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendACBPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendACBPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendACBPaymentResult" type="tns:PaymentResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReleaseFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReleaseFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReleaseFileResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACBPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="isTranferError" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="time" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetACBPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetACBPaymentResult" type="tns:PaymentResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegisterAccountResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisableAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisableAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DisableAccountResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendFileResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResultFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResultFileResult" type="tns:PaymentResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllHolding">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="systemDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userEnter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllHoldingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllHoldingResult" type="tns:PaymentResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetServiceVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServiceVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="InquirySoapIn">
+    <wsdl:part name="parameters" element="tns:Inquiry" />
+  </wsdl:message>
+  <wsdl:message name="InquirySoapOut">
+    <wsdl:part name="parameters" element="tns:InquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="InquiryOnlineSoapIn">
+    <wsdl:part name="parameters" element="tns:InquiryOnline" />
+  </wsdl:message>
+  <wsdl:message name="InquiryOnlineSoapOut">
+    <wsdl:part name="parameters" element="tns:InquiryOnlineResponse" />
+  </wsdl:message>
+  <wsdl:message name="InquiryOfflineSoapIn">
+    <wsdl:part name="parameters" element="tns:InquiryOffline" />
+  </wsdl:message>
+  <wsdl:message name="InquiryOfflineSoapOut">
+    <wsdl:part name="parameters" element="tns:InquiryOfflineResponse" />
+  </wsdl:message>
+  <wsdl:message name="HoldSoapIn">
+    <wsdl:part name="parameters" element="tns:Hold" />
+  </wsdl:message>
+  <wsdl:message name="HoldSoapOut">
+    <wsdl:part name="parameters" element="tns:HoldResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnHoldSoapIn">
+    <wsdl:part name="parameters" element="tns:UnHold" />
+  </wsdl:message>
+  <wsdl:message name="UnHoldSoapOut">
+    <wsdl:part name="parameters" element="tns:UnHoldResponse" />
+  </wsdl:message>
+  <wsdl:message name="HoldWithFixErrorSoapIn">
+    <wsdl:part name="parameters" element="tns:HoldWithFixError" />
+  </wsdl:message>
+  <wsdl:message name="HoldWithFixErrorSoapOut">
+    <wsdl:part name="parameters" element="tns:HoldWithFixErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnHoldWithFixErrorSoapIn">
+    <wsdl:part name="parameters" element="tns:UnHoldWithFixError" />
+  </wsdl:message>
+  <wsdl:message name="UnHoldWithFixErrorSoapOut">
+    <wsdl:part name="parameters" element="tns:UnHoldWithFixErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPayment" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransaction" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:SendPayment" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:SendPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendACBPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:SendACBPayment" />
+  </wsdl:message>
+  <wsdl:message name="SendACBPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:SendACBPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReleaseFileSoapIn">
+    <wsdl:part name="parameters" element="tns:ReleaseFile" />
+  </wsdl:message>
+  <wsdl:message name="ReleaseFileSoapOut">
+    <wsdl:part name="parameters" element="tns:ReleaseFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetACBPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetACBPayment" />
+  </wsdl:message>
+  <wsdl:message name="GetACBPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetACBPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisterAccount" />
+  </wsdl:message>
+  <wsdl:message name="RegisterAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="DisableAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:DisableAccount" />
+  </wsdl:message>
+  <wsdl:message name="DisableAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:DisableAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendFileSoapIn">
+    <wsdl:part name="parameters" element="tns:SendFile" />
+  </wsdl:message>
+  <wsdl:message name="SendFileSoapOut">
+    <wsdl:part name="parameters" element="tns:SendFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResultFileSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResultFile" />
+  </wsdl:message>
+  <wsdl:message name="GetResultFileSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResultFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllHoldingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllHolding" />
+  </wsdl:message>
+  <wsdl:message name="GetAllHoldingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllHoldingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GetServiceVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Vấn tin tài khoản. Tham số: bankAccountNumber:số tài khoản ngân hàng - bankAccountName:tên tài khoản - bankCode:mã ngân hàng</wsdl:documentation>
+      <wsdl:input message="tns:GetServiceVersionSoapIn" />
+      <wsdl:output message="tns:GetServiceVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Inquiry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Vấn tin tài khoản. Tham số: bankAccountNumber:số tài khoản ngân hàng - bankAccountName:tên tài khoản - bankCode:mã ngân hàng</wsdl:documentation>
+      <wsdl:input message="tns:InquirySoapIn" />
+      <wsdl:output message="tns:InquirySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InquiryOnline">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Vấn tin số dư chính xác từ ngân hàng</wsdl:documentation>
+      <wsdl:input message="tns:InquiryOnlineSoapIn" />
+      <wsdl:output message="tns:InquiryOnlineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InquiryOffline">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Vấn tin số dư tạm tính</wsdl:documentation>
+      <wsdl:input message="tns:InquiryOfflineSoapIn" />
+      <wsdl:output message="tns:InquiryOfflineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Hold">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Phong tỏa tài khoản</wsdl:documentation>
+      <wsdl:input message="tns:HoldSoapIn" />
+      <wsdl:output message="tns:HoldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnHold">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Giải tỏa tài khoản</wsdl:documentation>
+      <wsdl:input message="tns:UnHoldSoapIn" />
+      <wsdl:output message="tns:UnHoldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HoldWithFixError">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Phong tỏa tài khoản dùng trong trường hợp bị lỗi</wsdl:documentation>
+      <wsdl:input message="tns:HoldWithFixErrorSoapIn" />
+      <wsdl:output message="tns:HoldWithFixErrorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnHoldWithFixError">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Giải tỏa tài khoản dùng trong trường hợp bị lỗi</wsdl:documentation>
+      <wsdl:input message="tns:UnHoldWithFixErrorSoapIn" />
+      <wsdl:output message="tns:UnHoldWithFixErrorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lấy kết quả hạch toán. Chỉ dùng cho BIDV</wsdl:documentation>
+      <wsdl:input message="tns:GetPaymentSoapIn" />
+      <wsdl:output message="tns:GetPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lấy thông tin các giao dịch trong ngày</wsdl:documentation>
+      <wsdl:input message="tns:GetTransactionSoapIn" />
+      <wsdl:output message="tns:GetTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gửi bảng kê. Dùng cho BIDV</wsdl:documentation>
+      <wsdl:input message="tns:SendPaymentSoapIn" />
+      <wsdl:output message="tns:SendPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendACBPayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gửi bảng kê. Dùng cho ACB Bank</wsdl:documentation>
+      <wsdl:input message="tns:SendACBPaymentSoapIn" />
+      <wsdl:output message="tns:SendACBPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ReleaseFile. Dùng cho ACB Bank</wsdl:documentation>
+      <wsdl:input message="tns:ReleaseFileSoapIn" />
+      <wsdl:output message="tns:ReleaseFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetACBPayment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lấy kết quả tranfer - chỉ dùng cho ACB Bank</wsdl:documentation>
+      <wsdl:input message="tns:GetACBPaymentSoapIn" />
+      <wsdl:output message="tns:GetACBPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Đăng ký tài khoản giao dịch chứng khoán của nhà đầu tư</wsdl:documentation>
+      <wsdl:input message="tns:RegisterAccountSoapIn" />
+      <wsdl:output message="tns:RegisterAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DisableAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Hủy đăng ký tài khoản ngân hàng của nhà đầu tư</wsdl:documentation>
+      <wsdl:input message="tns:DisableAccountSoapIn" />
+      <wsdl:output message="tns:DisableAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SendFile. Dùng cho những ngân hàng hỗ trợ truyền file qua WS</wsdl:documentation>
+      <wsdl:input message="tns:SendFileSoapIn" />
+      <wsdl:output message="tns:SendFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetResultFile. Dùng cho những ngân hàng hỗ trợ truyền file qua WS</wsdl:documentation>
+      <wsdl:input message="tns:GetResultFileSoapIn" />
+      <wsdl:output message="tns:GetResultFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHolding">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetAllHolding. Lấy danh sách những tài khoản đang bị phong tỏa tiền-Dung cho ACB,DAB</wsdl:documentation>
+      <wsdl:input message="tns:GetAllHoldingSoapIn" />
+      <wsdl:output message="tns:GetAllHoldingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServiceVersion">
+      <soap:operation soapAction="http://tempuri.org/GetServiceVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inquiry">
+      <soap:operation soapAction="http://tempuri.org/Inquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquiryOnline">
+      <soap:operation soapAction="http://tempuri.org/InquiryOnline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquiryOffline">
+      <soap:operation soapAction="http://tempuri.org/InquiryOffline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hold">
+      <soap:operation soapAction="http://tempuri.org/Hold" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnHold">
+      <soap:operation soapAction="http://tempuri.org/UnHold" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HoldWithFixError">
+      <soap:operation soapAction="http://tempuri.org/HoldWithFixError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnHoldWithFixError">
+      <soap:operation soapAction="http://tempuri.org/UnHoldWithFixError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayment">
+      <soap:operation soapAction="http://tempuri.org/GetPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransaction">
+      <soap:operation soapAction="http://tempuri.org/GetTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPayment">
+      <soap:operation soapAction="http://tempuri.org/SendPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendACBPayment">
+      <soap:operation soapAction="http://tempuri.org/SendACBPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseFile">
+      <soap:operation soapAction="http://tempuri.org/ReleaseFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACBPayment">
+      <soap:operation soapAction="http://tempuri.org/GetACBPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterAccount">
+      <soap:operation soapAction="http://tempuri.org/RegisterAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisableAccount">
+      <soap:operation soapAction="http://tempuri.org/DisableAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFile">
+      <soap:operation soapAction="http://tempuri.org/SendFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultFile">
+      <soap:operation soapAction="http://tempuri.org/GetResultFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHolding">
+      <soap:operation soapAction="http://tempuri.org/GetAllHolding" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServiceVersion">
+      <soap12:operation soapAction="http://tempuri.org/GetServiceVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inquiry">
+      <soap12:operation soapAction="http://tempuri.org/Inquiry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquiryOnline">
+      <soap12:operation soapAction="http://tempuri.org/InquiryOnline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InquiryOffline">
+      <soap12:operation soapAction="http://tempuri.org/InquiryOffline" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hold">
+      <soap12:operation soapAction="http://tempuri.org/Hold" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnHold">
+      <soap12:operation soapAction="http://tempuri.org/UnHold" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HoldWithFixError">
+      <soap12:operation soapAction="http://tempuri.org/HoldWithFixError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnHoldWithFixError">
+      <soap12:operation soapAction="http://tempuri.org/UnHoldWithFixError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayment">
+      <soap12:operation soapAction="http://tempuri.org/GetPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransaction">
+      <soap12:operation soapAction="http://tempuri.org/GetTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPayment">
+      <soap12:operation soapAction="http://tempuri.org/SendPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendACBPayment">
+      <soap12:operation soapAction="http://tempuri.org/SendACBPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseFile">
+      <soap12:operation soapAction="http://tempuri.org/ReleaseFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetACBPayment">
+      <soap12:operation soapAction="http://tempuri.org/GetACBPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterAccount">
+      <soap12:operation soapAction="http://tempuri.org/RegisterAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisableAccount">
+      <soap12:operation soapAction="http://tempuri.org/DisableAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFile">
+      <soap12:operation soapAction="http://tempuri.org/SendFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultFile">
+      <soap12:operation soapAction="http://tempuri.org/GetResultFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHolding">
+      <soap12:operation soapAction="http://tempuri.org/GetAllHolding" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://test.vics.com.vn:8080/SBSBank30/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://test.vics.com.vn:8080/SBSBank30/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+    # skylartech-netcore:
+    #     image: skylartech/aspnetcore:sdk-3.1
+    #     build:
+    #         context: ./netcore
+    #         dockerfile: Dockerfile
+
+    skylartech-nginx:
+        image: skylartech/nginx:1.17.9-alpine
+        build:
+            context: ./nginx
+            dockerfile: Dockerfile
+
+    skylartech-certbot:
+        image: certbot/certbot
+        volumes:
+            - ./data/certbot/conf:/etc/letsencrypt
+            - ./data/certbot/www:/var/www/certbot
+
+    skylartech-node:
+        image: skylartech/node:13.12.0-alpine
+        build:
+            context: ./node
+            dockerfile: Dockerfile
+
+    skylartech-mongodb:
+        image: skylartech/mongodb
+        build:
+            context: ./mongodb
+            dockerfile: Dockerfile
+
+# build and push to docker hub
+#docker-compose build
+#docker-compose push

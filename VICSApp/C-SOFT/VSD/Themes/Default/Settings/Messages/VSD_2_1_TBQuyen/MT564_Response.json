@@ -1,0 +1,700 @@
+[
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "28E",
+        "optional": true,
+        "parts": [
+            {
+                "name": "PageNumber",
+                "start": ":",
+                "end": "//",
+                "length": 5,
+				"type": "Integer"
+            },
+            {
+                "name": "PageCodeInfo",
+                "length": 4
+            }
+        ]
+    },
+    
+    {
+        "tag": "20C",   
+		"qualifier_start": "",        
+		"qualifier_end": "",
+        "parts": [
+		 {
+                "name": "RightCode",
+                "length": 4 ,
+				"start": "::",
+                "end": "//",
+            },
+            {
+                "name": "ReferenceNumber",
+                "length": 16
+            }
+        ]
+    },
+    {
+        "tag": "23G",
+        "parts": [
+            {
+                "name": "FunctionMessage",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "22F",
+        "qualifier": "CAEV",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "TypeOfRight",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "PREP",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "NoticeDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "25D",
+        "qualifier": "PROC",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "Status",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "USECU" }
+        ]
+    },
+    {
+        "tag": "35B",
+        "parts": [
+            {
+                "name": "IsinCode",
+                "length": 12,
+                "optional": true,
+                "start": "ISIN ",
+                "end": "<BrLine>"
+            },
+            {
+                "name": "CountryCode",
+                "length": 2,
+                "optional": true,
+                "start": "/",
+                "end": "/"
+            },
+            {
+                "name": "StockCode",
+                "end": "<BrLine>"
+            }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "optional": true,
+        "parts": [
+            { "default": "FIA" }
+        ]
+    },
+    {
+        "tag": "12A",
+        "qualifier": "CLAS",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ActivityType",
+                "length": 4
+            },
+            {
+                "name": "SecurityType",
+                "length": 1,
+				"type":"Integer" 
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "CONV",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ExecutionDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "optional": true,
+        "parts": [
+            { "default": "FIA" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "optional": true,
+        "parts": [
+            { "default": "ACCTINFO" }
+        ]
+    },
+    {
+        "tag": "95P",
+        "qualifier": "ACOW",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "OwnerPartyBicode",
+                "length": 11
+            }
+        ]
+    },
+    {
+        "tag": "97A",
+        "qualifier": "SAFE", 
+        "part_start": "/",
+		"optional": true,
+        "parts": [
+            {
+                "name": "AccountType",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "optional": true,
+        "parts": [
+            { "default": "ACCTINFO" }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "USECU" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "optional": true,
+        "parts": [
+            { "default": "INTSEC" }
+        ]
+    },
+    {
+        "tag": "35B",
+        "parts": [
+            {
+                "name": "MedialIsinCode",
+                "length": 12,
+                "optional": true,
+                "start": "ISIN ",
+                "end": "<BrLine>"
+            },
+            {
+                "name": "MedialCountryCode",
+                "length": 2,
+                "optional": true,
+                "start": "/",
+                "end": "/"
+            },
+            {
+                "name": "MedialStockCode",
+                "end": "<BrLine>"
+            }
+        ]
+    },
+    {
+        "tag": "36B",
+        "qualifier": "QINT",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "UnitType",
+                "length": 4
+            },
+            {
+                "name": "Quantity",
+                "length": 15,
+                "type": "Integer"
+            }
+        ]
+    },
+    {
+        "tag": "93C",
+        "qualifier": "INBA",
+        "optional": true,
+        "parts": [
+            {
+                "name": "BalanceUnit",
+                "length": 4,
+                "start": "/"
+            },
+            {
+                "name": "BalanceElig",
+                "length": 4,
+                "start": "/",
+                "end": "/"
+            },
+            {
+                "name": "BalanceOptionFlag",
+                "optional": true,
+                "length": 1
+            },
+            {
+                "name": "Amount",
+                "length": 15,
+                "type": "Integer"
+            }
+        ]
+    },
+    {
+        "tag": "22F",
+        "qualifier": "DISF",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "MedialRoundType",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "22F",
+        "qualifier": "SELL",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "MedialRightBuyType",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "92D",
+        "qualifier": "RTUN",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "IntermediateSecurities",
+                "length": 15,
+                "type": "Integer"
+            },
+            {
+                "name": "Underlying",
+                "length": 15,
+                "type": "Integer"
+            }
+        ]
+    },
+    {
+        "tag": "90B",
+        "qualifier": "MRKT",
+        "optional": true,
+        "parts": [
+            {
+                "name": "Market",
+                "length": 4,
+                "start": "/"
+            },
+            {
+                "name": "CurrencyCode",
+                "length": 3,
+                "start": "/"
+            },
+            {
+                "name": "MarketPrice",
+                "length": 15,
+                "type": "Integer"
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "EXPI",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ExpirationDateSubscription",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "POST",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ClosingBalanceDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "69A",
+        "qualifier": "TRDP",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "TradingPriodFrom",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            },
+            {
+                "name": "TradingPriodTo",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "optional": true,
+        "parts": [
+            { "default": "INTSEC" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "optional": true,
+        "parts": [
+            { "default": "CADETL" }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "RDTE",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "LastDateRegister",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "MEET",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "MeetingDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "EFFD",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "EffectiveDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "PAYD",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "PaymentDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "69A",
+        "qualifier": "CSPD",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "CompulsoryPurchaseFrom",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            },
+            {
+                "name": "CompulsoryPurchaseTo",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "94G",
+        "qualifier": "MEET",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "MeetingPlace",
+                "length": 35,
+                "line": 2
+            }
+        ]
+    },
+    {
+        "tag": "70E",
+        "qualifier": "WEBB",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "Narrative",
+                "length": 35,
+                "line": 10
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "optional": true,
+        "parts": [
+            { "default": "CADETL" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "optional": true,
+        "parts": [
+            { "default": "CAOPTN" }
+        ]
+    },
+    {
+        "tag": "13A",
+        "qualifier": "CAON", 
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "IdentificationNumber",
+                "length": 3
+            }
+        ]
+    }, 
+    {
+        "tag": "22F",
+        "qualifier": "DISF",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "OptionRoundType",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "17B",
+        "qualifier": "DFLT",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "DefaultProcessingFlag",
+                "length": 1
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "RDDT",
+        "part_start": "/",
+        "optional": true,
+        "parts": [
+            {
+                "name": "DeadlinePassOwnershipList",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "SUBS",
+        "part_start": "/",
+        "optional": true,
+        "parts": [
+            {
+                "name": "DeadlinePayment",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "92A",
+        "optional": true,
+        "parts": [
+            {
+                "name": "RateOptionType",
+                "length": 4,
+                "start": ":",
+                "end": "//"
+            },
+            {
+                "name": "RateValue",  
+				"end": "<BrLine>"
+            }
+        ]
+    },
+    {
+        "tag": "90A",
+        "qualifier": "CINL",
+        "part_start": "/",
+        "optional": true,
+        "parts": [
+            {
+                "name": "PriceRateType",
+                "length": 4
+            },
+            {
+                "name": "Denominations",
+				"type":"Decimal",
+                "length": 15
+            }
+        ]
+    },
+    {
+        "tag": "36B",
+        "qualifier": "NEWD",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "OptionUnitType",
+                "length": 4
+            },
+            {
+                "name": "OptionQuantity",
+                "length": 15,
+                "type": "Integer"
+            }
+        ]
+    },
+    {
+        "tag": "70E",
+        "qualifier": "ADTX",
+        "optional": true,
+        "parts": [
+            {
+                "name": "Narrative"
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "optional": true,
+        "parts": [
+            { "default": "CAOPTN" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "optional": true,
+        "parts": [
+            { "default": "ADDINFO" }
+        ]
+    },
+    {
+        "tag": "70E",
+        "qualifier": "ADTX",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "Description",
+                "line": 10
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "optional": true,
+        "parts": [
+            { "default": "ADDINFO" }
+        ]
+    }
+]

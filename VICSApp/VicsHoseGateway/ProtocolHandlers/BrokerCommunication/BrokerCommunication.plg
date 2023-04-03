@@ -1,0 +1,55 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: BrokerCommunication - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP46.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/BrokerCommunication.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Gateway\BrokerCommuniction_V2_Than_Developing\BrokerCommunication\AutoTProtocol.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP46.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP47.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/BrokerCommunication.pdb" /debug /machine:I386 /out:"Debug/BrokerCommunication.exe" /pdbtype:sept 
+.\Debug\AutoTProtocol.obj
+.\Debug\BrokerCommunication.obj
+.\Debug\BrokerCommunicationDlg.obj
+.\Debug\BrokerSocket.obj
+.\Debug\ConnectionSetting.obj
+.\Debug\Queue.obj
+.\Debug\RestransmissionBroadcastPacket.obj
+.\Debug\StdAfx.obj
+.\Debug\BrokerCommunication.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP47.tmp"
+<h3>Output Window</h3>
+Compiling...
+AutoTProtocol.cpp
+C:\Gateway\BrokerCommuniction_V2_Than_Developing\BrokerCommunication\AutoTProtocol.cpp(2369) : warning C4101: 'debugBuffer' : unreferenced local variable
+Linking...
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP48.tmp" with contents
+[
+/nologo /o"Debug/BrokerCommunication.bsc" 
+.\Debug\StdAfx.sbr
+.\Debug\AutoTProtocol.sbr
+.\Debug\BrokerCommunication.sbr
+.\Debug\BrokerCommunicationDlg.sbr
+.\Debug\BrokerSocket.sbr
+.\Debug\ConnectionSetting.sbr
+.\Debug\Queue.sbr
+.\Debug\RestransmissionBroadcastPacket.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP48.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+BrokerCommunication.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

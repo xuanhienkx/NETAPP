@@ -1,0 +1,1074 @@
+﻿{
+  "block_start": "{",
+  "block_end": "}",
+  "start": "{",
+  "end": "}",
+  "block_delimiter": ":",
+  "messages": [
+    {
+      "messageId": "21",
+      "messageType": "ACKNAK",
+      "requestType": "Response",
+      "blocks": [
+        {
+          "id": "1",
+          "name": "BASIC_HEADER",
+          "fields": [
+            {
+              "start": "",
+              "end": "",
+              "qualifier_start": "",
+              "qualifier_end": "",
+              "tag_start": "",
+              "2AB1957F-BF68-4121-A3B0-78294696D5E8": null,
+              "tag_end": "",
+              "parts": [
+                {
+                  "name": "ApplicationIdentifier",
+                  "length": 1
+                },
+                {
+                  "name": "ServiceIdentifier",
+                  "length": 2
+                },
+                {
+                  "name": "VicsBiccode",
+                  "length": 8
+                },
+                {
+                  "name": "LogicalTerminalIdentifier",
+                  "default": "AXXX",
+                  "length": 4
+                },
+                {
+                  "name": "OutputSessionInteger",
+                  "length": 4,
+                  "type": "Integer",
+                  "format": "D4"
+                },
+                {
+                  "name": "OutputSequenceInteger",
+                  "length": 6,
+                  "type": "Integer",
+                  "format": "D6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "name": "TEXTBLOCK",
+          "fields": [
+            {
+              "tag": "177",
+              "start": "",
+              "end": "",
+              "tag_start": "",
+              "parts": [
+                {
+                  "name": "ReceiverDate",
+                  "length": 17,
+                  "type": "Date",
+                  "format": "yyyyMMdd HH:mm:ss"
+                }
+              ]
+            },
+            {
+              "start": "",
+              "end": "",
+              "tag": "451",
+              "tag_start": "",
+              "parts": [
+                {
+                  "name": "AcceptReject",
+                  "length": 1,
+                  "type": "Integer"
+                }
+              ]
+            },
+            {
+              "start": "",
+              "end": "",
+              "part_end": "",
+              "tag": "405",
+              "tag_start": "",
+              "optional": true,
+              "parts": [
+                {
+                  "name": "RejectionReasonCode",
+                  "length": "3",
+                  "end": "<BrLine>"
+                },
+                {
+                  "name": "ErrorMessage"
+                }
+              ]
+            },
+            {
+              "end": "}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "messageId": "01",
+      "messageType": "MT",
+      "requestType": "Response",
+      "blocks": [
+        {
+          "id": "1",
+          "name": "BASIC_HEADER",
+          "fields": [
+            {
+              "start": "",
+              "end": "",
+              "qualifier_start": "",
+              "qualifier_end": "",
+              "tag_start": "",
+              "tag_end": "",
+              "parts": [
+                {
+                  "name": "ApplicationIdentifier",
+                  "length": 1
+                },
+                {
+                  "name": "ServiceIdentifier",
+                  "length": 2
+                },
+                 {
+                  "name": "VicsBiccode",
+                  "length": 8
+                },
+                {
+                  "name": "LogicalTerminalIdentifier",
+                  "default": "AXXX",
+                  "length": 4
+                },
+                {
+                  "name": "OutputSessionInteger",
+                  "length": 4,
+                  "type": "Integer"
+                },
+                {
+                  "name": "OutputSequenceInteger",
+                  "length": 6,
+                  "type": "Integer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "name": "APPLICATION_HEADER",
+          "fields": [
+            {
+              "start": "",
+              "end": "",
+              "qualifier_start": "",
+              "qualifier_end": "",
+              "tag_start": "",
+              "tag_end": "",
+              "parts": [
+                {
+                  "name": "OutputIdentifier",
+                  "length": 1
+                },
+                {
+                  "name": "MessageId",
+                  "length": 3
+                },
+                {
+                  "name": "ProcessedTime",
+                  "length": 10
+                },
+                {
+                  "name": "VsdBiccode",
+                  "length": 8
+                },
+				{
+                  "name": "VsdBiccodeExt",
+				  "default":"XXXX",
+                  "length": 4
+                },
+                {
+                  "name": "SessionInteger",
+                  "length": 4,
+                  "type": "Integer"
+                },
+                {
+                  "name": "SequenceInteger",
+                  "length": 6,
+                  "type": "Integer"
+                },
+                {
+                  "name": "ReceivedDate",
+                  "length": 6,
+                  "format": "ddMMyy",
+                  "type": "Date"
+                },
+                {
+                  "name": "ReceivedTime",
+                  "length": 4,
+                  "format": "HHmm",
+                  "type": "Time"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "name": "TEXTBLOCK",
+          "start": "<BrLine>",
+          "end": "-"
+        },
+        {
+          "id": "5",
+          "name": "TRAILER",
+          "default": "{MAC:00000000}{CHK:F1DBCA886BBF}{TNG:}",
+          "ignorable": true
+        }
+      ]
+    },
+    {
+      "messageId": "01",
+      "messageType": "MT",
+      "requestType": "Request",
+      "blocks": [
+        {
+          "id": "1",
+          "name": "BASIC_HEADER",
+          "fields": [
+            {
+              "start": "",
+              "end": "",
+              "qualifier_start": "",
+              "qualifier_end": "",
+              "tag_start": "",
+              "tag_end": "",
+              "parts": [
+                {
+                  "name": "ApplicationIdentifier",
+                  "default": "F",
+                  "length": 1
+                },
+                {
+                  "name": "ServiceIdentifier",
+                  "default": "01",
+                  "length": 2
+                },
+                {
+                  "name": "VicsBiccode",
+                  "length": 8
+                },
+                {
+                  "name": "LogicalTerminalIdentifier",
+                  "default": "AXXX",
+                  "length": 4
+                },
+                {
+                  "name": "SessionInteger",
+                  "length": 4,
+                  "type": "Integer",
+                  "format": "D4"
+                },
+                {
+                  "name": "InputSequenceInteger",
+                  "length": 6,
+                  "type": "Integer",
+                  "format": "D6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "name": "APPLICATION_HEADER",
+          "fields": [
+            {
+              "start": "",
+              "end": "",
+              "qualifier_start": "",
+              "qualifier_end": "",
+              "tag_start": "",
+              "tag_end": "",
+              "parts": [
+                {
+                  "name": "InputIdentifier",
+                  "default": "I",
+                  "length": 1
+                },
+                {
+                  "name": "MessageId",
+                  "length": 3
+                },
+                {
+                  "name": "VsdBiccode",
+                  "length": 8
+                },
+				{
+                  "name": "VsdBiccodeExt",
+				  "default":"XXXX",
+                  "length": 4
+                },
+                {
+                  "name": "MessagePriority",
+                  "default": "N",
+                  "length": 1
+                },
+                {
+                  "name": "DeliveryMonitor",
+                  "length": 1,
+                  "default": "2"
+                },
+                {
+                  "name": "ObsolesencePriod",
+                  "length": 3,
+                  "optional": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "name": "TEXTBLOCK",
+          "start": "<BrLine>",
+          "end": "-"
+        },
+        {
+          "id": "5",
+          "name": "TRAILER",
+          "default": "{MAC:00000000}{CHK:F1DBCA886BBF}{TNG:}",
+          "ignorable": true
+        }
+      ]
+    }
+  ],
+  "responseMessageKeys": [
+    {
+      "messageId": "598",
+      "keys": [
+        {
+          "tag": "12",
+          "keyType": "All",
+          "parts": [
+            {
+              "end": "<BrLine>"
+            }
+          ]
+        },
+        {
+          "tag": "77E",
+          "qualifier_start": "",
+          "qualifier_end": "",
+          "keyType": "One",
+          "parts": [
+            {
+              "length": 4,
+              "start": ":",
+              "end": "//",
+              "optional": true
+            },
+            {
+              "end": "<BrLine>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "messageId": "544",
+      "keys": [
+        {
+          "tag": "13A",
+          "qualifier": "LINK",
+          "part_start": "/",
+          "keyType": "All",
+          "parts": [
+            {
+              "default": "000",
+              "end": "<BrLine>"
+            }
+          ]
+        },
+        {
+          "tag": "22F",
+          "qualifier": "SETR",
+          "part_start": "/",
+          "parts": [
+            {
+              "name": "SettlementType",
+              "length": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "messageId": "546",
+      "keys": [
+        {
+          "tag": "20C",
+          "qualifier": "RELA",
+          "part_start": "/",
+          "keyType": "REF",
+          "parts": [
+            {
+              "name": "MessageReference",
+              "type": "Integer",
+              "format": "D16",
+              "end": "<BrLine>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "messageId": "548",
+      "keys": [
+        {
+          "tag": "20C",
+          "qualifier": "RELA",
+          "part_start": "/",
+          "keyType": "REF",
+          "parts": [
+            {
+              "name": "MessageReference",
+              "type": "Integer",
+              "format": "D16",
+              "end": "<BrLine>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "messageId": "564",
+      "keys": [
+        {
+          "combineType": "One",
+          "tag": "25D",
+          "qualifier": "PROC",
+          "part_start": "/",
+          "parts": [
+            {
+              "length": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "messageId": "566",
+      "keys": [
+        {
+          "tag": "13A",
+          "qualifier": "LINK",
+          "part_start": "/",
+          "keyType": "All",
+          "parts": [
+            {
+              "length": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "messageId": "567",
+      "keys": [
+        {
+          "tag": "13A",
+          "qualifier": "LINK",
+          "part_start": "/",
+          "keyType": "All",
+          "parts": [
+            {
+              "length": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "messageId": "508",
+      "keys": [
+        {
+          "tag": "13A",
+          "qualifier": "LINK",
+          "part_start": "/",
+          "keyType": "All",
+          "parts": [
+            {
+              "default": "000",
+              "length": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "businessUnits": [
+    {
+      "name": "1.1 Cập nhật mở/đóng tài khoản giao dịch chứng khoán của NĐT",
+      "businessId": "VSD_1_1_DongMoTK",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "598",
+          "requestType": "Request"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "598",
+          "requestType": "Response",
+          "keyValue": "002_NORMAL"
+        }
+      ]
+    },
+    {
+      "name": "1.2.1 Ký gửi chứng khoán thông thường (có yêu cầu từ TVLK)",
+      "businessId": "VSD_1_2_1_KyGuiCK",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "540",
+          "requestType": "Request"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "544",
+          "requestType": "Response",
+          "keyValue": "540_TRAD"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "548",
+          "requestType": "Response",
+          "keyValue": "REF"
+        }
+      ]
+    },
+    {
+      "name": "1.2.2 Rút chứng khoán thông thường (có yêu cầu từ TVLK)",
+      "businessId": "VSD_1_2_2_RutCK",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "542",
+          "requestType": "Request"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "546",
+          "requestType": "Response",
+          "keyValue": "REF"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "548",
+          "requestType": "Response",
+          "keyValue": "REF"
+        }
+      ]
+    },
+    {
+      "name": "1.2.3 Ký gửi chứng khoán đồng thời với đăng ký chứng khoán, ký gửi trái phiếu/tín phiếu chính phủ",
+      "businessId": "VSD_1_2_3_KyGuiTP",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "544",
+          "requestType": "Response",
+          "keyValue": "000_ISSU"
+        }
+      ]
+    },
+    {
+      "name": "1.2.4 Ký gửi chứng khoán phát hành thêm từ quyền",
+      "businessId": "VSD_1_2_4_KyGuiCKTuQuyen",
+      "messages": [
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "DE164"
+        }
+      ]
+    },
+    {
+      "name": "1.2.5  Rút chứng khoán do hủy đăng ký",
+      "businessId": "VSD_1_2_5_RutCKDoHuy",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "542",
+          "requestType": "Request"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "546",
+          "requestType": "Response",
+          "keyValue": "REF"
+        }
+      ]
+    },
+    {
+      "name": "1.3 Chuyển khoản chứng khoán",
+      "businessId": "VSD_1_3_ChuyenKhoanCK",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "542",
+          "requestType": "Request"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "546",
+          "requestType": "Response",
+          "keyValue": "REF"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "548",
+          "requestType": "Response",
+          "keyValue": "REF"
+        }
+      ]
+    },
+    {
+      "name": "1.4 Tất toán tài khoản giao dịch/Chuyển khoản toàn bộ chứng khoán",
+      "businessId": "VSD_1_4_TatToanTK",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "598",
+          "requestType": "Request"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "546",
+          "requestType": "Response",
+          "keyValue": "REF"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "548",
+          "requestType": "Response",
+          "keyValue": "REF"
+        }
+      ]
+    },
+    {
+      "name": "1.5 Phong tỏa và giải tỏa chứng khoán",
+      "businessId": "VSD_1_5_PhongToaGiaiToaCK",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "524",
+          "requestType": "Request"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "508",
+          "requestType": "Response",
+          "keyValue": "524"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "508",
+          "requestType": "Response",
+          "keyValue": "508",
+          "note": "LINK//508 nếu 23G=CANC"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "548",
+          "requestType": "Response",
+          "keyValue": "REF"
+        }
+      ]
+    },
+    {
+      "name": "1.6 Thông báo điều chỉnh thông tin về loại chứng khoán (phổ thông, hạn chế chuyển nhượng)",
+      "businessId": "VSD_1_6_TBDieuChinhCK",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "508",
+          "requestType": "Response",
+          "keyValue": "000"
+        }
+      ]
+    },
+    {
+      "name": "1.7 Thông báo thay đổi hạn chế chuyển nhượng giao dịch",
+      "businessId": "VSD_1_7_TBThayDoiChuyenNhuong",
+      "messages": [
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "DE1646",
+          "note": "Tạm thời không dùng, nghiệp vụ nhân code DE164 sẽ dùng chung với nghiệp vụ 1.2.4 Ky gui chung khoan phat hanh them"
+        }
+      ]
+    },
+    {
+      "name": "1.8 Xác nhận/hủy xác nhận số dư chứng khoán",
+      "businessId": "VSD_1_8_XNSoDuCK",
+      "messages": [
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "DE013"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "DE065"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "DE083"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "DE084"
+        },
+        {
+          "messageType": "MT",
+          "requestType": "Request",
+          "messageId": "598"
+        }
+      ]
+    },
+    {
+      "name": "2.1 Thông báo thông tin thực hiện quyền",
+      "businessId": "VSD_2_1_TBQuyen",
+      "messages": [
+        {
+          "messageType": "MT",
+          "requestType": "Response",
+          "messageId": "564",
+          "keyValue": "INFO"
+        }
+      ]
+    },
+    {
+      "name": "2.2 Xác nhận/Hủy xác nhận danh sách người sở hữu chứng khoán lưu ký thực hiện quyền",
+      "businessId": "VSD_2_2_XNDSThucHienQuyen",
+      "messages": [
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CA001"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CA005"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CA009"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CA012"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CA014"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CA029"
+        },
+        {
+          "messageType": "MT",
+          "requestType": "Request",
+          "messageId": "598"
+        }
+      ]
+    },
+    {
+      "name": "2.3 Chuyển nhượng quyền mua",
+      "businessId": "VSD_2_3_ChuyenNhuongQuyen",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "542",
+          "requestType": "Request"
+        },
+        {
+          "messageType": "MT",
+          "requestType": "Response",
+          "messageId": "548",
+          "keyValue": "REF"
+        },
+        {
+          "messageType": "MT",
+          "requestType": "Response",
+          "messageId": "546",
+          "keyValue": "REF"
+        }
+      ]
+    },
+    {
+      "name": "2.4 Đăng ký đặt mua",
+      "businessId": "VSD_2_4_DKDatMua",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "565",
+          "requestType": "Request"
+        },
+        {
+          "messageType": "MT",
+          "requestType": "Response",
+          "messageId": "566",
+          "keyValue": "565"
+        },
+        {
+          "messageType": "MT",
+          "requestType": "Response",
+          "messageId": "567",
+          "keyValue": "565"
+        }
+      ]
+    },
+    {
+      "name": "3.1 Xác nhận/Hủy xác nhận kết quả giao dịch",
+      "businessId": "VSD_3_1_XNKetQuaGD",
+      "messages": [
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS007"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS070"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS077"
+        },
+        {
+          "messageType": "MT",
+          "requestType": "Request",
+          "messageId": "598"
+        }
+      ]
+    },
+    {
+      "name": "3.2 Thông báo tổng hợp kết quả bù trừ và thông báo điều chỉnh kết quả bù trừ",
+      "businessId": "VSD_3_2_TBKetQuaBuTru",
+      "messages": [
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS071"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS072"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS075"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS076"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS078"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS079"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS082"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS083"
+        }
+      ]
+    },
+    {
+      "name": "3.3 Thông báo về việc thanh toán hoàn tất với TVLK",
+      "businessId": "VSD_3_3_TBThanhToanVoiTVLK",
+      "messages": [
+        {
+          "messageType": "MT",
+          "requestType": "Response",
+          "messageId": "598",
+          "keyValue": "ESET"
+        }
+      ]
+    },
+    {
+      "name": "4 Tra xuất báo cáo nghiệp vụ",
+      "businessId": "VSD_4_TraXuatBC",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "598",
+          "requestType": "Request"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CA069"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CA031"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CA070"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS008"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS091"
+        },
+        {
+          "messageType": "FileACT",
+          "requestType": "Response",
+          "keyValue": "CS092"
+        }
+      ]
+    },
+    {
+      "name": "5.1 Thông báo mã chứng khoán đăng ký mới",
+      "businessId": "VSD_5_1_TBCKMoi",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "598",
+          "requestType": "Response",
+          "keyValue": "007_ISIN"
+        }
+      ]
+    },
+    {
+      "name": "5.2 Thông báo mã chứng khoán chuyển sàn",
+      "businessId": "VSD_5_2_TBCKChuyenSan",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "598",
+          "requestType": "Response",
+          "keyValue": "007_CHAN"
+        }
+      ]
+    },
+    {
+      "name": "5.3 Thông báo mã chứng khoán hủy đăng ký",
+      "businessId": "VSD_5_3_TBCKHuy",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "598",
+          "requestType": "Response",
+          "keyValue": "007_DLST"
+        }
+      ]
+    },
+    {
+      "name": "5.4 Thông báo mã đợt đăng ký bổ sung",
+      "businessId": "VSD_5_4_TBDangKyBoSung",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "598",
+          "requestType": "Response",
+          "keyValue": "007_ISSU",
+          "note": "(phát hành)"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "598",
+          "requestType": "Response",
+          "keyValue": "007_CAPT",
+          "note": "(Tăng vốn)"
+        }
+      ]
+    },
+    {
+      "note": "Thành vên nhận thông báo hạch toán số dư chứng khoán khoán qua MT544 ứng với chuyển chứng khoán hoặc chuyển nhượng quyền mua FE75B2BC-1127-4552-B108-96F20C7EBC58 các nghiệp vụ liên quan bên gửi: 1.3. Chuyển khoản chứng khoán Trường hợp giao dịch chuyển khoản được xử lý thành công, VSD sẽ gửi điện MT544 cho bên nhận chuyển khoản 1.4. Tất toán tài khoản giao dịch/Chuyển khoản toàn bộ chứng khoán Trường hợp giao dịch chuyển khoản được xử lý thành công, VSD sẽ gửi điện MT544 - Xác nhận kết quả tất toán tài khoản đối với bên nhận chuyển khoản cho TVLK bên nhận tất toán. ",
+      "name": "Thông báo hạch toán số dư chứng khoán đối với bên nhận cho chuyển nhượng quyền mua/chuyển chứng khoán",
+      "businessId": "VSD_1_3_1_4_TBHT_TangTK_CNQ_TTTK",
+      "messages": [
+        {
+          "messageType": "MT",
+          "messageId": "544",
+          "requestType": "Response",
+          "keyValue": "542_TRAD"
+        },
+		 {
+          "messageType": "MT",
+          "messageId": "544",//TRAD
+          "requestType": "Response",
+          "keyValue": "542_OWNI"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "544",
+          "requestType": "Response",
+          "keyValue": "542_OWNE"
+        }, {
+          "messageType": "MT",
+          "messageId": "544",
+          "requestType": "Response",
+          "keyValue": "598_TRAD"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "544",
+          "requestType": "Response",
+          "keyValue": "598_TWAC"
+        },
+        {
+          "messageType": "MT",
+          "messageId": "544",
+          "requestType": "Response",
+          "keyValue": "598_TBAC"
+        }
+      ]
+    }
+  ]
+}

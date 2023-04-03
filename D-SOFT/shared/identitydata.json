@@ -1,0 +1,31 @@
+﻿{
+  "IdentityData": {
+    "Roles": [
+      {
+        "Name": "DSoftAdministrator"
+      }
+    ],
+    "Users": [
+      {
+        "Username": "admin",
+        "Password": "Admin@1234",
+        "Email": "admin@dsoft.com.vn",
+        "Roles": [ "DSoftAdministrator" ],
+        "Claims": [
+          {
+            "Type": "name",
+            "Value": "admin"
+          },
+          {
+            "Type": "given_name",
+            "Value": "XuanPhap"
+          },
+          {
+            "Type": "family_name",
+            "Value": "Nguyen"
+          }
+        ]
+      }
+    ]
+  }
+}

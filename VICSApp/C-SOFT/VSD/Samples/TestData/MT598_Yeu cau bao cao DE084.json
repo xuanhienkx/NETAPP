@@ -1,0 +1,22 @@
+﻿{
+    "BusinessId": "D7AD8A32-C523-448B-8BAA-68F68B3B958A",
+    "MessageType": "MT",
+    "RequestType": "REPORT",
+    "ApplicationIdentifier": "F",
+    "ServiceIdentifier": "01",
+    "SenderBicode": "VSDTVGXXAXXX",
+    "SessionInteger": "0001",
+    "InputSequenceInteger": "000224",
+    "InputIdentifier": "I",
+    "MessageId": "598",
+    "ReceiverBicode": "VSDSVN01XXXX",
+    "MessagePriority": "N",
+    "DeliveryMonitor": "",
+    "ObsolesencePriod": "",
+    "TransactionReferenceNumber": "05416",
+    "SubMessageType": "003",
+    "Proprietary": "TXDATE:20150907\r\nSICODE:ALL\r\nBRID:0003",
+    "MessageFunction": "NEWM",
+    "CreatedDate": "Date#2015-09-07",
+    "ReportReference": "DE084"
+}

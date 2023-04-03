@@ -1,0 +1,80 @@
+  
+  
+ 
+  
+
+  .election-matters-item {
+      border: 1px solid #edf1f7;
+      border-radius: 0.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      .election-matters-content,
+      .election-matters-vote {
+          padding-top: 0.75rem;
+          height: 100%;
+          width: 100%;
+      }
+      .election-matters-vote {
+           ::ng-deep nb-radio label {
+              padding-right: unset !important;
+          }
+      }
+      .election-matters-content {
+          padding-left: 1rem;
+          background-color: #f8fbff96;
+          .section-item-body,
+          .attachments {
+              margin-top: 0.5rem;
+              .attachments-titel {
+                  font-weight: 600;
+              }
+          }
+          .section-item-body {
+              font-style: italic;
+              font-size: 0.75rem;
+          }
+          .content-item-index {
+              display: flex;
+              width: 5.5rem;
+              height: 5.5rem;
+              margin-left: auto;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              opacity: 90%;
+              border-top-left-radius: 100%;
+              margin-right: 1rem;
+              background-color: #eff2f7;
+              .index {
+                  font-size: 3.8rem;
+                  font-weight: 600;
+                  text-align: right;
+                  justify-items: stretch;
+                  margin-top: auto;
+                  margin-left: auto;
+                  color: #ffffff;
+                  padding-right: 1.2rem;
+                  padding-bottom: 2.2rem;
+              }
+          }
+      }
+      .vote-warning-zone{
+        border-top: 1px solid;
+        
+        &.warning{
+            color: #ffaa00;
+        }
+        &.errors{
+            color: #dc3545;
+        }
+        .icon-vote{
+            background-color: #eff2f7;
+           
+        }
+        .text-error{
+            font-style: italic;
+            font-size: 0.75rem ;
+        }
+      }
+      
+  }

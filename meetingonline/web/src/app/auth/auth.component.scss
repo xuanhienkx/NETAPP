@@ -1,0 +1,53 @@
+@import '~@nebular/theme/styles/global/breakpoints';
+@import 'auth-block/auth-block.component.scss';
+:host {
+    $auth-layout-padding: 2.5rem;
+    .navigation .link {
+        display: inline-block;
+        text-decoration: none;
+        nb-icon {
+            font-size: 2rem;
+            vertical-align: middle;
+        }
+    }
+    .links nb-icon {
+        font-size: 2.5rem;
+    }
+    vip-auth-block {
+        margin: auto;
+        padding: 3rem 5rem;
+        background-color: #ffffff;
+        border: 0.0625rem solid #e4e9f2;
+        border-radius: 0.25rem;
+    }
+    @include media-breakpoint-down(sm) {
+        nb-card {
+            border-radius: 0;
+            height: 100vh;
+        }
+    }
+     ::ng-deep {
+        nb-layout .layout .layout-container .content .columns nb-layout-column {
+            background-color: #ffffff;
+            display: flex;
+            padding: $auth-layout-padding;
+            @include media-breakpoint-down(sm) {
+                background-color: #ffffff;
+                padding: 0;
+                vip-auth-block {
+                    border: none;
+                }
+            }
+            
+.btn-google        {background-color:#dd4b39; color: #fff; }
+.btn-facebook      { background-color:#3b5998; color: #fff;}
+.btn-linkedin      { background-color:#007bb6; color: #fff;}
+        }
+    }
+}
+// @mixin btn-social($color-bg, $color: #fff) {
+//     background-color: $color-bg;
+//     color: $color!important;
+//    // @include button-variant($color, $color-bg, rgba(0,0,0,.2));
+//   }
+  

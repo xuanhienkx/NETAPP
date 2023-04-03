@@ -1,0 +1,103 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="11.0.1" />
+		<PackageReference Include="MediatR" Version="10.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
+		<PackageReference Include="CircuitBreaker.Net" Version="0.7.0" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.6" />
+		<PackageReference Include="MongoDB.Driver" Version="2.16.1" />
+		<PackageReference Include="MongoDB.Bson" Version="2.16.1" />
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6" />
+		<PackageReference Include="MongoDB.Driver.Core" Version="2.16.1" />
+		<PackageReference Include="NetMQ" Version="4.0.1.9" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Domain\Commands\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\osx\native\libsnappy64.dylib" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\linux\native\libsnappy64.so" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\win\native\libzstd.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\osx\native\libzstd.dylib" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\linux\native\libzstd.so" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\win\native\snappy32.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\win\native\snappy64.dll" />
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\contentFiles\any\netstandard2.1\Core\Compression\Snappy\lib\linux\libsnappy64.so" />
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\contentFiles\any\netstandard2.1\Core\Compression\Snappy\lib\osx\libsnappy64.dylib" />
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\contentFiles\any\netstandard2.1\Core\Compression\Snappy\lib\win\snappy32.dll" />
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\contentFiles\any\netstandard2.1\Core\Compression\Snappy\lib\win\snappy64.dll" />
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\contentFiles\any\netstandard2.1\Core\Compression\Zstandard\lib\linux\libzstd.so" />
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\contentFiles\any\netstandard2.1\Core\Compression\Zstandard\lib\osx\libzstd.dylib" />
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\contentFiles\any\netstandard2.1\Core\Compression\Zstandard\lib\win\libzstd.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\osx\native\libsnappy64.dylib" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\linux\native\libsnappy64.so" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\win\native\libzstd.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\osx\native\libzstd.dylib" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\linux\native\libzstd.so" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\win\native\snappy32.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\win\native\snappy64.dll" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\osx\native\libsnappy64.dylib" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="C:\Users\phaph\.nuget\packages\mongodb.driver.core\2.16.1\build\..\runtimes\win\native\snappy64.dll" />
+	</ItemGroup>
+
+</Project>

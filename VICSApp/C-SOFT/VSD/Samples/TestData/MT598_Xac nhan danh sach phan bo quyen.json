@@ -1,0 +1,22 @@
+﻿{
+    "BusinessId": "709E8B99-F3B9-4AE6-A40D-735EC9A7887E",
+    "MessageType": "MT",
+    "ApplicationIdentifier": "F",
+    "ServiceIdentifier": "01",
+    "SenderBicode": "VSDSHSXXAXXX",
+    "SessionInteger": "2222",
+    "InputSequenceInteger": "000015",
+    "InputIdentifier": "I",
+    "MessageId": "598",
+    "ReceiverBicode": "VSDSVN01XXXX",
+    "MessagePriority": "N",
+    "DeliveryMonitor": "",
+    "ObsolesencePriod": "",
+    "TransactionReferenceNumber": "27",
+    "SubMessageType": "005",
+    "Proprietary": "CAINFO\r\nTXNUM:0140675779\r\nRPTID:CA005\r\nTRANDATE:20150701\r\nBRID:0003",
+    "MessageFunction": "NEWM",
+    "CreatedDate": "Date#2015-07-02",
+    "ReportReference": "30062015",
+    "ConfirmationStatus": "CONF"
+}

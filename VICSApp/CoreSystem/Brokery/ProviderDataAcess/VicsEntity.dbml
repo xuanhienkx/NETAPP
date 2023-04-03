@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Vics30ForTest" Class="VicsEntityDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.1.29;Initial Catalog=Vics30ForTest;Persist Security Info=True;User ID=sa" SettingsObjectName="ProviderDataAcess.Properties.Settings" SettingsPropertyName="Vics30ForTestConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CustomerDebitLimitLog" Member="CustomerDebitLimitLogs">
+    <Type Name="CustomerDebitLimitLog">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TransactionDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionTime" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="CustomerId" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="OldLimitValue" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="LimitValue" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="OldFromDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="FromDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="OldToDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ToDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="UserEnter" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomerDebitLimit" Member="CustomerDebitLimits">
+    <Type Name="CustomerDebitLimit">
+      <Column Name="CustomerId" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LimitValue" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="DayLimitValue" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Deferrable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentLimitValue" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="FromDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ToDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DebitLimitType" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_CustomerDebitLimit" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AgencyCustomer" Member="AgencyCustomers">
+    <Type Name="AgencyCustomer">
+      <Column Name="AgencyTradeCode" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerId" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerTradeCode" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="UnitTradeCode_AgencyCustomer" Member="UnitTradeCode" ThisKey="AgencyTradeCode" OtherKey="TradeCode" Type="UnitTradeCode" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customers" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="BranchCode" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="ContractNumber" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="CustomerId" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BrokerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CustomerNameViet" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CustomerType" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DomesticForeign" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Dob" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="SignatureImage1" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SignatureImage2" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OpenDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CloseDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CardType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CardIdentity" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CardDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CardIssuer" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AddressViet" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Mobile2" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UserCreate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateCreate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="UserModify" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateModify" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ProxyStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AccountStatus" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="WorkingAddress" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UserIntroduce" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AttitudePoint" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DepositPoint" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ActionPoint" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Website" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TaxCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AccountType" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="OrderType" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="ReceiveReport" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="ReceiveReportBy" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="MarriageStatus" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="KnowledgeLevel" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Job" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="OfficeFunction" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OfficeTel" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="OfficeFax" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="HusbandWifeName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="HusbandWifeCardNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="HusbandWifeCardDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="HusbandWifeCardLocation" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="HusbandWifeTel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HusbandWifeEmail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JoinStockMarket" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="InvestKnowledge" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="InvestedIn" Type="System.String" DbType="Char(5)" CanBeNull="true" />
+      <Column Name="InvestTarget" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="RiskAccepted" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="InvestFund" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DelegatePersonName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DelegatePersonFunction" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DelegatePersonCardNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DelegateCardDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DelegateCardLocation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DelegatePersonTel" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DelegatePersonEmail" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ChiefAccountancyName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ChiefAccountancyCI" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ChiefAccountancyCD" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ChiefAccountancyIssuer" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ChiefAccountancySign1" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ChiefAccountancySign2" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CaProxyName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CaProxyCI" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CaProxyCD" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CaProxyIssuer" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CaProxySign1" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CaProxySign2" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CompanySign1" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CompanySign2" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TradeCode" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CustomerAccount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MobileSms" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="IsHere" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MoneyDepositeNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MoneyDepositeLocation" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DepartmentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PublicCompanyManage" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PublicCompanyHolder" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ParentCompanyName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentCompanyAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ParentCompanyEmail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ParentCompanyTel" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PostType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReOpenDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="UserTakeCared" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Customer_CustomerDebitLimit" Member="CustomerDebitLimit" ThisKey="CustomerId" OtherKey="CustomerId" Type="CustomerDebitLimit" Cardinality="One" />
+      <Association Name="UnitTradeCode_Customer" Member="UnitTradeCode" ThisKey="TradeCode" OtherKey="TradeCode" Type="UnitTradeCode" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vrm_Contract" Member="vrm_Contracts">
+    <Type Name="vrm_Contract">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContractID" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerId" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ContractType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="DueDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ExpiredDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="BranchCode" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="TradeCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ApprovedDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ApprovedBy" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="DisbursedDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DisbursedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegisteredAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="WithdrawDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="WithdrawBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InterestAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="InterestRatePerDay" Type="System.Decimal" DbType="Decimal(4,4)" CanBeNull="true" />
+      <Column Name="InterestRatePenalty" Type="System.Decimal" DbType="Decimal(4,4)" CanBeNull="true" />
+      <Column Name="DisbursedAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ApprovalAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="WithdrawAmount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vrm_Customer" Member="vrm_Customers">
+    <Type Name="vrm_Customer">
+      <Column Name="CustomerId" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MarginRate" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsSpecial" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UnitTradeCode" Member="UnitTradeCodes">
+    <Type Name="UnitTradeCode">
+      <Column Name="TradeCode" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UnitName" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ProvinceCode" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Information" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="BranchCode" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="ParentUnit" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UnitType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PostType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsShow" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="UnitTradeCode_AgencyCustomer" Member="AgencyCustomers" ThisKey="TradeCode" OtherKey="AgencyTradeCode" Type="AgencyCustomer" />
+      <Association Name="UnitTradeCode_Customer" Member="Customers" ThisKey="TradeCode" OtherKey="TradeCode" Type="Customer" />
+      <Association Name="UnitTradeCode_UserGroup" Member="UserGroups" ThisKey="TradeCode" OtherKey="TradeCode" Type="UserGroup" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserGroups" Member="UserGroups">
+    <Type Name="UserGroup">
+      <Column Name="GroupId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="BranchCode" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="TradeCode" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="UserGroup_AgencyPermission" Member="AgencyPermissions" ThisKey="GroupId" OtherKey="GroupId" Type="AgencyPermission" />
+      <Association Name="UnitTradeCode_UserGroup" Member="UnitTradeCode" ThisKey="TradeCode" OtherKey="TradeCode" Type="UnitTradeCode" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AgencyPermission" Member="AgencyPermissions">
+    <Type Name="AgencyPermission">
+      <Column Name="GroupId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Permission" Type="System.String" DbType="VarChar(200) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="UserGroup_AgencyPermission" Member="UserGroup" ThisKey="GroupId" OtherKey="GroupId" Type="UserGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomerDebitLimitTransaction" Member="CustomerDebitLimitTransactions">
+    <Type Name="CustomerDebitLimitTransaction">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerId" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TransDate" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="UserEnter" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="BranchCode" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="BeforeLimitValue" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentLimitValue" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vrm_DebitLimit" Member="vrm_DebitLimits">
+    <Type Name="vrm_DebitLimit">
+      <Column Name="BranchCode" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TradingDate" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TradeCode" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UnitType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="DebitLimitAmount" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="DebitLimitDay" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CurrentDebitLimit" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.CustomerDebitLimit_Insert" Method="CustomerDebitLimit_Insert">
+    <Parameter Name="CustomerId" Parameter="customerId" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="LimitValue" Parameter="limitValue" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CurrentLimitValue" Parameter="currentLimitValue" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="TransactionDate" Parameter="transactionDate" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="TransactionTime" Parameter="transactionTime" Type="System.String" DbType="VarChar(8)" />
+    <Parameter Name="UserEnter" Parameter="userEnter" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="FromDate" Parameter="fromDate" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="ToDate" Parameter="toDate" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="DebitLimitType" Parameter="debitLimitType" Type="System.Char" DbType="Char(1)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

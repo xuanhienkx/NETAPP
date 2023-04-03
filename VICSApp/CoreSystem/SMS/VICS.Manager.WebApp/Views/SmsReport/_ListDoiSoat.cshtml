@@ -1,0 +1,90 @@
+﻿@model VICS.Manager.WebApp.Models.RequestHistsViewModel
+@using SMS.Common
+@using SMS.DataAccess.Models
+@using VICS.Manager.WebApp.Models
+@using VicsManageWeb.Common.UI.Grid
+
+<div class="col-md-12" style="margin: 10px auto; background-color: white; text-align: center">
+    <div id="Summary" class="col-md-6">
+        @{ Html.RenderPartial("_Summary", Model.Summaries);}
+    </div>
+</div>
+<div class="col-md-12">
+    @{
+
+        Model.ActionName = "ListDoiSoat";
+        Model.ControllerName = "SmsReport";
+        Model.UpdateTargetId = "listData";
+    }
+
+    @Html.PagedGrid("HistGrid", Model,
+        columns =>
+        {
+            /*Hidden id column*/
+            columns.Add(o => o.SmsIdResponse)
+                .Encoded(false)
+                .Sanitized(false)
+                .Titled("Tài khoản")
+                .RenderValueAs(c => Html.ActionLink(c.SmsIdResponse, "SmsDetail", "SmsReport", new { smsId = c.SmsIdResponse, isBrandName = c.IsBrandName }, new { @class = "viewDetail", id = "viewDetail_" + c.Id }).ToString())
+                .Sortable(true);
+
+            /* Adding "Headline" column: */
+            columns.Add(o => o.CustomerId)
+                .Titled("Khách hàng")
+                .Sortable(true)
+                .Filterable(true)
+                .Css("text-left");
+
+            /* Adding "Status" column: */
+            columns.Add(o => o.Mobile)
+                .Titled("Mobile")
+                .Filterable(true)
+                .Sortable(true);
+
+            /* Adding "CreatedDate" column: */
+            columns.Add(o => o.IsSent)
+                .Titled("Mạng")
+                .Encoded(false)
+                .Sanitized(false)
+                .RenderValueAs(c => c.Mobile.GePhoneType().ToString())
+                .SetWidth(80);
+
+            columns.Add(o => o.Type)
+                .Titled("Loại")
+                .Encoded(false)
+                .Sanitized(false)
+                .RenderValueAs(c =>
+                {
+                    var name = Enum.GetName(typeof(SmsType), c.Type);
+                    return name ?? "N/A";
+                })
+                .SetWidth(80)
+                .Sortable(true);
+
+            /* Adding "Status" column: */
+            columns.Add(o => o.Message)
+                .Titled("Message").Filterable(true);
+
+
+            columns.Add(o => o.CreatedTime)
+                .Titled("Ngày")
+                .Format("{0:dd/MM/yyyy HH:mm}")
+                .Sortable(true);
+        })
+     
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        $(".viewDetail").on('click', function (e) {
+            e.preventDefault();
+            var url = $(this).attr("href");
+            $.mbqDialog({
+                width: 850,
+                content: 'url:' + url,
+                title: "Thông tin của tin nhắn"
+        });
+        });
+    });
+</script>
+

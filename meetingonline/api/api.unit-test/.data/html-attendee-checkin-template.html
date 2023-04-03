@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Web Fonts  -->
+
+    <title>Vote-template</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+
+        @page {
+            margin-top: 0;
+            margin-left: 0.2rem;
+            margin-right: 0.2rem;
+
+            @bottom-right {
+                content: "Page "counter(page) " of "counter(pages);
+            }
+        }
+
+        @media print {
+
+            body,
+            html,
+            page,
+            .container {
+                padding: 0;
+                box-shadow: 0;
+                background: white !important;
+                margin: 0 !important;
+            }
+
+            .report-content-right,
+            .right-item-number,
+            .info-item,
+            .report-title,
+            .right-item,
+            .right-item-number,
+            .report-table th,
+            .report-table td {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .report-table th,
+            .report-table td {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            .report-content-right,
+            .right-item-number,
+            .info-item,
+            .right-item,
+            .report-title,
+            .right-item-number {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            .report-title {
+                line-height: 0.5rem;
+            }
+        }
+
+
+        html,
+        body {
+            font-size: 14px;
+            display: flex;
+            flex: 1 1 auto;
+            margin: 0 auto;
+        }
+
+        body {
+            background: rgb(204, 204, 204);
+        }
+
+        page {
+            background: white;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.5cm;
+            box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+        }
+
+        page[size="A4"] {
+            width: 21cm;
+            height: 29.7cm;
+        }
+
+        page[size="A4"][layout="landscape"] {
+            width: 29.7cm;
+            height: 21cm;
+        }
+
+        header,
+        .header {
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            justify-content: space-between;
+            flex: 1 1 auto;
+        }
+
+        header table td {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        footer,
+        .footer {
+            margin: 1.5rem auto;
+            padding-top: 0.25rem;
+            width: 100%;
+            justify-items: end;
+
+        }
+
+        .footer-content {
+            max-width: 2480px;
+            border-top: 1px solid #dee2e6;
+            margin: auto;
+        }
+
+        .img-fluid {
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+        .logo {
+            width: 10rem;
+            height: 3.5rem;
+            column-width: 10rem;
+
+        }
+
+        .logo,
+        .header-content {
+            margin: auto;
+        }
+
+        .header-content {
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+            line-height: 1.2rem;
+            text-align: center;
+        }
+
+        .container {
+            margin: auto 1rem;
+            max-width: 2480px;
+            height: 100%;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-uppercase {
+            text-transform: uppercase;
+        }
+
+        .text-lowercase {
+            text-transform: lowercase;
+        }
+
+        .text-capitalize {
+            text-transform: capitalize;
+        }
+
+        .report-title {
+            margin-top: 2rem;
+            margin-bottom: 0.25rem;
+            line-height: 0.75rem;
+        }
+
+        .text-description {
+            font-style: italic;
+        }
+
+        .info-item,
+        .right-item td {
+            padding: 0.5rem;
+            margin-top: auto;
+            margin-bottom: auto;
+
+        }
+
+        /* .report-content-right {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        } */
+
+        .info-item span {
+            margin-right: 0.75rem;
+            text-align: left;
+        }
+
+        .right-item-number {
+            width: 15rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #dee2e6;
+            text-align: center;
+            margin: 0.5rem auto;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table tr.right-item {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .right-item td:first-child {
+            width: 85%;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .right-item td:last-child {
+            text-align: right;
+        }
+
+
+        .report-table table {
+            border-collapse: collapse;
+        }
+
+        .report-table th,
+        .report-table td {
+            border: 1px solid #dee2e6;
+            padding: 1rem;
+        }
+
+        th {
+            font-weight: 700;
+        }
+
+        td {
+
+            font-weight: 550;
+        }
+
+        tr td:first-child {
+            width: 3rem;
+            text-align: center;
+        }
+
+        .report-note {
+            margin-bottom: 1rem;
+
+        }
+
+        .lable {
+            font-weight: 700;
+            text-decoration: underline;
+            font-size: 1.05rem;
+        }
+
+        .report-note ul {
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .clearfix ::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <page size="A4">
+        <div class="container">
+            <header>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="logo" id="logo">
+                                <img class="img-fluid"
+                                    src="http://localhost/media/5ed09d4d1dc6913c08df27ea_hbtmzncs.png">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="header-content text-center" id="header-content">
+                                <h3 style="text-align: center;">Công ty cổ phần chứng khoán thương mại và công nghiệp
+                                    việt
+                                    nam</h3>
+                                <div style="text-align: center;"><b>Trụ sở ch&iacute;nh:</b>&nbsp;Villa số 3, 02 Bis
+                                    Nguyễn
+                                    Thị Minh
+                                    Khai,
+                                    Quận 1, TP Hồ Ch&iacute; Minh - Tel : (84-28) 39110788 - Fax : (84-28) 39110789 -
+                                    Email:<a href="mailto:info@vics.com.vn">info@vics.com.vn</a></div>
+                                <div style="text-align: center;"><b>Chi nh&aacute;nh: H&agrave;
+                                        Th&agrave;nh</b>&nbsp;Tầng
+                                    4, H&agrave;
+                                    Th&agrave;nh Plaza, 102 Th&aacute;i Thịnh, Đống Đa, H&agrave; Nội Tel:(84-24)
+                                    35148766 -
+                                    Fax:(84-24)
+                                    35148768</div>
+                                <div style="text-align: center;"><b>Chi nh&aacute;nh: H&agrave; Nội</b>&nbsp;Tầng 8,
+                                    th&aacute;p B,
+                                    t&ograve;a nh&agrave; s&ocirc;ng đ&agrave;, đường Phạm H&ugrave;ng, Phường Mỹ
+                                    Đ&igrave;nh 1, quận
+                                    Nam Từ
+                                    Li&ecirc;m, H&agrave; Nội Tel:(84-24) 35149999 - Fax:(84-24) 35548669</div>
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+
+
+            </header>
+            <div class="body">
+                <div class="report-title text-center">
+                    <h1 class="text-uppercase">phiếu bầu</h1>
+                    <h2 class="text-uppercase">Thành viên ban kiểm soát nhiệm kỳ 2018-2023</h2>
+                    <div class="text-description">(Đại hội đồng cổ đông thường niên năm 2019)</div>
+                </div>
+                <div class="report-content-info">
+                    <div class="report-content-info-base">
+                        <div class="info-item"> <span>Mã đại biểu:</span> <b>01</b> </div>
+                        <div class="info-item"> <span>Tên đại biểu:</span> <b>Nguyễn Xuân Biểu</b> </div>
+                        <div class="info-item"> <span>Số CMT/Hộ chiếu/ĐKKD: </span> <b>123456789</b> </div>
+                    </div>
+                    <div class="info-item"> <span>Địa chỉ/Trụ sở: </span> <span>2 bis Nguyễn Thị Minh Khai đakao, Quận 1
+                            HCM</span> </div>
+                </div>
+                <div class="report-content-right">
+                    <table>
+                        <tr class="right-item">
+                            <td>Số lượng cổ phần được quyền biểu quyết:</td>
+                            <td><span class="right-item-number"><b>11.552.689</b></span></td>
+                        </tr>
+                        <tr class="right-item">
+                            <td>Tổng số quyền biểu quyết ( =Số lượng cổ phần được quyền biểu quyết x Số thành viên được
+                                bầu):</td>
+                            <td> <span class="right-item-number"><b>69.316.134</b></span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="report-note">
+                    <div class="lable">Ghi chú</div>
+                    <div>
+                        <ul>
+                            <li>Đại biểu lựa chọn tối đa 3 ứng viên BKS, gạch ngang tên những ứng viên không được lựa
+                                chọn.
+                            </li>
+                            <li>Phiếu bầu hợp lệ là những phiếu do Ban tổ chức Đại Hội Cổ Đông phát hành.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="report-table">
+                    <table style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>Mã</th>
+                                <th>Ứng viên ban kiểm soát</th>
+                                <th style="width: 25rem;">Số lượng quyền biểu quyết bầu cho mỗi ứng viên</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> 01 </td>
+                                <td class="text-capitalize"> NGUYỄN THỊ HOA HUỆ </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> 02 </td>
+                                <td class="text-capitalize"> DƯƠNG THỊ TRINH </td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td> 02 </td>
+                                <td class="text-capitalize"> HỒ THỊ HIỀN </td>
+                                <td> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <footer id="footer-content container">
+                <div class="footer-content">
+                    <p style="text-align: center;"><b>&copy;</b>&nbsp;VICS Sercurities All right reserved - Designed and
+                        developed
+                        by VICS IT Department.</p>
+                </div>
+            </footer>
+        </div>
+    </page>
+</body>
+
+</html>

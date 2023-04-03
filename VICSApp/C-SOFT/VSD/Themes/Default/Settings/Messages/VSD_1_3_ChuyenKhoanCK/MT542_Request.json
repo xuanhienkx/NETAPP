@@ -1,0 +1,386 @@
+[
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "20C",
+        "qualifier": "SEME",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "OutReferenceNumber",
+                "length": 16,
+				"type":"Integer",
+				"format": "D16"
+            }
+        ]
+    },
+    {
+        "tag": "23G",
+        "parts": [
+            {
+                "name": "MessageFunctional", 
+                "default":"NEWM",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "PREP",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "RequestDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "optional": true,
+        "parts": [
+            { "default": "LINK" }
+        ]
+    },
+    {
+        "tag": "20C",
+        "qualifier": "PREV",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "PreviousReference",
+                "length": 16
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "optional": true,
+        "parts": [
+            { "default": "LINK" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "optional": true,
+        "parts": [
+            { "default": "LINK" }
+        ]
+    },
+    {
+        "tag": "20C",
+        "qualifier": "PCTI",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "RightPandingRefNumber",
+                "length": 16
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "optional": true,
+        "parts": [
+            { "default": "LINK" }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "TRADDET" }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "SETT",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "SettlementDate",
+                "length": 8,
+                "format": "yyyyMMdd",
+                "type": "Date"
+            }
+        ]
+    },
+    {
+        "tag": "35B",
+        "parts": [ 
+            {
+                "name": "StockCountryCode",
+                "length": 2, 
+                "default": "VN",
+                "start": "/",
+                "end": "/"
+            },
+            {
+                "name": "Code"
+            }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "optional": true,
+        "parts": [
+            { "default": "FIA" }
+        ]
+    },
+    {
+        "tag": "12A",
+        "qualifier": "CLAS",
+        "part_start": "/",
+        "parts": [
+             {
+                "name": "ActivityType",
+                "length": 4
+              },
+              {
+                "name": "SubType",
+                "length": 1
+              }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "optional": true,
+        "parts": [
+            { "default": "FIA" }
+        ]
+    },
+    {
+        "tag": "70E",
+        "qualifier": "SPRO",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "InfoNotes",
+                "line": 10,
+                "length": 35
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "TRADDET" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "FIAC" }
+        ]
+    },
+    {
+        "tag": "36B",
+        "qualifier": "SETT",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "UnitType",
+                "length": 4
+              },
+              {
+                "name": "Quantity",
+                "length": 15,
+                "type": "Integer"
+              }
+        ]
+    },
+    {
+        "tag": "70D",
+        "qualifier": "DENC",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "TransactionNotes",
+                "line": 6,
+                "length": 35
+            }
+        ]
+    },
+    {
+        "tag": "95P",
+        "qualifier": "ACOW",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "VicsBiccode",
+                "length": 11
+            }
+        ]
+    },
+    {
+        "tag": "97A",
+        "qualifier": "SAFE",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "CustomerNumber",
+                "length": 35
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "FIAC" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "SETDET" }
+        ]
+    },
+    {
+        "tag": "22F",
+        "qualifier": "SETR",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "SettlementType",
+                "default": "TRAD" ,
+                "length": 4
+            }
+        ]
+
+    },
+    {
+        "tag": "22F",
+        "qualifier": "STCO",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "SettlementCondition",
+                "default": "DLWM" ,
+                "length": 4
+            }
+        ]
+
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "SETPRTY" }
+        ]
+    },
+    {
+        "tag": "95P",
+        "qualifier": "PSET",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "VsdBiccode",
+                "length": 35
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "SETPRTY" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "SETPRTY" }
+        ]
+    },
+    {
+        "tag": "95P",
+        "qualifier": "DEAG",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "VicsBiccode",
+                "length": 11
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "SETPRTY" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "SETPRTY" }
+        ]
+    },
+    {
+        "tag": "95P",
+        "qualifier": "REAG",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ReceiverBiccode",
+                "length": 11
+            }
+        ]
+    },
+    {
+        "tag": "97A",
+        "qualifier": "SAFE",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ReceiverAccount",
+                "length": 35
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "SETPRTY" }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            {
+                "default": "SETDET"
+            }
+        ]
+    }
+]

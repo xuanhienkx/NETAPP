@@ -1,0 +1,52 @@
+﻿ @model SMS.Common.Models.SmsStatus
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1></h1>
+    </div>
+</div>
+<div class="row">
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Mã trạng thái</th>
+                <th>Trạng thái tin nhắn</th>
+                <th>Tổng số tin nhắn cần gửi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.CodeResult</td>
+                <td>@Model.StatusCode</td>
+                <td>@Model.TotalSent</td>
+            </tr>
+            <tr>
+                <th>Tổng số người nhận</th>
+                <th>Tổng số tin nhắn gửi thành công</th>
+                <th>Tổng số tin nhắn gửi thất bại</th>
+            </tr>
+            <tr>
+                <td>@Model.TotalReceiver</td>
+                <td>@Model.SuccessCount</td>
+                <td>@Model.FailedCount</td>
+            </tr>
+
+        </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        <div>
+                            Trạng thái tin nhắn:
+                            1: đang chờ duyệt
+                            2: đang chờ gửi
+                            3: đang gửi
+                            4: bị từ chối
+                            5: đã gửi xong
+                            6: đã bị xóa
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+    </table>
+</div>
+

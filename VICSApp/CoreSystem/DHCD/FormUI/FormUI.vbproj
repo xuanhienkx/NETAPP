@@ -1,0 +1,997 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF9E14A1-C34F-401E-B3FF-562DF853C283}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>pmDHCD.My.MyApplication</StartupObject>
+    <RootNamespace>pmDHCD</RootNamespace>
+    <AssemblyName>pmDHCD</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>Resources\Run.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>497F79E8BA498618B4EF9F1A733575E904271A49</ManifestCertificateThumbprint>
+    <ManifestKeyFile>FormUI_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>C:\Users\admin\Desktop\DHCD\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>pmDHCD.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>pmDHCD.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>pmDHCD.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>pmDHCD.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Crystal.Reports.Essentials.13.0.2000.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Crystal.Reports.Essentials.13.0.2000.0\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Crystal.Reports.Essentials.13.0.2000.0\lib\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Crystal.Reports.Essentials.13.0.2000.0\lib\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\CrystalDecisions.Windows.Forms.1.0.0\lib\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Lapas.Common, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Lapas.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Meeting\AuthorizationList.Designer.vb">
+      <DependentUpon>AuthorizationList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\AuthorizationList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting\AuthorizationsInsert.Designer.vb">
+      <DependentUpon>AuthorizationsInsert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\AuthorizationsInsert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting\AuthorizationUpdate.Designer.vb">
+      <DependentUpon>AuthorizationUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\AuthorizationUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting\CandidateList.Designer.vb">
+      <DependentUpon>CandidateList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\CandidateList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting\Candidates_ins_update.Designer.vb">
+      <DependentUpon>Candidates_ins_update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\Candidates_ins_update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clsCommon.vb" />
+    <Compile Include="Meeting\AuthorizationListForSelect.Designer.vb">
+      <DependentUpon>AuthorizationListForSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\AuthorizationListForSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting\DelegateListForSelect.Designer.vb">
+      <DependentUpon>DelegateListForSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\DelegateListForSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting\PrintHolders.Designer.vb">
+      <DependentUpon>PrintHolders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\PrintHolders.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\phieubauHDQT.vb">
+      <DependentUpon>phieubauHDQT.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\ReportViewer.Designer.vb">
+      <DependentUpon>ReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ThongTinCuocHop.vb">
+      <DependentUpon>ThongTinCuocHop.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\PhieuXacNhan.vb">
+      <DependentUpon>PhieuXacNhan.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\thebieuquyet_2.vb">
+      <DependentUpon>thebieuquyet_2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Meeting\HolderListForSelect.Designer.vb">
+      <DependentUpon>HolderListForSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\HolderListForSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSReportSouce.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSReportSouce.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSReportSouce.vb">
+      <DependentUpon>DSReportSouce.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmReport.Designer.vb">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frmReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sentate.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sentate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vote\IllegalElectionList.Designer.vb">
+      <DependentUpon>IllegalElectionList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vote\IllegalElectionList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\phieubauBKS.vb">
+      <DependentUpon>phieubauBKS.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\phieubieuquyet2.vb">
+      <DependentUpon>phieubieuquyet2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\phieubieuquyet1.vb">
+      <DependentUpon>phieubieuquyet1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Meeting\DelegateList.Designer.vb">
+      <DependentUpon>DelegateList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\DelegateList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting\DelegateUpdate.Designer.vb">
+      <DependentUpon>DelegateUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\DelegateUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting\Delegate_ins.Designer.vb">
+      <DependentUpon>Delegate_ins.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\Delegate_ins.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vote\ElectionList.Designer.vb">
+      <DependentUpon>ElectionList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vote\ElectionList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vote\Elections_result.Designer.vb">
+      <DependentUpon>Elections_result.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vote\Elections_result.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vote\ElectionVoteList.Designer.vb">
+      <DependentUpon>ElectionVoteList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vote\ElectionVoteList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vote\Electionvote_ins_update.Designer.vb">
+      <DependentUpon>Electionvote_ins_update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vote\Electionvote_ins_update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vote\election_ins_update.Designer.vb">
+      <DependentUpon>election_ins_update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vote\election_ins_update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting\HolderList.Designer.vb">
+      <DependentUpon>HolderList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\HolderList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting\Holder_ins_update.Designer.vb">
+      <DependentUpon>Holder_ins_update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\Holder_ins_update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainform.Designer.vb">
+      <DependentUpon>Mainform.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vote\MatterList.Designer.vb">
+      <DependentUpon>MatterList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vote\MatterList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vote\MatterVoteList.Designer.vb">
+      <DependentUpon>MatterVoteList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vote\MatterVoteList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vote\MatterVoteResult.Designer.vb">
+      <DependentUpon>MatterVoteResult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vote\MatterVoteResult.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vote\MatterVotes_ins_remain.Designer.vb">
+      <DependentUpon>MatterVotes_ins_remain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vote\MatterVotes_ins_remain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vote\Mattervote_ins_update.Designer.vb">
+      <DependentUpon>Mattervote_ins_update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vote\Mattervote_ins_update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vote\Matter_ins_update.Designer.vb">
+      <DependentUpon>Matter_ins_update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vote\Matter_ins_update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting\MeetingInfoshow.Designer.vb">
+      <DependentUpon>MeetingInfoshow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\MeetingInfoshow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting\MeetingList.Designer.vb">
+      <DependentUpon>MeetingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\MeetingList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meeting\Meeting_ins_update.Designer.vb">
+      <DependentUpon>Meeting_ins_update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\Meeting_ins_update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\thebieuquyet.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>thebieuquyet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Meeting\AuthorizationList.resx">
+      <DependentUpon>AuthorizationList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\AuthorizationsInsert.resx">
+      <DependentUpon>AuthorizationsInsert.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\AuthorizationUpdate.resx">
+      <DependentUpon>AuthorizationUpdate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\CandidateList.resx">
+      <DependentUpon>CandidateList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\Candidates_ins_update.resx">
+      <DependentUpon>Candidates_ins_update.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\AuthorizationListForSelect.resx">
+      <DependentUpon>AuthorizationListForSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\DelegateListForSelect.resx">
+      <DependentUpon>DelegateListForSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\PrintHolders.resx">
+      <DependentUpon>PrintHolders.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\phieubauHDQT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>phieubauHDQT.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportViewer.resx">
+      <DependentUpon>ReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ThongTinCuocHop.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ThongTinCuocHop.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PhieuXacNhan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PhieuXacNhan.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\thebieuquyet_2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>thebieuquyet_2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\HolderListForSelect.resx">
+      <DependentUpon>HolderListForSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmReport.resx">
+      <DependentUpon>frmReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vote\IllegalElectionList.resx">
+      <DependentUpon>IllegalElectionList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\phieubauBKS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>phieubauBKS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\phieubieuquyet2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>phieubieuquyet2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\phieubieuquyet1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>phieubieuquyet1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\DelegateList.resx">
+      <DependentUpon>DelegateList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\DelegateUpdate.resx">
+      <DependentUpon>DelegateUpdate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\Delegate_ins.resx">
+      <DependentUpon>Delegate_ins.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vote\ElectionList.resx">
+      <DependentUpon>ElectionList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vote\Elections_result.resx">
+      <DependentUpon>Elections_result.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vote\ElectionVoteList.resx">
+      <DependentUpon>ElectionVoteList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vote\Electionvote_ins_update.resx">
+      <DependentUpon>Electionvote_ins_update.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vote\election_ins_update.resx">
+      <DependentUpon>election_ins_update.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\HolderList.resx">
+      <DependentUpon>HolderList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\Holder_ins_update.resx">
+      <DependentUpon>Holder_ins_update.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainform.resx">
+      <DependentUpon>Mainform.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vote\MatterList.resx">
+      <DependentUpon>MatterList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vote\MatterVoteList.resx">
+      <DependentUpon>MatterVoteList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vote\MatterVoteResult.resx">
+      <DependentUpon>MatterVoteResult.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vote\MatterVotes_ins_remain.resx">
+      <DependentUpon>MatterVotes_ins_remain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vote\Mattervote_ins_update.resx">
+      <DependentUpon>Mattervote_ins_update.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vote\Matter_ins_update.resx">
+      <DependentUpon>Matter_ins_update.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\MeetingInfoshow.resx">
+      <DependentUpon>MeetingInfoshow.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\MeetingList.resx">
+      <DependentUpon>MeetingList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meeting\Meeting_ins_update.resx">
+      <DependentUpon>Meeting_ins_update.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\thebieuquyet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>thebieuquyet.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Sentate.xsc">
+      <DependentUpon>Sentate.xsd</DependentUpon>
+    </None>
+    <None Include="Sentate.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sentate.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Sentate.xss">
+      <DependentUpon>Sentate.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adminstrative-Tools.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio_CD.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio-CDs.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BMP-Image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD-Drive.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close Folder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Closed-Folder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Command.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control-Panel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cryo_acrobat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cryo_adobesuite.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cryo_golive.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cryo_illustrator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cryo_indesign.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cryoaccess.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cryoexcel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cryofrontpage.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cryoppoint.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cryoutlook.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cryovisio.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cryoword.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Default.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Default_b.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop_b.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DialUp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dial-Up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E-Mail.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favourites.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy-Drive.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GIF-Image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Globe.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HD-Partitions.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HTML.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IE.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JPG-Image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Media-Player.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie-clip.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MP3-File.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My Computer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My Documents1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My Documents2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My Music.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My Pictures.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My Video.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\my_pics.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My-Computer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My-Documents1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My-Documents.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My-Music.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My-Network-Places.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My-Pictures.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My-Videos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network_b.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NTDDiscon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NTDEn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nt-Services.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office02.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_access.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_doc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_dot.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_mdb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_ppt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_vsd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office_xls.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\officemac01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\officemac02.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open Folder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open-Folder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photoshopcs.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play-List.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Program-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recent-Docs.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recycle Bin%28Empty%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recycle Bin%28Full%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecycleBin-Empty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecycleBin-Full.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Removable-Drive.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Run.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Run_b.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SET-File.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shortcut-Arrow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text-Document.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workgroup.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DSReportSouce.xsc">
+      <DependentUpon>DSReportSouce.xsd</DependentUpon>
+    </None>
+    <None Include="DSReportSouce.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSReportSouce.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DSReportSouce.xss">
+      <DependentUpon>DSReportSouce.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\ZIP-File.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.vbproj">
+      <Project>{EFE7B421-87E9-4ABF-A411-92EAA1188C1D}</Project>
+      <Name>BenlyDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\Lapas.Common.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

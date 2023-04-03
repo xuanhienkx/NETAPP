@@ -1,0 +1,297 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:CS.UI.Controls"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:common="clr-namespace:CS.UI.Common;assembly=CS.UI.Common">
+
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+      
+    <DataTemplate x:Key="NavigationItemDataTemplate" DataType="{x:Type common:NavigationItem}">
+        <Border Padding="0 5 10 5"
+                Background="Transparent">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <materialDesign:PackIcon x:Name="PackIcon"
+                                         Kind="{Binding Icon}"
+                                         VerticalAlignment="Center"
+                                         HorizontalAlignment="Center"
+                                         Height="20" Width="20"
+                                         Focusable="False" IsTabStop="False"
+                                         Foreground="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=RadioButton}}"/>
+                <TextBlock Grid.Column="1"
+                           VerticalAlignment="Center"
+                           FontSize="13"
+                           Text="{Binding Title}" 
+                           Foreground="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=RadioButton}}"/>
+            </Grid>
+        </Border>
+        <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding Icon}" Value="CheckboxBlankCircle">
+                <Setter TargetName="PackIcon" Property="Width" Value="5"/>
+                <Setter TargetName="PackIcon" Property="Height" Value="5"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Icon}" Value="EmoticonPoop">
+                <Setter TargetName="PackIcon" Property="Visibility" Value="Hidden"/>
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+
+    <Style x:Key="NavigationItemExpanderToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border BorderThickness="0"  Background="{TemplateBinding Background}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition From="Unchecked" To="Checked">
+                                        <VisualTransition.GeneratedEasingFunction>
+                                            <QuarticEase EasingMode="EaseOut"/>
+                                        </VisualTransition.GeneratedEasingFunction>
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)" Storyboard.TargetName="ExpandPath">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-90"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualTransition>
+                                    <VisualTransition GeneratedDuration="0" To="Unchecked">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)" Storyboard.TargetName="ExpandPath">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="-90"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualTransition>
+                                    <VisualTransition GeneratedDuration="0" To="Checked">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)" Storyboard.TargetName="ExpandPath">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualTransition>
+                                    <VisualTransition From="Checked" GeneratedDuration="0" To="Unchecked">
+                                        <VisualTransition.GeneratedEasingFunction>
+                                            <QuarticEase EasingMode="EaseOut"/>
+                                        </VisualTransition.GeneratedEasingFunction>
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)" Storyboard.TargetName="ExpandPath">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="-90"/>
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualTransition>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)" Storyboard.TargetName="ExpandPath">
+                                            <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-90"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)" Storyboard.TargetName="ExpandPath">
+                                            <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <ContentPresenter ContentSource="{TemplateBinding Content}" HorizontalAlignment="Left"/>
+
+                            <materialDesign:PackIcon Grid.Column="1"
+                                                     VerticalAlignment="Center"
+                                                     Kind="ChevronRight" Opacity=".38" x:Name="ExpandPath" 
+                                                     RenderTransformOrigin="0.5,0.5"
+                                                     Margin="3 0"
+                                                     Height="20" Width="20" 
+                                                     Foreground="{DynamicResource MaterialDesignPaper}">
+                                <materialDesign:PackIcon.RenderTransform>
+                                    <RotateTransform />
+                                </materialDesign:PackIcon.RenderTransform>
+                            </materialDesign:PackIcon>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="RadioButtonItemStyle" TargetType="RadioButton">
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryAccentForegroundBrush}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="IsChecked" Value="{Binding IsSelected, Mode=TwoWay}"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource MenuHoverBackgroundBrush}"/>
+                <Setter Property="Foreground" Value="{DynamicResource MenuSelectedForegroundBrush}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TreeViewItemOptionStyle" TargetType="RadioButton" 
+           BasedOn="{StaticResource RadioButtonItemStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border x:Name="NavigationItem" 
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter ContentSource="{TemplateBinding Content}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Foreground" Value="{DynamicResource MenuSelectedForegroundBrush}"/>
+                            <Setter TargetName="NavigationItem" Property="BorderBrush" Value="{DynamicResource CSoftHighlightBrush}"/>
+                            <Setter TargetName="NavigationItem" Property="BorderThickness" Value="0 0 2 0"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TreeViewItemOptionExpandableStyle" TargetType="RadioButton" 
+           BasedOn="{StaticResource RadioButtonItemStyle}">
+        <Setter Property="IsChecked" Value="{Binding IsExpanded, Mode=TwoWay}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <ToggleButton Foreground="{TemplateBinding Foreground}"
+                                  Background="{TemplateBinding Background}"
+                                  IsChecked="{Binding IsExpanded, Mode=TwoWay}"
+                                  Style="{StaticResource NavigationItemExpanderToggleButton}"
+                                  RenderTransformOrigin="0.5,0.5">
+                        <ContentPresenter ContentSource="{TemplateBinding Content}"/>
+                    </ToggleButton>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="TreeViewItemExpandedStyle" TargetType="{x:Type TreeViewItem}">
+        <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+        <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+        <Setter Property="Padding" Value="8" />
+        <Setter Property="FocusVisualStyle" Value="{DynamicResource MaterialDesignTreeViewItemFocusVisual}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TreeViewItem}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <RadioButton x:Name="NavigationOption"
+                                     Command="{Binding Command, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=controls:NavigationMenu}}"
+                                     CommandParameter="{Binding}"
+                                     GroupName="{Binding Group}"
+                                     Content="{Binding Header, RelativeSource={RelativeSource TemplatedParent}}"
+                                     ContentTemplate="{StaticResource NavigationItemDataTemplate}"
+                                     Style="{StaticResource TreeViewItemOptionStyle}">
+                        </RadioButton>
+
+                        <controls:RevealPanel x:Name="ItemsHost"
+                                              Grid.Row="1"
+                                              Visibility="Collapsed"
+                                              VerticalReveal="FromTopToBottom"
+                                              HorizontalReveal="FromRightToLeft"
+                                              Width="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=controls:NavigationMenu}, Path=Width}">
+
+                            <Border Background="{DynamicResource SubMenuBackgroundBrush}"
+                                    BorderThickness="0 0 2 0" BorderBrush="{DynamicResource CSoftHighlightBrush}"
+                                    Padding="0 0 0 0" 
+                                    HorizontalAlignment="Stretch">
+                                <ItemsPresenter HorizontalAlignment="Stretch"/>
+                            </Border>
+                        </controls:RevealPanel>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasItems" Value="True">
+                            <Setter TargetName="NavigationOption" Property="Style" Value="{StaticResource TreeViewItemOptionExpandableStyle}"/>
+                            <Setter TargetName="ItemsHost" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+
+                        <Trigger Property="IsExpanded" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation BeginTime="0:0:0.2"  Storyboard.TargetName="ItemsHost"
+                                                         Storyboard.TargetProperty="AnimationProgress"
+                                                         Duration="0:0:0.2" To="1" DecelerationRatio="1" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="ItemsHost"
+                                                         Storyboard.TargetProperty="AnimationProgress"
+                                                         Duration="0:0:0.2" AccelerationRatio="1" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="VirtualizingStackPanel.IsVirtualizing" Value="true">
+                <Setter Property="ItemsPanel">
+                    <Setter.Value>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel/>
+                        </ItemsPanelTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="NavigationMenuStyle" TargetType="TreeView" >
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource TreeViewItemExpandedStyle}"/>
+        <Setter Property="ItemTemplate">
+            <Setter.Value>
+                <HierarchicalDataTemplate DataType="{x:Type common:NavigationItem}"
+                                          ItemsSource="{Binding SubItems}">
+                    <ContentPresenter Content="{Binding}"/>
+                </HierarchicalDataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="controls:NavigationMenu" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                                  HorizontalScrollBarVisibility="Auto">
+                        <TreeView x:Name="TreeView"
+                                  Background="{DynamicResource SecondaryAccentBrush}"
+                                  ItemsSource="{Binding ItemsSource, RelativeSource={RelativeSource TemplatedParent}}"
+                                  Style="{StaticResource NavigationMenuStyle}"/>
+                    </ScrollViewer>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

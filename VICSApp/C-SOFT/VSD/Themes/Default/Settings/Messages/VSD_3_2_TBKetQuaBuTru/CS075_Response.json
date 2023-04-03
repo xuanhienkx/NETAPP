@@ -1,0 +1,148 @@
+{
+    "code": "CS075",
+    "name": "CS075- Thông báo tổng hợp kết quả bù trừ đa phương và thanh toán tiền giao dịch trái phiếu đã điều chỉnh (gửi thành viên lưu ký)",
+    "parameters": [
+        {
+            "name": "MemberCode",
+            "start": "MICODE:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "Period",
+            "start": "PERIOD:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "TransactionDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "start": "TRANDATE:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "BoardId",
+            "start": "BRID:",
+            "end": "<BrLine>"
+        }
+    ],
+    "csvFields": [
+        {
+            "name": "DateAndCode",
+            "end": ";"
+        },
+        {
+            "name": "CurrencyUnit",
+            "end": ";"
+        },
+        {
+            "name": "BondOrStockFund",
+            "end": ";"
+        },
+        {
+            "name": "DateOfValidity",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "ExchangeCode",
+            "end": ";"
+        },
+        {
+            "name": "MemberCode",
+            "end": ";"
+        },
+        {
+            "name": "MemberName",
+            "end": ";"
+        },
+        {
+            "name": "CompanyBuy",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "CompanySell",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "ExchangeName",
+            "end": ";"
+        },
+        {
+            "name": "CompanyPay",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "CompanyReceived",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "SellBroker",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "BuyBroker",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "BrokerPay",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "BrokerReceived",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "BuyForeignBroker",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "SellForeignBroker",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "ForeignBrokerPay",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "ForeignBrokerReceived",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "BuyQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "SellQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "PaymentQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "ReceivedQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "Type",
+            "end": ";"
+        }
+    ]
+}

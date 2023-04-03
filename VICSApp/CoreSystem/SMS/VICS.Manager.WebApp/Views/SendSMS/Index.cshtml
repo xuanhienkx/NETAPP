@@ -1,0 +1,117 @@
+﻿<div id="header-page" class="row wrapper border-bottom  page-heading">
+    <div class="col-lg-10">
+        <h2>Gửi tin nhắn thông báo</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Trang chủ</a>
+            </li>
+            <li class="active">
+                <strong>Gửi tin</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+        <div class="list-icon">
+            <ul>
+                <li>
+                    <a href="@Url.Action("Create","Customer")" title="tạo mới"><i class="fa fa-plus-circle fa-2x fa-w"></i></a>
+                </li>
+                <li>
+                    <a href="#" title="filter" id="filter-icon" class="isShow"><i class="fa fa-filter fa-2x fa-w"></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div id="SendByExcel">
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.TextArea("Content", new { @class = "form-control", placeholder = "Nội dung", rows = 5 })
+                @Html.ValidationMessage("Content", "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2">
+                <input type="checkbox" name="isDetail" id="isDetail" checked="checked" /> Thông báo chung
+                
+                <button class="btn btn-primary" id="createMessage">Tạo và gửi tin nhắn</button>
+                <a class="btn btn-link" href='~/filemau.xls' target="_blank">File Mẫu</a>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 10px; margin-bottom: 10px">
+        <div class="col-md-10">
+            @{Html.RenderPartial("_UploadFile");}
+        </div>
+        <div class="col-md-2">
+            @* <button class="btn btn-primary hidden">Gửi tin nhắn</button>*@
+        </div>
+    </div>
+    <div id="ListData">
+
+    </div>
+
+</div>
+<script type="text/javascript">
+    $('.btn-file :file').on('change', function (e) {
+        var input = $(this),
+            numFiles = input.get(0).files ? input.get(0).files.length : 1,
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+        input.trigger('fileselect', [numFiles, label]);
+
+    });
+
+    $(document).ready(function () {
+        $('.btn-file :file').on('fileselect', function (event, numFiles, label) {
+            var input = $(this).parents('.input-group').find(':text'),
+                log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+            if (input.length) {
+                input.val(log);
+                $("#fileUpload").submit();
+            } else {
+                if (log) alert(log);
+            }
+        });
+        $("#isDetail").on("click", function () {
+            var checked = $(this).is(":checked");
+            if (checked == true) {
+                $("#Content").removeAttr("disabled");
+            } else {
+                $("#Content").prop("disabled", "disabled");
+            }
+        });
+        $("#createMessage").click(function () {
+            var isNomal = $("#isDetail").is(":checked");
+            if ($("#Content").val() === "" && isNomal === true) {
+                $("#Content").focus();
+                return false;
+            }
+            var listCust = getListId();
+            var action = '@Url.Action("CreateMessage", "SendSms")';
+            if (listCust !== null || listCust !== []) {
+
+                $.mbqAjax({
+                    type: "POST",
+                    url: action,
+                    data: { ids: listCust, message: $("#Content").val(), isNomalinfo: isNomal },
+                    targetId: "ListData"
+                });
+            }
+
+        });
+
+    });
+
+    function getListId() {
+        var arr = [];
+        $(".xls_checked").each(function () {
+            if ($(this).is(":checked")) {
+                var id = $(this).attr("name");
+                arr.push(id);
+            }
+        });
+        return arr;
+    }
+
+</script>

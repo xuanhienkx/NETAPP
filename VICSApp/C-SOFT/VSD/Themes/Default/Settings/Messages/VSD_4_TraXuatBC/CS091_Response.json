@@ -1,0 +1,49 @@
+{
+  "code": "CS091",
+  "name": "CS091- Báo cáo tổng hợp tình hình xác nhận số liệu của TVLK",
+  "parameters": [
+    {
+      "name": "ReportDate",
+      "type": "Date",
+      "format": "dd/MM/yyyy",
+      "start": "TRANDATE:",
+      "end": "<BrLine>"
+    },
+    {
+      "name": "ReportByCode",
+      "start": "RPTID:"
+    }
+  ],
+  "csvFields": [
+    {
+      "name": "DateAndCode",
+      "end": ";"
+    },
+    {
+      "name": "ConfirmType",
+      "end": ";"
+    },
+    {
+      "name": "MemberCode",
+      "end": ";"
+    },
+    {
+      "name": "MemberName",
+      "end": ";"
+    },
+    {
+      "name": "ConfirmDate",
+      "type": "Date",
+      "format": "dd/MM/yyyy",
+      "end": ";"
+    },
+    {
+      "name": "ReportName",
+      "end": ";"
+    },
+    {
+      "name": "ConfirmType",
+      "end": ";"
+    }
+  ]
+}

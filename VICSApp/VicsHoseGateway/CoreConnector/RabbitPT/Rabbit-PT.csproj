@@ -1,0 +1,931 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D3DC767-812D-4699-8293-6F6F64B5C7C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HOGW_PT_Dealer</RootNamespace>
+    <AssemblyName>Rabbit-PT</AssemblyName>
+    <ApplicationIcon>graph.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>271F3A4211F3CEA4640A5EDC30A4C74DEFA828CC</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Rabbit-PT_1_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <PublishUrl>ftp://10.10.5.5/apps/hosept/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://apps.vics.com.vn/hosept/</InstallUrl>
+    <ProductName>Rabbit-PT</ProductName>
+    <PublisherName>VICS - Utitilies</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>2.0.1.5</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v7.2">
+      <HintPath>..\References\DevExpress\DevExpress.Data.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v7.2">
+      <HintPath>..\References\DevExpress\DevExpress.Utils.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v7.2">
+      <HintPath>..\References\DevExpress\DevExpress.XtraEditors.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v7.2">
+      <HintPath>..\References\DevExpress\DevExpress.XtraGrid.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntLib4.DAAB.4.1.0\lib\net35\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntLib4.DAAB.4.1.0\lib\net35\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntLib4.DAAB.4.1.0\lib\net35\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsSettings.cs" />
+    <Compile Include="ConnectToSBS.cs" />
+    <Compile Include="ConnectToSBSFacade.cs" />
+    <Compile Include="ConvertUtils.cs" />
+    <Compile Include="Form_1Firm\frmAdvDeals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_1Firm\frmAdvDeals.Designer.cs">
+      <DependentUpon>frmAdvDeals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_1Firm\frmAdvCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_1Firm\frmAdvCancel.Designer.cs">
+      <DependentUpon>frmAdvCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_1Firm\frm1FirmDealCancelSupper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_1Firm\frm1FirmDealCancelSupper.Designer.cs">
+      <DependentUpon>frm1FirmDealCancelSupper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_1Firm\frm1FirmDealCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_1Firm\frm1FirmDealCancel.Designer.cs">
+      <DependentUpon>frm1FirmDealCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_1Firm\frm1FirmDeals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_1Firm\frm1FirmDeals.Designer.cs">
+      <DependentUpon>frm1FirmDeals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_1Firm\frmAdvApprove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_1Firm\frmAdvApprove.Designer.cs">
+      <DependentUpon>frmAdvApprove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_1Firm\frmMakeNewAdv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_1Firm\frmMakeNewAdv.Designer.cs">
+      <DependentUpon>frmMakeNewAdv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_1Firm\frmMakeNewPT1FirmDeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_1Firm\frmMakeNewPT1FirmDeal.Designer.cs">
+      <DependentUpon>frmMakeNewPT1FirmDeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_2FirmBuyer\frm2FirmBuyerDeals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_2FirmBuyer\frm2FirmBuyerDeals.Designer.cs">
+      <DependentUpon>frm2FirmBuyerDeals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_2FirmSeller\frm2FirmSellerDeals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_2FirmSeller\frm2FirmSellerDeals.Designer.cs">
+      <DependentUpon>frm2FirmSellerDeals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_1Firm\frmAdvAnnounce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_1Firm\frmAdvAnnounce.Designer.cs">
+      <DependentUpon>frmAdvAnnounce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTMasterThread.cs" />
+    <Compile Include="UserControls\EnhancedComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\EnhancedComboBox.Designer.cs">
+      <DependentUpon>EnhancedComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_2FirmBuyer\frm2FirmBuyerApproveSellerCancelDealSuper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_2FirmBuyer\frm2FirmBuyerApproveSellerCancelDealSuper.Designer.cs">
+      <DependentUpon>frm2FirmBuyerApproveSellerCancelDealSuper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_2FirmBuyer\frm2FirmBuyerApproveSellerCancelDeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_2FirmBuyer\frm2FirmBuyerApproveSellerCancelDeal.Designer.cs">
+      <DependentUpon>frm2FirmBuyerApproveSellerCancelDeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_2FirmSeller\frm2FirmSellerCancelSuper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_2FirmSeller\frm2FirmSellerCancelSuper.Designer.cs">
+      <DependentUpon>frm2FirmSellerCancelSuper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_2FirmSeller\frm2FirmSellerCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_2FirmSeller\frm2FirmSellerCancel.Designer.cs">
+      <DependentUpon>frm2FirmSellerCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_1Firm\frm1FirmDealApprove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_1Firm\frm1FirmDealApprove.Designer.cs">
+      <DependentUpon>frm1FirmDealApprove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_2FirmBuyer\frm2FirmBuyerApproveSuper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_2FirmBuyer\frm2FirmBuyerApproveSuper.Designer.cs">
+      <DependentUpon>frm2FirmBuyerApproveSuper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_2FirmBuyer\frm2FirmBuyerApprove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_2FirmBuyer\frm2FirmBuyerApprove.Designer.cs">
+      <DependentUpon>frm2FirmBuyerApprove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_2FirmSeller\frm2FirmSellerApprove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_2FirmSeller\frm2FirmSellerApprove.Designer.cs">
+      <DependentUpon>frm2FirmSellerApprove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Authen\frmLoginPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Authen\frmLoginPT.Designer.cs">
+      <DependentUpon>frmLoginPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainPT.Designer.cs">
+      <DependentUpon>frmMainPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_2FirmSeller\frmMakeNewPTDeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_2FirmSeller\frmMakeNewPTDeal.Designer.cs">
+      <DependentUpon>frmMakeNewPTDeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Web References\HosePTConnector\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SBSCommon\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SBSGateway\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form_1Firm\frmAdvDeals.resx">
+      <DependentUpon>frmAdvDeals.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_1Firm\frmAdvCancel.resx">
+      <DependentUpon>frmAdvCancel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_1Firm\frm1FirmDealCancelSupper.resx">
+      <DependentUpon>frm1FirmDealCancelSupper.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_1Firm\frm1FirmDealCancel.resx">
+      <DependentUpon>frm1FirmDealCancel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_1Firm\frm1FirmDeals.resx">
+      <DependentUpon>frm1FirmDeals.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_1Firm\frmAdvApprove.resx">
+      <DependentUpon>frmAdvApprove.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_1Firm\frmMakeNewAdv.resx">
+      <DependentUpon>frmMakeNewAdv.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_1Firm\frmMakeNewPT1FirmDeal.resx">
+      <DependentUpon>frmMakeNewPT1FirmDeal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_2FirmBuyer\frm2FirmBuyerDeals.resx">
+      <DependentUpon>frm2FirmBuyerDeals.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_2FirmSeller\frm2FirmSellerDeals.resx">
+      <DependentUpon>frm2FirmSellerDeals.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_1Firm\frmAdvAnnounce.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAdvAnnounce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="UserControls\EnhancedComboBox.resx">
+      <DependentUpon>EnhancedComboBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_2FirmBuyer\frm2FirmBuyerApproveSellerCancelDealSuper.resx">
+      <DependentUpon>frm2FirmBuyerApproveSellerCancelDealSuper.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_2FirmBuyer\frm2FirmBuyerApproveSellerCancelDeal.resx">
+      <DependentUpon>frm2FirmBuyerApproveSellerCancelDeal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_2FirmSeller\frm2FirmSellerCancelSuper.resx">
+      <DependentUpon>frm2FirmSellerCancelSuper.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_2FirmSeller\frm2FirmSellerCancel.resx">
+      <DependentUpon>frm2FirmSellerCancel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_1Firm\frm1FirmDealApprove.resx">
+      <DependentUpon>frm1FirmDealApprove.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_2FirmBuyer\frm2FirmBuyerApproveSuper.resx">
+      <DependentUpon>frm2FirmBuyerApproveSuper.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_2FirmBuyer\frm2FirmBuyerApprove.resx">
+      <DependentUpon>frm2FirmBuyerApprove.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_2FirmSeller\frm2FirmSellerApprove.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frm2FirmSellerApprove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Authen\frmLoginPT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLoginPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainPT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMainPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_2FirmSeller\frmMakeNewPTDeal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMakeNewPTDeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Web References\CoreConnector\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\HoseConnector\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <None Include="Web References\CoreConnector\Branch.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\Branch1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\CoreStockOrderCancel.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\CoreStockOrderCancel1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\CoreStockOrderChange.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\CoreStockOrderChange1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\Customer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\Customer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\CustomerBalance.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\CustomerBalance1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\CustomerCompact.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\CustomerCompact1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\Securities.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\Securities1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\StockOrder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CoreConnector\StockOrder1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HoseConnector\GWStockData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HoseConnector\GWStockData1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HoseConnector\GWStockPrice.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HoseConnector\GWStockPrice1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HoseConnector\GWTradingDay.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HoseConnector\GWTradingDay1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HoseConnector\HOGWValidOutput.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HoseConnector\HOGWValidOutput1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HosePTConnector\ADVERTISEMENT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HosePTConnector\ADVERTISEMENT_ANNOUCEMENT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HosePTConnector\LoginResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HosePTConnector\ONE_FIRM_DEAL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HosePTConnector\PTConnectorWS.wsdl" />
+    <None Include="Web References\HosePTConnector\PT_ADVERTISEMENT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HosePTConnector\PT_ADVERTISEMENT_ANNOUCEMENT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HosePTConnector\PT_FIRM.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HosePTConnector\PT_ONE_FIRM_DEAL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HosePTConnector\PT_TRADER.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HosePTConnector\PT_TWO_FIRM_DEAL_BUYER.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HosePTConnector\PT_TWO_FIRM_DEAL_SELLER.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HosePTConnector\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HosePTConnector\TWO_FIRM_DEAL_BUYER.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HosePTConnector\TWO_FIRM_DEAL_SELLER.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SBSCommon\CommonService.wsdl" />
+    <None Include="Web References\SBSCommon\CustomerTransactionDay.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SBSCommon\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SBSCommon\StockData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SBSCommon\StockPrice.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SBSGateway\CommonService.wsdl" />
+    <None Include="Web References\SBSGateway\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SBSGateway\StockData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SBSGateway\StockPrice.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="graph.ico" />
+    <None Include="Web References\SBSCommon\CommonService.disco" />
+    <None Include="Web References\HosePTConnector\PTConnectorWS.disco" />
+    <None Include="Web References\SBSGateway\CommonService.disco" />
+    <None Include="Web References\CoreConnector\CoreConnectorWS.disco" />
+    <None Include="Web References\CoreConnector\CoreConnectorWS.wsdl" />
+    <None Include="Web References\CoreConnector\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HoseConnector\GWConnectorWS.disco" />
+    <None Include="Web References\HoseConnector\GWConnectorWS.wsdl" />
+    <None Include="Web References\HoseConnector\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://testserver.vics.com.vn/gateway/common.net4.v1/CommonService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SBSCommon\</RelPath>
+      <UpdateFromURL>http://testserver.vics.com.vn/gateway/common.net4.v1/CommonService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SBSCommon_CommonService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.10.1.29/HosePTConnector/PTConnectorWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HosePTConnector\</RelPath>
+      <UpdateFromURL>http://10.10.1.29/HosePTConnector/PTConnectorWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HosePTConnector_PTConnectorWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://testserver.vics.com.vn/gateway/SBSGateway30/CommonService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SBSGateway\</RelPath>
+      <UpdateFromURL>http://testserver.vics.com.vn/gateway/SBSGateway30/CommonService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SBSGateway_CommonService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.10.1.29/HoseConnector/GWConnectorWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HoseConnector\</RelPath>
+      <UpdateFromURL>http://10.10.1.29/HoseConnector/GWConnectorWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HoseConnector_GWConnectorWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.10.1.29/CoreConnector/CoreConnectorWS.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CoreConnector\</RelPath>
+      <UpdateFromURL>http://10.10.1.29/CoreConnector/CoreConnectorWS.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CoreConnector_CoreConnectorWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Enterprise.Framework">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Enterprise.InfoStore">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Enterprise.PluginManager">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.KeyCode">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="EnvDTE">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="EnvDTE80">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Practices.Unity">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.CommandBars">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.TemplateWizardInterface">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="VSLangProj">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InterStock\InterStock.csproj">
+      <Project>{84C4C535-22ED-4B51-ADA8-0B6AA8ABA6A0}</Project>
+      <Name>InterStock</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrderChecker\OrderChecker.csproj">
+      <Project>{B9CBFF36-B353-40CB-AED4-39D1B642FACA}</Project>
+      <Name>OrderChecker</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

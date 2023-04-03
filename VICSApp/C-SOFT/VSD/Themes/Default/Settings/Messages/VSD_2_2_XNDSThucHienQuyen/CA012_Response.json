@@ -1,0 +1,100 @@
+{
+    "code": "CA012",
+    "name": "CA012- Danh sách người sở hữu chứng khoán lưu ký nhận cổ phiếu thưởng",
+    "parameters": [
+         {
+		  "name": "RightNumber",
+		  "start": "CACODE:",
+		  "end": "<BrLine>"
+		},
+		{
+		  "name": "BoardType",
+		  "start": "BRID:"
+		}
+    ],
+    "csvFields": [
+        {
+            "name": "Code",
+            "end": ";"
+        },
+        {
+            "name": "MemberCode",
+            "end": ";"
+        },
+        {
+            "name": "HoldQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "ActualQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "ResidualQuantity",
+            "type": "Decimal",
+            "end": ";"
+        },
+       /* {
+            "name": "DepositQuantity",
+            "type": "Integer",
+            "end": ";"
+        },*/
+       /* {
+            "name": "TotalQuantity",
+            "type": "Integer",
+            "end": ";"
+        },*/
+        {
+            "name": "Note",
+            "end": ";"
+        },
+        {
+            "name": "HolderName",
+            "end": ";"
+        },
+        {
+            "name": "IdentityIssued",
+            "end": ";"
+        },
+        {
+            "name": "IdentityIssuedDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "Address",
+            "end": ";"
+        },
+        {
+            "name": "AccountType",
+            "end": ";"
+        },
+        {
+            "name": "BusinessType",
+            "end": ";"
+        },
+        {
+            "name": "Nationaltity",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber",
+            "end": ";"
+        },
+        {
+            "name": "ParValue",
+            "end": ";"
+        },
+        {
+            "name": "MemberName",
+            "end": ";"
+        },
+        {
+            "name": "DocumentRef",
+            "end": ";"
+        }
+    ]
+}

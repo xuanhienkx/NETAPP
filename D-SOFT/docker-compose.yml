@@ -1,0 +1,78 @@
+version: '3.4'
+networks:
+  proxy:
+    driver: bridge
+  identityserverui:
+    driver: bridge
+
+services: 
+  dsoft.api:
+    image: xuanphap/dsoft-api
+    container_name: dsoft-api
+    build:
+      context: .
+      dockerfile: src/DSoftCore/DSoft.Api/Dockerfile
+    entrypoint: /bin/sh -c "update-ca-certificates && dotnet DSoft.Api.dll"
+    depends_on:
+      - dsoft.authen
+    environment: 
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:6001;http://+:6000
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=Phap@1234
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/dsoft.pfx
+      - 'CoreApi__apiUrl=https://api.dsoft.local:6001'
+      - 'applicationSettings__Authority=https://sts.dsoft.local:5001'
+    ports:
+      - "6000:6000"
+      - "6001:6001" 
+    volumes:
+      - ./shared/nginx/certs/dsoft.pfx:/https/dsoft.pfx:ro
+      - ./shared/nginx/certs/dsoft.crt:/usr/local/share/ca-certificates/dsoft.crt:ro 
+    networks:
+      identityserverui: 
+         aliases: 
+          - api.dsoft.local 
+  dsoft.authen:
+    image: xuanphap/dsoft-authen
+    container_name: dsoft-authen
+    build:
+      context: .
+      dockerfile: src/Authen/DSoft.Authen/Dockerfile 
+    #command: dotnet DSoft.Authen.dll /seed
+    entrypoint: /bin/sh -c "update-ca-certificates && dotnet DSoft.Authen.dll /seed"
+    environment: 
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:5001;http://+:5000
+      - 'ConnectionStrings__DefaultConnection=Server=9.9.9.2;Database=DSoftAuthenServer;User Id=sa;Password=Admin@1234;MultipleActiveResultSets=true'
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=Phap@1234
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/dsoft.pfx
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    volumes:
+      - ./shared/nginx/certs/dsoft.pfx:/https/dsoft.pfx:ro
+      - ./shared/nginx/certs/dsoft.crt:/usr/local/share/ca-certificates/dsoft.crt:ro 
+    networks:
+      identityserverui: 
+         aliases:
+          - sts.dsoft.local  
+  dsoft.client-app:
+    image: xuanphap/dsoft-client-app
+    container_name: dsoft-client-app
+    build:
+      context: .
+      dockerfile: src/Apps/ClientApps/Dockerfile
+    depends_on:
+      - dsoft.api
+      - dsoft.authen
+    entrypoint: /bin/sh -c "sleep 10 && update-ca-certificates && dotnet ClientApps.dll"
+    environment:
+      - DOTNET_ENVIRONMENT=Development
+      - CoreApi__apiUrl=https://api.dsoft.local:6001
+      - IdentitySettings__DiscoveryUrl=https://sts.dsoft.local:5001
+      - IdentitySettings__ClientId=dsoft_info_client_machain
+      - IdentitySettings__ClientPassword=dsoft_info_client_machain
+      - IdentitySettings__Scope=DSoftApi.Read
+    volumes:
+      - ./shared/nginx/certs/dsoft.pfx:/https/dsoft.pfx:ro
+      - ./shared/nginx/certs/dsoft.crt:/usr/local/share/ca-certificates/dsoft.crt:ro 

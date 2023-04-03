@@ -1,0 +1,23 @@
+// @import '../../../@theme/styles/themes'; 
+@mixin meetingList-Style {
+     :host {
+        display: flex;
+        justify-content: space-between;
+    }
+    nb-list-item:first-child {
+        border-top: none !important;
+    }
+    .fa,
+    .fas,
+    .far {
+        opacity: 90%;
+        &:hover {
+            opacity: 100%;
+        }
+    }
+    .badge-info {
+        opacity: 80%;
+        background-color: #0095ff !important;
+        border-color: #0095ff !important;
+    }
+}

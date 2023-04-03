@@ -1,0 +1,113 @@
+[
+    {
+        "tag": "20",
+        "parts": [
+            {
+                "name": "IntReferenceNumber",
+                "length": 16
+            }
+        ]
+    },
+    {
+        "tag": "12",
+        "parts": [
+            {
+                "name": "SubMessageType",
+                "length": 3 
+            }
+        ]
+    },
+    {
+        "tag": "77E",
+        "parts": [
+            {
+                "name": "Proprietary",
+                "length": 73,
+                "default": "CHAN"
+            }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "23G",
+        "parts": [
+            {
+                "name": "MessageFunction",
+                "length": 4,
+                "default": "NEWM"
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "PREP",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "CreatedDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "35B",
+        "parts": [
+            {
+                "name": "IsinCode",
+                "length": 12,
+                "optional": true,
+                "start": "ISIN ",
+                "end": "<BrLine>"
+            },
+            {
+                "name": "CountryCode",
+                "length": 2,
+                "optional": true,
+                "start": "/",
+                "end": "/"
+            },
+            {
+                "name": "code",
+                "length": 35,
+                "end": "<BrLine>"
+            }
+        ]
+    },
+    {
+        "tag": "94B",
+        "qualifier": "PLIS",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "PlaceListing",
+                "length": 4
+            },
+            {
+                "name": "BoardCode",
+                "optional": true,
+                "length": 4,
+                "end": ":"
+            },
+            {
+                "name": "BoardType",
+                "optional": true,
+                "end": "<BrLine>"
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "GENL" }
+        ]
+    }
+]

@@ -1,0 +1,141 @@
+﻿<h1>Khách hàng</h1>
+
+<p *ngIf="!customers"><em>Loading...</em></p>
+
+<div>
+    <div class="row">
+        <div class="row">
+            <table class="table">
+                <tr *ngFor="let item of filter.criteria">
+                    <td>
+                        <select [(ngModel)]="item.type">
+                            <option value="0">NOT INCLUDE</option>
+                            <option value="1">AND</option>
+                            <option value="2">OR</option>
+                        </select>
+                    </td>
+                    <td>{{item.name}}</td>
+                    <td>
+                        <select [(ngModel)]="item.operator">
+                            <option *ngFor="let operator of operators" [value]="operator.value">{{operator.name}}</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input [(ngModel)]="item.value" />
+                    </td>
+                    <td>type : {{item.type}} | operator : {{item.operator}} | value: {{item.value}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <a href="#" class="btn btn-success" type="button" (click)="findCustomers(filter.pageIndex)">Tim</a>
+        <input class="btn btn-default" type="reset" value="Refesh">
+        <button type="button" class="btn btn-primary" (click)="openModal(template)">Thêm khách hàng</button>
+    </div>
+</div>
+<table class='table table-striped' *ngIf="customers" sortable-table (sorted)="onSorted($event)">
+    <thead>
+        <tr>
+            <th class="pointer" sortable-column="customerId" sort-direction="asc">Mã khách hàng </th>
+            <th class="pointer" sortable-column="customerName">Tên khách hàng </th>
+            <th class="pointer" sortable-column="mobile">Điện thoại </th>
+            <th class="pointer" sortable-column="email">Email </th>
+            <th class="pointer" sortable-column="isActive">Trạng thái </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customers" (click)="openModal(template,customer.customerId)">
+            <td >{{ customer.customerId}}</td>
+            <td>{{ customer.name}}</td>
+            <td>{{ customer.mobile}}</td>
+            <td>{{ customer.email }}</td>
+            <td>{{ customer.isActive|status }}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="5">
+                <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+                    <li [ngClass]="{disabled:pager.currentPage === 1}">
+                        <a (click)="findCustomers(1)">First</a>
+                    </li>
+                    <li [ngClass]="{disabled:pager.currentPage === 1}">
+                        <a (click)="findCustomers(pager.currentPage - 1)">Previous</a>
+                    </li>
+                    <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+                        <a (click)="findCustomers(page)">{{page}}</a>
+                    </li>
+                    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                        <a (click)="findCustomers(pager.currentPage + 1)">Next</a>
+                    </li>
+                    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                        <a (click)="findCustomers(pager.totalPages)">Last</a>
+                    </li>
+                </ul>
+
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Tạo/Sửa khách hàng</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+
+        <form (ngSubmit)="onSubmit(custForm)" #custForm="ngForm" novalidate *ngIf="model">
+            <div class="form-group">
+                <label>Mã khách hàng</label>
+                <input required type="text" maxlength="10"
+                       #customerId="ngModel" name="customerId" [(ngModel)]="model.customerId"
+                       class="form-control" placeholder="Nhập mã khách hàng...">
+                <small [hidden]="customerId.valid || (customerId.pristine && !custForm.submitted)" class="text-danger">
+                    Mã khách hàng không được để trống và phải là 10 ký tự
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="name">Tên khách hàng</label>
+                <input required type="text" #name="ngModel"
+                       id="name" name="name" [(ngModel)]="model.name"
+                       class="form-control" placeholder="Nhập tên khách hàng...">
+                <small [hidden]="name.valid || (name.pristine && !custForm.submitted)" class="text-danger">
+                    Mã tên khách hàng không được để trống
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Số điện thoại</label>
+                <input required type="text" maxlength="15" #mobile="ngModel"
+                       id="mobile" name="mobile" [(ngModel)]="model.mobile"
+                       class="form-control" placeholder="Nhập số điện thoại...">
+                <small [hidden]="mobile.valid || (mobile.pristine && !custForm.submitted)" class="text-danger">
+                    Điện thoại không được để trống
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input required type="email" length="15" #email="ngModel"
+                       id="email" name="email" [(ngModel)]="model.email"
+                       class="form-control" placeholder="Nhập email...">
+                <small [hidden]="email.valid || (email.pristine && !custForm.submitted)" class="text-danger">
+                    Email không được để trống
+                </small>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" [(ngModel)]="model.isActive" name="status" #status="ngModel"> Kích hoạt
+                </label>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Lưu</button>
+                <button type="button" *ngIf="isEdit && model" class="btn btn-danger" (click)="delete(model.customerId)">Xoá</button>
+                <button type="button" class="btn btn-default" (click)="modalRef.hide()">Đóng</button>
+            </div>
+        </form>
+
+    </div>
+</ng-template>

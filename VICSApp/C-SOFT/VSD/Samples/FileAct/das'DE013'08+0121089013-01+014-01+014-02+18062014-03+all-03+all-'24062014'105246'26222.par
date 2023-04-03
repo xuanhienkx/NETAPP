@@ -1,0 +1,20 @@
+SwiftTime=20140624 
+NonRep=FALSE 
+DeliveryTime=20140624 
+MsgId=26222 
+Creationtime=20140624 
+PDIndication=FALSE 
+Requestor=o=VSDSVNV0, o=swift 
+Responder=o=VSDDASXX, o=swift 
+Service=camt.xxx.fisp.rep 
+Priority=Normal
+RequestRef=
+TransferRef=26222
+TransferDescription=26222
+TransferInfo=VSDDASXX.26222.20140624.26222
+PossibleDuplicate=TRUE
+OrigTransferRef=0121089013
+AckIndicator=FALSE
+LogicalName=das'DE013'08+0121089013-01+014-01+014-02+18062014-03+all-03+all-'24062014'105246'26222.csv
+FileInfo=SwCompression=None
+Size=257

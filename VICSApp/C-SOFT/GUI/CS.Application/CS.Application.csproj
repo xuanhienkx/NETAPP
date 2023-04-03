@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B2D2806-4EA4-4BC8-B4CE-8849D91C63EC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CS.Application</RootNamespace>
+    <AssemblyName>C-Soft</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <HockeyAppResourceId>14afcbc302d840bb94f28751f367b74a</HockeyAppResourceId>
+    <PublishUrl>ftp://10.10.5.230/vics/apps/csoft/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://testserver.vics.com.vn/apps/csoft/</InstallUrl>
+    <PublisherName>C-Soft</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CS.Application.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AC53F225E65C79E26E933570396295DCE1841608</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CS.Application_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>CS.Application_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>vics_logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MahApps.Metro, Version=1.5.0.23, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.SimpleChildWindow, Version=1.4.1.6, Culture=neutral, PublicKeyToken=bbbfdff7f500a992, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MahApps.Metro.SimpleChildWindow.1.4.1\lib\net45\MahApps.Metro.SimpleChildWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MaterialDesignColors.1.1.3\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.MahApps, Version=0.0.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MaterialDesignThemes.MahApps.0.0.11\lib\net45\MaterialDesignThemes.MahApps.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.3.1.953, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MaterialDesignThemes.2.3.1.953\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Expression.Interaction.3.0.40218.0\lib\net46\Microsoft.Expression.Interactions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.IdentityModel.Logging.1.1.5\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.IdentityModel.Tokens.5.1.5\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serilog.2.6.0\lib\net46\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Settings.AppSettings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serilog.Settings.AppSettings.2.1.2\lib\net45\Serilog.Settings.AppSettings.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serilog.Sinks.File.4.0.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.RollingFile, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Serilog.Sinks.RollingFile.3.3.0\lib\net45\Serilog.Sinks.RollingFile.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleInjector, Version=4.0.12.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SimpleInjector.4.0.12\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.IdentityModel.Tokens.Jwt.5.1.5\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Expression.Interaction.3.0.40218.0\lib\net46\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Framework\PermissionFactory.cs" />
+    <Compile Include="Views\Admin\AdminView.xaml.cs">
+      <DependentUpon>AdminView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\AdminViewModel.cs" />
+    <Compile Include="Controllers\AssetController.cs" />
+    <Compile Include="Controllers\BankController.cs" />
+    <Compile Include="Controllers\BranchController.cs" />
+    <Compile Include="Controllers\ExchangeStockController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
+    <Compile Include="Controllers\GroupController.cs" />
+    <Compile Include="Views\Custody\RequestConfirmListView.xaml.cs">
+      <DependentUpon>RequestConfirmListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Customer\CustomerListViewModel.cs" />
+    <Compile Include="Views\Customer\CustomerEditViewModel.cs" />
+    <Compile Include="Views\Group\PermissionAccessView.xaml.cs">
+      <DependentUpon>PermissionAccessView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Group\PermissionAccessViewModel.cs" />
+    <Compile Include="Views\User\ResetPasswordView.xaml.cs">
+      <DependentUpon>ResetPasswordView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\ResetPasswordViewModel.cs" />
+    <Compile Include="Views\User\UserProfileViewModel.cs" />
+    <Compile Include="Framework\ApplicationCommands.cs" />
+    <Compile Include="Framework\ApplicationCoordinator.cs" />
+    <Compile Include="Framework\ApplicationService.cs" />
+    <Compile Include="Framework\ControllerContext.cs" />
+    <Compile Include="Framework\DialogService.cs" />
+    <Compile Include="Framework\HelperExtension.cs" />
+    <Compile Include="Framework\VsdMemberList.cs" />
+    <Compile Include="Framework\VsdReportList.cs" />
+    <Compile Include="Framework\VsdReportNameConverter.cs" />
+    <Compile Include="Services\Interfaces\CustodyBusinessHandler.cs" />
+    <Compile Include="Services\Interfaces\ICustodyBusinessHandler.cs" />
+    <Compile Include="Views\Branch\BranchListViewModel.cs" />
+    <Compile Include="Views\Branch\BranchEditViewModel.cs" />
+    <Compile Include="Views\Custody\Base\BaseRequestCustomerPublishViewModel.cs" />
+    <Compile Include="Views\Custody\Base\BaseRequestCustomerStockPublishViewModel.cs" />
+    <Compile Include="Views\Custody\Base\BaseRequestCustomerTranferStockPublishViewModel.cs" />
+    <Compile Include="Views\Custody\Base\CustodyCsvReportView.xaml.cs">
+      <DependentUpon>CustodyCsvReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\Base\ITranferCustody.cs" />
+    <Compile Include="Views\Custody\Base\ReportConfirmViewModel.cs" />
+    <Compile Include="Views\Custody\Base\RequestPublishViewModel.cs" />
+    <Compile Include="Views\Custody\RequestConfirmListViewModel.cs" />
+    <Compile Include="Views\Custody\VsdReportResponseListView.xaml.cs">
+      <DependentUpon>VsdReportResponseListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VsdReportResponseListViewModel.cs" />
+    <Compile Include="Views\Custody\VSD_1_4_TatToanTKView.xaml.cs">
+      <DependentUpon>VSD_1_4_TatToanTKView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VSD_1_4_TatToanTKViewModel.cs" />
+    <Compile Include="Views\Custody\VSD_1_5_PhongToaGiaiToaCKView.xaml.cs">
+      <DependentUpon>VSD_1_5_PhongToaGiaiToaCKView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VSD_1_5_PhongToaGiaiToaCKViewModel.cs" />
+    <Compile Include="Views\Custody\VSD_1_8_XNSoDuCKView.xaml.cs">
+      <DependentUpon>VSD_1_8_XNSoDuCKView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VSD_1_8_XNSoDuCKViewModel.cs" />
+    <Compile Include="Views\Custody\VSD_2_3_ChuyenNhuongQuyenView.xaml.cs">
+      <DependentUpon>VSD_2_3_ChuyenNhuongQuyenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VSD_2_3_ChuyenNhuongQuyenViewModel.cs" />
+    <Compile Include="Views\Custody\VSD_2_4_DKDatMuaView.xaml.cs">
+      <DependentUpon>VSD_2_4_DKDatMuaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VSD_2_4_DKDatMuaViewModel.cs" />
+    <Compile Include="Views\Custody\VSD_4_TraXuatBCView.xaml.cs">
+      <DependentUpon>VSD_4_TraXuatBCView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VSD_4_TraXuatBCViewModel.cs" />
+    <Compile Include="Views\Department\DepartmentEditViewModel.cs" />
+    <Compile Include="Views\Department\DepartmentListViewModel.cs" />
+    <Compile Include="Views\Group\GroupEditViewModel.cs" />
+    <Compile Include="Views\Group\GroupListViewModel.cs" />
+    <Compile Include="Views\Custody\RightInformationListViewModel.cs" />
+    <Compile Include="Views\Custody\RequestListViewModel.cs" />
+    <Compile Include="Views\Custody\VSD_1_1_DongMoTKView.xaml.cs">
+      <DependentUpon>VSD_1_1_DongMoTKView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VSD_1_1_DongMoTKViewModel.cs" />
+    <Compile Include="Views\Custody\RequestListView.xaml.cs">
+      <DependentUpon>RequestListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VSD_1_2_1_KyGuiCKView.xaml.cs">
+      <DependentUpon>VSD_1_2_1_KyGuiCKView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VSD_1_2_1_KyGuiCKViewModel.cs" />
+    <Compile Include="Views\Custody\VSD_1_2_2_RutCKView.xaml.cs">
+      <DependentUpon>VSD_1_2_2_RutCKView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VSD_1_2_2_RutCKViewModel.cs" />
+    <Compile Include="Views\Custody\VSD_1_3_ChuyenKhoanCKView.xaml.cs">
+      <DependentUpon>VSD_1_3_ChuyenKhoanCKView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VSD_1_3_ChuyenKhoanCKViewModel.cs" />
+    <Compile Include="Controllers\CustodyController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Views\Home\HomeViewModel.cs" />
+    <Compile Include="Views\Home\LoginViewModel.cs" />
+    <Compile Include="Views\Group\GroupEditView.xaml.cs">
+      <DependentUpon>GroupEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Group\GroupListView.xaml.cs">
+      <DependentUpon>GroupListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Branch\BranchEditView.xaml.cs">
+      <DependentUpon>BranchEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Branch\BranchListView.xaml.cs">
+      <DependentUpon>BranchListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Customer\CustomerEditView.xaml.cs">
+      <DependentUpon>CustomerEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Customer\CustomerListView.xaml.cs">
+      <DependentUpon>CustomerListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Department\DepartmentEditView.xaml.cs">
+      <DependentUpon>DepartmentEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Department\DepartmentListView.xaml.cs">
+      <DependentUpon>DepartmentListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\RightInformationListView.xaml.cs">
+      <DependentUpon>RightInformationListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VSD_2_1_TBQuyenView.xaml.cs">
+      <DependentUpon>VSD_2_1_TBQuyenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Custody\VSD_2_1_TBQuyenViewModel.cs" />
+    <Compile Include="Views\Home\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\SettingsViewModel.cs" />
+    <Compile Include="Views\User\UserEditView.xaml.cs">
+      <DependentUpon>UserEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserListView.xaml.cs">
+      <DependentUpon>UserListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserProfileView.xaml.cs">
+      <DependentUpon>UserProfileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\UserListViewModel.cs" />
+    <Compile Include="Views\User\UserEditViewModel.cs" />
+    <Compile Include="Views\MainWindowViewModel.cs" />
+    <Compile Include="Views\SplashScreenWindowViewModel.cs" />
+    <Compile Include="Views\SplashScreenWindow.xaml.cs">
+      <DependentUpon>SplashScreenWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Themes\Default\MahAppResources.Light.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Default\Resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\AdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\Base\CustodyInfoContentTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\Base\CustodyCsvReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\Base\ReportParamTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\RequestConfirmListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\VsdReportResponseListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\VSD_1_1_DongMoTKView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\Base\CustomerInfoTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\RequestListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\VSD_1_2_1_KyGuiCKView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\VSD_1_2_2_RutCKView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\VSD_1_3_ChuyenKhoanCKView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\VSD_1_4_TatToanTKView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\VSD_1_5_PhongToaGiaiToaCKView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\VSD_1_8_XNSoDuCKView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\VSD_2_3_ChuyenNhuongQuyenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\VSD_2_4_DKDatMuaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\VSD_4_TraXuatBCView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Default\MahAppResources.Dark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Group\PermissionAccessView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Group\GroupEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Group\GroupListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Branch\BranchEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Branch\BranchListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Customer\CustomerEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Customer\CustomerListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Department\DepartmentEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Department\DepartmentListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Home\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Home\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\RightInformationListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Custody\VSD_2_1_TBQuyenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Home\SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\User\ResetPasswordView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\User\UserEditView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\User\UserListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\User\UserProfileView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\SplashScreenWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="CS.Application_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Themes\Default\NavigationSettings.json" />
+    <EmbeddedResource Include="Themes\Default\VSDMemberList.json" />
+    <EmbeddedResource Include="Themes\Default\VSDRerportStructData.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Themes\Default\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Report\" />
+    <Folder Include="Views\Trading\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="vics.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="vics_logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\CS.Common.Contract\CS.Common.Contract.csproj">
+      <Project>{CA579CC7-879C-4A56-A199-6C388091D26C}</Project>
+      <Name>CS.Common.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\CS.Common.Std\CS.Common.Std.csproj">
+      <Project>{6FCDF381-F158-46CF-AA3C-05C132A6E06A}</Project>
+      <Name>CS.Common.Std</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CS.UI.Common\CS.UI.Common.csproj">
+      <Project>{90327856-d886-40eb-938f-e5a8d636488c}</Project>
+      <Name>CS.UI.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CS.UI.Controls\CS.UI.Controls.csproj">
+      <Project>{d3956363-d30c-47cb-b997-7f3734b8369f}</Project>
+      <Name>CS.UI.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

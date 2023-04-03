@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+    # mongodb:
+    #     image: skylartech/mongodb:latest
+    #     restart: always
+    #     ports:
+    #         - 27017:27017
+    #     volumes:
+    #         # - mongodata:/data/db # <--------- only for docker on Windows
+    #         - ~/mongodb/data/db:/data/db
+
+    skylar-api:
+        image: skylartech/api:vics
+        restart: always
+        build:
+            context: ./api
+            dockerfile: ./api/Dockerfile
+        environment:
+            # - ASPNETCORE_URLS=http://+:5000;https://+:5001
+            - ASPNETCORE_URLS=http://+:5000;
+            # - ASPNETCORE_Kestrel__Certificates__Default__Password=vinhvinh
+            # - ASPNETCORE_Kestrel__Certificates__Default__Path=/etc/letsencrypt/live/skylar-tech.com-0001/private.pfx
+        ports:
+             - 8800:5000
+             - 4433:5001
+        volumes:
+           #  - /etc/letsencrypt:/etc/letsencrypt
+             - ~/assets:/usr/share/assets
+
+    skylar-web:
+        image: skylartech/web:vics
+        restart: always
+        build:
+            context: ./web
+            dockerfile: Dockerfile
+            args:
+                - env=prod
+        ports:
+        - 80:8080
+        - 443:4433
+        volumes:
+            # - /etc/letsencrypt:/etc/letsencrypt
+             - ~/assets:/usr/share/nginx/html/web/media
+        

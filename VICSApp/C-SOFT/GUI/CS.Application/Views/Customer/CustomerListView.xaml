@@ -1,0 +1,170 @@
+﻿<UserControl x:Class="CS.Application.Views.Customer.CustomerListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:CS.UI.Common.Converters;assembly=CS.UI.Common"
+             xmlns:localization="clr-namespace:CS.UI.Common.Localization;assembly=CS.UI.Common"
+             xmlns:viewBase="clr-namespace:CS.UI.Common.ViewBase;assembly=CS.UI.Common"
+             xmlns:common="clr-namespace:CS.UI.Common;assembly=CS.UI.Common"
+             xmlns:controls="clr-namespace:CS.UI.Controls;assembly=CS.UI.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <common:SharedResourceDictionary Source="../../Themes/Default/Resources.xaml"/>
+                <common:SharedResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.DataGrid.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="AlignRight" TargetType="{x:Type TextBlock}">
+                <Setter Property="HorizontalAlignment" Value="Right" />
+            </Style>
+
+            <Style x:Key="AlignCenter" TargetType="{x:Type TextBlock}">
+                <Setter Property="HorizontalAlignment" Value="Center" />
+            </Style>
+
+            <converters:CountryNameLocalizedConverter x:Key="CountryNameLocalizedConverter"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <DockPanel LastChildFill="True">
+        <!--Tool bar-->
+        <materialDesign:ColorZone DockPanel.Dock="Top" 
+                                  Margin ="0 0 0 5"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                                  Background="{StaticResource MaterialDesignToolBarBackground}">
+            <DockPanel DockPanel.Dock="Top">
+                <ToolBarPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <ToolBarPanel.Resources>
+                        <Style TargetType="Button" BasedOn="{StaticResource CSoftToolbarButton}"/>
+                    </ToolBarPanel.Resources>
+
+                    <Button ToolTip="{localization:Translate Toolbar_CreateTitle}" 
+                                Content="{materialDesign:PackIcon Plus}"
+                                Command="{Binding OpenEditDialogCommand}"  
+                                CommandParameter="{StaticResource True}"/>
+                    <Button ToolTip="{localization:Translate Toolbar_EditTitle}" 
+                                Content="{materialDesign:PackIcon TableEdit}"
+					            Command="{Binding OpenEditDialogCommand}"/>
+
+                    <Separator/>
+
+                    <Button ToolTip="{localization:Translate Toolbar_RemoveTitle}"
+                            Content="{materialDesign:PackIcon Minus}"
+                            Command="{Binding DeleteCommand}"/>
+                    <Button ToolTip="{localization:Translate Toolbar_RefreshTitle}"
+                            Content="{materialDesign:PackIcon Refresh}"
+                            Command="{Binding RefreshCommand}"/>
+                </ToolBarPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <materialDesign:ColorZone VerticalAlignment="Center" 
+                                          Mode="Light"  
+                                          Margin="0 0 10 0"
+                                          CornerRadius="2">
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Margin="10 0 0 0" 
+                                 materialDesign:HintAssist.Hint="{localization:Translate Toolbar_SearchTitle}" 
+                                 materialDesign:TextFieldAssist.DecorationVisibility="Hidden" 
+                                 BorderThickness="0"   
+                                 Width="200"
+                                 VerticalAlignment="Center"  
+                                 Text="{Binding SearchText}"
+                                 Style="{DynamicResource MaterialDesignTextBox}"/>
+                            <Button Style="{DynamicResource MaterialDesignToolForegroundButton}" 
+                                VerticalAlignment="Center"  
+                                Margin="3 0 0 0" 
+                                Command="{Binding RefreshCommand}"
+                                Content="{materialDesign:PackIcon Magnify}"/>
+                        </StackPanel>
+                    </materialDesign:ColorZone>
+
+                    <ItemsControl ItemsSource="{Binding NavigationButtons}" 
+                                  Margin="3 0 3 0"
+                                  Style="{StaticResource PagerTemplate}"/>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+
+        <!--List-->
+        <DataGrid CanUserSortColumns="True" 
+                  CanUserAddRows="False" AutoGenerateColumns="False"
+                  materialDesign:DataGridAssist.CellPadding="8 2 2 2" 
+                  materialDesign:DataGridAssist.ColumnHeaderPadding="6 2 2 2"
+                  CanUserResizeColumns="True" 
+                  CanUserReorderColumns="True" 
+                  IsReadOnly="True"
+                  SelectionMode="Extended"             
+                  SelectionUnit="FullRow"  
+                  ItemsSource="{Binding ListModels}"     
+                  SelectedItem="{Binding SelectedModel}">
+
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding OpenEditDialogCommand}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+
+            <DataGrid.InputBindings>
+                <KeyBinding Gesture="Delete" Key="Delete" Command="{Binding DeleteCommand, Mode=OneWay}" />
+            </DataGrid.InputBindings>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding CustomerNumber}"  
+                                Header="{localization:Translate CustomerView_CustomerNumber, CharacterCasing=Upper}"/>
+                <DataGridTextColumn Binding="{Binding FullNameLocal}"  
+                                Header="{localization:Translate CustomerView_FullNameLocal, CharacterCasing=Upper}"/>
+                <DataGridTextColumn Binding="{Binding FullName}"  
+                                Header="{localization:Translate CustomerView_FullName, CharacterCasing=Upper}"/>
+                <DataGridTextColumn Binding="{Binding Status, Converter={StaticResource EnumLocalizedConverter}}"  
+                                Header="{localization:Translate CustomerView_Status, CharacterCasing=Upper}"
+                                ElementStyle="{StaticResource AlignCenter}"/>
+                <DataGridTextColumn Binding="{Binding Genere, Converter={StaticResource EnumLocalizedConverter}}"  
+                                Header="{localization:Translate CustomerView_Genere, CharacterCasing=Upper}" 
+                                ElementStyle="{StaticResource AlignCenter}"/>
+                <DataGridTextColumn Binding="{Binding BirthDay,StringFormat='{}{0:dd/MM/yyyy}'}" 
+                                Header="{localization:Translate CustomerView_BirthDay, CharacterCasing=Upper}"                                                        
+                                ElementStyle="{StaticResource AlignCenter}"/>
+                <DataGridTextColumn Binding="{Binding Email}" 
+                                Header="{localization:Translate CustomerView_Email, CharacterCasing=Upper}" />
+                <DataGridTextColumn Binding="{Binding PhoneNumber}" 
+                                Header="{localization:Translate CustomerView_PhoneNumber, CharacterCasing=Upper}" 
+                                ElementStyle="{StaticResource AlignRight}"/>
+                <DataGridTextColumn Binding="{Binding Branch.BranchName}"  
+                                Header="{localization:Translate BranchView_BranchParent, CharacterCasing=Upper}" />
+                <DataGridTextColumn Binding="{Binding CardType, Converter={StaticResource EnumLocalizedConverter}}"  
+                                Header="{localization:Translate CustomerView_CardType, CharacterCasing=Upper}"
+                                ElementStyle="{StaticResource AlignCenter}"/>
+                <DataGridTextColumn Binding="{Binding CardIdentity}"  
+                                Header="{localization:Translate CustomerView_CardIdentity, CharacterCasing=Upper}"
+                                ElementStyle="{StaticResource AlignRight}"/>
+                <DataGridTextColumn Binding="{Binding CardIssuedDate,StringFormat='{}{0:dd/MM/yyyy}'}"  
+                                Header="{localization:Translate CustomerView_CardIssuedDate, CharacterCasing=Upper}"
+                                ElementStyle="{StaticResource AlignCenter}"/>
+                <DataGridTextColumn Binding="{Binding CardIssuer}"  
+                                Header="{localization:Translate CustomerView_CardIssuer, CharacterCasing=Upper}"/>
+                <DataGridTextColumn Binding="{Binding Type, Converter={StaticResource EnumLocalizedConverter}}"  
+                                Header="{localization:Translate CustomerView_CustomerType, CharacterCasing=Upper}"
+                                ElementStyle="{StaticResource AlignCenter}"/>
+                <DataGridTextColumn Binding="{Binding CountryCode,  Converter={StaticResource CountryNameLocalizedConverter}}"  
+                                Header="{localization:Translate CustomerView_CountryCode, CharacterCasing=Upper}"
+                                ElementStyle="{StaticResource AlignCenter}"/>
+                <DataGridTextColumn Binding="{Binding CreatedDate,StringFormat='{}{0:dd/MM/yyyy}'}" 
+                                Header="{localization:Translate UserModel_CreatedDate, CharacterCasing=Upper}"     
+                                ElementStyle="{StaticResource AlignCenter}"/>
+                <DataGridTextColumn Binding="{Binding ModifiedDate,StringFormat='{}{0:dd/MM/yyyy}'}"  
+                                Header="{localization:Translate UserModel_ModifledDate, CharacterCasing=Upper}"                                                                                        
+                                ElementStyle="{StaticResource AlignCenter}"/>
+                <DataGridCheckBoxColumn Binding="{Binding IsActive}" 
+                                        Header="{localization:Translate UserModel_Active}"                                                         
+                                        EditingElementStyle="{DynamicResource MaterialDesignDataGridCheckBoxColumnEditingStyle}"/>
+
+            </DataGrid.Columns>
+        </DataGrid >
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="VRMService.asmx.cs" Class="VRMGateway.VRMService" %>

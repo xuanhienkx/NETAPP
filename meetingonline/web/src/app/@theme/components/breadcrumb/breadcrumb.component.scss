@@ -1,0 +1,32 @@
+
+@import '~@nebular/theme/styles/global/breakpoints'; 
+:host{
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }  
+}
+      ::ng-deep .header-page {
+         .page-header-title {
+             margin: 0px !important;
+             color: #36f !important;
+             text-transform: uppercase !important;
+             font-size: larger !important;
+         }
+         ::ng-deep .breadcrumb {
+             margin: 0 !important;
+             padding: 0 !important;
+             background: transparent !important;
+             a {
+                color: #36f;
+                transition: color ease-out 0.1s;
+                text-decoration: none;
+                font-weight: 600;
+                margin-top: 0 !important;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+         }
+        
+     }
+   

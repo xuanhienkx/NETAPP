@@ -1,0 +1,56 @@
+version: "3"
+
+services:
+
+  mongodb1:
+    image: skylartech/mongodb:latest
+    restart: always
+    hostname: mongodb1
+    container_name: mongodb1
+    ports:
+      - 3000:27017
+      - 3800:28017
+    volumes:
+      - ~/mongodb/data/db1:/data/db
+    # entrypoint: ["/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0"]
+    entrypoint: [ "/usr/bin/mongod", "--replSet", "rs", "--journal", "--smallfiles", "--rest" ]
+    links:
+      - mongodb2:mongodb2
+      - mongodb3:mongodb3
+
+  mongodb2:
+    image: skylartech/mongodb:latest
+    restart: always
+    hostname: mongodb2
+    container_name: mongodb2
+    ports:
+      - 3001:27017
+      - 3801:28017
+    volumes:
+      - ~/mongodb/data/db2:/data/db
+    # entrypoint: ["/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0"]
+    entrypoint: [ "/usr/bin/mongod", "--replSet", "rs", "--journal", "--smallfiles", "--rest" ]
+
+  mongodb3:
+    image: skylartech/mongodb:latest
+    restart: always
+    hostname: mongodb3
+    container_name: mongodb3
+    ports:
+      - 3002:27017
+      - 3802:28017
+    volumes:
+      - ~/mongodb/data/db3:/data/db
+    # entrypoint: ["/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0"]
+    entrypoint: [ "/usr/bin/mongod", "--replSet", "rs", "--journal", "--smallfiles", "--rest" ]
+
+# This configures the MongoDB replicaset
+mongoreplica:
+  image: allpine
+  links:
+    - mongodb1:mongodb1
+    - mongodb2:mongodb2
+    - mongodb3:mongodb3
+  volumes:
+    - ~/mongodb/scripts:/scripts
+  entrypoint: [ "/scripts/setup.sh" ]

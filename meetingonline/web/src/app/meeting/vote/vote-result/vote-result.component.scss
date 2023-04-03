@@ -1,0 +1,35 @@
+@import '../vote.component.scss';
+.content-item-index.result {
+    margin-right: unset !important;
+}
+
+.item-body-title {
+    font-weight: 600;
+    color: #6c757d
+}
+.election-matters-content {
+    padding: 1rem;
+}
+
+.section-item-index {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    text-align: center; 
+    margin-right: 0.5rem;
+    border: 1px solid #a2a4a7;
+    font-weight: 500;
+    background-color: #fff;
+    &.active {
+        background-color: #3366ff;
+        color: #ffffff;
+    }
+    //rounded-circle initials border-secondary border text-primary my-auto  
+}
+.section-item-title{
+    margin-top: auto;
+    margin-bottom: auto; 
+}

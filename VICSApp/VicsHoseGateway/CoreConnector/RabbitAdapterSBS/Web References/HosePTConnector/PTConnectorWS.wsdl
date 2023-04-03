@@ -1,0 +1,2901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetAdvOrders">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAdvOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdvOrdersResult" type="tns:ArrayOfPT_ADVERTISEMENT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPT_ADVERTISEMENT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PT_ADVERTISEMENT" nillable="true" type="tns:PT_ADVERTISEMENT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PT_ADVERTISEMENT">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_TYPE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SIDE" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRICE" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BOARD" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIME" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ADD_CANCEL_FLAG" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONTACT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ENTRY_DATE" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAdvAnnounces">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAdvAnnouncesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdvAnnouncesResult" type="tns:ArrayOfPT_ADVERTISEMENT_ANNOUCEMENT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPT_ADVERTISEMENT_ANNOUCEMENT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PT_ADVERTISEMENT_ANNOUCEMENT" nillable="true" type="tns:PT_ADVERTISEMENT_ANNOUCEMENT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PT_ADVERTISEMENT_ANNOUCEMENT">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_TYPE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SECURITY_NUMBER" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRICE" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SIDE" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="BOARD" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIME" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ADD_CANCEL_FLAG" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONTACT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ENTRY_DATE" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get1FirmOrders">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get1FirmOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get1FirmOrdersResult" type="tns:ArrayOfPT_ONE_FIRM_DEAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPT_ONE_FIRM_DEAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PT_ONE_FIRM_DEAL" nillable="true" type="tns:PT_ONE_FIRM_DEAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PT_ONE_FIRM_DEAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_TYPE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BUYER_CLIENT_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SELLER_CLIENT_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRICE" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BOARD" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="DEAL_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_PORTFOLIO_VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_CLIENT_VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_MUTUAL_FUND_VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_FOREIGN_VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_PORTFOLIO_VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_CLIENT_VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_MUTUAL_FUND_VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_FOREIGN_VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CONFIRM_NUMBER" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ENTRY_DATE" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBuyerOrders">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetBuyerOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBuyerOrdersResult" type="tns:ArrayOfPT_TWO_FIRM_DEAL_BUYER" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPT_TWO_FIRM_DEAL_BUYER">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PT_TWO_FIRM_DEAL_BUYER" nillable="true" type="tns:PT_TWO_FIRM_DEAL_BUYER" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PT_TWO_FIRM_DEAL_BUYER">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DEAL_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_TYPE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SIDE" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_CONTRA_FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRICE" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BOARD" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="CONFIRM_NUMBER" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BUYER_CLIENT_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ENTRY_DATE" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSellerOrders">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSellerOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSellerOrdersResult" type="tns:ArrayOfPT_TWO_FIRM_DEAL_SELLER" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPT_TWO_FIRM_DEAL_SELLER">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PT_TWO_FIRM_DEAL_SELLER" nillable="true" type="tns:PT_TWO_FIRM_DEAL_SELLER" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PT_TWO_FIRM_DEAL_SELLER">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_TYPE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SELLER_CLIENT_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRICE" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BOARD" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="DEAL_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BROKER_PORTFOLIO_VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BROKER_CLIENT_VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BROKER_MUTUAL_FUND_VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BROKER_FOREIGN_VOLUME" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CONFIRM_NUMBER" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SIDE" nillable="true" type="s1:char" />
+          <s:element minOccurs="1" maxOccurs="1" name="ENTRY_DATE" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAdvOrdersByStatusLINQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdvOrdersByStatusLINQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdvOrdersByStatusLINQResult" type="tns:ArrayOfPT_ADVERTISEMENT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdvAnnouncesByStatusLINQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdvAnnouncesByStatusLINQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdvAnnouncesByStatusLINQResult" type="tns:ArrayOfPT_ADVERTISEMENT_ANNOUCEMENT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get1FirmOrdersByStatusLINQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get1FirmOrdersByStatusLINQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get1FirmOrdersByStatusLINQResult" type="tns:ArrayOfPT_ONE_FIRM_DEAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBuyerOrdersByStatusLINQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBuyerOrdersByStatusLINQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBuyerOrdersByStatusLINQResult" type="tns:ArrayOfPT_TWO_FIRM_DEAL_BUYER" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellerOrdersByStatusLINQ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellerOrdersByStatusLINQResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSellerOrdersByStatusLINQResult" type="tns:ArrayOfPT_TWO_FIRM_DEAL_SELLER" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdvOrdersByStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdvOrdersByStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdvOrdersByStatusResult" type="tns:ArrayOfADVERTISEMENT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfADVERTISEMENT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ADVERTISEMENT" nillable="true" type="tns:ADVERTISEMENT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ADVERTISEMENT">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_TYPE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SIDE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRICE" nillable="true" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="BOARD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ADD_CANCEL_FLAG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONTACT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ENTRY_DATE" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAdvAnnouncesByStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdvAnnouncesByStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdvAnnouncesByStatusResult" type="tns:ArrayOfADVERTISEMENT_ANNOUCEMENT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfADVERTISEMENT_ANNOUCEMENT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ADVERTISEMENT_ANNOUCEMENT" nillable="true" type="tns:ADVERTISEMENT_ANNOUCEMENT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ADVERTISEMENT_ANNOUCEMENT">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_TYPE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SECURITY_NUMBER" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRICE" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SIDE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BOARD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ADD_CANCEL_FLAG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONTACT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ENTRY_DATE" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get1FirmOrdersByStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get1FirmOrdersByStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get1FirmOrdersByStatusResult" type="tns:ArrayOfONE_FIRM_DEAL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfONE_FIRM_DEAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ONE_FIRM_DEAL" nillable="true" type="tns:ONE_FIRM_DEAL" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ONE_FIRM_DEAL">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_TYPE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BUYER_CLIENT_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SELLER_CLIENT_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRICE" nillable="true" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="BOARD" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DEAL_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_PORTFOLIO_VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_CLIENT_VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_MUTUAL_FUND_VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_FOREIGN_VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_PORTFOLIO_VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_CLIENT_VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_MUTUAL_FUND_VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_FOREIGN_VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CONFIRM_NUMBER" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ENTRY_DATE" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBuyerOrdersByStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBuyerOrdersByStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBuyerOrdersByStatusResult" type="tns:ArrayOfTWO_FIRM_DEAL_BUYER" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTWO_FIRM_DEAL_BUYER">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TWO_FIRM_DEAL_BUYER" nillable="true" type="tns:TWO_FIRM_DEAL_BUYER" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TWO_FIRM_DEAL_BUYER">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DEAL_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_TYPE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SIDE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_CONTRA_FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRICE" nillable="true" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="BOARD" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CONFIRM_NUMBER" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BUYER_CLIENT_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ENTRY_DATE" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSellerOrdersByStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellerOrdersByStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSellerOrdersByStatusResult" type="tns:ArrayOfTWO_FIRM_DEAL_SELLER" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTWO_FIRM_DEAL_SELLER">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TWO_FIRM_DEAL_SELLER" nillable="true" type="tns:TWO_FIRM_DEAL_SELLER" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TWO_FIRM_DEAL_SELLER">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_TYPE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SELLER_TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SELLER_CLIENT_ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_FIRM" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BUYER_TRADER_ID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRICE" nillable="true" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="BOARD" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DEAL_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BROKER_PORTFOLIO_VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BROKER_CLIENT_VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BROKER_MUTUAL_FUND_VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BROKER_FOREIGN_VOLUME" nillable="true" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CONFIRM_NUMBER" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SIDE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ENTRY_DATE" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateSeller">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DealID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Side" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSellerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSellerResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DealID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateBuyerResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update1Firm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DealID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update1FirmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update1FirmResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DealID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateBuyerStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerStatusByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DealID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="USERNAME" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerStatusByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateBuyerStatusByUserResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerStatusByConfirmNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CONFIRM_NUMBER" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerStatusByConfirmNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateBuyerStatusByConfirmNumberResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSellerStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DealID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSellerStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSellerStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSellerStatusByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DealID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="USERNAME" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSellerStatusByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSellerStatusByUserResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSellerStatusByConfirmNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CONFIRM_NUMBER" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSellerStatusByConfirmNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSellerStatusByConfirmNumberResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerConfirmNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DealID" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerConfirmNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateBuyerConfirmNumberResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSellerConfirmNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DealID" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSellerConfirmNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSellerConfirmNumberResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update1FirmConfirmNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DealID" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update1FirmConfirmNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update1FirmConfirmNumberResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update1FirmStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DealID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update1FirmStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update1FirmStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update1FirmStatusByConfirmNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CONFIRM_NUMBER" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update1FirmStatusByConfirmNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update1FirmStatusByConfirmNumberResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update1FirmStatusByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DealID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update1FirmStatusByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Update1FirmStatusByUserResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAdvStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAdvStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAdvStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAdvStatusByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAdvStatusByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAdvStatusByUserResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAdvAnnouncementStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAdvAnnouncementStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAdvAnnouncementStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertBuyerDeal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BUYER_FIRM" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BUYER_TRADER_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SIDE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SELLER_CONTRA_FIRM" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SELLER_TRADER_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="VOLUME" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="PRICE" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="BOARD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CONFIRM_NUMBER" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertBuyerDealResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertBuyerDealResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertAdvAnnouncement">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FIRM" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TRADER_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SIDE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="VOLUME" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="PRICE" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="BOARD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TIME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ADD_CANCEL_FLAG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CONTACT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertAdvAnnouncementResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertAdvAnnouncementResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertSellerDeal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MessageStatus" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SellerFirm" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SellerTraderID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SellerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BuyerFirm" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BuyerTraderID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="StockCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Price" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BoardType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BrokerPortfolioVolume" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="BrokerClientVolume" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="BrokerMutualFundVolume" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="BrokerForeignVolume" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReceivedBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApprovedBy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertSellerDealResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertSellerDealResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert1FirmDeal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FIRM" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TRADER_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="BUYER_CLIENT_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SELLER_CLIENT_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PRICE" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="BOARD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BUYER_PORTFOLIO_VOLUME" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="BUYER_CLIENT_VOLUME" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="BUYER_MUTUAL_FUND_VOLUME" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="BUYER_FOREIGN_VOLUME" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="SELLER_PORTFOLIO_VOLUME" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="SELLER_CLIENT_VOLUME" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="SELLER_MUTUAL_FUND_VOLUME" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="SELLER_FOREIGN_VOLUME" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert1FirmDealResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Insert1FirmDealResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertAdv">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_TYPE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FIRM" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TRADER_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SIDE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="VOLUME" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="PRICE" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="BOARD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TIME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ADD_CANCEL_FLAG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CONTACT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertAdvResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertAdvResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get1FirmOrderSeqBuy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OrderNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get1FirmOrderSeqBuyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Get1FirmOrderSeqBuyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get1FirmOrderSeqSell">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OrderNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get1FirmOrderSeqSellResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Get1FirmOrderSeqSellResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellerOrderSeq">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OrderNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellerOrderSeqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetSellerOrderSeqResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBuyerOrderSeq">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OrderNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBuyerOrderSeqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetBuyerOrderSeqResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAdvACFlag">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="newFlag" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAdvACFlagResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAdvACFlagResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBuyerOrdersByTraderID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageStatus" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TraderID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBuyerOrdersByTraderIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBuyerOrdersByTraderIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllFirms">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllFirmsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllFirmsResult" type="tns:ArrayOfPT_FIRM" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPT_FIRM">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PT_FIRM" nillable="true" type="tns:PT_FIRM" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PT_FIRM">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FIRM_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FIRM_NAME" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NUMBER_OF_TRADERS" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONTACT" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CORE_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FIRM_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOTE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFirmsAreNotCurrentFirm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="currentFirm" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFirmsAreNotCurrentFirmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFirmsAreNotCurrentFirmResult" type="tns:ArrayOfPT_FIRM" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTraders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="firmId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTradersResult" type="tns:ArrayOfPT_TRADER" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPT_TRADER">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PT_TRADER" nillable="true" type="tns:PT_TRADER" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PT_TRADER">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FIRM_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TRADER_ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TRADER_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOTE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTraderIdByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTraderIdByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTraderIdByUserResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="tns:LoginResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LoginResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Branch" type="tns:Branch" />
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RoleID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoleName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Branch">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BranchID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BrachCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradeCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PTInsertAdv">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" />
+            <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_TYPE" />
+            <s:element minOccurs="0" maxOccurs="1" name="FIRM" />
+            <s:element minOccurs="0" maxOccurs="1" name="TRADER_ID" />
+            <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" />
+            <s:element minOccurs="0" maxOccurs="1" name="SIDE" />
+            <s:element minOccurs="0" maxOccurs="1" name="VOLUME" />
+            <s:element minOccurs="0" maxOccurs="1" name="PRICE" />
+            <s:element minOccurs="0" maxOccurs="1" name="BOARD" />
+            <s:element minOccurs="0" maxOccurs="1" name="TIME" />
+            <s:element minOccurs="0" maxOccurs="1" name="ADD_CANCEL_FLAG" />
+            <s:element minOccurs="0" maxOccurs="1" name="CONTACT" />
+            <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" />
+            <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PTInsertAdvResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PTInsertAdvResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PTInsertSellerDeal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MessageStatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="SellerFirm" />
+            <s:element minOccurs="0" maxOccurs="1" name="SellerTraderID" />
+            <s:element minOccurs="0" maxOccurs="1" name="SellerID" />
+            <s:element minOccurs="0" maxOccurs="1" name="BuyerFirm" />
+            <s:element minOccurs="0" maxOccurs="1" name="BuyerTraderID" />
+            <s:element minOccurs="0" maxOccurs="1" name="StockCode" />
+            <s:element minOccurs="0" maxOccurs="1" name="Price" />
+            <s:element minOccurs="0" maxOccurs="1" name="BoardType" />
+            <s:element minOccurs="0" maxOccurs="1" name="BrokerPortfolioVolume" />
+            <s:element minOccurs="0" maxOccurs="1" name="BrokerClientVolume" />
+            <s:element minOccurs="0" maxOccurs="1" name="BrokerMutualFundVolume" />
+            <s:element minOccurs="0" maxOccurs="1" name="BrokerForeignVolume" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReceivedBy" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApprovedBy" />
+            <s:element minOccurs="0" maxOccurs="1" name="CoreOrderSeq" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PTInsertSellerDealResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PTInsertSellerDealResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PTInsert1FirmDeal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MESSAGE_STATUS" />
+            <s:element minOccurs="0" maxOccurs="1" name="FIRM" />
+            <s:element minOccurs="0" maxOccurs="1" name="TRADER_ID" />
+            <s:element minOccurs="0" maxOccurs="1" name="BUYER_CLIENT_ID" />
+            <s:element minOccurs="0" maxOccurs="1" name="SELLER_CLIENT_ID" />
+            <s:element minOccurs="0" maxOccurs="1" name="SECURITY_SYMBOL" />
+            <s:element minOccurs="0" maxOccurs="1" name="PRICE" />
+            <s:element minOccurs="0" maxOccurs="1" name="BOARD" />
+            <s:element minOccurs="0" maxOccurs="1" name="BUYER_PORTFOLIO_VOLUME" />
+            <s:element minOccurs="0" maxOccurs="1" name="BUYER_CLIENT_VOLUME" />
+            <s:element minOccurs="0" maxOccurs="1" name="BUYER_MUTUAL_FUND_VOLUME" />
+            <s:element minOccurs="0" maxOccurs="1" name="BUYER_FOREIGN_VOLUME" />
+            <s:element minOccurs="0" maxOccurs="1" name="SELLER_PORTFOLIO_VOLUME" />
+            <s:element minOccurs="0" maxOccurs="1" name="SELLER_CLIENT_VOLUME" />
+            <s:element minOccurs="0" maxOccurs="1" name="SELLER_MUTUAL_FUND_VOLUME" />
+            <s:element minOccurs="0" maxOccurs="1" name="SELLER_FOREIGN_VOLUME" />
+            <s:element minOccurs="0" maxOccurs="1" name="RECEIVED_BY" />
+            <s:element minOccurs="0" maxOccurs="1" name="APPROVED_BY" />
+            <s:element minOccurs="0" maxOccurs="1" name="CORE_ORDER_SEQ_BUY" />
+            <s:element minOccurs="0" maxOccurs="1" name="CORE_ORDER_SEQ_SELL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PTInsert1FirmDealResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PTInsert1FirmDealResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetIdentityPTDealTables">
+        <s:complexType />
+      </s:element>
+      <s:element name="ResetIdentityPTDealTablesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ResetPTDealTables">
+        <s:complexType />
+      </s:element>
+      <s:element name="ResetPTDealTablesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateBuyerStatusByUserWithOldStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DealID" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldStatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewStatus" />
+            <s:element minOccurs="0" maxOccurs="1" name="USERNAME" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerStatusByUserWithOldStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateBuyerStatusByUserWithOldStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerClient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DealID" />
+            <s:element minOccurs="0" maxOccurs="1" name="BuyerClient" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerClientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateBuyerClientResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerCoreSeq">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DealID" />
+            <s:element minOccurs="0" maxOccurs="1" name="Seq" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBuyerCoreSeqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateBuyerCoreSeqResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBuyerOrdersCountByTrader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="messageStatus" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="traderID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBuyerOrdersCountByTraderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetBuyerOrdersCountByTraderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAdvOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdvOrders" />
+  </wsdl:message>
+  <wsdl:message name="GetAdvOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdvOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdvAnnouncesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdvAnnounces" />
+  </wsdl:message>
+  <wsdl:message name="GetAdvAnnouncesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdvAnnouncesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get1FirmOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:Get1FirmOrders" />
+  </wsdl:message>
+  <wsdl:message name="Get1FirmOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:Get1FirmOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyerOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBuyerOrders" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyerOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBuyerOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSellerOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSellerOrders" />
+  </wsdl:message>
+  <wsdl:message name="GetSellerOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSellerOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdvOrdersByStatusLINQSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdvOrdersByStatusLINQ" />
+  </wsdl:message>
+  <wsdl:message name="GetAdvOrdersByStatusLINQSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdvOrdersByStatusLINQResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdvAnnouncesByStatusLINQSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdvAnnouncesByStatusLINQ" />
+  </wsdl:message>
+  <wsdl:message name="GetAdvAnnouncesByStatusLINQSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdvAnnouncesByStatusLINQResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get1FirmOrdersByStatusLINQSoapIn">
+    <wsdl:part name="parameters" element="tns:Get1FirmOrdersByStatusLINQ" />
+  </wsdl:message>
+  <wsdl:message name="Get1FirmOrdersByStatusLINQSoapOut">
+    <wsdl:part name="parameters" element="tns:Get1FirmOrdersByStatusLINQResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyerOrdersByStatusLINQSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBuyerOrdersByStatusLINQ" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyerOrdersByStatusLINQSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBuyerOrdersByStatusLINQResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSellerOrdersByStatusLINQSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSellerOrdersByStatusLINQ" />
+  </wsdl:message>
+  <wsdl:message name="GetSellerOrdersByStatusLINQSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSellerOrdersByStatusLINQResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdvOrdersByStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdvOrdersByStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetAdvOrdersByStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdvOrdersByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdvAnnouncesByStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdvAnnouncesByStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetAdvAnnouncesByStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdvAnnouncesByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get1FirmOrdersByStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Get1FirmOrdersByStatus" />
+  </wsdl:message>
+  <wsdl:message name="Get1FirmOrdersByStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:Get1FirmOrdersByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyerOrdersByStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBuyerOrdersByStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyerOrdersByStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBuyerOrdersByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSellerOrdersByStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSellerOrdersByStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetSellerOrdersByStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSellerOrdersByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSellerSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSeller" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSellerSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSellerResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBuyer" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update1FirmSoapIn">
+    <wsdl:part name="parameters" element="tns:Update1Firm" />
+  </wsdl:message>
+  <wsdl:message name="Update1FirmSoapOut">
+    <wsdl:part name="parameters" element="tns:Update1FirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerStatusByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerStatusByUser" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerStatusByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerStatusByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerStatusByConfirmNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerStatusByConfirmNumber" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerStatusByConfirmNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerStatusByConfirmNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSellerStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSellerStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSellerStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSellerStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSellerStatusByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSellerStatusByUser" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSellerStatusByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSellerStatusByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSellerStatusByConfirmNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSellerStatusByConfirmNumber" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSellerStatusByConfirmNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSellerStatusByConfirmNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerConfirmNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerConfirmNumber" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerConfirmNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerConfirmNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSellerConfirmNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSellerConfirmNumber" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSellerConfirmNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSellerConfirmNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update1FirmConfirmNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:Update1FirmConfirmNumber" />
+  </wsdl:message>
+  <wsdl:message name="Update1FirmConfirmNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:Update1FirmConfirmNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update1FirmStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Update1FirmStatus" />
+  </wsdl:message>
+  <wsdl:message name="Update1FirmStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:Update1FirmStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update1FirmStatusByConfirmNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:Update1FirmStatusByConfirmNumber" />
+  </wsdl:message>
+  <wsdl:message name="Update1FirmStatusByConfirmNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:Update1FirmStatusByConfirmNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update1FirmStatusByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:Update1FirmStatusByUser" />
+  </wsdl:message>
+  <wsdl:message name="Update1FirmStatusByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:Update1FirmStatusByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAdvStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAdvStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAdvStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAdvStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAdvStatusByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAdvStatusByUser" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAdvStatusByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAdvStatusByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAdvAnnouncementStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAdvAnnouncementStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAdvAnnouncementStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAdvAnnouncementStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertBuyerDealSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertBuyerDeal" />
+  </wsdl:message>
+  <wsdl:message name="InsertBuyerDealSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertBuyerDealResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertAdvAnnouncementSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertAdvAnnouncement" />
+  </wsdl:message>
+  <wsdl:message name="InsertAdvAnnouncementSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertAdvAnnouncementResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertSellerDealSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertSellerDeal" />
+  </wsdl:message>
+  <wsdl:message name="InsertSellerDealSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertSellerDealResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert1FirmDealSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert1FirmDeal" />
+  </wsdl:message>
+  <wsdl:message name="Insert1FirmDealSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert1FirmDealResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertAdvSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertAdv" />
+  </wsdl:message>
+  <wsdl:message name="InsertAdvSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertAdvResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get1FirmOrderSeqBuySoapIn">
+    <wsdl:part name="parameters" element="tns:Get1FirmOrderSeqBuy" />
+  </wsdl:message>
+  <wsdl:message name="Get1FirmOrderSeqBuySoapOut">
+    <wsdl:part name="parameters" element="tns:Get1FirmOrderSeqBuyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get1FirmOrderSeqSellSoapIn">
+    <wsdl:part name="parameters" element="tns:Get1FirmOrderSeqSell" />
+  </wsdl:message>
+  <wsdl:message name="Get1FirmOrderSeqSellSoapOut">
+    <wsdl:part name="parameters" element="tns:Get1FirmOrderSeqSellResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSellerOrderSeqSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSellerOrderSeq" />
+  </wsdl:message>
+  <wsdl:message name="GetSellerOrderSeqSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSellerOrderSeqResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyerOrderSeqSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBuyerOrderSeq" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyerOrderSeqSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBuyerOrderSeqResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAdvACFlagSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAdvACFlag" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAdvACFlagSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAdvACFlagResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyerOrdersByTraderIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBuyerOrdersByTraderID" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyerOrdersByTraderIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBuyerOrdersByTraderIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllFirmsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllFirms" />
+  </wsdl:message>
+  <wsdl:message name="GetAllFirmsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllFirmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFirmsAreNotCurrentFirmSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFirmsAreNotCurrentFirm" />
+  </wsdl:message>
+  <wsdl:message name="GetFirmsAreNotCurrentFirmSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFirmsAreNotCurrentFirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTradersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTraders" />
+  </wsdl:message>
+  <wsdl:message name="GetTradersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTradersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTraderIdByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTraderIdByUser" />
+  </wsdl:message>
+  <wsdl:message name="GetTraderIdByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTraderIdByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="PTInsertAdvSoapIn">
+    <wsdl:part name="parameters" element="tns:PTInsertAdv" />
+  </wsdl:message>
+  <wsdl:message name="PTInsertAdvSoapOut">
+    <wsdl:part name="parameters" element="tns:PTInsertAdvResponse" />
+  </wsdl:message>
+  <wsdl:message name="PTInsertSellerDealSoapIn">
+    <wsdl:part name="parameters" element="tns:PTInsertSellerDeal" />
+  </wsdl:message>
+  <wsdl:message name="PTInsertSellerDealSoapOut">
+    <wsdl:part name="parameters" element="tns:PTInsertSellerDealResponse" />
+  </wsdl:message>
+  <wsdl:message name="PTInsert1FirmDealSoapIn">
+    <wsdl:part name="parameters" element="tns:PTInsert1FirmDeal" />
+  </wsdl:message>
+  <wsdl:message name="PTInsert1FirmDealSoapOut">
+    <wsdl:part name="parameters" element="tns:PTInsert1FirmDealResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResetIdentityPTDealTablesSoapIn">
+    <wsdl:part name="parameters" element="tns:ResetIdentityPTDealTables" />
+  </wsdl:message>
+  <wsdl:message name="ResetIdentityPTDealTablesSoapOut">
+    <wsdl:part name="parameters" element="tns:ResetIdentityPTDealTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResetPTDealTablesSoapIn">
+    <wsdl:part name="parameters" element="tns:ResetPTDealTables" />
+  </wsdl:message>
+  <wsdl:message name="ResetPTDealTablesSoapOut">
+    <wsdl:part name="parameters" element="tns:ResetPTDealTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerStatusByUserWithOldStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerStatusByUserWithOldStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerStatusByUserWithOldStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerStatusByUserWithOldStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerClientSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerClient" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerClientSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerCoreSeqSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerCoreSeq" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBuyerCoreSeqSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBuyerCoreSeqResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyerOrdersCountByTraderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBuyerOrdersCountByTrader" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyerOrdersCountByTraderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBuyerOrdersCountByTraderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PTConnectorWSSoap">
+    <wsdl:operation name="GetAdvOrders">
+      <wsdl:input message="tns:GetAdvOrdersSoapIn" />
+      <wsdl:output message="tns:GetAdvOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvAnnounces">
+      <wsdl:input message="tns:GetAdvAnnouncesSoapIn" />
+      <wsdl:output message="tns:GetAdvAnnouncesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrders">
+      <wsdl:input message="tns:Get1FirmOrdersSoapIn" />
+      <wsdl:output message="tns:Get1FirmOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrders">
+      <wsdl:input message="tns:GetBuyerOrdersSoapIn" />
+      <wsdl:output message="tns:GetBuyerOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSellerOrders">
+      <wsdl:input message="tns:GetSellerOrdersSoapIn" />
+      <wsdl:output message="tns:GetSellerOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvOrdersByStatusLINQ">
+      <wsdl:input message="tns:GetAdvOrdersByStatusLINQSoapIn" />
+      <wsdl:output message="tns:GetAdvOrdersByStatusLINQSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvAnnouncesByStatusLINQ">
+      <wsdl:input message="tns:GetAdvAnnouncesByStatusLINQSoapIn" />
+      <wsdl:output message="tns:GetAdvAnnouncesByStatusLINQSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrdersByStatusLINQ">
+      <wsdl:input message="tns:Get1FirmOrdersByStatusLINQSoapIn" />
+      <wsdl:output message="tns:Get1FirmOrdersByStatusLINQSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrdersByStatusLINQ">
+      <wsdl:input message="tns:GetBuyerOrdersByStatusLINQSoapIn" />
+      <wsdl:output message="tns:GetBuyerOrdersByStatusLINQSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSellerOrdersByStatusLINQ">
+      <wsdl:input message="tns:GetSellerOrdersByStatusLINQSoapIn" />
+      <wsdl:output message="tns:GetSellerOrdersByStatusLINQSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvOrdersByStatus">
+      <wsdl:input message="tns:GetAdvOrdersByStatusSoapIn" />
+      <wsdl:output message="tns:GetAdvOrdersByStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvAnnouncesByStatus">
+      <wsdl:input message="tns:GetAdvAnnouncesByStatusSoapIn" />
+      <wsdl:output message="tns:GetAdvAnnouncesByStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrdersByStatus">
+      <wsdl:input message="tns:Get1FirmOrdersByStatusSoapIn" />
+      <wsdl:output message="tns:Get1FirmOrdersByStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrdersByStatus">
+      <wsdl:input message="tns:GetBuyerOrdersByStatusSoapIn" />
+      <wsdl:output message="tns:GetBuyerOrdersByStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSellerOrdersByStatus">
+      <wsdl:input message="tns:GetSellerOrdersByStatusSoapIn" />
+      <wsdl:output message="tns:GetSellerOrdersByStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSeller">
+      <wsdl:input message="tns:UpdateSellerSoapIn" />
+      <wsdl:output message="tns:UpdateSellerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyer">
+      <wsdl:input message="tns:UpdateBuyerSoapIn" />
+      <wsdl:output message="tns:UpdateBuyerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update1Firm">
+      <wsdl:input message="tns:Update1FirmSoapIn" />
+      <wsdl:output message="tns:Update1FirmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerStatus">
+      <wsdl:input message="tns:UpdateBuyerStatusSoapIn" />
+      <wsdl:output message="tns:UpdateBuyerStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerStatusByUser">
+      <wsdl:input message="tns:UpdateBuyerStatusByUserSoapIn" />
+      <wsdl:output message="tns:UpdateBuyerStatusByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerStatusByConfirmNumber">
+      <wsdl:input message="tns:UpdateBuyerStatusByConfirmNumberSoapIn" />
+      <wsdl:output message="tns:UpdateBuyerStatusByConfirmNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellerStatus">
+      <wsdl:input message="tns:UpdateSellerStatusSoapIn" />
+      <wsdl:output message="tns:UpdateSellerStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellerStatusByUser">
+      <wsdl:input message="tns:UpdateSellerStatusByUserSoapIn" />
+      <wsdl:output message="tns:UpdateSellerStatusByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellerStatusByConfirmNumber">
+      <wsdl:input message="tns:UpdateSellerStatusByConfirmNumberSoapIn" />
+      <wsdl:output message="tns:UpdateSellerStatusByConfirmNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerConfirmNumber">
+      <wsdl:input message="tns:UpdateBuyerConfirmNumberSoapIn" />
+      <wsdl:output message="tns:UpdateBuyerConfirmNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellerConfirmNumber">
+      <wsdl:input message="tns:UpdateSellerConfirmNumberSoapIn" />
+      <wsdl:output message="tns:UpdateSellerConfirmNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update1FirmConfirmNumber">
+      <wsdl:input message="tns:Update1FirmConfirmNumberSoapIn" />
+      <wsdl:output message="tns:Update1FirmConfirmNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update1FirmStatus">
+      <wsdl:input message="tns:Update1FirmStatusSoapIn" />
+      <wsdl:output message="tns:Update1FirmStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update1FirmStatusByConfirmNumber">
+      <wsdl:input message="tns:Update1FirmStatusByConfirmNumberSoapIn" />
+      <wsdl:output message="tns:Update1FirmStatusByConfirmNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update1FirmStatusByUser">
+      <wsdl:input message="tns:Update1FirmStatusByUserSoapIn" />
+      <wsdl:output message="tns:Update1FirmStatusByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvStatus">
+      <wsdl:input message="tns:UpdateAdvStatusSoapIn" />
+      <wsdl:output message="tns:UpdateAdvStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvStatusByUser">
+      <wsdl:input message="tns:UpdateAdvStatusByUserSoapIn" />
+      <wsdl:output message="tns:UpdateAdvStatusByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvAnnouncementStatus">
+      <wsdl:input message="tns:UpdateAdvAnnouncementStatusSoapIn" />
+      <wsdl:output message="tns:UpdateAdvAnnouncementStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBuyerDeal">
+      <wsdl:input message="tns:InsertBuyerDealSoapIn" />
+      <wsdl:output message="tns:InsertBuyerDealSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdvAnnouncement">
+      <wsdl:input message="tns:InsertAdvAnnouncementSoapIn" />
+      <wsdl:output message="tns:InsertAdvAnnouncementSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSellerDeal">
+      <wsdl:input message="tns:InsertSellerDealSoapIn" />
+      <wsdl:output message="tns:InsertSellerDealSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert1FirmDeal">
+      <wsdl:input message="tns:Insert1FirmDealSoapIn" />
+      <wsdl:output message="tns:Insert1FirmDealSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdv">
+      <wsdl:input message="tns:InsertAdvSoapIn" />
+      <wsdl:output message="tns:InsertAdvSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrderSeqBuy">
+      <wsdl:input message="tns:Get1FirmOrderSeqBuySoapIn" />
+      <wsdl:output message="tns:Get1FirmOrderSeqBuySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrderSeqSell">
+      <wsdl:input message="tns:Get1FirmOrderSeqSellSoapIn" />
+      <wsdl:output message="tns:Get1FirmOrderSeqSellSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSellerOrderSeq">
+      <wsdl:input message="tns:GetSellerOrderSeqSoapIn" />
+      <wsdl:output message="tns:GetSellerOrderSeqSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrderSeq">
+      <wsdl:input message="tns:GetBuyerOrderSeqSoapIn" />
+      <wsdl:output message="tns:GetBuyerOrderSeqSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvACFlag">
+      <wsdl:input message="tns:UpdateAdvACFlagSoapIn" />
+      <wsdl:output message="tns:UpdateAdvACFlagSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrdersByTraderID">
+      <wsdl:input message="tns:GetBuyerOrdersByTraderIDSoapIn" />
+      <wsdl:output message="tns:GetBuyerOrdersByTraderIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFirms">
+      <wsdl:input message="tns:GetAllFirmsSoapIn" />
+      <wsdl:output message="tns:GetAllFirmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirmsAreNotCurrentFirm">
+      <wsdl:input message="tns:GetFirmsAreNotCurrentFirmSoapIn" />
+      <wsdl:output message="tns:GetFirmsAreNotCurrentFirmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTraders">
+      <wsdl:input message="tns:GetTradersSoapIn" />
+      <wsdl:output message="tns:GetTradersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTraderIdByUser">
+      <wsdl:input message="tns:GetTraderIdByUserSoapIn" />
+      <wsdl:output message="tns:GetTraderIdByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PTInsertAdv">
+      <wsdl:input message="tns:PTInsertAdvSoapIn" />
+      <wsdl:output message="tns:PTInsertAdvSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PTInsertSellerDeal">
+      <wsdl:input message="tns:PTInsertSellerDealSoapIn" />
+      <wsdl:output message="tns:PTInsertSellerDealSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PTInsert1FirmDeal">
+      <wsdl:input message="tns:PTInsert1FirmDealSoapIn" />
+      <wsdl:output message="tns:PTInsert1FirmDealSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetIdentityPTDealTables">
+      <wsdl:input message="tns:ResetIdentityPTDealTablesSoapIn" />
+      <wsdl:output message="tns:ResetIdentityPTDealTablesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPTDealTables">
+      <wsdl:input message="tns:ResetPTDealTablesSoapIn" />
+      <wsdl:output message="tns:ResetPTDealTablesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerStatusByUserWithOldStatus">
+      <wsdl:input message="tns:UpdateBuyerStatusByUserWithOldStatusSoapIn" />
+      <wsdl:output message="tns:UpdateBuyerStatusByUserWithOldStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerClient">
+      <wsdl:input message="tns:UpdateBuyerClientSoapIn" />
+      <wsdl:output message="tns:UpdateBuyerClientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerCoreSeq">
+      <wsdl:input message="tns:UpdateBuyerCoreSeqSoapIn" />
+      <wsdl:output message="tns:UpdateBuyerCoreSeqSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrdersCountByTrader">
+      <wsdl:input message="tns:GetBuyerOrdersCountByTraderSoapIn" />
+      <wsdl:output message="tns:GetBuyerOrdersCountByTraderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PTConnectorWSSoap" type="tns:PTConnectorWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAdvOrders">
+      <soap:operation soapAction="http://tempuri.org/GetAdvOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvAnnounces">
+      <soap:operation soapAction="http://tempuri.org/GetAdvAnnounces" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrders">
+      <soap:operation soapAction="http://tempuri.org/Get1FirmOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrders">
+      <soap:operation soapAction="http://tempuri.org/GetBuyerOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellerOrders">
+      <soap:operation soapAction="http://tempuri.org/GetSellerOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvOrdersByStatusLINQ">
+      <soap:operation soapAction="http://tempuri.org/GetAdvOrdersByStatusLINQ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvAnnouncesByStatusLINQ">
+      <soap:operation soapAction="http://tempuri.org/GetAdvAnnouncesByStatusLINQ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrdersByStatusLINQ">
+      <soap:operation soapAction="http://tempuri.org/Get1FirmOrdersByStatusLINQ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrdersByStatusLINQ">
+      <soap:operation soapAction="http://tempuri.org/GetBuyerOrdersByStatusLINQ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellerOrdersByStatusLINQ">
+      <soap:operation soapAction="http://tempuri.org/GetSellerOrdersByStatusLINQ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvOrdersByStatus">
+      <soap:operation soapAction="http://tempuri.org/GetAdvOrdersByStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvAnnouncesByStatus">
+      <soap:operation soapAction="http://tempuri.org/GetAdvAnnouncesByStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrdersByStatus">
+      <soap:operation soapAction="http://tempuri.org/Get1FirmOrdersByStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrdersByStatus">
+      <soap:operation soapAction="http://tempuri.org/GetBuyerOrdersByStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellerOrdersByStatus">
+      <soap:operation soapAction="http://tempuri.org/GetSellerOrdersByStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSeller">
+      <soap:operation soapAction="http://tempuri.org/UpdateSeller" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyer">
+      <soap:operation soapAction="http://tempuri.org/UpdateBuyer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update1Firm">
+      <soap:operation soapAction="http://tempuri.org/Update1Firm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateBuyerStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerStatusByUser">
+      <soap:operation soapAction="http://tempuri.org/UpdateBuyerStatusByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerStatusByConfirmNumber">
+      <soap:operation soapAction="http://tempuri.org/UpdateBuyerStatusByConfirmNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellerStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateSellerStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellerStatusByUser">
+      <soap:operation soapAction="http://tempuri.org/UpdateSellerStatusByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellerStatusByConfirmNumber">
+      <soap:operation soapAction="http://tempuri.org/UpdateSellerStatusByConfirmNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerConfirmNumber">
+      <soap:operation soapAction="http://tempuri.org/UpdateBuyerConfirmNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellerConfirmNumber">
+      <soap:operation soapAction="http://tempuri.org/UpdateSellerConfirmNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update1FirmConfirmNumber">
+      <soap:operation soapAction="http://tempuri.org/Update1FirmConfirmNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update1FirmStatus">
+      <soap:operation soapAction="http://tempuri.org/Update1FirmStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update1FirmStatusByConfirmNumber">
+      <soap:operation soapAction="http://tempuri.org/Update1FirmStatusByConfirmNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update1FirmStatusByUser">
+      <soap:operation soapAction="http://tempuri.org/Update1FirmStatusByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateAdvStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvStatusByUser">
+      <soap:operation soapAction="http://tempuri.org/UpdateAdvStatusByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvAnnouncementStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateAdvAnnouncementStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBuyerDeal">
+      <soap:operation soapAction="http://tempuri.org/InsertBuyerDeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdvAnnouncement">
+      <soap:operation soapAction="http://tempuri.org/InsertAdvAnnouncement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSellerDeal">
+      <soap:operation soapAction="http://tempuri.org/InsertSellerDeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert1FirmDeal">
+      <soap:operation soapAction="http://tempuri.org/Insert1FirmDeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdv">
+      <soap:operation soapAction="http://tempuri.org/InsertAdv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrderSeqBuy">
+      <soap:operation soapAction="http://tempuri.org/Get1FirmOrderSeqBuy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrderSeqSell">
+      <soap:operation soapAction="http://tempuri.org/Get1FirmOrderSeqSell" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellerOrderSeq">
+      <soap:operation soapAction="http://tempuri.org/GetSellerOrderSeq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrderSeq">
+      <soap:operation soapAction="http://tempuri.org/GetBuyerOrderSeq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvACFlag">
+      <soap:operation soapAction="http://tempuri.org/UpdateAdvACFlag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrdersByTraderID">
+      <soap:operation soapAction="http://tempuri.org/GetBuyerOrdersByTraderID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFirms">
+      <soap:operation soapAction="http://tempuri.org/GetAllFirms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirmsAreNotCurrentFirm">
+      <soap:operation soapAction="http://tempuri.org/GetFirmsAreNotCurrentFirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTraders">
+      <soap:operation soapAction="http://tempuri.org/GetTraders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTraderIdByUser">
+      <soap:operation soapAction="http://tempuri.org/GetTraderIdByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PTInsertAdv">
+      <soap:operation soapAction="http://tempuri.org/PTInsertAdv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PTInsertSellerDeal">
+      <soap:operation soapAction="http://tempuri.org/PTInsertSellerDeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PTInsert1FirmDeal">
+      <soap:operation soapAction="http://tempuri.org/PTInsert1FirmDeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetIdentityPTDealTables">
+      <soap:operation soapAction="http://tempuri.org/ResetIdentityPTDealTables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPTDealTables">
+      <soap:operation soapAction="http://tempuri.org/ResetPTDealTables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerStatusByUserWithOldStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateBuyerStatusByUserWithOldStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerClient">
+      <soap:operation soapAction="http://tempuri.org/UpdateBuyerClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerCoreSeq">
+      <soap:operation soapAction="http://tempuri.org/UpdateBuyerCoreSeq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrdersCountByTrader">
+      <soap:operation soapAction="http://tempuri.org/GetBuyerOrdersCountByTrader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PTConnectorWSSoap12" type="tns:PTConnectorWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAdvOrders">
+      <soap12:operation soapAction="http://tempuri.org/GetAdvOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvAnnounces">
+      <soap12:operation soapAction="http://tempuri.org/GetAdvAnnounces" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrders">
+      <soap12:operation soapAction="http://tempuri.org/Get1FirmOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrders">
+      <soap12:operation soapAction="http://tempuri.org/GetBuyerOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellerOrders">
+      <soap12:operation soapAction="http://tempuri.org/GetSellerOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvOrdersByStatusLINQ">
+      <soap12:operation soapAction="http://tempuri.org/GetAdvOrdersByStatusLINQ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvAnnouncesByStatusLINQ">
+      <soap12:operation soapAction="http://tempuri.org/GetAdvAnnouncesByStatusLINQ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrdersByStatusLINQ">
+      <soap12:operation soapAction="http://tempuri.org/Get1FirmOrdersByStatusLINQ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrdersByStatusLINQ">
+      <soap12:operation soapAction="http://tempuri.org/GetBuyerOrdersByStatusLINQ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellerOrdersByStatusLINQ">
+      <soap12:operation soapAction="http://tempuri.org/GetSellerOrdersByStatusLINQ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvOrdersByStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetAdvOrdersByStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvAnnouncesByStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetAdvAnnouncesByStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrdersByStatus">
+      <soap12:operation soapAction="http://tempuri.org/Get1FirmOrdersByStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrdersByStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetBuyerOrdersByStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellerOrdersByStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetSellerOrdersByStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSeller">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSeller" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyer">
+      <soap12:operation soapAction="http://tempuri.org/UpdateBuyer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update1Firm">
+      <soap12:operation soapAction="http://tempuri.org/Update1Firm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateBuyerStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerStatusByUser">
+      <soap12:operation soapAction="http://tempuri.org/UpdateBuyerStatusByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerStatusByConfirmNumber">
+      <soap12:operation soapAction="http://tempuri.org/UpdateBuyerStatusByConfirmNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellerStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSellerStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellerStatusByUser">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSellerStatusByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellerStatusByConfirmNumber">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSellerStatusByConfirmNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerConfirmNumber">
+      <soap12:operation soapAction="http://tempuri.org/UpdateBuyerConfirmNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellerConfirmNumber">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSellerConfirmNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update1FirmConfirmNumber">
+      <soap12:operation soapAction="http://tempuri.org/Update1FirmConfirmNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update1FirmStatus">
+      <soap12:operation soapAction="http://tempuri.org/Update1FirmStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update1FirmStatusByConfirmNumber">
+      <soap12:operation soapAction="http://tempuri.org/Update1FirmStatusByConfirmNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update1FirmStatusByUser">
+      <soap12:operation soapAction="http://tempuri.org/Update1FirmStatusByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAdvStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvStatusByUser">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAdvStatusByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvAnnouncementStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAdvAnnouncementStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBuyerDeal">
+      <soap12:operation soapAction="http://tempuri.org/InsertBuyerDeal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdvAnnouncement">
+      <soap12:operation soapAction="http://tempuri.org/InsertAdvAnnouncement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSellerDeal">
+      <soap12:operation soapAction="http://tempuri.org/InsertSellerDeal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert1FirmDeal">
+      <soap12:operation soapAction="http://tempuri.org/Insert1FirmDeal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAdv">
+      <soap12:operation soapAction="http://tempuri.org/InsertAdv" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrderSeqBuy">
+      <soap12:operation soapAction="http://tempuri.org/Get1FirmOrderSeqBuy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get1FirmOrderSeqSell">
+      <soap12:operation soapAction="http://tempuri.org/Get1FirmOrderSeqSell" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellerOrderSeq">
+      <soap12:operation soapAction="http://tempuri.org/GetSellerOrderSeq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrderSeq">
+      <soap12:operation soapAction="http://tempuri.org/GetBuyerOrderSeq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdvACFlag">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAdvACFlag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrdersByTraderID">
+      <soap12:operation soapAction="http://tempuri.org/GetBuyerOrdersByTraderID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFirms">
+      <soap12:operation soapAction="http://tempuri.org/GetAllFirms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirmsAreNotCurrentFirm">
+      <soap12:operation soapAction="http://tempuri.org/GetFirmsAreNotCurrentFirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTraders">
+      <soap12:operation soapAction="http://tempuri.org/GetTraders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTraderIdByUser">
+      <soap12:operation soapAction="http://tempuri.org/GetTraderIdByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PTInsertAdv">
+      <soap12:operation soapAction="http://tempuri.org/PTInsertAdv" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PTInsertSellerDeal">
+      <soap12:operation soapAction="http://tempuri.org/PTInsertSellerDeal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PTInsert1FirmDeal">
+      <soap12:operation soapAction="http://tempuri.org/PTInsert1FirmDeal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetIdentityPTDealTables">
+      <soap12:operation soapAction="http://tempuri.org/ResetIdentityPTDealTables" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPTDealTables">
+      <soap12:operation soapAction="http://tempuri.org/ResetPTDealTables" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerStatusByUserWithOldStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateBuyerStatusByUserWithOldStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerClient">
+      <soap12:operation soapAction="http://tempuri.org/UpdateBuyerClient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBuyerCoreSeq">
+      <soap12:operation soapAction="http://tempuri.org/UpdateBuyerCoreSeq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyerOrdersCountByTrader">
+      <soap12:operation soapAction="http://tempuri.org/GetBuyerOrdersCountByTrader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PTConnectorWS">
+    <wsdl:port name="PTConnectorWSSoap" binding="tns:PTConnectorWSSoap">
+      <soap:address location="http://localhost/HosePTConnector/PTConnectorWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PTConnectorWSSoap12" binding="tns:PTConnectorWSSoap12">
+      <soap12:address location="http://localhost/HosePTConnector/PTConnectorWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

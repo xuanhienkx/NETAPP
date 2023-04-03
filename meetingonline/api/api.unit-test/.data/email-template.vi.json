@@ -1,0 +1,10 @@
+﻿{
+  "register": {
+    "title": "[Skylar Tech] Xác thực tài khoản email",
+    "body": "Xin chào {{NAME}}! <p>Cảm ơn bạn đã đăng ký tài khoản trên hệ thống của Skylar Tech. Vui lòng xác thực email bằng cách click vào <a href='{{URL}}'>đây</a>, hoặc nhập code như bên dưới để đăng nhập. <br/><h6>{{CODE}}</h6></p><br/>Skylar Tech Team"
+  },
+  "reset-password": {
+    "title": "[Skylar Tech] Lấy lại mật khẩu đăng nhập",
+    "body": "Xin chào {{NAME}}! <p>Cảm ơn bạn sử dụng dịch vụ của Skylar Tech. Vui lòng xác thực email bằng cách click vào <a href='{{URL}}'>đây để lấy lại mật khẩu</a></p><br/>Skylar Tech Team"
+  } 
+}

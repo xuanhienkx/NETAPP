@@ -1,0 +1,14 @@
+<div class="text-center">
+    <h1 *ngIf="(stype === 'signup')" class="display-3 text-uppercase">{{'Common.thankyou' | translate}}</h1>
+    <p class="lead" *ngIf="(stype === 'signup')" [innerHTML]="'Common.messageSuccesSigup' | translate"></p>
+    <p class="lead" *ngIf="(stype === 'forgot')" [innerHTML]="'Common.messageSuccesForgot' | translate"></p>
+    <hr>
+    <p [innerHTML]="'Common.contactTrouble' | translate">
+        <!-- Having trouble? <a href="">Contact us</a> -->
+    </p>
+    <p class="lead">
+        <button nbButton status="primary" size="medium" routerLink='/'>
+            {{'Common.gotoHome'| translate}}
+        </button>
+    </p>
+</div>

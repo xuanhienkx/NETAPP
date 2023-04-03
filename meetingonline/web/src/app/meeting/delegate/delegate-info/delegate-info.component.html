@@ -1,0 +1,212 @@
+<vip-header-list [title]="'delegateInfo.title'">
+    <div class="command-header-group d-flex justify-content-between" command>
+        <span *ngIf="canCheckOut" class="description my-auto py-2" [translate]="'delegateInfo.checkIn.desc'"
+            [translateParams]="{date: holder?.checkedInDate?.value | date:'dd/MM/yyyy', time: holder?.checkedInDate?.value | date:'HH:mm'}">
+        </span>
+        <div class="vip-group-btn btn-group ml-3 my-auto">
+            <button nbButton status="primary" size="small" *ngIf="canCheckIn" class="my-lg-auto" (click)="checkIn()">
+                {{'delegateInfo.checkIn.title' | translate}}
+            </button>
+            <button nbButton status="primary" size="small" class="my-lg-auto" *ngIf="canCheckOut" (click)="checkOut()">
+                {{'delegateInfo.checkOut.title' | translate}}
+            </button>
+        </div>
+    </div>
+</vip-header-list>
+
+<div *ngIf="holder">
+    <vip-account-right-info  [type]="'full'"></vip-account-right-info>
+
+    <nb-card accent="info" status="basic" class="mt-3">
+        <nb-card-header class="d-flex justify-content-between">
+            <div class="my-auto" *ngIf="myDelegations?.length>0">
+                <span class="my-auto mr-lg-2"> {{'delegateInfo.holder.delegation.titleList' |translate}} </span>
+                <span>-</span>
+                <span class="my-auto ml-lg-2 text-secondary" [translate]="'delegateInfo.holder.delegation.totalVotes'"
+                    [translateParams]="{total: totalShared | number:'1.0-0'}"> </span>
+            </div>
+            <button nbButton status="info" size="small" *ngIf="canDelegate" class="ml-auto" (click)="edit()">
+                {{'delegateInfo.delegated.title' | translate}}
+            </button>
+        </nb-card-header>
+        <nb-card-body class="pt-0">
+            <nb-list class="mt-0 pt-0 vip-list">
+                <nb-list-item *ngFor="let item of myDelegations; let idx = index" class="border-bottom">
+                    <div class="d-lg-flex w-100 justify-content-between">
+                        <vip-account-info-item [accountInfo]="item?.delegation" [index]="idx" (itemSelect)="edit(item)">
+                            <div itemInfoCenter class="my-auto mr-4  justify-content-end text-right">
+                                <div class="info-right-item  my-auto ">
+                                    <span class="description mr-2">
+                                        {{'delegateInfo.holder.mandator.votes' |translate}}:
+                                    </span>
+                                    <span style="font-size: 0.75rem; font-weight: 600;">
+                                        {{item?.delegation.votes | number}}
+                                    </span>
+                                </div>
+                                <div class="info-right-item my-auto ">
+                                    <span
+                                        *ngIf="item?.delegation?.requestedDate && !item?.delegation?.approvedDate && !item?.delegation?.rejectedDate  my-auto"
+                                        class="px-2 badge badge-vip font-italic description text-success">
+                                        {{'delegateInfo.request.status.submit' | translate}}
+                                    </span>
+
+                                    <span *ngIf="item?.delegation?.approvedDate"
+                                        class=" px-2 badge badge-vip font-italic description text-success  my-auto">
+                                        {{'delegateInfo.request.status.approve' | translate}}
+
+                                    </span>
+
+                                    <span *ngIf="item?.delegation?.rejectedDate"
+                                        class="px-2 badge badge-vip font-italic description text-danger  my-auto">
+                                        {{'delegateInfo.request.status.reject' | translate}}:
+                                        <span class="px-2 description truncate text-secondary  my-auto"
+                                            style="max-width: 200px; font-weight: 500;display: inherit;">
+                                            {{item?.adminActivities[item?.adminActivities?.length - 1]?.note}}
+                                        </span>
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div rightInfo
+                                class="my-auto  justify-content-end text-right d-flex delegateInfo-right-detal">
+                                <div class="description d-flex my-auto justify-content-end text-right">
+                                    <div class="mr-2 mr-lg-4 my-auto ">
+                                        <div *ngIf="item?.delegation?.attachments && item?.delegation?.attachments.length > 0"
+                                            class="">
+                                            <i class="fas fa-paperclip text-secondary" style="opacity: 50%;"></i>
+                                            {{'document.list.attachmentFile' | translate}}(
+                                            {{item?.delegation?.attachments?.length}})
+                                        </div>
+                                        <div *ngIf="item?.adminActivities && item?.adminActivities?.length > 0">
+                                            <i class="far fa-list-alt text-secondary" style="opacity: 50%;"></i>
+                                            {{'delegateInfo.activities.title' | translate}}(
+                                            {{ item?.adminActivities?.length}})
+                                        </div>
+                                    </div>
+                                    <div class="my-auto ml-auto mr-lg-2"
+                                        *ngIf="item?.adminActivities?.length > 0|| item?.delegation?.attachments.length > 0">
+                                        <a nbButton outline status="info" size="tiny" href="javascript:void(0);"
+                                            [nbPopover]="deleteInfoDetail" [nbPopoverContext]="{info: item}"
+                                            nbPopoverTrigger="click" nbPopoverPlacement="start-bottom">
+                                            {{'document.list.buttonDetail' | translate}}
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div command class="my-auto command-group delegateInfo-cammad">
+                                <a size="tiny" class="command-item" *ngIf="canEdit(item)" data-toggle="tooltip"
+                                    data-placement="top" title="{{'delegateInfo.request.tooltip' | translate}}"
+                                    (click)="requestDelegate(item,idx)">
+
+                                    <i class="fas fa-angle-double-up text-secondary"></i>
+                                </a>
+                                <a class="command-item" data-toggle="tooltip" data-placement="top" *ngIf="canEdit(item)"
+                                    title="{{'delegateInfo.edit.tooltip' | translate}}" (click)="edit(item)">
+                                    <i class="fas fa-edit text-secondary"></i>
+                                </a>
+                                <a class="command-item" data-toggle="tooltip" data-placement="top" *ngIf="canEdit(item)"
+                                    title="{{'delegateInfo.delete.tooltip' | translate}}" (click)="delete(idx, item)">
+                                    <i class="fas fa-trash-alt text-secondary"></i>
+                                </a>
+                            </div>
+                        </vip-account-info-item>
+                    </div>
+                </nb-list-item>
+            </nb-list>
+        </nb-card-body>
+    </nb-card>
+    <nb-card accent="info" status="basic" class="mt-3" *ngIf="mandators && mandators.length > 0">
+        <nb-card-header class="d-flex">
+            <span class="my-auto mr-lg-2"> {{'delegateInfo.holder.mandator.titleList' |translate}}</span>
+            <span>-</span>
+            <span class="my-auto ml-lg-2 text-secondary" [translate]="'delegateInfo.holder.mandator.totalVotes'"
+                [translateParams]="{total: totalDelegated | number:'1.0-0'}"> </span>
+        </nb-card-header>
+        <nb-card-body class="pt-0">
+            <nb-list class="mt-0 pt-0 vip-list">
+                <nb-list-item *ngFor="let item of mandators; let idx = index" class="border-bottom">
+                    <div class="d-lg-flex w-100 justify-content-between">
+                        <vip-account-info-item [accountInfo]="item?.mandator" [index]="idx">
+                            <div infoStatus class="info-list-status">
+                                <span
+                                    *ngIf="item?.delegation?.requestedDate && !item.delegation?.approvedDate && !item.delegation?.rejectedDate"
+                                    class="px-2 badge badge-vip font-italic description text-success">
+                                    {{'delegateInfo.request.status.submit' | translate}}
+                                </span>
+
+                                <span *ngIf="item?.delegation?.approvedDate"
+                                    class=" px-2 badge badge-vip font-italic description text-success">
+                                    {{'delegateInfo.request.status.approve' | translate}}
+                                </span>
+
+                                <span *ngIf="item?.delegation?.rejectedDate"
+                                    class="px-2 badge badge-vip font-italic description text-danger">
+                                    {{'delegateInfo.request.status.reject' | translate}}
+                                </span>
+                            </div>
+
+
+                            <div rightInfo class=" my-auto info-right-group text-right">
+                                <div class="info-right-item"><span
+                                        class="description mr-2">{{'delegateInfo.holder.mandator.votes' |translate}}:</span>
+                                    <span
+                                        style="font-size: 0.75rem; font-weight: 600;">{{item?.delegation.votes | number}}</span>
+                                </div>
+
+                            </div>
+                        </vip-account-info-item>
+                    </div>
+                </nb-list-item>
+            </nb-list>
+        </nb-card-body>
+    </nb-card>
+</div>
+<vip-empty-data [isNoData]="!holder">
+    <div note>{{'delegateInfo.note'|translate}} </div>
+</vip-empty-data>
+<ng-template #deleteInfoDetail let-data>
+    <vip-content-detail>
+        <div infoHeader>
+            <h6 class="text-capitalize">{{data?.info?.delegation?.displayName}}</h6>
+        </div>
+        <div buttonEdit class="d-flex">
+            <div *ngIf="data?.info?.adminActivities.length > 0">
+                <span class="mx-2 px-2 badge badge-vip font-italic description text-success"
+                    *ngIf="!data?.info?.adminActivities[data?.info?.adminActivities.length-1]?.note">{{'delegateInfo.request.status.approve' | translate}}</span>
+                <span class="mx-2 px-2 badge badge-vip font-italic description text-danger"
+                    *ngIf="data?.info?.adminActivities[data?.info?.adminActivities.length-1]?.note">{{'delegateInfo.request.status.reject' | translate}}</span>
+            </div>
+
+            <button nbButton status="info" size="small" class="ml-3 py-1 float-right" *ngIf="canEdit(data?.info)"
+                (click)="edit(data?.info)">
+                {{'document.edit.title' | translate}}
+            </button>
+        </div>
+
+        <div descriptionContent class="mb-2"
+            *ngIf="data?.info?.adminActivities && data?.info?.adminActivities.length > 0">
+            <div class="text-secondary border-bottom text-info">
+                <b class="">{{'delegateInfo.activities.title' |translate}}:</b></div>
+            <div *ngFor="let at of data?.info?.adminActivities; let idx = index" class="py-2">
+                <div class="d-flex font-italic " style="font-size: 0.75rem;">
+                    <span class="mx-2 ">{{at?.performedName}}</span>
+                    <span class="mr-2 ml-auto"> {{at?.createdDate?.value | date:'dd/MM/yyyy hh:mm:ss'}}
+                    </span>
+                </div>
+                <div class="d-flex">
+                    <span class="mx-2  font-italic description text-success"
+                        *ngIf="!at.note">{{'delegateInfo.request.status.approve' | translate}}</span>
+                    <span class="mx-2 font-italic description text-danger" style="text-decoration: underline;"
+                        *ngIf="at.note">{{'delegateInfo.request.status.reject' | translate}}:</span>
+                    <div *ngIf="at.note" class="px-2 font-weight-light description">
+                        {{at.note}}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <vip-document-list documentList [attachments]="data?.info?.delegation?.attachments" [contentId]="data?.info?.id"
+            [allowEdit]="canEdit(data?.info)" (deleteFileInfo)="deleteFile($event)"></vip-document-list>
+    </vip-content-detail>
+</ng-template>

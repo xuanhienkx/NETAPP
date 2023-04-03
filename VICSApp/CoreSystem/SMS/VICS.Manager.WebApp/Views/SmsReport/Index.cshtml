@@ -1,0 +1,64 @@
+﻿@using System.Web.Mvc.Ajax
+@model VICS.Manager.WebApp.Models.RequetsViewModel
+
+@{
+    ViewBag.Title = "Index";
+
+} 
+<div id="header-page" class="row wrapper border-bottom  page-heading">
+    <div class="col-lg-10">
+        <h2>Danh sach tin nhắn</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Trang chủ</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index","SmsReport")">SMS</a>
+            </li>
+            <li class="active">
+                <strong>Danh sach</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+        @*<div class="list-icon">
+            <ul>
+                <li>
+                    <a href="@Url.Action("Create","Customer")" title="tạo mới"><i class="fa fa-plus-circle fa-2x fa-w"></i></a>
+                </li>
+                <li>
+                    <a href="#" title="filter" id="filter-icon" class="isShow"><i class="fa fa-filter fa-2x fa-w"></i></a>
+                </li>
+            </ul>
+        </div>
+*@
+    </div>
+</div>
+<div id="filter" class="row">
+    @using (Ajax.BeginForm("List", "SmsReport", null, new AjaxOptions()
+    {
+        UpdateTargetId = "ListData",
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "get"
+    }, new { @id = "form-filter" }))
+    {
+        <div class="col-lg-10">
+            <div class="row">
+                <div class="col-lg-2">CustomerId</div>
+                <div class="col-lg-4">@Html.TextBoxFor(m => m.CustomerId, new { @class = "form-control" })</div>
+                <div class="col-lg-2">Loại tin nhắn</div>
+                <div class="col-lg-3">@Html.EnumDropDownListFor(m => m.Type)</div> 
+            </div> 
+        </div>
+        <div class="col-lg-2">
+            <div class="middle-box">
+                <input id="submit-search" class="btn btn-primary" type="submit" value="Tìm ">
+                <input id="reset-search" class="btn btn-default" type="reset" value="Refesh">
+            </div>
+        </div>
+    }
+</div>
+<div class="row"></div>
+<div id="ListData" class="row">
+    @Html.Action("List", "SmsReport") 
+</div>

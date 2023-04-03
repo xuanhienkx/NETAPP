@@ -1,0 +1,67 @@
+@media print {
+    * {
+        font-family: 'Open Sans', sans-serif;
+    }  
+     
+    body,
+    html,
+    page,
+    .container {
+        padding: 0;
+        box-shadow: 0;
+        background: white !important;
+        margin: 0 !important;
+    }
+
+    .report-content-right,
+    .right-item-number,
+    .info-item,
+    .report-title,
+    .right-item,
+    .right-item-number,
+    .report-table th,
+    .report-table td {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .report-table th,
+    .report-table td {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .report-content-right,
+    .right-item-number,
+    .info-item,
+    .right-item,
+    .report-title,
+    .right-item-number {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .report-title {
+        line-height: 0.5rem;
+    }
+    .report-content-info-base {
+       display:  flex; flex: auto; justify-content: space-between;
+    }
+    .report-signingstar .name {
+        margin-top: 5rem;
+    }
+    .report-content-info-base .info-item{
+        display: inline;
+        
+    }
+    
+}
+@page {
+    margin-top: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    @bottom-right {
+        content: "Page "counter(page) " of "counter(pages);
+    }
+}

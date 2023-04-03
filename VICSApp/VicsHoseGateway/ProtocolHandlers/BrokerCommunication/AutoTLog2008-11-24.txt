@@ -1,0 +1,1096 @@
+2008/11/24-17:36:45 Start Program ...
+2008/11/24-17:36:45 Load Setting Parameters From File(Setting.bin) 
+2008/11/24-17:36:45 Setting Parameters read from File
+2008/11/24-17:36:45 Load Transmission Data From File(TransmissionD.bin) 
+2008/11/24-17:36:45 Transmission Data read from File
+2008/11/24-17:36:45 Load ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-17:36:45 ReTransmission Infor read from File
+2008/11/24-17:36:45 Load Possible ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-17:36:45 Possible ReTransmission Infor read from File
+2008/11/24-17:36:45 Load Unsent Data From File(UnSentData.bin) 
+2008/11/24-17:36:45 Unsent Data read from File
+2008/11/24-17:36:46 Broker start with seq_no(3), seq_start(2), seq_ack(34)
+2008/11/24-17:36:46 Packet[0], seq_no = 0
+2008/11/24-17:36:46 Packet[1], seq_no = 1
+2008/11/24-17:36:46 Packet[2], seq_no = 2
+2008/11/24-17:36:46 Packet[3], seq_no = 3
+2008/11/24-17:36:46 Packet[4], seq_no = 4
+2008/11/24-17:36:46 Packet[5], seq_no = 5
+2008/11/24-17:36:46 Packet[6], seq_no = 0
+2008/11/24-17:36:46 Broker start with broadcast seq_no(1)
+2008/11/24-17:37:21 Broker start with seq_no(3), seq_start(2), seq_ack(34)
+2008/11/24-17:37:21 Packet[0], seq_no = 0
+2008/11/24-17:37:21 Packet[1], seq_no = 1
+2008/11/24-17:37:21 Packet[2], seq_no = 2
+2008/11/24-17:37:21 Packet[3], seq_no = 3
+2008/11/24-17:37:21 Packet[4], seq_no = 4
+2008/11/24-17:37:21 Packet[5], seq_no = 5
+2008/11/24-17:37:21 Packet[6], seq_no = 0
+2008/11/24-17:37:21 Broker start with broadcast seq_no(1)
+2008/11/24-17:37:21 Connect to 172.16.255.31, port 30002 successed
+2008/11/24-17:37:21 Successed init AutoT protocol Handler
+2008/11/24-17:37:21 Connected to HOSE, State = PROG_START
+2008/11/24-17:37:21 Send HELLO Packet, opcode = HL, seq_no = 3, ack_seq_no =34, mode = C
+2008/11/24-17:37:26 Receive Packet after send HELLO, opcode = HR, seq_no = 34, ack_seq_no =2
+2008/11/24-17:37:26 Receive Hello Reply Packet, opcode = HR, seq_no = 34, ack_seq_no =2
+2008/11/24-17:37:26 Server Mode [C]
+2008/11/24-17:37:26 CheckLeftOverPacket(3, 2)
+2008/11/24-17:37:26 Send LEFT OVER LAST, opcode = LL, seq_no = 2, ack_seq_no =34
+2008/11/24-17:37:26 Receive Packet, opcode = AK, seq_no = 34, ack_seq_no =3
+2008/11/24-17:37:26 Send CONFIRM successfully, opcode = CF, seq_no = 3, ack_seq_no =34
+2008/11/24-17:37:26 Establish connection to HOSE, State = PROG_DATA_TRANFER
+2008/11/24-17:37:26 Start Thread: ThreadPollCTCIMsgFromQueue
+2008/11/24-17:37:26 Start Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-17:37:26 Receive data which has: Number of AutoT packet = 3, Buffer Length: 771
+2008/11/24-17:37:26 Receive AutoT Packet, opcode = DT, seq_no = 34, ack_seq_no =3, length: 255, buffer_length: 771
+2008/11/24-17:37:26 Push CTCI Message(2G, 0x0137B8E4), Length(240) to queue
+2008/11/24-17:37:26 Receive AutoT Packet, opcode = DT, seq_no = 35, ack_seq_no =3, length: 255, buffer_length: 771
+2008/11/24-17:37:26 Push CTCI Message(2G, 0x0137B8E4), Length(240) to queue
+2008/11/24-17:37:26 Receive AutoT Packet, opcode = DT, seq_no = 36, ack_seq_no =3, length: 255, buffer_length: 771
+2008/11/24-17:37:26 Push CTCI Message(2G, 0x0137B8E4), Length(240) to queue
+2008/11/24-17:37:59 Send EC packet(012ADF78), length = 14
+2008/11/24-17:37:59 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:37:59 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:38:32 Send EC packet(012ADF78), length = 14
+2008/11/24-17:38:32 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:38:32 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:39:05 Send EC packet(012ADF78), length = 14
+2008/11/24-17:39:05 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:39:05 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:39:37 Send EC packet(012ADF78), length = 14
+2008/11/24-17:39:37 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:39:37 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:40:10 Send EC packet(012ADF78), length = 14
+2008/11/24-17:40:10 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:40:10 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:40:43 Send EC packet(012ADF78), length = 14
+2008/11/24-17:40:43 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:40:43 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:41:16 Send EC packet(012ADF78), length = 14
+2008/11/24-17:41:16 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:41:16 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:41:49 Send EC packet(012ADF78), length = 14
+2008/11/24-17:41:49 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:41:49 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:42:21 Send EC packet(012ADF78), length = 14
+2008/11/24-17:42:21 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:42:21 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:42:54 Send EC packet(012ADF78), length = 14
+2008/11/24-17:42:54 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:42:54 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:43:27 Send EC packet(012ADF78), length = 14
+2008/11/24-17:43:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:43:27 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:44:00 Send EC packet(012ADF78), length = 14
+2008/11/24-17:44:00 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:44:00 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:44:33 Send EC packet(012ADF78), length = 14
+2008/11/24-17:44:33 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:44:33 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:45:06 Send EC packet(012ADF78), length = 14
+2008/11/24-17:45:06 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:45:06 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:45:38 Send EC packet(012ADF78), length = 14
+2008/11/24-17:45:38 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:45:38 Receive AutoT Packet, opcode = ER, seq_no = 37, ack_seq_no =3, length: 13, buffer_length: 15
+2008/11/24-17:45:50 Pop CTCI Message(1I, 0x012AEFA0), Length(70) to queue. No: 1
+2008/11/24-17:45:50 Pop CTCI Message(1I, 0x012AEFA0), Length(70) to queue. No: 2
+2008/11/24-17:45:50 Pop CTCI Message(1I, 0x012AEFA0), Length(70) to queue. No: 3
+2008/11/24-17:46:33 Timeup, sending a packet to HOSE(012AF7A8, 215), Number of Messages = 3
+2008/11/24-17:46:33 Send DATA[1], opcode = DT, seq_no = 3, ack_seq_no =37, length =226
+2008/11/24-17:46:33 Receive data which has: Number of AutoT packet = 1, Buffer Length: 34
+2008/11/24-17:46:33 Receive AutoT Packet, opcode = DT, seq_no = 37, ack_seq_no =4, length: 32, buffer_length: 34
+2008/11/24-17:46:33 Push CTCI Message(2B, 0x0137B8E4), Length(17) to queue
+2008/11/24-17:46:33 Receive data which has: Number of AutoT packet = 1, Buffer Length: 34
+2008/11/24-17:46:33 Receive AutoT Packet, opcode = DT, seq_no = 38, ack_seq_no =4, length: 32, buffer_length: 34
+2008/11/24-17:46:33 Push CTCI Message(2B, 0x0137B8E4), Length(17) to queue
+2008/11/24-17:46:33 Receive data which has: Number of AutoT packet = 1, Buffer Length: 34
+2008/11/24-17:46:33 Receive AutoT Packet, opcode = DT, seq_no = 39, ack_seq_no =4, length: 32, buffer_length: 34
+2008/11/24-17:46:33 Push CTCI Message(2B, 0x0137B8E4), Length(17) to queue
+2008/11/24-17:47:06 Send EC packet(012ADF78), length = 14
+2008/11/24-17:47:06 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:47:06 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:47:39 Send EC packet(012ADF78), length = 14
+2008/11/24-17:47:39 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:47:39 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:48:12 Send EC packet(012ADF78), length = 14
+2008/11/24-17:48:12 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:48:12 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:48:44 Send EC packet(012ADF78), length = 14
+2008/11/24-17:48:44 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:48:44 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:49:17 Send EC packet(012ADF78), length = 14
+2008/11/24-17:49:17 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:49:17 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:49:50 Send EC packet(012ADF78), length = 14
+2008/11/24-17:49:50 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:49:50 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:50:23 Send EC packet(012ADF78), length = 14
+2008/11/24-17:50:23 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:50:23 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:50:56 Send EC packet(012ADF78), length = 14
+2008/11/24-17:50:56 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:50:56 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:51:29 Send EC packet(012ADF78), length = 14
+2008/11/24-17:51:29 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:51:29 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:52:01 Send EC packet(012ADF78), length = 14
+2008/11/24-17:52:01 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:52:01 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:52:34 Send EC packet(012ADF78), length = 14
+2008/11/24-17:52:34 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:52:34 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:53:07 Send EC packet(012ADF78), length = 14
+2008/11/24-17:53:07 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:53:07 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:53:40 Send EC packet(012ADF78), length = 14
+2008/11/24-17:53:40 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:53:40 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:54:13 Send EC packet(012ADF78), length = 14
+2008/11/24-17:54:13 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:54:13 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:54:45 Send EC packet(012ADF78), length = 14
+2008/11/24-17:54:45 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:54:45 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:55:18 Send EC packet(012ADF78), length = 14
+2008/11/24-17:55:18 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:55:18 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:55:51 Send EC packet(012ADF78), length = 14
+2008/11/24-17:55:51 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:55:51 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:56:24 Send EC packet(012ADF78), length = 14
+2008/11/24-17:56:24 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:56:24 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:56:57 Send EC packet(012ADF78), length = 14
+2008/11/24-17:56:57 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:56:57 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:57:29 Send EC packet(012ADF78), length = 14
+2008/11/24-17:57:29 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:57:29 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:58:02 Send EC packet(012ADF78), length = 14
+2008/11/24-17:58:02 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:58:02 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:58:35 Send EC packet(012ADF78), length = 14
+2008/11/24-17:58:35 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:58:35 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:59:08 Send EC packet(012ADF78), length = 14
+2008/11/24-17:59:08 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:59:08 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-17:59:41 Send EC packet(012ADF78), length = 14
+2008/11/24-17:59:41 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-17:59:41 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:00:14 Send EC packet(012ADF78), length = 14
+2008/11/24-18:00:14 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:00:14 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:00:46 Send EC packet(012ADF78), length = 14
+2008/11/24-18:00:46 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:00:46 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:01:19 Send EC packet(012ADF78), length = 14
+2008/11/24-18:01:19 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:01:19 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:01:52 Send EC packet(012ADF78), length = 14
+2008/11/24-18:01:52 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:01:52 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:02:25 Send EC packet(012ADF78), length = 14
+2008/11/24-18:02:25 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:02:25 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:02:58 Send EC packet(012ADF78), length = 14
+2008/11/24-18:02:58 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:02:58 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:03:30 Send EC packet(012ADF78), length = 14
+2008/11/24-18:03:30 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:03:30 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:04:03 Send EC packet(012ADF78), length = 14
+2008/11/24-18:04:03 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:04:03 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:04:36 Send EC packet(012ADF78), length = 14
+2008/11/24-18:04:36 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:04:36 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:05:09 Send EC packet(012ADF78), length = 14
+2008/11/24-18:05:09 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:05:09 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:05:42 Send EC packet(012ADF78), length = 14
+2008/11/24-18:05:42 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:05:42 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:06:14 Send EC packet(012ADF78), length = 14
+2008/11/24-18:06:14 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:06:14 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:06:47 Send EC packet(012ADF78), length = 14
+2008/11/24-18:06:47 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:06:47 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:07:20 Send EC packet(012ADF78), length = 14
+2008/11/24-18:07:20 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:07:20 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:07:53 Send EC packet(012ADF78), length = 14
+2008/11/24-18:07:53 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:07:53 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:08:26 Send EC packet(012ADF78), length = 14
+2008/11/24-18:08:26 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:08:26 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:08:59 Send EC packet(012ADF78), length = 14
+2008/11/24-18:08:59 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:08:59 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:09:31 Send EC packet(012ADF78), length = 14
+2008/11/24-18:09:31 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:09:31 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:10:04 Send EC packet(012ADF78), length = 14
+2008/11/24-18:10:04 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:10:04 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:10:37 Send EC packet(012ADF78), length = 14
+2008/11/24-18:10:37 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:10:37 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:11:10 Send EC packet(012ADF78), length = 14
+2008/11/24-18:11:10 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:11:10 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:11:43 Send EC packet(012ADF78), length = 14
+2008/11/24-18:11:43 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:11:43 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:12:15 Send EC packet(012ADF78), length = 14
+2008/11/24-18:12:15 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:12:15 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:12:48 Send EC packet(012ADF78), length = 14
+2008/11/24-18:12:48 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:12:48 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:13:21 Send EC packet(012ADF78), length = 14
+2008/11/24-18:13:21 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:13:21 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:13:54 Send EC packet(012ADF78), length = 14
+2008/11/24-18:13:54 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:13:54 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:14:27 Send EC packet(012ADF78), length = 14
+2008/11/24-18:14:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:14:27 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:14:59 Send EC packet(012ADF78), length = 14
+2008/11/24-18:14:59 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:14:59 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:15:32 Send EC packet(012ADF78), length = 14
+2008/11/24-18:15:32 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:15:32 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:16:05 Send EC packet(012ADF78), length = 14
+2008/11/24-18:16:05 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:16:05 Receive AutoT Packet, opcode = ER, seq_no = 40, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:16:12 Receive data which has: Number of AutoT packet = 1, Buffer Length: 66
+2008/11/24-18:16:12 Receive AutoT Packet, opcode = DT, seq_no = 40, ack_seq_no =4, length: 64, buffer_length: 66
+2008/11/24-18:16:12 Push CTCI Message(2I, 0x0137B8E4), Length(49) to queue
+2008/11/24-18:16:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 57
+2008/11/24-18:16:27 Receive AutoT Packet, opcode = DT, seq_no = 41, ack_seq_no =4, length: 55, buffer_length: 57
+2008/11/24-18:16:27 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 57
+2008/11/24-18:16:27 Receive AutoT Packet, opcode = DT, seq_no = 42, ack_seq_no =4, length: 55, buffer_length: 57
+2008/11/24-18:16:27 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 57
+2008/11/24-18:16:27 Receive AutoT Packet, opcode = DT, seq_no = 43, ack_seq_no =4, length: 55, buffer_length: 57
+2008/11/24-18:16:27 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:27 Send ACK, opcode = AK, seq_no = 4, ack_seq_no =44
+2008/11/24-18:16:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 57
+2008/11/24-18:16:27 Receive AutoT Packet, opcode = DT, seq_no = 44, ack_seq_no =4, length: 55, buffer_length: 57
+2008/11/24-18:16:27 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 98
+2008/11/24-18:16:27 Receive AutoT Packet, opcode = DT, seq_no = 45, ack_seq_no =4, length: 96, buffer_length: 98
+2008/11/24-18:16:27 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:27 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 57
+2008/11/24-18:16:27 Receive AutoT Packet, opcode = DT, seq_no = 46, ack_seq_no =4, length: 55, buffer_length: 57
+2008/11/24-18:16:27 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 57
+2008/11/24-18:16:27 Receive AutoT Packet, opcode = DT, seq_no = 47, ack_seq_no =4, length: 55, buffer_length: 57
+2008/11/24-18:16:27 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 57
+2008/11/24-18:16:27 Receive AutoT Packet, opcode = DT, seq_no = 48, ack_seq_no =4, length: 55, buffer_length: 57
+2008/11/24-18:16:27 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 57
+2008/11/24-18:16:27 Receive AutoT Packet, opcode = DT, seq_no = 49, ack_seq_no =4, length: 55, buffer_length: 57
+2008/11/24-18:16:27 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:28 Receive data which has: Number of AutoT packet = 1, Buffer Length: 98
+2008/11/24-18:16:28 Receive AutoT Packet, opcode = DT, seq_no = 50, ack_seq_no =4, length: 96, buffer_length: 98
+2008/11/24-18:16:28 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:28 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:28 Send ACK, opcode = AK, seq_no = 4, ack_seq_no =51
+2008/11/24-18:16:28 Receive data which has: Number of AutoT packet = 1, Buffer Length: 57
+2008/11/24-18:16:28 Receive AutoT Packet, opcode = DT, seq_no = 51, ack_seq_no =4, length: 55, buffer_length: 57
+2008/11/24-18:16:28 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:28 Receive data which has: Number of AutoT packet = 1, Buffer Length: 57
+2008/11/24-18:16:28 Receive AutoT Packet, opcode = DT, seq_no = 52, ack_seq_no =4, length: 55, buffer_length: 57
+2008/11/24-18:16:28 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:16:28 Receive data which has: Number of AutoT packet = 1, Buffer Length: 57
+2008/11/24-18:16:28 Receive AutoT Packet, opcode = DT, seq_no = 53, ack_seq_no =4, length: 55, buffer_length: 57
+2008/11/24-18:16:28 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:17:01 Send EC packet(012ADF78), length = 14
+2008/11/24-18:17:01 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:17:01 Receive AutoT Packet, opcode = ER, seq_no = 54, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:17:33 Send EC packet(012ADF78), length = 14
+2008/11/24-18:17:33 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:17:33 Receive AutoT Packet, opcode = ER, seq_no = 54, ack_seq_no =4, length: 13, buffer_length: 15
+2008/11/24-18:18:02 Pop CTCI Message(1I, 0x012AEFA0), Length(70) to queue. No: 4
+2008/11/24-18:18:02 Timeup, sending a packet to HOSE(012AF7A8, 73), Number of Messages = 1
+2008/11/24-18:18:02 Send DATA[2], opcode = DT, seq_no = 4, ack_seq_no =54, length =84
+2008/11/24-18:18:02 Receive data which has: Number of AutoT packet = 1, Buffer Length: 34
+2008/11/24-18:18:02 Receive AutoT Packet, opcode = DT, seq_no = 54, ack_seq_no =5, length: 32, buffer_length: 34
+2008/11/24-18:18:02 Push CTCI Message(2B, 0x0137B8E4), Length(17) to queue
+2008/11/24-18:18:35 Send EC packet(012ADF78), length = 14
+2008/11/24-18:18:35 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:18:35 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:19:07 Send EC packet(012ADF78), length = 14
+2008/11/24-18:19:07 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:19:07 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:19:40 Send EC packet(012ADF78), length = 14
+2008/11/24-18:19:40 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:19:40 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:20:13 Send EC packet(012ADF78), length = 14
+2008/11/24-18:20:13 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:20:13 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:20:46 Send EC packet(012ADF78), length = 14
+2008/11/24-18:20:46 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:20:46 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:21:19 Send EC packet(012ADF78), length = 14
+2008/11/24-18:21:19 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:21:19 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:21:51 Send EC packet(012ADF78), length = 14
+2008/11/24-18:21:51 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:21:51 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:22:24 Send EC packet(012ADF78), length = 14
+2008/11/24-18:22:24 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:22:24 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:22:57 Send EC packet(012ADF78), length = 14
+2008/11/24-18:22:57 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:22:57 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:23:30 Send EC packet(012ADF78), length = 14
+2008/11/24-18:23:30 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:23:30 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:24:03 Send EC packet(012ADF78), length = 14
+2008/11/24-18:24:03 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:24:03 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:24:36 Send EC packet(012ADF78), length = 14
+2008/11/24-18:24:36 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:24:36 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:25:08 Send EC packet(012ADF78), length = 14
+2008/11/24-18:25:08 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:25:08 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:25:41 Send EC packet(012ADF78), length = 14
+2008/11/24-18:25:41 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:25:41 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:26:14 Send EC packet(012ADF78), length = 14
+2008/11/24-18:26:14 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:26:14 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:26:47 Send EC packet(012ADF78), length = 14
+2008/11/24-18:26:47 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:26:47 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:27:20 Send EC packet(012ADF78), length = 14
+2008/11/24-18:27:20 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:27:20 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:27:52 Send EC packet(012ADF78), length = 14
+2008/11/24-18:27:52 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:27:52 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:28:25 Send EC packet(012ADF78), length = 14
+2008/11/24-18:28:25 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:28:25 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:28:58 Send EC packet(012ADF78), length = 14
+2008/11/24-18:28:58 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:28:58 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:29:31 Send EC packet(012ADF78), length = 14
+2008/11/24-18:29:31 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:29:31 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:30:04 Send EC packet(012ADF78), length = 14
+2008/11/24-18:30:04 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:30:04 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:30:36 Send EC packet(012ADF78), length = 14
+2008/11/24-18:30:36 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:30:36 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:31:09 Send EC packet(012ADF78), length = 14
+2008/11/24-18:31:09 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:31:09 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:31:42 Send EC packet(012ADF78), length = 14
+2008/11/24-18:31:42 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:31:42 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:32:15 Send EC packet(012ADF78), length = 14
+2008/11/24-18:32:15 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:32:15 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:32:48 Send EC packet(012ADF78), length = 14
+2008/11/24-18:32:48 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:32:48 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:33:21 Send EC packet(012ADF78), length = 14
+2008/11/24-18:33:21 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:33:21 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:33:53 Send EC packet(012ADF78), length = 14
+2008/11/24-18:33:53 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:33:53 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:34:26 Send EC packet(012ADF78), length = 14
+2008/11/24-18:34:26 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:34:26 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:34:59 Send EC packet(012ADF78), length = 14
+2008/11/24-18:34:59 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:34:59 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:35:32 Send EC packet(012ADF78), length = 14
+2008/11/24-18:35:32 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:35:32 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:36:05 Send EC packet(012ADF78), length = 14
+2008/11/24-18:36:05 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:36:05 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:36:37 Send EC packet(012ADF78), length = 14
+2008/11/24-18:36:37 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:36:37 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:37:10 Send EC packet(012ADF78), length = 14
+2008/11/24-18:37:10 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:37:10 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:37:43 Send EC packet(012ADF78), length = 14
+2008/11/24-18:37:43 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:37:43 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:38:16 Send EC packet(012ADF78), length = 14
+2008/11/24-18:38:16 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:38:16 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:38:49 Send EC packet(012ADF78), length = 14
+2008/11/24-18:38:49 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:38:49 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:39:21 Send EC packet(012ADF78), length = 14
+2008/11/24-18:39:21 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:39:21 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:39:54 Send EC packet(012ADF78), length = 14
+2008/11/24-18:39:54 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:39:54 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:40:27 Send EC packet(012ADF78), length = 14
+2008/11/24-18:40:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:40:27 Receive AutoT Packet, opcode = ER, seq_no = 55, ack_seq_no =5, length: 13, buffer_length: 15
+2008/11/24-18:40:35 Pop CTCI Message(1I, 0x012AEFA0), Length(70) to queue. No: 5
+2008/11/24-18:40:35 Timeup, sending a packet to HOSE(012AF7A8, 73), Number of Messages = 1
+2008/11/24-18:40:35 Send DATA[3], opcode = DT, seq_no = 5, ack_seq_no =55, length =84
+2008/11/24-18:40:35 Receive data which has: Number of AutoT packet = 1, Buffer Length: 57
+2008/11/24-18:40:35 Receive AutoT Packet, opcode = DT, seq_no = 55, ack_seq_no =6, length: 55, buffer_length: 57
+2008/11/24-18:40:35 Push CTCI Message(2E, 0x0137B8E4), Length(40) to queue
+2008/11/24-18:41:08 Send EC packet(012ADF78), length = 14
+2008/11/24-18:41:08 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:41:08 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:41:40 Send EC packet(012ADF78), length = 14
+2008/11/24-18:41:41 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:41:41 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:42:13 Send EC packet(012ADF78), length = 14
+2008/11/24-18:42:13 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:42:13 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:42:46 Send EC packet(012ADF78), length = 14
+2008/11/24-18:42:46 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:42:46 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:43:19 Send EC packet(012ADF78), length = 14
+2008/11/24-18:43:19 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:43:19 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:43:52 Send EC packet(012ADF78), length = 14
+2008/11/24-18:43:52 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:43:52 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:44:25 Send EC packet(012ADF78), length = 14
+2008/11/24-18:44:25 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:44:25 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:44:57 Send EC packet(012ADF78), length = 14
+2008/11/24-18:44:57 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:44:57 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:45:30 Send EC packet(012ADF78), length = 14
+2008/11/24-18:45:30 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:45:30 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:46:03 Send EC packet(012ADF78), length = 14
+2008/11/24-18:46:03 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:46:03 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:46:36 Send EC packet(012ADF78), length = 14
+2008/11/24-18:46:36 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:46:36 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:47:09 Send EC packet(012ADF78), length = 14
+2008/11/24-18:47:09 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:47:09 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:47:41 Send EC packet(012ADF78), length = 14
+2008/11/24-18:47:41 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:47:41 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:48:14 Send EC packet(012ADF78), length = 14
+2008/11/24-18:48:14 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:48:14 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:48:47 Send EC packet(012ADF78), length = 14
+2008/11/24-18:48:47 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:48:47 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:49:20 Send EC packet(012ADF78), length = 14
+2008/11/24-18:49:20 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:49:20 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:49:53 Send EC packet(012ADF78), length = 14
+2008/11/24-18:49:53 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:49:53 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:50:26 Send EC packet(012ADF78), length = 14
+2008/11/24-18:50:26 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:50:26 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:50:58 Send EC packet(012ADF78), length = 14
+2008/11/24-18:50:58 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:50:58 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:51:31 Send EC packet(012ADF78), length = 14
+2008/11/24-18:51:31 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:51:31 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:52:04 Send EC packet(012ADF78), length = 14
+2008/11/24-18:52:04 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:52:04 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:52:37 Send EC packet(012ADF78), length = 14
+2008/11/24-18:52:37 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:52:37 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:53:10 Send EC packet(012ADF78), length = 14
+2008/11/24-18:53:10 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:53:10 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:53:42 Send EC packet(012ADF78), length = 14
+2008/11/24-18:53:42 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:53:42 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:54:15 Send EC packet(012ADF78), length = 14
+2008/11/24-18:54:15 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:54:15 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:54:48 Send EC packet(012ADF78), length = 14
+2008/11/24-18:54:48 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:54:48 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:55:21 Send EC packet(012ADF78), length = 14
+2008/11/24-18:55:21 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:55:21 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:55:54 Send EC packet(012ADF78), length = 14
+2008/11/24-18:55:54 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:55:54 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:56:26 Send EC packet(012ADF78), length = 14
+2008/11/24-18:56:26 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:56:26 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:56:59 Send EC packet(012ADF78), length = 14
+2008/11/24-18:56:59 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:56:59 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:57:32 Send EC packet(012ADF78), length = 14
+2008/11/24-18:57:32 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:57:32 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:58:05 Send EC packet(012ADF78), length = 14
+2008/11/24-18:58:05 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:58:05 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:58:38 Send EC packet(012ADF78), length = 14
+2008/11/24-18:58:38 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:58:38 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:59:11 Send EC packet(012ADF78), length = 14
+2008/11/24-18:59:11 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:59:11 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-18:59:43 Send EC packet(012ADF78), length = 14
+2008/11/24-18:59:43 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-18:59:43 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:00:16 Send EC packet(012ADF78), length = 14
+2008/11/24-19:00:16 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:00:16 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:00:49 Send EC packet(012ADF78), length = 14
+2008/11/24-19:00:49 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:00:49 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:01:22 Send EC packet(012ADF78), length = 14
+2008/11/24-19:01:22 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:01:22 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:01:55 Send EC packet(012ADF78), length = 14
+2008/11/24-19:01:55 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:01:55 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:02:27 Send EC packet(012ADF78), length = 14
+2008/11/24-19:02:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:02:27 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:03:00 Send EC packet(012ADF78), length = 14
+2008/11/24-19:03:00 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:03:00 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:03:33 Send EC packet(012ADF78), length = 14
+2008/11/24-19:03:33 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:03:33 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:04:06 Send EC packet(012ADF78), length = 14
+2008/11/24-19:04:06 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:04:06 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:04:39 Send EC packet(012ADF78), length = 14
+2008/11/24-19:04:39 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:04:39 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:05:11 Send EC packet(012ADF78), length = 14
+2008/11/24-19:05:11 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:05:11 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:05:44 Send EC packet(012ADF78), length = 14
+2008/11/24-19:05:44 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:05:44 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:06:17 Send EC packet(012ADF78), length = 14
+2008/11/24-19:06:17 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:06:17 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:06:50 Send EC packet(012ADF78), length = 14
+2008/11/24-19:06:50 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:06:50 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:07:23 Send EC packet(012ADF78), length = 14
+2008/11/24-19:07:23 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:07:23 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:07:56 Send EC packet(012ADF78), length = 14
+2008/11/24-19:07:56 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:07:56 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:08:28 Send EC packet(012ADF78), length = 14
+2008/11/24-19:08:28 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:08:28 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:09:01 Send EC packet(012ADF78), length = 14
+2008/11/24-19:09:01 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:09:01 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:09:34 Send EC packet(012ADF78), length = 14
+2008/11/24-19:09:34 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:09:34 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:10:07 Send EC packet(012ADF78), length = 14
+2008/11/24-19:10:07 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:10:07 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:10:40 Send EC packet(012ADF78), length = 14
+2008/11/24-19:10:40 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:10:40 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:11:12 Send EC packet(012ADF78), length = 14
+2008/11/24-19:11:12 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:11:12 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:11:45 Send EC packet(012ADF78), length = 14
+2008/11/24-19:11:45 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:11:45 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:12:18 Send EC packet(012ADF78), length = 14
+2008/11/24-19:12:18 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:12:18 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:12:51 Send EC packet(012ADF78), length = 14
+2008/11/24-19:12:51 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:12:51 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:13:24 Send EC packet(012ADF78), length = 14
+2008/11/24-19:13:24 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:13:24 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:13:56 Send EC packet(012ADF78), length = 14
+2008/11/24-19:13:56 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:13:56 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:14:29 Send EC packet(012ADF78), length = 14
+2008/11/24-19:14:29 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:14:29 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:15:02 Send EC packet(012ADF78), length = 14
+2008/11/24-19:15:02 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:15:02 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:15:35 Send EC packet(012ADF78), length = 14
+2008/11/24-19:15:35 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:15:35 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:16:08 Send EC packet(012ADF78), length = 14
+2008/11/24-19:16:08 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:16:08 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:16:41 Send EC packet(012ADF78), length = 14
+2008/11/24-19:16:41 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:16:41 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:17:13 Send EC packet(012ADF78), length = 14
+2008/11/24-19:17:13 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:17:13 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:17:46 Send EC packet(012ADF78), length = 14
+2008/11/24-19:17:46 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:17:46 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:18:19 Send EC packet(012ADF78), length = 14
+2008/11/24-19:18:19 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:18:19 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:18:52 Send EC packet(012ADF78), length = 14
+2008/11/24-19:18:52 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:18:52 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:19:25 Send EC packet(012ADF78), length = 14
+2008/11/24-19:19:25 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:19:25 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:19:57 Send EC packet(012ADF78), length = 14
+2008/11/24-19:19:57 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:19:57 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:20:30 Send EC packet(012ADF78), length = 14
+2008/11/24-19:20:30 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:20:30 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:21:03 Send EC packet(012ADF78), length = 14
+2008/11/24-19:21:03 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:21:03 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:21:36 Send EC packet(012ADF78), length = 14
+2008/11/24-19:21:36 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:21:36 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:22:09 Send EC packet(012ADF78), length = 14
+2008/11/24-19:22:09 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:22:09 Receive AutoT Packet, opcode = ER, seq_no = 56, ack_seq_no =6, length: 13, buffer_length: 15
+2008/11/24-19:22:32 Pop CTCI Message(1I, 0x012AEFA0), Length(70) to queue. No: 6
+2008/11/24-19:22:32 Timeup, sending a packet to HOSE(012AF7A8, 73), Number of Messages = 1
+2008/11/24-19:22:32 Send DATA[4], opcode = DT, seq_no = 6, ack_seq_no =56, length =84
+2008/11/24-19:22:32 Receive data which has: Number of AutoT packet = 1, Buffer Length: 34
+2008/11/24-19:22:32 Receive AutoT Packet, opcode = DT, seq_no = 56, ack_seq_no =7, length: 32, buffer_length: 34
+2008/11/24-19:22:32 Push CTCI Message(2B, 0x0137B8E4), Length(17) to queue
+2008/11/24-19:23:05 Send EC packet(012ADF78), length = 14
+2008/11/24-19:23:05 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:23:05 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:23:37 Send EC packet(012ADF78), length = 14
+2008/11/24-19:23:37 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:23:37 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:24:10 Send EC packet(012ADF78), length = 14
+2008/11/24-19:24:10 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:24:10 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:24:43 Send EC packet(012ADF78), length = 14
+2008/11/24-19:24:43 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:24:43 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:25:16 Send EC packet(012ADF78), length = 14
+2008/11/24-19:25:16 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:25:16 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:25:49 Send EC packet(012ADF78), length = 14
+2008/11/24-19:25:49 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:25:49 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:26:22 Send EC packet(012ADF78), length = 14
+2008/11/24-19:26:22 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:26:22 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:26:54 Send EC packet(012ADF78), length = 14
+2008/11/24-19:26:54 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:26:54 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:27:27 Send EC packet(012ADF78), length = 14
+2008/11/24-19:27:27 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:27:27 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:28:00 Send EC packet(012ADF78), length = 14
+2008/11/24-19:28:00 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:28:00 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:28:33 Send EC packet(012ADF78), length = 14
+2008/11/24-19:28:33 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:28:33 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:29:06 Send EC packet(012ADF78), length = 14
+2008/11/24-19:29:06 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:29:06 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:29:39 Send EC packet(012ADF78), length = 14
+2008/11/24-19:29:39 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:29:39 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:30:11 Send EC packet(012ADF78), length = 14
+2008/11/24-19:30:11 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:30:11 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:30:44 Send EC packet(012ADF78), length = 14
+2008/11/24-19:30:44 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:30:44 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:31:17 Send EC packet(012ADF78), length = 14
+2008/11/24-19:31:17 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:31:17 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:31:50 Send EC packet(012ADF78), length = 14
+2008/11/24-19:31:50 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:31:50 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:32:23 Send EC packet(012ADF78), length = 14
+2008/11/24-19:32:23 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:32:23 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:32:56 Send EC packet(012ADF78), length = 14
+2008/11/24-19:32:56 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:32:56 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:33:28 Send EC packet(012ADF78), length = 14
+2008/11/24-19:33:28 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:33:28 Receive AutoT Packet, opcode = ER, seq_no = 57, ack_seq_no =7, length: 13, buffer_length: 15
+2008/11/24-19:33:53 Pop CTCI Message(1F, 0x012AEFA0), Length(191) to queue. No: 7
+2008/11/24-19:33:53 Timeup, sending a packet to HOSE(012AF7A8, 194), Number of Messages = 1
+2008/11/24-19:33:53 Send DATA[5], opcode = DT, seq_no = 7, ack_seq_no =57, length =205
+2008/11/24-19:33:53 Receive data which has: Number of AutoT packet = 1, Buffer Length: 57
+2008/11/24-19:33:53 Receive AutoT Packet, opcode = DT, seq_no = 57, ack_seq_no =8, length: 55, buffer_length: 57
+2008/11/24-19:33:53 Push CTCI Message(2L, 0x0137B8E4), Length(40) to queue
+2008/11/24-19:34:26 Send EC packet(012ADF78), length = 14
+2008/11/24-19:34:26 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:34:26 Receive AutoT Packet, opcode = ER, seq_no = 58, ack_seq_no =8, length: 13, buffer_length: 15
+2008/11/24-19:34:35 Pop CTCI Message(1F, 0x012AEFA0), Length(191) to queue. No: 8
+2008/11/24-19:36:44 Pop CTCI Message(1F, 0x012AEFA0), Length(191) to queue. No: 9
+2008/11/24-19:37:19 Stop Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-19:37:19 Save unsent packet for next time sending, because queue already pop, seq_no = 8
+2008/11/24-19:37:28 Start Program ...
+2008/11/24-19:37:28 Load Setting Parameters From File(Setting.bin) 
+2008/11/24-19:37:28 Setting Parameters read from File
+2008/11/24-19:37:28 Load Transmission Data From File(TransmissionD.bin) 
+2008/11/24-19:37:28 Transmission Data read from File
+2008/11/24-19:37:28 Load ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:37:28 ReTransmission Infor read from File
+2008/11/24-19:37:28 Load Possible ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:37:28 Possible ReTransmission Infor read from File
+2008/11/24-19:37:28 Load Unsent Data From File(UnSentData.bin) 
+2008/11/24-19:37:28 Unsent Data read from File
+2008/11/24-19:37:28 Broker start with seq_no(9), seq_start(8), seq_ack(58)
+2008/11/24-19:37:28 Packet[0], seq_no = 7
+2008/11/24-19:37:28 Packet[1], seq_no = 8
+2008/11/24-19:37:28 Packet[2], seq_no = 2
+2008/11/24-19:37:28 Packet[3], seq_no = 3
+2008/11/24-19:37:28 Packet[4], seq_no = 4
+2008/11/24-19:37:28 Packet[5], seq_no = 5
+2008/11/24-19:37:28 Packet[6], seq_no = 6
+2008/11/24-19:37:28 Broker start with broadcast seq_no(1)
+2008/11/24-19:37:29 Broker start with seq_no(9), seq_start(8), seq_ack(58)
+2008/11/24-19:37:29 Packet[0], seq_no = 7
+2008/11/24-19:37:29 Packet[1], seq_no = 8
+2008/11/24-19:37:29 Packet[2], seq_no = 2
+2008/11/24-19:37:29 Packet[3], seq_no = 3
+2008/11/24-19:37:29 Packet[4], seq_no = 4
+2008/11/24-19:37:29 Packet[5], seq_no = 5
+2008/11/24-19:37:29 Packet[6], seq_no = 6
+2008/11/24-19:37:29 Broker start with broadcast seq_no(1)
+2008/11/24-19:37:30 Connect to 172.16.255.31, port 30002 successed
+2008/11/24-19:37:30 Successed init AutoT protocol Handler
+2008/11/24-19:37:30 Connected to HOSE, State = PROG_START
+2008/11/24-19:37:30 Send HELLO Packet, opcode = HL, seq_no = 9, ack_seq_no =58, mode = C
+2008/11/24-19:37:35 Receive Packet after send HELLO, opcode = HR, seq_no = 58, ack_seq_no =8
+2008/11/24-19:37:35 Receive Hello Reply Packet, opcode = HR, seq_no = 58, ack_seq_no =8
+2008/11/24-19:37:35 Server Mode [C]
+2008/11/24-19:37:35 CheckLeftOverPacket(9, 8)
+2008/11/24-19:37:35 Send LEFT OVER LAST, opcode = LL, seq_no = 8, ack_seq_no =58
+2008/11/24-19:37:35 Receive Packet, opcode = AK, seq_no = 58, ack_seq_no =9
+2008/11/24-19:37:35 Send CONFIRM successfully, opcode = CF, seq_no = 9, ack_seq_no =58
+2008/11/24-19:37:35 Establish connection to HOSE, State = PROG_DATA_TRANFER
+2008/11/24-19:37:35 Start Thread: ThreadPollCTCIMsgFromQueue
+2008/11/24-19:37:35 Start Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-19:37:35 Receive data which has: Number of AutoT packet = 1, Buffer Length: 98
+2008/11/24-19:37:35 Receive AutoT Packet, opcode = DT, seq_no = 58, ack_seq_no =9, length: 96, buffer_length: 98
+2008/11/24-19:37:35 Push CTCI Message(2L, 0x012EB8E4), Length(40) to queue
+2008/11/24-19:37:35 Push CTCI Message(2L, 0x012EB8E4), Length(40) to queue
+2008/11/24-19:38:08 Send EC packet(0121DF78), length = 14
+2008/11/24-19:38:08 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:38:08 Receive AutoT Packet, opcode = ER, seq_no = 59, ack_seq_no =9, length: 13, buffer_length: 15
+2008/11/24-19:38:41 Send EC packet(0121DF78), length = 14
+2008/11/24-19:38:41 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:38:41 Receive AutoT Packet, opcode = ER, seq_no = 59, ack_seq_no =9, length: 13, buffer_length: 15
+2008/11/24-19:38:47 Pop CTCI Message(1F, 0x0121EFA0), Length(191) to queue. No: 1
+2008/11/24-19:41:38 Pop CTCI Message(1F, 0x0121EFA0), Length(191) to queue. No: 2
+2008/11/24-19:42:17 Pop CTCI Message(1G, 0x0121EFA0), Length(120) to queue. No: 3
+2008/11/24-19:42:39 Stop Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-19:42:39 Save unsent packet for next time sending, because queue already pop, seq_no = 9
+2008/11/24-19:43:04 Start Program ...
+2008/11/24-19:43:04 Load Setting Parameters From File(Setting.bin) 
+2008/11/24-19:43:04 Setting Parameters read from File
+2008/11/24-19:43:04 Load Transmission Data From File(TransmissionD.bin) 
+2008/11/24-19:43:04 Transmission Data read from File
+2008/11/24-19:43:04 Load ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:43:04 ReTransmission Infor read from File
+2008/11/24-19:43:04 Load Possible ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:43:04 Possible ReTransmission Infor read from File
+2008/11/24-19:43:04 Load Unsent Data From File(UnSentData.bin) 
+2008/11/24-19:43:04 Unsent Data read from File
+2008/11/24-19:43:04 Broker start with seq_no(10), seq_start(9), seq_ack(59)
+2008/11/24-19:43:04 Packet[0], seq_no = 7
+2008/11/24-19:43:04 Packet[1], seq_no = 8
+2008/11/24-19:43:04 Packet[2], seq_no = 9
+2008/11/24-19:43:04 Packet[3], seq_no = 3
+2008/11/24-19:43:04 Packet[4], seq_no = 4
+2008/11/24-19:43:04 Packet[5], seq_no = 5
+2008/11/24-19:43:04 Packet[6], seq_no = 6
+2008/11/24-19:43:04 Broker start with broadcast seq_no(1)
+2008/11/24-19:43:05 Broker start with seq_no(10), seq_start(9), seq_ack(59)
+2008/11/24-19:43:05 Packet[0], seq_no = 7
+2008/11/24-19:43:05 Packet[1], seq_no = 8
+2008/11/24-19:43:05 Packet[2], seq_no = 9
+2008/11/24-19:43:05 Packet[3], seq_no = 3
+2008/11/24-19:43:05 Packet[4], seq_no = 4
+2008/11/24-19:43:05 Packet[5], seq_no = 5
+2008/11/24-19:43:05 Packet[6], seq_no = 6
+2008/11/24-19:43:05 Broker start with broadcast seq_no(1)
+2008/11/24-19:43:05 Connect to 172.16.255.31, port 30002 successed
+2008/11/24-19:43:05 Successed init AutoT protocol Handler
+2008/11/24-19:43:05 Connected to HOSE, State = PROG_START
+2008/11/24-19:43:05 Send HELLO Packet, opcode = HL, seq_no = 10, ack_seq_no =59, mode = C
+2008/11/24-19:43:10 Receive Packet after send HELLO, opcode = HR, seq_no = 59, ack_seq_no =9
+2008/11/24-19:43:10 Receive Hello Reply Packet, opcode = HR, seq_no = 59, ack_seq_no =9
+2008/11/24-19:43:10 Server Mode [C]
+2008/11/24-19:43:10 CheckLeftOverPacket(10, 9)
+2008/11/24-19:43:10 Send LEFT OVER LAST, opcode = LL, seq_no = 9, ack_seq_no =59
+2008/11/24-19:43:10 Receive Packet, opcode = AK, seq_no = 59, ack_seq_no =10
+2008/11/24-19:43:10 Send CONFIRM successfully, opcode = CF, seq_no = 10, ack_seq_no =59
+2008/11/24-19:43:10 Establish connection to HOSE, State = PROG_DATA_TRANFER
+2008/11/24-19:43:10 Start Thread: ThreadPollCTCIMsgFromQueue
+2008/11/24-19:43:10 Start Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-19:43:10 Receive data which has: Number of AutoT packet = 2, Buffer Length: 114
+2008/11/24-19:43:10 Receive AutoT Packet, opcode = DT, seq_no = 59, ack_seq_no =10, length: 55, buffer_length: 114
+2008/11/24-19:43:10 Push CTCI Message(2L, 0x012EB8E4), Length(40) to queue
+2008/11/24-19:43:10 Receive AutoT Packet, opcode = DT, seq_no = 60, ack_seq_no =10, length: 55, buffer_length: 114
+2008/11/24-19:43:10 Push CTCI Message(2L, 0x012EB8E4), Length(40) to queue
+2008/11/24-19:43:26 Pop CTCI Message(1G, 0x0121EFA0), Length(120) to queue. No: 1
+2008/11/24-19:44:02 Stop Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-19:44:02 Save unsent packet for next time sending, because queue already pop, seq_no = 10
+2008/11/24-19:45:02 Start Program ...
+2008/11/24-19:45:02 Load Setting Parameters From File(Setting.bin) 
+2008/11/24-19:45:02 Setting Parameters read from File
+2008/11/24-19:45:02 Load Transmission Data From File(TransmissionD.bin) 
+2008/11/24-19:45:02 Transmission Data read from File
+2008/11/24-19:45:02 Load ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:45:02 ReTransmission Infor read from File
+2008/11/24-19:45:02 Load Possible ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:45:02 Possible ReTransmission Infor read from File
+2008/11/24-19:45:02 Load Unsent Data From File(UnSentData.bin) 
+2008/11/24-19:45:02 Unsent Data read from File
+2008/11/24-19:45:02 Broker start with seq_no(11), seq_start(10), seq_ack(61)
+2008/11/24-19:45:02 Packet[0], seq_no = 7
+2008/11/24-19:45:02 Packet[1], seq_no = 8
+2008/11/24-19:45:02 Packet[2], seq_no = 9
+2008/11/24-19:45:02 Packet[3], seq_no = 10
+2008/11/24-19:45:02 Packet[4], seq_no = 4
+2008/11/24-19:45:02 Packet[5], seq_no = 5
+2008/11/24-19:45:02 Packet[6], seq_no = 6
+2008/11/24-19:45:02 Broker start with broadcast seq_no(1)
+2008/11/24-19:45:03 Broker start with seq_no(11), seq_start(10), seq_ack(61)
+2008/11/24-19:45:03 Packet[0], seq_no = 7
+2008/11/24-19:45:03 Packet[1], seq_no = 8
+2008/11/24-19:45:03 Packet[2], seq_no = 9
+2008/11/24-19:45:03 Packet[3], seq_no = 10
+2008/11/24-19:45:03 Packet[4], seq_no = 4
+2008/11/24-19:45:03 Packet[5], seq_no = 5
+2008/11/24-19:45:03 Packet[6], seq_no = 6
+2008/11/24-19:45:03 Broker start with broadcast seq_no(1)
+2008/11/24-19:45:03 Connect to 172.16.255.31, port 30002 successed
+2008/11/24-19:45:03 Successed init AutoT protocol Handler
+2008/11/24-19:45:03 Connected to HOSE, State = PROG_START
+2008/11/24-19:45:03 Send HELLO Packet, opcode = HL, seq_no = 11, ack_seq_no =61, mode = C
+2008/11/24-19:45:08 Receive Packet after send HELLO, opcode = HR, seq_no = 61, ack_seq_no =10
+2008/11/24-19:45:08 Receive Hello Reply Packet, opcode = HR, seq_no = 61, ack_seq_no =10
+2008/11/24-19:45:08 Server Mode [C]
+2008/11/24-19:45:08 CheckLeftOverPacket(11, 10)
+2008/11/24-19:45:08 Send LEFT OVER LAST, opcode = LL, seq_no = 10, ack_seq_no =61
+2008/11/24-19:45:08 Receive Packet, opcode = AK, seq_no = 61, ack_seq_no =11
+2008/11/24-19:45:08 Send CONFIRM successfully, opcode = CF, seq_no = 11, ack_seq_no =61
+2008/11/24-19:45:08 Establish connection to HOSE, State = PROG_DATA_TRANFER
+2008/11/24-19:45:08 Start Thread: ThreadPollCTCIMsgFromQueue
+2008/11/24-19:45:08 Start Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-19:45:41 Send EC packet(0121DF78), length = 14
+2008/11/24-19:45:41 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:45:41 Receive AutoT Packet, opcode = ER, seq_no = 61, ack_seq_no =11, length: 13, buffer_length: 15
+2008/11/24-19:46:08 Pop CTCI Message(1G, 0x0121EFA0), Length(120) to queue. No: 1
+2008/11/24-19:46:08 Pop CTCI Message(1G, 0x0121EFA0), Length(120) to queue. No: 2
+2008/11/24-19:50:09 Stop Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-19:50:09 Save unsent packet for next time sending, because queue already pop, seq_no = 11
+2008/11/24-19:50:25 Start Program ...
+2008/11/24-19:50:25 Load Setting Parameters From File(Setting.bin) 
+2008/11/24-19:50:25 Setting Parameters read from File
+2008/11/24-19:50:25 Load Transmission Data From File(TransmissionD.bin) 
+2008/11/24-19:50:25 Transmission Data read from File
+2008/11/24-19:50:25 Load ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:50:25 ReTransmission Infor read from File
+2008/11/24-19:50:25 Load Possible ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:50:25 Possible ReTransmission Infor read from File
+2008/11/24-19:50:25 Load Unsent Data From File(UnSentData.bin) 
+2008/11/24-19:50:25 Unsent Data read from File
+2008/11/24-19:50:25 Broker start with seq_no(12), seq_start(10), seq_ack(61)
+2008/11/24-19:50:25 Packet[0], seq_no = 7
+2008/11/24-19:50:25 Packet[1], seq_no = 8
+2008/11/24-19:50:25 Packet[2], seq_no = 9
+2008/11/24-19:50:25 Packet[3], seq_no = 10
+2008/11/24-19:50:25 Packet[4], seq_no = 11
+2008/11/24-19:50:25 Packet[5], seq_no = 5
+2008/11/24-19:50:25 Packet[6], seq_no = 6
+2008/11/24-19:50:25 Broker start with broadcast seq_no(1)
+2008/11/24-19:50:27 Broker start with seq_no(12), seq_start(10), seq_ack(61)
+2008/11/24-19:50:27 Packet[0], seq_no = 7
+2008/11/24-19:50:27 Packet[1], seq_no = 8
+2008/11/24-19:50:27 Packet[2], seq_no = 9
+2008/11/24-19:50:27 Packet[3], seq_no = 10
+2008/11/24-19:50:27 Packet[4], seq_no = 11
+2008/11/24-19:50:27 Packet[5], seq_no = 5
+2008/11/24-19:50:27 Packet[6], seq_no = 6
+2008/11/24-19:50:27 Broker start with broadcast seq_no(1)
+2008/11/24-19:50:27 Connect to 172.16.255.31, port 30002 successed
+2008/11/24-19:50:27 Successed init AutoT protocol Handler
+2008/11/24-19:50:27 Connected to HOSE, State = PROG_START
+2008/11/24-19:50:27 Send HELLO Packet, opcode = HL, seq_no = 12, ack_seq_no =61, mode = C
+2008/11/24-19:50:31 Receive Packet after send HELLO, opcode = HR, seq_no = 61, ack_seq_no =11
+2008/11/24-19:50:31 Receive Hello Reply Packet, opcode = HR, seq_no = 61, ack_seq_no =11
+2008/11/24-19:50:31 Server Mode [C]
+2008/11/24-19:50:31 CheckLeftOverPacket(12, 11)
+2008/11/24-19:50:31 Send LEFT OVER LAST, opcode = LL, seq_no = 11, ack_seq_no =61
+2008/11/24-19:50:31 Receive Packet, opcode = AK, seq_no = 61, ack_seq_no =12
+2008/11/24-19:50:31 Send CONFIRM successfully, opcode = CF, seq_no = 12, ack_seq_no =61
+2008/11/24-19:50:31 Establish connection to HOSE, State = PROG_DATA_TRANFER
+2008/11/24-19:50:31 Start Thread: ThreadPollCTCIMsgFromQueue
+2008/11/24-19:50:31 Start Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-19:50:50 Pop CTCI Message(1G, 0x0121EFA0), Length(120) to queue. No: 1
+2008/11/24-19:51:26 Timeup, sending a packet to HOSE(0121F7A8, 123), Number of Messages = 1
+2008/11/24-19:51:26 Send DATA[1], opcode = DT, seq_no = 12, ack_seq_no =61, length =134
+2008/11/24-19:51:49 Send FINISH, opcode = FN, seq_no = 13, ack_seq_no =61
+2008/11/24-19:51:49 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:51:49 Receive AutoT Packet, opcode = AF, seq_no = 61, ack_seq_no =13, length: 13, buffer_length: 15
+2008/11/24-19:51:49 Stop Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-19:51:49 Stop Thread: ThreadPollCTCIMsgFromQueue
+2008/11/24-19:52:20 Start Program ...
+2008/11/24-19:52:20 Load Setting Parameters From File(Setting.bin) 
+2008/11/24-19:52:20 Setting Parameters read from File
+2008/11/24-19:52:20 Load Transmission Data From File(TransmissionD.bin) 
+2008/11/24-19:52:20 Transmission Data read from File
+2008/11/24-19:52:20 Load ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:52:20 ReTransmission Infor read from File
+2008/11/24-19:52:20 Load Possible ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:52:20 Possible ReTransmission Infor read from File
+2008/11/24-19:52:20 Load Unsent Data From File(UnSentData.bin) 
+2008/11/24-19:52:20 Unsent Data read from File
+2008/11/24-19:52:20 Broker start with seq_no(13), seq_start(10), seq_ack(61)
+2008/11/24-19:52:20 Packet[0], seq_no = 7
+2008/11/24-19:52:20 Packet[1], seq_no = 8
+2008/11/24-19:52:20 Packet[2], seq_no = 9
+2008/11/24-19:52:20 Packet[3], seq_no = 10
+2008/11/24-19:52:20 Packet[4], seq_no = 11
+2008/11/24-19:52:20 Packet[5], seq_no = 12
+2008/11/24-19:52:20 Packet[6], seq_no = 6
+2008/11/24-19:52:20 Broker start with broadcast seq_no(1)
+2008/11/24-19:53:42 Start Program ...
+2008/11/24-19:53:42 Load Setting Parameters From File(Setting.bin) 
+2008/11/24-19:53:42 Setting Parameters read from File
+2008/11/24-19:53:42 Load Transmission Data From File(TransmissionD.bin) 
+2008/11/24-19:53:42 Transmission Data read from File
+2008/11/24-19:53:42 Load ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:53:42 ReTransmission Infor read from File
+2008/11/24-19:53:42 Load Possible ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:53:42 Possible ReTransmission Infor read from File
+2008/11/24-19:53:42 Load Unsent Data From File(UnSentData.bin) 
+2008/11/24-19:53:42 Unsent Data read from File
+2008/11/24-19:53:42 Broker start with seq_no(13), seq_start(10), seq_ack(61)
+2008/11/24-19:53:42 Packet[0], seq_no = 7
+2008/11/24-19:53:42 Packet[1], seq_no = 8
+2008/11/24-19:53:42 Packet[2], seq_no = 9
+2008/11/24-19:53:42 Packet[3], seq_no = 10
+2008/11/24-19:53:42 Packet[4], seq_no = 11
+2008/11/24-19:53:42 Packet[5], seq_no = 12
+2008/11/24-19:53:42 Packet[6], seq_no = 6
+2008/11/24-19:53:42 Broker start with broadcast seq_no(1)
+2008/11/24-19:53:45 Broker start with seq_no(13), seq_start(10), seq_ack(61)
+2008/11/24-19:53:45 Packet[0], seq_no = 7
+2008/11/24-19:53:45 Packet[1], seq_no = 8
+2008/11/24-19:53:45 Packet[2], seq_no = 9
+2008/11/24-19:53:45 Packet[3], seq_no = 10
+2008/11/24-19:53:45 Packet[4], seq_no = 11
+2008/11/24-19:53:45 Packet[5], seq_no = 12
+2008/11/24-19:53:45 Packet[6], seq_no = 6
+2008/11/24-19:53:45 Broker start with broadcast seq_no(1)
+2008/11/24-19:53:45 Connect to 172.16.255.31, port 30002 successed
+2008/11/24-19:53:45 Successed init AutoT protocol Handler
+2008/11/24-19:53:45 Connected to HOSE, State = PROG_START
+2008/11/24-19:53:45 Send HELLO Packet, opcode = HL, seq_no = 13, ack_seq_no =61, mode = C
+2008/11/24-19:53:45 Receive Packet after send HELLO, opcode = HR, seq_no = 61, ack_seq_no =13
+2008/11/24-19:53:45 Receive Hello Reply Packet, opcode = HR, seq_no = 61, ack_seq_no =13
+2008/11/24-19:53:45 Server Mode [C]
+2008/11/24-19:53:45 CheckLeftOverPacket(13, 13)
+2008/11/24-19:53:45 Send CONFIRM successfully, opcode = CF, seq_no = 13, ack_seq_no =61
+2008/11/24-19:53:45 Establish connection to HOSE, State = PROG_DATA_TRANFER
+2008/11/24-19:53:45 Start Thread: ThreadPollCTCIMsgFromQueue
+2008/11/24-19:53:45 Start Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-19:54:02 Pop CTCI Message(1G, 0x0121EF9C), Length(120) to queue. No: 1
+2008/11/24-19:54:02 Timeup, sending a packet to HOSE(0121F7A4, 123), Number of Messages = 1
+2008/11/24-19:54:02 Send DATA[1], opcode = DT, seq_no = 13, ack_seq_no =61, length =134
+2008/11/24-19:54:23 Pop CTCI Message(1G, 0x0121EF9C), Length(120) to queue. No: 2
+2008/11/24-19:54:23 Timeup, sending a packet to HOSE(0121F7A4, 123), Number of Messages = 1
+2008/11/24-19:54:23 Send DATA[2], opcode = DT, seq_no = 14, ack_seq_no =61, length =134
+2008/11/24-19:54:53 Send FINISH, opcode = FN, seq_no = 15, ack_seq_no =61
+2008/11/24-19:54:53 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:54:53 Receive AutoT Packet, opcode = AF, seq_no = 61, ack_seq_no =15, length: 13, buffer_length: 15
+2008/11/24-19:54:53 Stop Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-19:54:53 Stop Thread: ThreadPollCTCIMsgFromQueue
+2008/11/24-19:55:20 Start Program ...
+2008/11/24-19:55:20 Load Setting Parameters From File(Setting.bin) 
+2008/11/24-19:55:20 Setting Parameters read from File
+2008/11/24-19:55:20 Load Transmission Data From File(TransmissionD.bin) 
+2008/11/24-19:55:20 Transmission Data read from File
+2008/11/24-19:55:20 Load ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:55:20 ReTransmission Infor read from File
+2008/11/24-19:55:20 Load Possible ReTransmission Infor From File(ReTransmission.bin) 
+2008/11/24-19:55:20 Possible ReTransmission Infor read from File
+2008/11/24-19:55:20 Load Unsent Data From File(UnSentData.bin) 
+2008/11/24-19:55:20 Unsent Data read from File
+2008/11/24-19:55:20 Broker start with seq_no(15), seq_start(10), seq_ack(61)
+2008/11/24-19:55:20 Packet[0], seq_no = 14
+2008/11/24-19:55:20 Packet[1], seq_no = 8
+2008/11/24-19:55:20 Packet[2], seq_no = 9
+2008/11/24-19:55:20 Packet[3], seq_no = 10
+2008/11/24-19:55:20 Packet[4], seq_no = 11
+2008/11/24-19:55:20 Packet[5], seq_no = 12
+2008/11/24-19:55:20 Packet[6], seq_no = 13
+2008/11/24-19:55:20 Broker start with broadcast seq_no(1)
+2008/11/24-19:55:26 Broker start with seq_no(15), seq_start(10), seq_ack(61)
+2008/11/24-19:55:26 Packet[0], seq_no = 14
+2008/11/24-19:55:26 Packet[1], seq_no = 8
+2008/11/24-19:55:26 Packet[2], seq_no = 9
+2008/11/24-19:55:26 Packet[3], seq_no = 10
+2008/11/24-19:55:26 Packet[4], seq_no = 11
+2008/11/24-19:55:26 Packet[5], seq_no = 12
+2008/11/24-19:55:26 Packet[6], seq_no = 13
+2008/11/24-19:55:26 Broker start with broadcast seq_no(1)
+2008/11/24-19:55:26 Connect to 172.16.255.31, port 30002 successed
+2008/11/24-19:55:26 Successed init AutoT protocol Handler
+2008/11/24-19:55:26 Connected to HOSE, State = PROG_START
+2008/11/24-19:55:26 Send HELLO Packet, opcode = HL, seq_no = 15, ack_seq_no =61, mode = C
+2008/11/24-19:55:26 Receive Packet after send HELLO, opcode = HR, seq_no = 61, ack_seq_no =15
+2008/11/24-19:55:26 Receive Hello Reply Packet, opcode = HR, seq_no = 61, ack_seq_no =15
+2008/11/24-19:55:26 Server Mode [C]
+2008/11/24-19:55:26 CheckLeftOverPacket(15, 15)
+2008/11/24-19:55:26 Send CONFIRM successfully, opcode = CF, seq_no = 15, ack_seq_no =61
+2008/11/24-19:55:26 Establish connection to HOSE, State = PROG_DATA_TRANFER
+2008/11/24-19:55:26 Start Thread: ThreadPollCTCIMsgFromQueue
+2008/11/24-19:55:26 Start Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-19:55:35 Pop CTCI Message(1G, 0x0129EFA0), Length(120) to queue. No: 1
+2008/11/24-19:55:35 Timeup, sending a packet to HOSE(0129F7A8, 123), Number of Messages = 1
+2008/11/24-19:55:35 Send DATA[1], opcode = DT, seq_no = 15, ack_seq_no =61, length =134
+2008/11/24-19:55:44 Send FINISH, opcode = FN, seq_no = 16, ack_seq_no =61
+2008/11/24-19:55:44 Receive data which has: Number of AutoT packet = 1, Buffer Length: 15
+2008/11/24-19:55:44 Receive AutoT Packet, opcode = AF, seq_no = 61, ack_seq_no =16, length: 13, buffer_length: 15
+2008/11/24-19:55:44 Stop Thread: ThreadReceiveAutoTPacketFromHOSE
+2008/11/24-19:55:44 Stop Thread: ThreadPollCTCIMsgFromQueue

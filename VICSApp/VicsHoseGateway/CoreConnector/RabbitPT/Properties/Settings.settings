@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HOGW_PT_Dealer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SBSCommon_CommonService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://testserver.vics.com.vn/gateway/common.net4.v1/CommonService.asmx</Value>
+    </Setting>
+    <Setting Name="HosePTConnector_PTConnectorWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://testserver.vics.com.vn/gateway/HosePTConnector/PTConnectorWS.asmx</Value>
+    </Setting>
+    <Setting Name="CoreConnector_CoreConnectorWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://testserver.vics.com.vn/gateway/CoreConnector/CoreConnectorWS.asmx</Value>
+    </Setting>
+    <Setting Name="SBSGateway_CommonService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://testserver.vics.com.vn/gateway/SBSGateway30/CommonService.asmx</Value>
+    </Setting>
+    <Setting Name="HoseConnector_GWConnectorWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://testserver.vics.com.vn/gateway/HoseConnector/GWConnectorWS.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

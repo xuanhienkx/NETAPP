@@ -1,0 +1,18 @@
+.poster {
+    width: 120px;
+    background-color: red;
+    float: right;
+}
+.director {
+    font-style: italic;
+    background-color: red;
+}
+.description {
+    font-family: serif;
+}
+.imdb {
+    font-size: 0.8em;
+}
+a {
+    color: green;
+}

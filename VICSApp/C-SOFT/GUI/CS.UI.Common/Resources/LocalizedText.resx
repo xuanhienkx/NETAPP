@@ -1,0 +1,1608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdminHome_AccountAndPermissionTitle" xml:space="preserve">
+    <value>Accounts &amp; Permission</value>
+  </data>
+  <data name="BranchViewModel_Title" xml:space="preserve">
+    <value>Branches &amp; Offices</value>
+  </data>
+  <data name="AdminHome_GeneralSettingTitle" xml:space="preserve">
+    <value>General Settings</value>
+  </data>
+  <data name="AdminHome_SignOutTitle" xml:space="preserve">
+    <value>Sign out</value>
+  </data>
+  <data name="AdminHome_SystemMonitoringTitle" xml:space="preserve">
+    <value>System Monitoring</value>
+  </data>
+  <data name="AdminView_Title" xml:space="preserve">
+    <value>Admin settings</value>
+  </data>
+  <data name="Application_QuitMessage" xml:space="preserve">
+    <value>Sure you want to quit application?</value>
+  </data>
+  <data name="Application_QuitTitle" xml:space="preserve">
+    <value>Quit application?</value>
+  </data>
+  <data name="BranchView_BranchAddress" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="BranchView_BranchCode" xml:space="preserve">
+    <value>Mã chi nhánh</value>
+  </data>
+  <data name="BranchView_BranchEditTitel" xml:space="preserve">
+    <value>Chi nhánh</value>
+  </data>
+  <data name="BranchView_BranchFax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="BranchView_BranchName" xml:space="preserve">
+    <value>Tên chi nhánh</value>
+  </data>
+  <data name="BranchView_BranchParent" xml:space="preserve">
+    <value>Đơn vị quản lý</value>
+  </data>
+  <data name="BranchView_BranchPhone" xml:space="preserve">
+    <value>Điện thoại</value>
+  </data>
+  <data name="BranchView_List" xml:space="preserve">
+    <value>Danh sách chi nhánh</value>
+  </data>
+  <data name="Command_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Command_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Command_Quit" xml:space="preserve">
+    <value>Quit</value>
+  </data>
+  <data name="Command_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Command_Revert" xml:space="preserve">
+    <value>Revert</value>
+  </data>
+  <data name="Command_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="LoginView_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="LoginView_CannotIdentifyTheLoginUser" xml:space="preserve">
+    <value>The login view's role is invalid</value>
+  </data>
+  <data name="LoginView_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LoginView_LoginTitle" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LoginView_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="LoginView_Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="MainView_HelloTitle" xml:space="preserve">
+    <value>You are signed in as</value>
+  </data>
+  <data name="MainWindow_ExitTitle" xml:space="preserve">
+    <value>Quit the aplication!</value>
+  </data>
+  <data name="MainWindow_SettingTitle" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MainWindow_SignOutTitle" xml:space="preserve">
+    <value>Log off!</value>
+  </data>
+  <data name="MainWindow_Tittle" xml:space="preserve">
+    <value>C-Soft application</value>
+  </data>
+  <data name="MainWindow_UserProfileSettingTitle" xml:space="preserve">
+    <value>Edit user profile</value>
+  </data>
+  <data name="Start_RegisterComponent" xml:space="preserve">
+    <value>Starting to register all components...</value>
+  </data>
+  <data name="WindowView_CloseTitle" xml:space="preserve">
+    <value>Đóng ứng dụng</value>
+  </data>
+  <data name="WindowView_MaximizeTitle" xml:space="preserve">
+    <value>Hiển thị hết màn hình</value>
+  </data>
+  <data name="WindowView_MinimizeTitle" xml:space="preserve">
+    <value>Ẩn màn ứng dụng</value>
+  </data>
+  <data name="WindowView_RestoreTitle" xml:space="preserve">
+    <value>Thu nhỏ màn hình</value>
+  </data>
+  <data name="BranchView_BranchAddress_MaxLength" xml:space="preserve">
+    <value>Địa chỉ được nhập tối đa 200 ký tự</value>
+  </data>
+  <data name="Number_Only" xml:space="preserve">
+    <value>Chỉ được nhập  vào ký tự số</value>
+  </data>
+  <data name="Phone_Number" xml:space="preserve">
+    <value>Chỉ cho phép nhập các ký tự 0-9 . () -</value>
+  </data>
+  <data name="BranchEditViewModel_Add_Title" xml:space="preserve">
+    <value>Tạo chi nhánh</value>
+  </data>
+  <data name="BranchEditViewModel_Edit_Title" xml:space="preserve">
+    <value>Cập nhật chi nhánh </value>
+  </data>
+  <data name="Toolbar_EditTitle" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="Toolbar_CreateTitle" xml:space="preserve">
+    <value>Thêm mới</value>
+  </data>
+  <data name="Toolbar_RemoveTitle" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="ApiProvider_Exception" xml:space="preserve">
+    <value>An unexpected error happened. Please check the detail in error log file.</value>
+  </data>
+  <data name="ApiProvider_HttpRequestException" xml:space="preserve">
+    <value>Request to the API was failed.</value>
+  </data>
+  <data name="ApiProvider_JsonReaderException" xml:space="preserve">
+    <value>An error happened while process the request result. Please check the detail in error log file.</value>
+  </data>
+  <data name="BrokerModel_Department" xml:space="preserve">
+    <value>Phòng</value>
+  </data>
+  <data name="UserModel_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="UserModel_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="UserModel_FullName" xml:space="preserve">
+    <value>Họ tên</value>
+  </data>
+  <data name="UserModel_Group" xml:space="preserve">
+    <value>Nhóm</value>
+  </data>
+  <data name="UserModel_ModifledDate" xml:space="preserve">
+    <value>Ngày cập nhật</value>
+  </data>
+  <data name="UserModel_Active" xml:space="preserve">
+    <value>Kích hoạt</value>
+  </data>
+  <data name="BrokerViewModel_AddDialog_Title" xml:space="preserve">
+    <value>Tạo thông tin môi giới</value>
+  </data>
+  <data name="BrokerViewModel_EditDialog_Title" xml:space="preserve">
+    <value>Cập nhật thông tin môi giới</value>
+  </data>
+  <data name="UserModel_Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="BranchView_BrokerInfo_Title" xml:space="preserve">
+    <value>Thông tin cơ bản</value>
+  </data>
+  <data name="BranchView_UserInfo_Title" xml:space="preserve">
+    <value>Thông tin truy cập</value>
+  </data>
+  <data name="UserModel_PhoneNumber" xml:space="preserve">
+    <value>Số điện thoại</value>
+  </data>
+  <data name="DepartmentView_Name" xml:space="preserve">
+    <value>Tên phòng</value>
+  </data>
+  <data name="GroupViewModel_Title" xml:space="preserve">
+    <value>Nhóm</value>
+  </data>
+  <data name="GroupEditViewModel_Add_Title" xml:space="preserve">
+    <value>Tạo nhóm</value>
+  </data>
+  <data name="GroupEditViewModel_Edit_Title" xml:space="preserve">
+    <value>Cập nhật nhóm</value>
+  </data>
+  <data name="GroupView_LeaderName" xml:space="preserve">
+    <value>Tên trưởng nhóm</value>
+  </data>
+  <data name="GroupView_Name" xml:space="preserve">
+    <value>Tên nhóm</value>
+  </data>
+  <data name="DepartmentEditViewModel_Edit_Title" xml:space="preserve">
+    <value>Cập nhật phòng ban</value>
+  </data>
+  <data name="DepartmentEditViewModel_Add_Title" xml:space="preserve">
+    <value>Tạo phòng ban</value>
+  </data>
+  <data name="AdminHome_CustomerViewModel_Title" xml:space="preserve">
+    <value>Khách hàng</value>
+  </data>
+  <data name="CustomerViewModel_AddDialog_Title" xml:space="preserve">
+    <value>Tạo khách hàng</value>
+  </data>
+  <data name="CustomerViewModel_EditDialog_Title" xml:space="preserve">
+    <value>Cập nhật khách hàng</value>
+  </data>
+  <data name="CustomerView_BirthDay" xml:space="preserve">
+    <value>Ngày sinh</value>
+  </data>
+  <data name="CustomerView_CardIdentity" xml:space="preserve">
+    <value>Số đăng ký</value>
+  </data>
+  <data name="CustomerView_CardIssuedDate" xml:space="preserve">
+    <value>Ngày cấp</value>
+  </data>
+  <data name="CustomerView_CardType" xml:space="preserve">
+    <value>Loại giấy CM</value>
+  </data>
+  <data name="CustomerView_CountryCode" xml:space="preserve">
+    <value>Mã quốc gia</value>
+  </data>
+  <data name="CustomerView_CustomerNumber" xml:space="preserve">
+    <value>Số tài khoản</value>
+  </data>
+  <data name="CustomerView_CustomerType" xml:space="preserve">
+    <value>Loại khách hàng</value>
+  </data>
+  <data name="CustomerView_Genere" xml:space="preserve">
+    <value>Giới tính</value>
+  </data>
+  <data name="CustomerView_Notes" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="CustomerView_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="CustomerView_Broker" xml:space="preserve">
+    <value>Nhân viên môi giới</value>
+  </data>
+  <data name="CustomerView_CardIssuer" xml:space="preserve">
+    <value>Nơi cấp</value>
+  </data>
+  <data name="CustomerView_FullName" xml:space="preserve">
+    <value>Tên tiếng anh</value>
+  </data>
+  <data name="CustomerView_FullNameLocal" xml:space="preserve">
+    <value>Họ tên</value>
+  </data>
+  <data name="CustomerView_TaxCode" xml:space="preserve">
+    <value>Mã số thuế</value>
+  </data>
+  <data name="CustomerContactView_Detail" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="CustomerContactView_IsDefault" xml:space="preserve">
+    <value>Mặc định</value>
+  </data>
+  <data name="CustomerContactView_Type" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="ContactModel_Detail_Validation" xml:space="preserve">
+    <value>Mô tả không được để trống</value>
+  </data>
+  <data name="CustomerView_AddContact_Email_Title" xml:space="preserve">
+    <value>Thêm email</value>
+  </data>
+  <data name="CustomerView_AddContact_Phone_Title" xml:space="preserve">
+    <value>Thêm số điện thoại</value>
+  </data>
+  <data name="CustomerView_AddContact_Fax_Title" xml:space="preserve">
+    <value>Thêm số fax</value>
+  </data>
+  <data name="CustomerView_AddContact_Address_Title" xml:space="preserve">
+    <value>Thêm địa chỉ</value>
+  </data>
+  <data name="CustomerView_AddContact_Delegate_Title" xml:space="preserve">
+    <value>Thêm người đại diện</value>
+  </data>
+  <data name="CustomerView_Contact_Title" xml:space="preserve">
+    <value>Liên hệ</value>
+  </data>
+  <data name="CustomerView_SignatureImage1" xml:space="preserve">
+    <value>Chữ ký 1</value>
+  </data>
+  <data name="CustomerView_SignatureImage2" xml:space="preserve">
+    <value>Chữ ký 2</value>
+  </data>
+  <data name="LoginView_CannotFoundIdentifyTheLoginUser" xml:space="preserve">
+    <value>Không lấy được thông tin đăng nhập vui lòng liên hệ quản trị viên</value>
+  </data>
+  <data name="CustomerView_Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="CustomerView_City" xml:space="preserve">
+    <value>Thành phố</value>
+  </data>
+  <data name="CustomerView_Country" xml:space="preserve">
+    <value>Quốc gia</value>
+  </data>
+  <data name="CustomerView_Nationality" xml:space="preserve">
+    <value>Quốc tịch</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_1_DongMoTK_Title" xml:space="preserve">
+    <value>Danh sách khách hàng cần đóng/mở lưu ký</value>
+  </data>
+  <data name="CustomerView_Search_Texbox" xml:space="preserve">
+    <value>Nhập vào số tài khoản hoặc số CMND</value>
+  </data>
+  <data name="Toolbar_Customer_Publish" xml:space="preserve">
+    <value>Gửi lên VSD</value>
+  </data>
+  <data name="AccountModel_Code_Validation" xml:space="preserve">
+    <value>Code không được để trống và tối đa  50 ký tự</value>
+  </data>
+  <data name="AccountModel_Name_Validation" xml:space="preserve">
+    <value>Tên không được để trống</value>
+  </data>
+  <data name="AccountTransactionModel_Description_Validation" xml:space="preserve">
+    <value>Mô tả không được để trống và  chỉ tối đa 256 ký tự</value>
+  </data>
+  <data name="AccountTransactionModel_ReferenceCode_Validation" xml:space="preserve">
+    <value>Code không được để trống và tối đa 20 ký tự</value>
+  </data>
+  <data name="BusinessUnitModel_Name_Validation" xml:space="preserve">
+    <value>Tên không được để trống</value>
+  </data>
+  <data name="CustomerAccountModel_Code_Validation" xml:space="preserve">
+    <value>Code không được để trống và tối đa 20 ký tự</value>
+  </data>
+  <data name="SourceModel_Description_Validation" xml:space="preserve">
+    <value>Mô tả chỉ tối đa 512 ký tự</value>
+  </data>
+  <data name="SourceModel_Name_Validation" xml:space="preserve">
+    <value>Nguồn không được để trống</value>
+  </data>
+  <data name="MainWindow_SubTitle" xml:space="preserve">
+    <value>Selected feature</value>
+  </data>
+  <data name="End_RegisterComponent" xml:space="preserve">
+    <value>Register all components completed!</value>
+  </data>
+  <data name="Navigation_VSD_1_1_DongMoTK_Desc" xml:space="preserve">
+    <value>Cập nhật mở/đóng tài khoản giao dịch</value>
+  </data>
+  <data name="Navigation_VSD_1_1_DongMoTK_Title" xml:space="preserve">
+    <value>Cập nhật mở/đóng tài khoản giao dịch</value>
+  </data>
+  <data name="Navigation_chuyenkhoanchungkhoan_Desc" xml:space="preserve">
+    <value>Chuyển khoản chứng khoán</value>
+  </data>
+  <data name="Navigation_chuyenkhoanchungkhoan_Title" xml:space="preserve">
+    <value>Chuyển khoản chứng khoán</value>
+  </data>
+  <data name="Navigation_Custody_Desc" xml:space="preserve">
+    <value>Custody module</value>
+  </data>
+  <data name="Navigation_Custody_Title" xml:space="preserve">
+    <value>LƯU KÝ</value>
+  </data>
+  <data name="Navigation_VSD_1_2_4_KyGuiCKTuQuyen_Desc" xml:space="preserve">
+    <value>Ký gửi chứng khoán phát hành thêm từ quyền</value>
+  </data>
+  <data name="Navigation_VSD_1_2_4_KyGuiCKTuQuyen_Title" xml:space="preserve">
+    <value>Ký gửi chứng khoán phát hành thêm từ quyền</value>
+  </data>
+  <data name="Navigation_VSD_1_2_1_KyGuiCK_Desc" xml:space="preserve">
+    <value>Ký gửi chứng khoán thông thường (có yêu cầu từ TVLK)</value>
+  </data>
+  <data name="Navigation_VSD_1_2_1_KyGuiCK_Title" xml:space="preserve">
+    <value>Ký gửi chứng khoán thông thường (có yêu cầu từ TVLK)</value>
+  </data>
+  <data name="Navigation_kyguirutchungkhoan_Desc" xml:space="preserve">
+    <value>Ký gửi/rút chứng khoán của NĐT</value>
+  </data>
+  <data name="Navigation_kyguirutchungkhoan_Title" xml:space="preserve">
+    <value>Ký gửi/rút chứng khoán của NĐT</value>
+  </data>
+  <data name="Navigation_VSD_1_2_3_KyGuiTP_Desc" xml:space="preserve">
+    <value>Ký gửi chứng khoán đồng thời với đăng ký chứng khoán</value>
+  </data>
+  <data name="Navigation_VSD_1_2_3_KyGuiTP_Title" xml:space="preserve">
+    <value>Ký gửi chứng khoán đồng thời với đăng ký chứng khoán</value>
+  </data>
+  <data name="Navigation_VSD_1_2_5_RutCKDoHuy_Desc" xml:space="preserve">
+    <value>Rút chứng khoán do hủy đăng ký</value>
+  </data>
+  <data name="Navigation_VSD_1_2_5_RutCKDoHuy_Title" xml:space="preserve">
+    <value>Rút chứng khoán do hủy đăng ký</value>
+  </data>
+  <data name="Navigation_VSD_1_2_2_RutCK_Desc" xml:space="preserve">
+    <value>Rút chứng khoán thông thường (có yêu cầu từ TVLK)</value>
+  </data>
+  <data name="Navigation_VSD_1_2_2_RutCK_Title" xml:space="preserve">
+    <value>Rút chứng khoán thông thường (có yêu cầu từ TVLK)</value>
+  </data>
+  <data name="Navigation_Admin_Desc" xml:space="preserve">
+    <value>Quản lý</value>
+  </data>
+  <data name="Navigation_Admin_Title" xml:space="preserve">
+    <value>Quản lý</value>
+  </data>
+  <data name="Navigation_Branch_Desc" xml:space="preserve">
+    <value>Quản lý đại lý chi nhánh</value>
+  </data>
+  <data name="Navigation_Branch_Title" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="Navigation_Catalogue_Desc" xml:space="preserve">
+    <value>Danh mục quản lý</value>
+  </data>
+  <data name="Navigation_Catalogue_Title" xml:space="preserve">
+    <value>DANH MỤC</value>
+  </data>
+  <data name="Navigation_Department_Desc" xml:space="preserve">
+    <value>Quản lý Phòng ban</value>
+  </data>
+  <data name="Navigation_Department_Title" xml:space="preserve">
+    <value>Phòng ban</value>
+  </data>
+  <data name="Navigation_Group_Desc" xml:space="preserve">
+    <value>Quản lý Nhóm</value>
+  </data>
+  <data name="Navigation_Group_Title" xml:space="preserve">
+    <value>Nhóm</value>
+  </data>
+  <data name="Confirm_Title" xml:space="preserve">
+    <value>Vui lòng xác nhận thông tin</value>
+  </data>
+  <data name="Navigation_User_Desc" xml:space="preserve">
+    <value>Quản lý môi giới &amp; cộng tác viên</value>
+  </data>
+  <data name="Navigation_User_Title" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+  <data name="Navigation_CustomerManager_Desc" xml:space="preserve">
+    <value>Quản lý thông tin khách hàng</value>
+  </data>
+  <data name="Navigation_CustomerManager_Title" xml:space="preserve">
+    <value>QUẢN LÝ KHÁCH HÀNG</value>
+  </data>
+  <data name="Navigation_Customer_Desc" xml:space="preserve">
+    <value>Quản lý cập nhật thông tin khách hàng</value>
+  </data>
+  <data name="Navigation_Customer_Title" xml:space="preserve">
+    <value>Thông tin khách hàng</value>
+  </data>
+  <data name="ViewModel_Confirm_MessageDelete" xml:space="preserve">
+    <value>Bạn thực sự muốn xóa {0} </value>
+  </data>
+  <data name="GroupViewModel_SubTitle" xml:space="preserve">
+    <value>Quản lý nhóm</value>
+  </data>
+  <data name="DepartmentViewModel_SubTitle" xml:space="preserve">
+    <value>Quản lý phòng ban</value>
+  </data>
+  <data name="DepartmentViewModel_Title" xml:space="preserve">
+    <value>Phòng Ban</value>
+  </data>
+  <data name="Toolbar_ReActiveTitle" xml:space="preserve">
+    <value>Reopen account</value>
+  </data>
+  <data name="Toolbar_ActiveTitle" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Toolbar_DeActiveTitle" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="BrokerViewModel_Title" xml:space="preserve">
+    <value>Môi giới</value>
+  </data>
+  <data name="BranchViewModel_SubTitle" xml:space="preserve">
+    <value>Quản lý chi nhánh</value>
+  </data>
+  <data name="BrokerViewModel_SubTitle" xml:space="preserve">
+    <value>Quản lý thông tin môi giới</value>
+  </data>
+  <data name="CustomerViewModel_SubTitle" xml:space="preserve">
+    <value>Quản lý thông tin khách hàng</value>
+  </data>
+  <data name="CustomerViewModel_Title" xml:space="preserve">
+    <value>Quản lý khách hàng</value>
+  </data>
+  <data name="Navigation_Asset_SubTitle" xml:space="preserve">
+    <value>Quản lý tài sản khách hàng</value>
+  </data>
+  <data name="Navigation_Asset_Title" xml:space="preserve">
+    <value>Tải sản</value>
+  </data>
+  <data name="Alert_Error" xml:space="preserve">
+    <value>Lỗi</value>
+  </data>
+  <data name="BrokerViewModel_Confirm_MessageDelete" xml:space="preserve">
+    <value>Bạn thực sự muốn đóng tài khoản {0}</value>
+  </data>
+  <data name="CustomerViewModel_Confirm_MessageDelete" xml:space="preserve">
+    <value>Bạn thực sự muốn đóng tài khoản {0}</value>
+  </data>
+  <data name="CustodyCustomer_Publish_Confirm_Message" xml:space="preserve">
+    <value>Bạn phải chắc chắn rằng thông tin đã đầy đủ và chính xác trước khi gửi lên VSD</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_1_DongMoTK_SubTitle" xml:space="preserve">
+    <value>Quản lý khách hàng lưu ký</value>
+  </data>
+  <data name="Navigation_CustodyRequest_Desc" xml:space="preserve">
+    <value>Thông tin gửi lên VSD</value>
+  </data>
+  <data name="Navigation_CustodyRequest_Title" xml:space="preserve">
+    <value>Thông tin gửi lên VSD</value>
+  </data>
+  <data name="RequestView_BusinessId" xml:space="preserve">
+    <value>Nghiệp vụ</value>
+  </data>
+  <data name="RequestView_Content" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="RequestView_CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="RequestView_ModifiedDate" xml:space="preserve">
+    <value>Ngày cập nhật</value>
+  </data>
+  <data name="RequestView_Notes" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="RequestView_Priority" xml:space="preserve">
+    <value>Ưu tiên</value>
+  </data>
+  <data name="RequestView_RequestType" xml:space="preserve">
+    <value>Loại request</value>
+  </data>
+  <data name="RequestView_Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="RequestViewModel_SubTile" xml:space="preserve">
+    <value>Quản lý thông tin publish VSD</value>
+  </data>
+  <data name="RequestViewModel_Tile" xml:space="preserve">
+    <value>Thông tin gửi publish VSD</value>
+  </data>
+  <data name="RequestView_Search_Texbox" xml:space="preserve">
+    <value>Nhập nghiệp vụ cần tìm</value>
+  </data>
+  <data name="Toolbar_Customer_ViewPublish" xml:space="preserve">
+    <value>Xem thông tin gửi lên VSD</value>
+  </data>
+  <data name="Navigation_VSD_1_3_ChuyenKhoanCK_Desc" xml:space="preserve">
+    <value>Chuyển khoản chứng khoán</value>
+  </data>
+  <data name="Navigation_VSD_1_3_ChuyenKhoanCK_Title" xml:space="preserve">
+    <value>Chuyển khoản chứng khoán</value>
+  </data>
+  <data name="Navigation_VSD_1_4_TatToanTK_Desc" xml:space="preserve">
+    <value>Tất toán tài khoản giao dịch/Chuyển khoản toàn bộ chứng khoán</value>
+  </data>
+  <data name="Navigation_VSD_1_4_TatToanTK_Title" xml:space="preserve">
+    <value>Tất toán tài khoản giao dịch</value>
+  </data>
+  <data name="Navigation_VSD_1_5_PhongToaGiaiToaCK_Desc" xml:space="preserve">
+    <value>Phong tỏa và giải tỏa chứng khoán</value>
+  </data>
+  <data name="Navigation_VSD_1_5_PhongToaGiaiToaCK_Title" xml:space="preserve">
+    <value>Phong tỏa và giải tỏa chứng khoán</value>
+  </data>
+  <data name="Navigation_VSD_1_6_TBDieuChinhCK_Desc" xml:space="preserve">
+    <value>Thông báo điều chỉnh thông tin về loại chứng khoán (phổ thông, hạn chế chuyển nhượng)</value>
+  </data>
+  <data name="Navigation_VSD_1_6_TBDieuChinhCK_Title" xml:space="preserve">
+    <value>Thông báo điều chỉnh loại chứng khoán</value>
+  </data>
+  <data name="Navigation_VSD_1_7_TBThayDoiChuyenNhuong_Desc" xml:space="preserve">
+    <value>Thông báo thay đổi hạn chế chuyển nhượng sang giao dịch</value>
+  </data>
+  <data name="Navigation_VSD_1_7_TBThayDoiChuyenNhuong_Title" xml:space="preserve">
+    <value>Thông báo thay đổi hạn chế chuyển nhượng sang  giao dịch</value>
+  </data>
+  <data name="Navigation_VSD_1_8_XNSoDuCK_Desc" xml:space="preserve">
+    <value>Xác nhận/hủy xác nhận số dư chứng khoán</value>
+  </data>
+  <data name="Navigation_VSD_1_8_XNSoDuCK_Title" xml:space="preserve">
+    <value>Xác nhận/hủy xác nhận số dư chứng khoán</value>
+  </data>
+  <data name="Navigation_VSD_2_1_TBQuyen_Desc" xml:space="preserve">
+    <value>Thông báo thông tin thực hiện quyền</value>
+  </data>
+  <data name="Navigation_VSD_2_1_TBQuyen_Title" xml:space="preserve">
+    <value>Thông báo thông tin thực hiện quyền</value>
+  </data>
+  <data name="Navigation_VSD_2_2_XNDSThucHienQuyen_Desc" xml:space="preserve">
+    <value>Xác nhận/Hủy xác nhận danh sách người sở hữu chứng khoán lưu ký thực hiện quyền</value>
+  </data>
+  <data name="Navigation_VSD_2_2_XNDSThucHienQuyen_Title" xml:space="preserve">
+    <value>Xác nhận/Hủy xác nhận danh sách người thực hiện quyền</value>
+  </data>
+  <data name="Navigation_VSD_2_3_ChuyenNhuongQuyen_Desc" xml:space="preserve">
+    <value>Chuyển nhượng quyền mua</value>
+  </data>
+  <data name="Navigation_VSD_2_3_ChuyenNhuongQuyen_Title" xml:space="preserve">
+    <value>Chuyển nhượng quyền mua</value>
+  </data>
+  <data name="Navigation_VSD_2_4_DKDatMua_Desc" xml:space="preserve">
+    <value>Đăng ký đặt mua</value>
+  </data>
+  <data name="Navigation_VSD_2_4_DKDatMua_Title" xml:space="preserve">
+    <value>Đăng ký đặt mua</value>
+  </data>
+  <data name="Navigation_VSD_3_1_XNKetQuaGD_Desc" xml:space="preserve">
+    <value>Xác nhận/Hủy xác nhận kết quả giao dịch</value>
+  </data>
+  <data name="Navigation_VSD_3_1_XNKetQuaGD_Title" xml:space="preserve">
+    <value>Xác nhận/Hủy xác nhận kết quả giao dịch</value>
+  </data>
+  <data name="Navigation_VSD_3_2_TBKetQuaBuTru_Desc" xml:space="preserve">
+    <value>Thông báo tổng hợp kết quả bù trừ và thông báo điều chỉnh kết quả bù trừ</value>
+  </data>
+  <data name="Navigation_VSD_3_2_TBKetQuaBuTru_Title" xml:space="preserve">
+    <value>Thông báo tổng hợp kết quả bù trừ</value>
+  </data>
+  <data name="Navigation_VSD_3_3_TBThanhToanVoiTVLK_Desc" xml:space="preserve">
+    <value>Thông báo về việc thanh toán hoàn tất với TVLK</value>
+  </data>
+  <data name="Navigation_VSD_3_3_TBThanhToanVoiTVLK_Title" xml:space="preserve">
+    <value>Thông báo về việc thanh toán hoàn tất với TVLK</value>
+  </data>
+  <data name="Navigation_VSD_4_TraXuatBC_Desc" xml:space="preserve">
+    <value>Tra xuất báo cáo nghiệp vụ</value>
+  </data>
+  <data name="Navigation_VSD_4_TraXuatBC_Title" xml:space="preserve">
+    <value>Tra xuất báo cáo nghiệp vụ</value>
+  </data>
+  <data name="Navigation_VSD_5_1_TBCKMoi_Desc" xml:space="preserve">
+    <value>Thông báo mã chứng khoán đăng ký mới</value>
+  </data>
+  <data name="Navigation_VSD_5_1_TBCKMoi_Title" xml:space="preserve">
+    <value>Thông báo mã chứng khoán đăng ký mới</value>
+  </data>
+  <data name="Navigation_VSD_5_2_TBCKChuyenSan_Desc" xml:space="preserve">
+    <value>Thông báo mã chứng khoán chuyển sàn</value>
+  </data>
+  <data name="Navigation_VSD_5_2_TBCKChuyenSan_Title" xml:space="preserve">
+    <value>Thông báo mã chứng khoán chuyển sàn</value>
+  </data>
+  <data name="Navigation_VSD_5_3_TBCKHuy_Desc" xml:space="preserve">
+    <value>Thông báo mã chứng khoán hủy đăng ký</value>
+  </data>
+  <data name="Navigation_VSD_5_3_TBCKHuy_Title" xml:space="preserve">
+    <value>Thông báo mã chứng khoán hủy đăng ký</value>
+  </data>
+  <data name="Navigation_VSD_5_4_TBDangKyBoSung_Desc" xml:space="preserve">
+    <value>Thông báo mã đợt đăng ký bổ sung</value>
+  </data>
+  <data name="Navigation_VSD_5_4_TBDangKyBoSung_Title" xml:space="preserve">
+    <value>Thông báo mã đợt đăng ký bổ sung</value>
+  </data>
+  <data name="Navigation_ThongBaoHachToanSoCKDoiVoiBenNhanChoCNQMChuyenChungKhoan_Desc" xml:space="preserve">
+    <value>Nhận thông báo hạch toán số dư chứng khoán khoán qua MT544 ứng với chuyển chứng khoán hoặc chuyển nhượng quyền mua</value>
+  </data>
+  <data name="Navigation_ThongBaoHachToanSoCKDoiVoiBenNhanChoCNQMChuyenChungKhoan_Title" xml:space="preserve">
+    <value>Hạch toán số dư chứng khoán khoán</value>
+  </data>
+  <data name="CustodyRequestViewModel_Confirm_MessageCancle" xml:space="preserve">
+    <value>Bạn muốn gửi điện hủy {0} </value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_1_DongMoTK_Dialog_Title" xml:space="preserve">
+    <value>Thông tin điện đóng mởi tài khoản gửi lên VSD</value>
+  </data>
+  <data name="CustodyView_VSD" xml:space="preserve">
+    <value>Trụ sở VSD</value>
+  </data>
+  <data name="Customer_NotFound_IdentityOrNumber" xml:space="preserve">
+    <value>Không tìm thấy khách hàng với CMND hoặc số tài khoản là {0}</value>
+  </data>
+  <data name="Customer_NotValid_Publish" xml:space="preserve">
+    <value>Tài khoản {0} đang trong tiến trình gửi lên VSD không thể tạo điện đóng/mở</value>
+  </data>
+  <data name="CustodyView_Toolbar_ResentTitle" xml:space="preserve">
+    <value>Gửi lại điện</value>
+  </data>
+  <data name="CustomerView_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="VSDPublishFailed_Customer_NotSameVersion" xml:space="preserve">
+    <value>Thông tin khách hàng có thể bị thay đổi version hiện tại là {0}. Vui lòng kiểm tra lại</value>
+  </data>
+  <data name="CustodyRequestModel_BusinessId_Validation" xml:space="preserve">
+    <value>BusinessId  is required</value>
+  </data>
+  <data name="CustodyRequestModel_Content_Validation" xml:space="preserve">
+    <value>Content is required</value>
+  </data>
+  <data name="RightInformationViewModel_SubTitle" xml:space="preserve">
+    <value>Danh Sách thông tin thực hiện quyền</value>
+  </data>
+  <data name="RightInformationViewModel_Title" xml:space="preserve">
+    <value>Danh Sách thông tin thực hiện quyền</value>
+  </data>
+  <data name="Navigation_VSD_1_3_1_4_TBHT_TangTK_CNQ_TTTK_Desc" xml:space="preserve">
+    <value>Thành vên nhận thông báo hạch toán số dư chứng khoán khoán qua MT544 ứng với chuyển chứng khoán hoặc chuyển nhượng quyền mua</value>
+  </data>
+  <data name="Navigation_VSD_1_3_1_4_TBHT_TangTK_CNQ_TTTK_Title" xml:space="preserve">
+    <value>Hoạch toán tăng số dư Mua quyền/Chuyển CK</value>
+  </data>
+  <data name="RightInfoView_Denominations" xml:space="preserve">
+    <value>Giá chuyển  đổi</value>
+  </data>
+  <data name="RightInfoView_LastDateRegister" xml:space="preserve">
+    <value>Ngày DK cuối cùng</value>
+  </data>
+  <data name="RightInfoView_NoticeDate" xml:space="preserve">
+    <value>Ngày thông báo</value>
+  </data>
+  <data name="RightInfoView_PaymentDate" xml:space="preserve">
+    <value>Ngày thanh toán</value>
+  </data>
+  <data name="RightInfoView_Quantity" xml:space="preserve">
+    <value>KL hưởng quyền</value>
+  </data>
+  <data name="RightInfoView_RateOptionType" xml:space="preserve">
+    <value>Loại TL THQ</value>
+  </data>
+  <data name="RightInfoView_RateValue" xml:space="preserve">
+    <value>Tỷ lệ THQ</value>
+  </data>
+  <data name="RightInfoView_SecuritySymbol" xml:space="preserve">
+    <value>Mã CK</value>
+  </data>
+  <data name="RightInfoView_TypeOfRight" xml:space="preserve">
+    <value>Loại Hình thực hiện</value>
+  </data>
+  <data name="RightInfoView_AccountType" xml:space="preserve">
+    <value>AccountType</value>
+  </data>
+  <data name="RightInfoView_Amount" xml:space="preserve">
+    <value>Số tiền</value>
+  </data>
+  <data name="RightInfoView_ClosingBalanceDate" xml:space="preserve">
+    <value>Ngày chốt số dư hoán đổi</value>
+  </data>
+  <data name="RightInfoView_CompulsoryPurchaseFrom" xml:space="preserve">
+    <value>Ngày bắt đầu đăng ký</value>
+  </data>
+  <data name="RightInfoView_CompulsoryPurchasePeriod" xml:space="preserve">
+    <value>Thời gian đăng ký đặt mua</value>
+  </data>
+  <data name="RightInfoView_CompulsoryPurchaseTo" xml:space="preserve">
+    <value>Ngày kết thúc đăng ký</value>
+  </data>
+  <data name="RightInfoView_CurrencyCode" xml:space="preserve">
+    <value>Đơn vị tiền tệ</value>
+  </data>
+  <data name="RightInfoView_DeadlinePassOwnershipList" xml:space="preserve">
+    <value>Hạn gửi danh sách</value>
+  </data>
+  <data name="RightInfoView_DeadlinePayment" xml:space="preserve">
+    <value>Hạn thanh toán</value>
+  </data>
+  <data name="RightInfoView_Description" xml:space="preserve">
+    <value>Thông tin bổ sung</value>
+  </data>
+  <data name="RightInfoView_EffectiveDate" xml:space="preserve">
+    <value>Ngày phân bổ</value>
+  </data>
+  <data name="RightInfoView_ExecutionDate" xml:space="preserve">
+    <value>Ngày hoán đổi</value>
+  </data>
+  <data name="RightInfoView_ExpirationDateSubscription" xml:space="preserve">
+    <value>Ngày hết hạn đăng ký quyền mua</value>
+  </data>
+  <data name="RightInfoView_From" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="RightInfoView_IdentificationNumber" xml:space="preserve">
+    <value>Số tứ tự thực hiện quyền</value>
+  </data>
+  <data name="RightInfoView_IndicatorRoundValue" xml:space="preserve">
+    <value>Quy tắc làm tròn</value>
+  </data>
+  <data name="RightInfoView_MarketPrice" xml:space="preserve">
+    <value>Giá mua quyền</value>
+  </data>
+  <data name="RightInfoView_MedialRightBuyType" xml:space="preserve">
+    <value>Loại quyền mua</value>
+  </data>
+  <data name="RightInfoView_MedialRoundType" xml:space="preserve">
+    <value>Quy tắc làm tròn</value>
+  </data>
+  <data name="RightInfoView_MeetingDate" xml:space="preserve">
+    <value>Ngày họp ĐHCD</value>
+  </data>
+  <data name="RightInfoView_MeetingPlace" xml:space="preserve">
+    <value>Nơi họp đại hội cổ đông</value>
+  </data>
+  <data name="RightInfoView_Narrative" xml:space="preserve">
+    <value>Thông tin liên quan</value>
+  </data>
+  <data name="RightInfoView_OwnerPartyBicode" xml:space="preserve">
+    <value>Mã TVLK</value>
+  </data>
+  <data name="RightInfoView_Page" xml:space="preserve">
+    <value>Thông tin trang</value>
+  </data>
+  <data name="RightInfoView_PriceRateType" xml:space="preserve">
+    <value>Loại cổ cổ phiếu</value>
+  </data>
+  <data name="RightInfoView_SecurityType" xml:space="preserve">
+    <value>Loại chứng khoán</value>
+  </data>
+  <data name="RightInfoView_To" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="RightInfoView_TradingPeried" xml:space="preserve">
+    <value>Thời gian chuyển đổi</value>
+  </data>
+  <data name="RightInfoView_Underlying" xml:space="preserve">
+    <value>Tỷ lệ chuyển đổi trung gian-gốc</value>
+  </data>
+  <data name="RightInfoView_UnitType" xml:space="preserve">
+    <value>CP/TP</value>
+  </data>
+  <data name="Command_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="VSD_2_1_TBQuyenViewModel_DialogTitle" xml:space="preserve">
+    <value>Thông tin chi tiết quyền</value>
+  </data>
+  <data name="CustodyView_ActivityType" xml:space="preserve">
+    <value>Trạng thái lưu ký</value>
+  </data>
+  <data name="CustodyView_Quantity" xml:space="preserve">
+    <value>Khối lượng</value>
+  </data>
+  <data name="CustodyView_SettlementDate" xml:space="preserve">
+    <value>Ngày hạch toán</value>
+  </data>
+  <data name="CustodyView_SubType" xml:space="preserve">
+    <value>Loại ck lưu ký</value>
+  </data>
+  <data name="CustodyView_UnitType" xml:space="preserve">
+    <value>Stock/Bonds</value>
+  </data>
+  <data name="CustodyView_BoardCode" xml:space="preserve">
+    <value>Mã sàn giao dịch</value>
+  </data>
+  <data name="CustodyView_BoardName" xml:space="preserve">
+    <value>Tên sàn giao dich</value>
+  </data>
+  <data name="CustodyView_Customer_Validation" xml:space="preserve">
+    <value>Khách hàng không tồn hại hoặc chưa được lưu ký</value>
+  </data>
+  <data name="CustodyView_StockCode" xml:space="preserve">
+    <value>Mã chứng khoán</value>
+  </data>
+  <data name="CustodyView_StockName" xml:space="preserve">
+    <value>Tên chứng khoán</value>
+  </data>
+  <data name="CustodyView_Stock_Validation" xml:space="preserve">
+    <value>Chứng khoán không tồn tại</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_2_1_KyGuiCK_Dialog_Title" xml:space="preserve">
+    <value>Thông tin điện ký gửi chứng khoán lên VSD</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_2_1_KyGuiCK_SubTitle" xml:space="preserve">
+    <value>Yêu cầu Lưu ký chứng khoán của NĐT đến VSD bằng điện MT540</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_2_1_KyGuiCK_Title" xml:space="preserve">
+    <value>Ký gửi chứng khoán thông thường</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_2_2_RutCK_Dialog_Title" xml:space="preserve">
+    <value>Thông tin điện rút chứng khoán.</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_2_2_RutCK_SubTitle" xml:space="preserve">
+    <value>TVLK gửi yêu cầu rút chứng khoán của NĐT đến VSD bằng điện MT542</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_2_2_RutCK_Title" xml:space="preserve">
+    <value>Rút chứng khoán thông thường</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_3_ChuyenKhoanCK_Dialog_Title" xml:space="preserve">
+    <value>Thông tin điện chuyển khoản chứng khoán</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_3_ChuyenKhoanCK_SubTitle" xml:space="preserve">
+    <value>TVLK bên chuyển gửi yêu cầu chuyển khoản đến VSD bằng điện MT542</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_3_ChuyenKhoanCK_Title" xml:space="preserve">
+    <value>Chuyển khoản chứng khoán</value>
+  </data>
+  <data name="CustodyView_Partner_Biccode" xml:space="preserve">
+    <value>Công ty nhận</value>
+  </data>
+  <data name="CustodyView_Partner_Number" xml:space="preserve">
+    <value>Số tài khoản bên nhận</value>
+  </data>
+  <data name="CustodyView_SettlementType" xml:space="preserve">
+    <value>Hình thức chuyển</value>
+  </data>
+  <data name="CustodyViewModel_VSD_2_3_ChuyenNhuongQuyen_Dialog_Title" xml:space="preserve">
+    <value>Thông tin điện chuyển nhượng quyền mua</value>
+  </data>
+  <data name="CustodyViewModel_VSD_2_3_ChuyenNhuongQuyen_SubTitle" xml:space="preserve">
+    <value>Quản lý chuyển nhượng quyền mua</value>
+  </data>
+  <data name="CustodyViewModel_VSD_2_3_ChuyenNhuongQuyen_Title" xml:space="preserve">
+    <value>Chuyển nhưởng quyền mua</value>
+  </data>
+  <data name="RequestView_Message_Header" xml:space="preserve">
+    <value>Thông tin cơ bản</value>
+  </data>
+  <data name="RequestView_Message_Infto" xml:space="preserve">
+    <value>Thông tin chi tiết</value>
+  </data>
+  <data name="RequestView_Message_Search" xml:space="preserve">
+    <value>Thông tin điện cho khách hàng/chứng khoán</value>
+  </data>
+  <data name="Toolbar_RefreshTitle" xml:space="preserve">
+    <value>Vấn tin</value>
+  </data>
+  <data name="Toolbar_SearchTitle" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="CustodyView_Contract_Bank" xml:space="preserve">
+    <value>Ngân hàng cầm cố</value>
+  </data>
+  <data name="CustodyView_Contract_Date" xml:space="preserve">
+    <value>Ngày ký hợp đồng</value>
+  </data>
+  <data name="CustodyView_Contract_Number" xml:space="preserve">
+    <value>Số hợp đồng</value>
+  </data>
+  <data name="CustodyView_Contract_Balance" xml:space="preserve">
+    <value>Loại giao dịch</value>
+  </data>
+  <data name="View_From" xml:space="preserve">
+    <value>Từ</value>
+  </data>
+  <data name="View_To" xml:space="preserve">
+    <value>Đến</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_5_PhongToaGiaiToaCK_Dialog_Title" xml:space="preserve">
+    <value>Thông tin điện phong toả/ giải toả</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_5_PhongToaGiaiToaCK_SubTitle" xml:space="preserve">
+    <value>Phong toả giải toả chứng khoán, cầm cố chứng khoản</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_5_PhongToaGiaiToaCK_Title" xml:space="preserve">
+    <value>Phong toả giải toả chúng khoán</value>
+  </data>
+  <data name="CustodyView_Bank_Validation" xml:space="preserve">
+    <value>Ngân hàng cầm cố chưa phù hợp</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_4_TatToanTK_Dialog_Title" xml:space="preserve">
+    <value>Thông tin điện tất toán tài khoản</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_4_TatToanTK_SubTitle" xml:space="preserve">
+    <value>Tất toán tài khoản khách hàng</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_4_TatToanTK_Title" xml:space="preserve">
+    <value>Tất toán tài khoản</value>
+  </data>
+  <data name="CustomerEditView_ContactInfomation_Header" xml:space="preserve">
+    <value>Thông tin khác</value>
+  </data>
+  <data name="CustomerEditView_GeneralInfomation_Header" xml:space="preserve">
+    <value>Thông tin chung</value>
+  </data>
+  <data name="CustomerEditView_SignatureInfomation_Header" xml:space="preserve">
+    <value>Chữ ký mẫu</value>
+  </data>
+  <data name="CustodyViewModel_VSD_4_TraXuatBC_Dialog_Title" xml:space="preserve">
+    <value>Yêu cầu truy xuất báo cáo</value>
+  </data>
+  <data name="CustodyView_Report_Code" xml:space="preserve">
+    <value>Mã báo cáo</value>
+  </data>
+  <data name="Custody_Report_Board" xml:space="preserve">
+    <value>Sàn giao dịch</value>
+  </data>
+  <data name="Custody_Report_RefDocNumber" xml:space="preserve">
+    <value>Số chứng từ</value>
+  </data>
+  <data name="Custody_Report_ReportDate" xml:space="preserve">
+    <value>Báo cáo ngày</value>
+  </data>
+  <data name="Custody_Report_StockCode" xml:space="preserve">
+    <value>Mã chứng khoán</value>
+  </data>
+  <data name="Custody_Report_StockCode_From" xml:space="preserve">
+    <value>Từ mã CK</value>
+  </data>
+  <data name="Custody_Report_StockCode_To" xml:space="preserve">
+    <value>Đến mã CK</value>
+  </data>
+  <data name="RequestView_Report_ParamInfo" xml:space="preserve">
+    <value>Tham số báo cáo</value>
+  </data>
+  <data name="Custody_Report_ReportByCode" xml:space="preserve">
+    <value>Mã báo báo</value>
+  </data>
+  <data name="Custody_Report_RightNumber" xml:space="preserve">
+    <value>Thông tin thực hiện quyền</value>
+  </data>
+  <data name="CustodyView_Customer_Info" xml:space="preserve">
+    <value>Thông tin khách hàng</value>
+  </data>
+  <data name="Custody_OpenOrClose_Invalidation" xml:space="preserve">
+    <value>Khách hàng không tồn tài khoặc trạng thái khách hàng không hổ trợ đóng mở</value>
+  </data>
+  <data name="CustodyView_ReceiverAccount_Dulicate_Validation" xml:space="preserve">
+    <value>Tài khoản nhận không được trùng với tài khoản chuyển</value>
+  </data>
+  <data name="CustodyView_VsdMember_Validation" xml:space="preserve">
+    <value>Không xác định được thành viên cần chuyển</value>
+  </data>
+  <data name="Report_PramaterModel_NotFound" xml:space="preserve">
+    <value>Không xác định được cấu trúc tham số của mã báo cáo {0}</value>
+  </data>
+  <data name="Navigation_VSD_Report_SubTitle" xml:space="preserve">
+    <value>Thông tin báo cáo</value>
+  </data>
+  <data name="Navigation_VSD_Report_Title" xml:space="preserve">
+    <value>Thông tin báo cáo</value>
+  </data>
+  <data name="ReprotView_OrigTransferRef" xml:space="preserve">
+    <value>Thông tin quyền</value>
+  </data>
+  <data name="ReprotView_ReportCode" xml:space="preserve">
+    <value>Mã báo cáo</value>
+  </data>
+  <data name="ReprotView_ReportStatus" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="ReprotView_ReportType" xml:space="preserve">
+    <value>Loại báo cáo</value>
+  </data>
+  <data name="ReprotView_StockCode" xml:space="preserve">
+    <value>Mã chứng khoán</value>
+  </data>
+  <data name="ReprotView_SwiftTime" xml:space="preserve">
+    <value>Ngày </value>
+  </data>
+  <data name="VsdReportResponseViewModel_SubTitle" xml:space="preserve">
+    <value>Thông tin báo cáo</value>
+  </data>
+  <data name="VsdReportResponseViewModel_Title" xml:space="preserve">
+    <value>Thông tin báo cáo</value>
+  </data>
+  <data name="CustodyView_Toolbar_ConfirmTitle" xml:space="preserve">
+    <value>Xem chi tiết</value>
+  </data>
+  <data name="CustodyView_Toolbar_CreateBuyTitle" xml:space="preserve">
+    <value>Đăng ký đặt mua</value>
+  </data>
+  <data name="CustodyView_Toolbar_MoveRightTitle" xml:space="preserve">
+    <value>Chuyển nhượng quyền</value>
+  </data>
+  <data name="CustodyView_Toolbar_ViewDataTitle" xml:space="preserve">
+    <value>Xem danh sách</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_8_XNSoDuCK_Dialog_Title" xml:space="preserve">
+    <value>Xác nhận số dư chứng khoán</value>
+  </data>
+  <data name="CustodyViewModel_VSD_2_2_XNDSThucHienQuyen_Dialog_Title" xml:space="preserve">
+    <value>Xác nhận danh sách thực hiện quyền</value>
+  </data>
+  <data name="CustodyViewModel_VSD_3_1_XNKetQuaGD_Dialog_Title" xml:space="preserve">
+    <value>Xác nhận kết quả giao dịch</value>
+  </data>
+  <data name="ReprotView_ConfirmType" xml:space="preserve">
+    <value>Trạng thái phản hồi</value>
+  </data>
+  <data name="CustodyViewModel_VSD_2_4_DKDatMua_Dialog_Title" xml:space="preserve">
+    <value>Đăng ký đặt mua chứng khoán phát hành thêm</value>
+  </data>
+  <data name="CustodyViewModel_VSD_2_4_DKDatMua_SubTitle" xml:space="preserve">
+    <value>Đăng ký đặt mua chứng khoán phát hành thêm</value>
+  </data>
+  <data name="CustodyViewModel_VSD_2_4_DKDatMua_Title" xml:space="preserve">
+    <value>Đăng ký đặt mua chứng khoán phát hành thêm</value>
+  </data>
+  <data name="CustodyViewModel_VSD_4_TraXuatBC_SubTitle1" xml:space="preserve">
+    <value>Tra xuất báo cáo</value>
+  </data>
+  <data name="CustodyViewModel_VSD_4_TraXuatBC_Title" xml:space="preserve">
+    <value>Tra xuất báo cáo</value>
+  </data>
+  <data name="RequestView_Description" xml:space="preserve">
+    <value>Thông tin điện</value>
+  </data>
+  <data name="Report_Csv_Detail" xml:space="preserve">
+    <value>Danh sách chi tiết </value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_2_4_KyGuiCKTuQuyen_Dialog_Title" xml:space="preserve">
+    <value>Ký gửi chứng khoán phát hành thêm từ quyền</value>
+  </data>
+  <data name="CustodyViewModel_VSD_1_7_TBThayDoiChuyenNhuong_Dialog_Title" xml:space="preserve">
+    <value>Thông báo thay đhạn chế chuyển nhượng sang giao dịch</value>
+  </data>
+  <data name="CustodyViewModel_VSD_3_2_TBKetQuaBuTru_Dialog_Title" xml:space="preserve">
+    <value>Thông báo tổng hợp kết quả bù trừ và thông báo điều chỉnh kết quả bù trừ</value>
+  </data>
+  <data name="ReprotView_ReportName" xml:space="preserve">
+    <value>Tên báo cáo</value>
+  </data>
+  <data name="Toolbar_BackTitle" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="Toolbar_SaveTitle" xml:space="preserve">
+    <value>Lưu dữ liệu</value>
+  </data>
+  <data name="ViewModel_DeleteFailed" xml:space="preserve">
+    <value>Có lỗi xảy ra. Dữ liệu không thể xóa được!</value>
+  </data>
+  <data name="ViewModel_DeleteSuccessfully" xml:space="preserve">
+    <value>Dữ liệu đã được xóa thành công.</value>
+  </data>
+  <data name="ViewModel_SaveFailed" xml:space="preserve">
+    <value>Có lỗi xảy ra. Dữ liệu không thể lưu được!</value>
+  </data>
+  <data name="ViewModel_SaveSuccessfully" xml:space="preserve">
+    <value>Dữ liệu đã được lưu thành công.</value>
+  </data>
+  <data name="BranchEditViewModel_SubTitle" xml:space="preserve">
+    <value>Tạo hoặc thay đổi thông tin của các chi nhánh, văn phòng</value>
+  </data>
+  <data name="DepartmentEditViewModel_SubTitle" xml:space="preserve">
+    <value>Tạo hoặc thay đổi thông tin của các phòng, ban</value>
+  </data>
+  <data name="GroupEditViewModel_SubTitle" xml:space="preserve">
+    <value>Tạo hoặc thay đổi thông tin của các nhóm nhân viên, khách hàng</value>
+  </data>
+  <data name="GroupView_BranchName" xml:space="preserve">
+    <value>Đơn vị quản lý</value>
+  </data>
+  <data name="GroupView_ParentName" xml:space="preserve">
+    <value>Nhóm quản lý</value>
+  </data>
+  <data name="LoginView_LoginSubTitle" xml:space="preserve">
+    <value>Nhập tài khoản đăng nhập để sử dụng các chức năng của chương trình</value>
+  </data>
+  <data name="CustodyView_Stock_Info" xml:space="preserve">
+    <value>Thông tin chứng khoán</value>
+  </data>
+  <data name="CustodyView_Bank_BankCode" xml:space="preserve">
+    <value>Mã ngân hàng</value>
+  </data>
+  <data name="CustodyView_Bank_BankPlRlCode" xml:space="preserve">
+    <value>Mã chi nhánh</value>
+  </data>
+  <data name="CustodyView_Bank_FullName" xml:space="preserve">
+    <value>Tên ngân hàng</value>
+  </data>
+  <data name="CustodyView_Bank_Info" xml:space="preserve">
+    <value>Thông tin ngân hàng</value>
+  </data>
+  <data name="CustodyView_Partner_CompanyName" xml:space="preserve">
+    <value>Tên thành viên</value>
+  </data>
+  <data name="BranchViewModel_EditDialog_ChooseOneTitle" xml:space="preserve">
+    <value>Chọn đơn vị quản lý</value>
+  </data>
+  <data name="VSD_2_1_TBQuyenViewModel_SubTitle" xml:space="preserve">
+    <value>Thông tin chi tiết quyền</value>
+  </data>
+  <data name="VSD_2_1_TBQuyenViewModel_Title" xml:space="preserve">
+    <value>Thông tin quyền</value>
+  </data>
+  <data name="RequestConfirmList_SubTitle" xml:space="preserve">
+    <value>Danh sách điện phản hồi</value>
+  </data>
+  <data name="RequestConfirmList_Title" xml:space="preserve">
+    <value>Danh sách điện phản hồi</value>
+  </data>
+  <data name="AdminSettings_Title" xml:space="preserve">
+    <value>Cấu hình</value>
+  </data>
+  <data name="Admin_SubTitle" xml:space="preserve">
+    <value>Admin page</value>
+  </data>
+  <data name="Admin_Title" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="BrokerViewModel_SubTitle_Edit" xml:space="preserve">
+    <value>Cập nhật môi giới</value>
+  </data>
+  <data name="BrokerViewModel_SubTitle_New" xml:space="preserve">
+    <value>Tạo môi giới</value>
+  </data>
+  <data name="BrokerViewModel_Title_Edit" xml:space="preserve">
+    <value>Cập nhật môi giới</value>
+  </data>
+  <data name="BrokerViewModel_Title_New" xml:space="preserve">
+    <value>Tạo môi giới</value>
+  </data>
+  <data name="Command_ResetPassword" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="DepartmentView_BranchName" xml:space="preserve">
+    <value>Chi nhánh</value>
+  </data>
+  <data name="LoginView_Password_Confirm" xml:space="preserve">
+    <value>Xác nhận mật khẩu</value>
+  </data>
+  <data name="Navigation_AdminProfile_Desc" xml:space="preserve">
+    <value>Thông tin người dùng</value>
+  </data>
+  <data name="Navigation_AdminProfile_Title" xml:space="preserve">
+    <value>User Profile</value>
+  </data>
+  <data name="Navigation_AdminSetting_Title" xml:space="preserve">
+    <value>Cấu hình</value>
+  </data>
+  <data name="ResetPasswordViewModel_SubTitle" xml:space="preserve">
+    <value>Thay đổi mật khẩu</value>
+  </data>
+  <data name="ResetPasswordViewModel_Title" xml:space="preserve">
+    <value>Thay đổi mật khẩu</value>
+  </data>
+  <data name="ResetPassword_Title" xml:space="preserve">
+    <value>Thay đổi mật khẩu</value>
+  </data>
+  <data name="UserEditView_GeneralInfomation_Header" xml:space="preserve">
+    <value>Thông tin người dùng</value>
+  </data>
+  <data name="UserEditView_UserRight_Header" xml:space="preserve">
+    <value>Thông tin quyền</value>
+  </data>
+  <data name="UserInfomation_Title" xml:space="preserve">
+    <value>Thông tin cơ bản</value>
+  </data>
+  <data name="UserModel_UserName" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="UserProfileView_SubTitle" xml:space="preserve">
+    <value>Thông tin người dung</value>
+  </data>
+  <data name="UserProfileView_Title" xml:space="preserve">
+    <value>Thông tin người dung</value>
+  </data>
+  <data name="UserViewModel_EditDialog_ChooseOneTitle" xml:space="preserve">
+    <value>--Chọn nhóm--</value>
+  </data>
+  <data name="Toolbar_ConfirmListTitel" xml:space="preserve">
+    <value>Danh sách điện phản hồi</value>
+  </data>
+  <data name="UserModel_Language" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="Setting_API_BufferSize" xml:space="preserve">
+    <value>BufferSize</value>
+  </data>
+  <data name="Setting_API_ContenType" xml:space="preserve">
+    <value>ContenType</value>
+  </data>
+  <data name="Setting_API_TimeoutInSecond" xml:space="preserve">
+    <value>Timeout</value>
+  </data>
+  <data name="Setting_API_Url" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="Setting_API_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="NavigationPager_NextPageTitle" xml:space="preserve">
+    <value>Trang kế</value>
+  </data>
+  <data name="NavigationPager_PageTitle" xml:space="preserve">
+    <value>Trang {0}</value>
+  </data>
+  <data name="NavigationPager_PreviousPageTitle" xml:space="preserve">
+    <value>Trang trước</value>
+  </data>
+  <data name="Enum_AccessType_Add" xml:space="preserve">
+    <value>Tạo</value>
+  </data>
+  <data name="Enum_AccessType_Allow" xml:space="preserve">
+    <value>Cho phép</value>
+  </data>
+  <data name="Enum_AccessType_Delete" xml:space="preserve">
+    <value>Xoá</value>
+  </data>
+  <data name="Enum_AccessType_Deny" xml:space="preserve">
+    <value>Không cho phép</value>
+  </data>
+  <data name="Enum_AccessType_Override" xml:space="preserve">
+    <value>Ghi đè</value>
+  </data>
+  <data name="Enum_AccessType_View" xml:space="preserve">
+    <value>Xem</value>
+  </data>
+  <data name="PermissionAccessViewModel_Dialog_SubTitle" xml:space="preserve">
+    <value>Thiết lập quyền cho nhóm </value>
+  </data>
+  <data name="PermissionAccessViewModel_Dialog_Title" xml:space="preserve">
+    <value>Thiết lập quyền cho nhóm </value>
+  </data>
+  <data name="Toolbar_GroupRightTitle" xml:space="preserve">
+    <value>Thiết lập quyền</value>
+  </data>
+  <data name="Right_Asset_Desc" xml:space="preserve">
+    <value>Quyền cập nhật quản lý tài sản khách hàng</value>
+  </data>
+  <data name="Right_Asset_Title" xml:space="preserve">
+    <value>Quản lý tài khản khách hàng</value>
+  </data>
+  <data name="Right_Branch_Desc" xml:space="preserve">
+    <value>Quyền quản lý các văn phòng/chi nhánh</value>
+  </data>
+  <data name="Right_Branch_Title" xml:space="preserve">
+    <value>Quản lý văn phòng/chi nhánh</value>
+  </data>
+  <data name="Right_ChuyenKhoanCkn_Title" xml:space="preserve">
+    <value>Quản lý điện chuyển khoản chứng khoán </value>
+  </data>
+  <data name="Right_ChuyenKhoanCk_Desc" xml:space="preserve">
+    <value>Quyền tạo, xoá điện chuyển khoản chứng khoán lưu ký</value>
+  </data>
+  <data name="Right_ChuyenNhuongQuyen_Desc" xml:space="preserve">
+    <value>Quyền tạo, xoá điện chuyện nhượng quyền mua chứng khoán.</value>
+  </data>
+  <data name="Right_ChuyenNhuongQuyen_Title" xml:space="preserve">
+    <value>Quản lý điện chuyển nhượng quyền</value>
+  </data>
+  <data name="Right_CustodyReport_Desc" xml:space="preserve">
+    <value>Quyền, xem và tạo điện phản hồi các báo cáo lên trung tâm lưu ký</value>
+  </data>
+  <data name="Right_CustodyReport_Title" xml:space="preserve">
+    <value>Xem và phản hồi báo cáo lên trung tâm lưu ký</value>
+  </data>
+  <data name="Right_Custody_Desc" xml:space="preserve">
+    <value>Quyền xem, tao, xoá điện gửi lên trung tâm lưu ký.</value>
+  </data>
+  <data name="Right_Custody_Title" xml:space="preserve">
+    <value>Quản lý thông tin điện lưu ký</value>
+  </data>
+  <data name="Right_Customer_Desc" xml:space="preserve">
+    <value>Quyền cập nhật quản lý thông tin khách hàng, thông tin chung, hợp đồng, uy quền, quan hệ...</value>
+  </data>
+  <data name="Right_Customer_Title" xml:space="preserve">
+    <value>Quản lý thông tin khách hàng</value>
+  </data>
+  <data name="Right_Department_Desc" xml:space="preserve">
+    <value>Quyền quản lý các phòng ban công ty</value>
+  </data>
+  <data name="Right_Department_Title" xml:space="preserve">
+    <value>Quản lý phòng ban</value>
+  </data>
+  <data name="Right_DkDatMua_Desc" xml:space="preserve">
+    <value>Quyền tạo, xoá điện đặt mua chứng khoán từ quyền.</value>
+  </data>
+  <data name="Right_DkDatMua_Title" xml:space="preserve">
+    <value>Quản lý điện đặt mua chứng khoán từ quyền</value>
+  </data>
+  <data name="Right_DongMoTk_Desc" xml:space="preserve">
+    <value>Quyền tạo, xoá điện đóng mở tài khoản lưu ký</value>
+  </data>
+  <data name="Right_DongMoTk_Title" xml:space="preserve">
+    <value>Quản lý đóng mở tài khoản lưu ký</value>
+  </data>
+  <data name="Right_Group_Desc" xml:space="preserve">
+    <value>Quyền quản lý nhóm người dùng</value>
+  </data>
+  <data name="Right_Group_Title" xml:space="preserve">
+    <value>Quản lý nhóm người dùng</value>
+  </data>
+  <data name="Right_Kyguirutchungkhoan_Desc" xml:space="preserve">
+    <value>Quyền tạo, xoá điện ký gửi/ rút chứng khoán lưu ký</value>
+  </data>
+  <data name="Right_Kyguirutchungkhoan_Title" xml:space="preserve">
+    <value>Quản lý ký gửi/ rút chứng khoán lưu ký</value>
+  </data>
+  <data name="Right_NoLimitResourceBoundaries_Desc" xml:space="preserve">
+    <value>Quyền không giới hạn truy xuất danh sách các danh mục</value>
+  </data>
+  <data name="Right_NoLimitResourceBoundaries_Title" xml:space="preserve">
+    <value>Không giới hạn truy xuất danh sách các danh mục</value>
+  </data>
+  <data name="Right_PhongToaGiaiToaCk_Desc" xml:space="preserve">
+    <value>Quyền tạo, xoá điện cầm cố giải toả chứng khoán </value>
+  </data>
+  <data name="Right_PhongToaGiaiToaCk_Title" xml:space="preserve">
+    <value>Quản lý điện cầm cố giải toả chứng khoán</value>
+  </data>
+  <data name="Right_RightInfomation_Desc" xml:space="preserve">
+    <value>Quyền xem thông tin quyền từ trung tâm lưu ký.</value>
+  </data>
+  <data name="Right_RightInfomation_Title" xml:space="preserve">
+    <value>Thông tin quyền</value>
+  </data>
+  <data name="Right_TatToanTk_Desc" xml:space="preserve">
+    <value>Quyền tạo, xoá điện tất toán tài khoản lưu ký</value>
+  </data>
+  <data name="Right_TatToanTk_Title" xml:space="preserve">
+    <value>Quản lý điện tất toán tài khoản lưu ký</value>
+  </data>
+  <data name="Right_TraXuatBc_Desc" xml:space="preserve">
+    <value>Quyền tạo, xoá điện gửi tra soát báo cáo lên trung tâm lưu ký</value>
+  </data>
+  <data name="Right_TraXuatBc_Title" xml:space="preserve">
+    <value>Quản lý điện gửi tra soát báo cáo lên trung tâm lưu ký</value>
+  </data>
+  <data name="Right_User_Desc" xml:space="preserve">
+    <value>Quyền quản lý  tài khoản đăng nhập hệ thống</value>
+  </data>
+  <data name="Right_User_Title" xml:space="preserve">
+    <value>Quản lý tài khoản người dùng hệ thống</value>
+  </data>
+  <data name="UserModel_UserType" xml:space="preserve">
+    <value>Cấp bậc</value>
+  </data>
+  <data name="ViewModel_RestrictedRight_DeleteFailed" xml:space="preserve">
+    <value>Bạn không có quyền xoá</value>
+  </data>
+  <data name="ViewModel_RestrictedRight_SaveFailed" xml:space="preserve">
+    <value>Bạn không có quyền tạo/sữa dữ liệu.</value>
+  </data>
+  <data name="ViewModel_RestrictedRight_ViewFailed" xml:space="preserve">
+    <value>Bạn không có quyền xem.</value>
+  </data>
+  <data name="GroupViewModel_EditDialog_ChooseOneTitle" xml:space="preserve">
+    <value>--Chọn nhóm--</value>
+  </data>
+  <data name="GroupView_Members" xml:space="preserve">
+    <value>Danh sách thành viên</value>
+  </data>
+  <data name="Right_AllowSpecificCustomerAccount_Desc" xml:space="preserve">
+    <value>Được phép nhập số tài khoản lưu ký khi mở tài khoản mà không sử dụng tài khoản động tạo ra do hệ thống.</value>
+  </data>
+  <data name="Right_AllowSpecificCustomerAccount_Title" xml:space="preserve">
+    <value>Cho phép tự chọn tài khoản lưu ky khi mở tài khoản khách hàng</value>
+  </data>
+  <data name="Navigation_CustomerCreate_Desc" xml:space="preserve">
+    <value>Tạo mới tài khoản giao dịch cho khách hàng</value>
+  </data>
+  <data name="Navigation_CustomerCreate_Title" xml:space="preserve">
+    <value>Mở tài khoản giao dịch</value>
+  </data>
+  <data name="RightGroup_Custody_Title" xml:space="preserve">
+    <value>Lưu ký</value>
+  </data>
+  <data name="RightGroup_Customer_Title" xml:space="preserve">
+    <value>Các quyền đến người dùng</value>
+  </data>
+  <data name="RightGroup_System_Title" xml:space="preserve">
+    <value>Hệ thống</value>
+  </data>
+  <data name="Enum_MemberType_Group" xml:space="preserve">
+    <value>Thành viên nhóm</value>
+  </data>
+  <data name="Enum_MemberType_User" xml:space="preserve">
+    <value>Thành viên người dùng</value>
+  </data>
+  <data name="GroupEditView_AddMember_User" xml:space="preserve">
+    <value>Thêm người dùng vào nhóm</value>
+  </data>
+  <data name="UserView_MemberOfGroup" xml:space="preserve">
+    <value>Thuộc nhóm</value>
+  </data>
+  <data name="UserView_RightOfUser" xml:space="preserve">
+    <value>Quyền của người dùng</value>
+  </data>
+  <data name="RightGroup_AdminSetting_Title" xml:space="preserve">
+    <value>Cấu hình</value>
+  </data>
+  <data name="RightGroup_Branch_Title" xml:space="preserve">
+    <value>Văn phòng/ chi nhánh</value>
+  </data>
+  <data name="RightGroup_Department_Title" xml:space="preserve">
+    <value>Phòng ban</value>
+  </data>
+  <data name="RightGroup_Group_Title" xml:space="preserve">
+    <value>Nhóm</value>
+  </data>
+  <data name="RightGroup_User_Title" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+</root>

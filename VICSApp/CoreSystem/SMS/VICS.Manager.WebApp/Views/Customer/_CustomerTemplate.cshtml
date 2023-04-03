@@ -1,0 +1,141 @@
+﻿@using VicsManageWeb.Common.Helpers
+@model VICS.Manager.WebApp.Models.CustomerViewModel
+@Html.AntiForgeryToken()
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<div class="col-lg-6">
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Id, "Mã KH",  new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(model => model.Id, new {  @class = "form-control"  })
+                @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-link row" style="margin-left: -40px" type="button" id="getSBS">Get Form SBS</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustomerName,"Tên KH",  new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.CustomerName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CustomerName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.LabelFor(model => model.Mobile, "Điện thoại", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Mobile, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Sex, "Giới Tính", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.DropDownListFor(model => model.Sex, Combox.Sex, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Sex, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.BranchCode, "Chi Nhánh", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.DropDownListFor(model => model.BranchCode, Combox.BranchCode, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.BranchCode, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.CustomerType, "Loại hình", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.DropDownListFor(model => model.CustomerType, Combox.CustomerTypes, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.CustomerType, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.DomesticForeign, "Cư dân", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.DropDownListFor(model => model.DomesticForeign, Combox.DomesticForeign, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.DomesticForeign, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.IsClose, "Trạng thái", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.DropDownListFor(model => model.IsClose, Combox.Status, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.IsClose, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.CloseDate, "Ngày đóng", htmlAttributes: new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(model => model.CloseDate, "{0:dd/MM/yyyy}", new { @class = "form-control", disabled = "disabled" })
+                    @Html.ValidationMessageFor(model => model.CloseDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row"></div>
+<div class="col-lg-6"></div>
+<div class="col-lg-6">
+    <div class="pull-right">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="reset" value="Làm lại" class="btn btn-default" />
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

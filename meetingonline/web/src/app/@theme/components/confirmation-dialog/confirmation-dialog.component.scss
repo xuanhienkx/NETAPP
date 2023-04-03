@@ -1,0 +1,9 @@
+.full-width-dialog-confirm {
+    width: 100vw;
+    min-width: calc(40vw * (9/16));
+    max-width: calc(70vw * (9/16));
+    max-height: calc(70rem * (9/16));
+    nb-card-body {
+        min-height: calc(10rem * (9/16));
+    }
+}

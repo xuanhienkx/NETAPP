@@ -1,0 +1,67 @@
+<div class="d-lg-flex w-lg-100 pb-3 border-bottom">
+    <h4 class="list-title" *ngIf="!isEdit">{{'meetingRole.add.headline' | translate}} </h4>
+    <h4 class="list-title" *ngIf="isEdit">{{'meetingRole.edit.headline' | translate}}</h4>
+</div>
+
+<form novalidate (ngSubmit)="onSubmit()" #fr="ngForm" [formGroup]="frm" autocomplete="off">
+    <div class="d-flex justify-content-between pt-3">
+        <div class="col-lg-7">
+
+            <div class="form-group">
+                <label for="name" class="required label">{{'meetingRole.name.label' | translate}}:</label>
+                <input nbInput autofocus fullWidth id="name" class="form-control form-control-md" formControlName="name" />
+                <span class="text-danger mt-2" *ngIf="(f.name.touched || submitted) && f.name.errors?.required">
+                    {{'meetingRole.name.required' | translate }}
+                </span>
+            </div>
+
+            <div class="form-group d-flex flex-column" *ngIf="!isEdit">
+                <label for="meetingType" class="required label">{{'meetingRole.meetingType.label' | translate}}:</label>
+                <nb-select [formControl]="f.meetingType" id="meetingType" formControlName="meetingType">
+                    <nb-option *ngFor="let meetingType of meetingTypes" [value]="meetingType.value">
+                        {{meetingType.name}}
+                    </nb-option>
+                </nb-select>
+
+            </div>
+            <div *ngIf="isEdit" class="form-group d-flex flex-row">
+                <label for="meetingType" class="label mt-1">{{'meetingRole.meetingType.label' | translate}}:</label>
+                <strong class="badge badge-primary mx-2 px-2 mt-0 pt-2">{{meetingTypeName}}</strong>
+            </div>
+
+            <div class="form-group d-flex flex-column">
+                <label for="isEnable" class="label">{{'meetingRole.status.label' | translate}}:</label>
+                <nb-toggle id="isEnable" formControlName="isEnable">
+                    <span class="text-danger" *ngIf="!f.isEnable.value; else lockedSpan">{{'meetingRole.status.locked' | translate}}</span>
+                    <ng-template #lockedSpan>
+                        <span class="text-success">{{'meetingRole.status.active' | translate}}</span>
+                    </ng-template>
+                </nb-toggle>
+            </div>
+
+            <div class="form-group">
+                <label for="description" class="label">{{'meetingRole.description.label' | translate}}:</label>
+                <textarea nbInput autofocus fullWidth id="description" rows="3" class="form-control form-control-md" formControlName="description"></textarea>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="form-group">
+                <label for="description" class="label">{{'meetingRole.permission.label' | translate}}:</label>
+                <div formArrayName="permissions" *ngFor="let p of permissionsList; let i=index">
+                    <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                        <input type="checkbox" class="custom-control-input" [formControlName]="i" [id]="'customControlInline-'+i">
+                        <label class="custom-control-label" [for]="'customControlInline-'+i">{{permissionsList[i].name}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear-fixd"></div>
+    <div class="d-flex justify-content-between py-3 border-top">
+        <button class="cancel" type="button" size="small" nbButton (click)="close()">{{'Common.close' | translate}}</button>
+        <div>
+            <button type="submit" size="small" nbButton status="primary" [disabled]="!fr.valid" [class.btn-pulse]="submitted" value="">{{'Common.save' | translate}}</button>
+            <button type="button" size="small" nbButton status="primary" [disabled]="!fr.valid" [class.btn-pulse]="submitted" (click)="onSubmit(true)" class="mx-4">{{'Common.saveAndCreate' | translate}}</button>
+        </div>
+    </div>
+</form>

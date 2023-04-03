@@ -1,0 +1,46 @@
+﻿@model VICS.Manager.WebApp.Models.RequetsViewModel
+
+@using SMS.DataAccess.Models
+@using VicsManageWeb.Common.UI.Grid
+@{
+    // update this field on client side
+    Model.ActionName = "List";
+    Model.ControllerName = "SmsReport";
+    Model.UpdateTargetId = "ListData";
+}
+
+
+@Html.PagedGrid("RequestGrid", Model,
+    columns =>
+    {
+        
+        /* Adding "Message" column: */
+        columns.Add(o => o.SmsIdResponse)
+       .Titled("SMS ID") 
+       .Css("text-left");
+        /* Adding "Status" column: */
+        columns.Add(o => o.Type)
+            .Titled("Loại")
+            .RenderValueAs(c =>
+            {
+                var name = Enum.GetName(typeof (SmsType), c.Type);
+                return name ?? "";
+            });
+        /* Adding "Headline" column: */
+        columns.Add(o => o.Message)
+        .Titled("Nội dung") 
+        .Css("text-left");
+
+        /* Adding "Status" column: */
+        columns.Add(o => o.IsSent)
+            .Titled("Trạng thái")
+            .RenderValueAs(c => c.IsSent ? "Đã gửi" : "Chưa gửi");
+
+        /* Adding "CreatedDate" column: */
+        columns.Add(o => o.CreatedTime)
+            .Titled("Thời gian")
+            .Format("{0:HH:mm:ss}")
+            .SetWidth(80);
+    })
+
+

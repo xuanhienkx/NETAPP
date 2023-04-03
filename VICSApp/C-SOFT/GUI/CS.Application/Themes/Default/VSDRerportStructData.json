@@ -1,0 +1,83 @@
+﻿[
+    {
+        "ReportCode": "CA001",
+        "ReportName": "CA001- Danh sách người sở hữu chứng khoán lưu ký nhận phân bổ quyền bỏ phiếu"
+    },
+    {
+        "ReportCode": "CA005",
+        "ReportName": "CA005- Danh sách người sở hữu chứng khoán lưu ký nhận phân bổ quyền mua"
+    },
+    {
+        "ReportCode": "CA009",
+        "ReportName": "CA009- Danh sách người sở hữu chứng khoán lưu ký nhận cổ tức bằng tiền"
+    },
+    {
+        "ReportCode": "CA012",
+        "ReportName": "CA012- Danh sách người sở hữu chứng khoán lưu ký nhận cổ phiếu thưởng"
+    },
+    {
+        "ReportCode": "CA014",
+        "ReportName": "CA014- Danh sách người sở hữu chứng khoán lưu ký nhận cổ tức bằng cổ phiếu"
+    }, 
+    {
+        "ReportCode": "CA031",
+        "ReportName": "CA031- Danh sách nhà đầu tư được phân bổ chứng khoán phát hành thêm do đặt mua (Mẫu 23/THQ)"
+    },
+    {
+        "ReportCode": "CA069",
+        "ReportName": "CA069- Báo cáo tổng hợp thông báo xác nhận danh sách người sở hữu chứng khoán lưu ký của TVLK"
+    },
+    {
+        "ReportCode": "DE013",
+        "ReportName": "DE013- Thông báo số dư cuối tháng"
+    },
+    {
+        "ReportCode": "DE065",
+        "ReportName": "DE065- Thông tin số dư tài khoản lưu ký chứng khoán chi tiết của NĐT chốt cuối tháng"
+    },
+    {
+        "ReportCode": "DE083",
+        "ReportName": "DE083- Thông tin số dư tài khoản lưu ký chứng khoán chi tiết của NĐT chốt theo ngày"
+    },
+    {
+        "ReportCode": "DE084",
+        "ReportName": "DE084- Thông báo số dư theo ngày"
+    }
+    ,
+    {
+        "ReportCode": "CS007",
+        "ReportName": "CS007 -Thông báo tài khoản bán thiếu chứng khoán và thiếu thông tin tài khoản"
+    },
+    {
+        "ReportCode": "CS008",
+        "ReportName": "CS008 - Thông báo về việc cập nhật thông tin tài khoản người đầu tư mua"
+    },
+    {
+        "ReportCode": "CS077",
+        "ReportName": "CS077- Thông báo tổng hợp kết quả giao dịch Cổ phiếu,chứng chỉ quỹ"
+    },
+    {
+        "ReportCode": "CS078",
+        "ReportName": "CS078- Thông báo tổng hợp kết quả bù trừ đa phương và thanh toán tiền giao dịch Cổ phiếu,chứng chỉ quỹ (gửi thành viên lưu ký)"
+    },
+    {
+        "ReportCode": "CS079",
+        "ReportName": "CS079- Thông báo tổng hợp kết quả bù trừ đa phương và thanh toán Cổ phiếu,chứng chỉ quỹ (gửi thành viên lưu ký)"
+    },
+    {
+        "ReportCode": "CS082",
+        "ReportName": "CS082- Thông báo tổng hợp kết quả bù trừ đa phương và thanh toán tiền giao dịch Cổ phiếu,chứng chỉ quỹ đã điều chỉnh (gửi thành viên lưu ký)"
+    },
+    {
+        "ReportCode": "CS083",
+        "ReportName": "CS083- Thông báo tổng hợp kết quả bù trừ đa phương và thanh toán Cổ phiếu,chứng chỉ quỹ đã điều chỉnh (gửi thành viên lưu ký)"
+    },
+    {
+        "ReportCode": "CS091",
+        "ReportName": "CS091- Báo cáo tổng hợp tình hình xác nhận số liệu của TVLK"
+    },
+    {
+        "ReportCode": "CS092",
+        "ReportName": "CS092- Thông báo kết quả thanh toán"
+    }
+]

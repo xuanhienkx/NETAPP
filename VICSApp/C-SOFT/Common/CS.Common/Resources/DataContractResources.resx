@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BranchModel_Address_Validation" xml:space="preserve">
+    <value>Dia chi validation</value>
+  </data>
+  <data name="BranchModel_BranchCode_Validation" xml:space="preserve">
+    <value>Mã chi nhánh phải là 3 ký tự số</value>
+  </data>
+  <data name="BranchModel_BranchName_Validation" xml:space="preserve">
+    <value>Branch name validation</value>
+  </data>
+  <data name="CredentialLoginModel_Password_Required" xml:space="preserve">
+    <value>Password field is required</value>
+  </data>
+  <data name="CredentialLoginModel_Username_Required" xml:space="preserve">
+    <value>Username field is required</value>
+  </data>
+  <data name="CustodyModel_Quantity_Validation" xml:space="preserve">
+    <value>Khối lượng phải lớn hơn 0.</value>
+  </data>
+  <data name="CustodyModel_SubType_Validation" xml:space="preserve">
+    <value>Kiểu chứng khoán lưu ký không phù hợp</value>
+  </data>
+  <data name="Enum_ActivityType_Normal" xml:space="preserve">
+    <value>Chứng khoán thông thường</value>
+  </data>
+  <data name="Enum_ActivityType_RestictedStock" xml:space="preserve">
+    <value>Chứng khoán hạn chế chuyển nhượng</value>
+  </data>
+  <data name="Enum_AssetSubType_CommonStock" xml:space="preserve">
+    <value>CK phổ thông</value>
+  </data>
+  <data name="Enum_AssetSubType_None" xml:space="preserve">
+    <value>Không xác định</value>
+  </data>
+  <data name="Enum_AssetSubType_PreferentialDividendUnVoteStock" xml:space="preserve">
+    <value>CK ưu đãi cổ tức không biểu quyết</value>
+  </data>
+  <data name="Enum_AssetSubType_PreferentialOtherVotingStock" xml:space="preserve">
+    <value>CK ưu đãi khác không biểu quyết</value>
+  </data>
+  <data name="Enum_AssetSubType_PreferentialRefundUnVoteStock" xml:space="preserve">
+    <value>CK ưu đãi hoàn lại không biểu quyết</value>
+  </data>
+  <data name="Enum_AssetSubType_PreferentialVotingStock" xml:space="preserve">
+    <value>CK ưu đãi biểu quyết</value>
+  </data>
+  <data name="Enum_AssetSubType_RestictedStock" xml:space="preserve">
+    <value>CK HCCN</value>
+  </data>
+  <data name="Enum_CustodyRequestType_Cancel" xml:space="preserve">
+    <value>Điện huỷ</value>
+  </data>
+  <data name="Enum_CustodyRequestType_New" xml:space="preserve">
+    <value>Điện tạo mới</value>
+  </data>
+  <data name="Enum_MessagePriority_Normal" xml:space="preserve">
+    <value>Bình thường</value>
+  </data>
+  <data name="Enum_MessagePriority_Urgent" xml:space="preserve">
+    <value>Điện khẩn</value>
+  </data>
+  <data name="Enum_RateOption_DividendsNoTax" xml:space="preserve">
+    <value>Cổ tức không khấu trừ thuế tại TCPH</value>
+  </data>
+  <data name="Enum_RateOption_DividendsTax" xml:space="preserve">
+    <value>Cổ tức khấu trừ thuế tại TCPH</value>
+  </data>
+  <data name="Enum_RateOption_Interest" xml:space="preserve">
+    <value>Lãi suất thanh toán</value>
+  </data>
+  <data name="Enum_RightBuyType_NonRightTransferable" xml:space="preserve">
+    <value>Quyền mua không được chuyển nhượng</value>
+  </data>
+  <data name="Enum_RightBuyType_RightAreTransferred" xml:space="preserve">
+    <value>Quyền mua được chuyển nhượng</value>
+  </data>
+  <data name="Enum_UnitType_BondsUnit" xml:space="preserve">
+    <value>Trái phiếu</value>
+  </data>
+  <data name="Enum_UnitType_StockUnit" xml:space="preserve">
+    <value>Cổ phiếu, chứng chỉ quỹ</value>
+  </data>
+</root>

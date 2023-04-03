@@ -1,0 +1,12 @@
+{
+  "MessageType": "ACKNAK",
+  "ApplicationIdentifier": "F",
+  "ServiceIdentifier": "21",
+  "SenderBicode": "VSDCTBXXAXXX",
+  "SessionInteger": "0020",
+  "InputSequenceInteger": "000021",
+  "ReceiverDate": "2014-03-14T17:27:49",
+  "AcceptReject": "1",
+  "RejectionReasonCode": "NAK",
+  "RejectionReasonMessage": "[REQUESTID: duplicate]"
+}

@@ -1,0 +1,15 @@
+USE [VICS30ForTest]
+GO
+/****** Object:  Table [dbo].[AgencyFee]    Script Date: 08/03/2010 14:26:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[AgencyFee](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[AgencyTradeCode] [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[ValueFrom] [bigint] NOT NULL,
+	[ToValue] [bigint] NOT NULL,
+	[Fee] [decimal](18, 0) NOT NULL,
+	[Note] [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+) ON [PRIMARY]

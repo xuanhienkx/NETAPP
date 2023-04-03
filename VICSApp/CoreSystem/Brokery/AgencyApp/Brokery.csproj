@@ -1,0 +1,1064 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CAE86FE6-34B1-43D1-BC7B-59D4E79BAF77}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Brokery</RootNamespace>
+    <AssemblyName>Brokery</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>2AD8CF957179EC02C02DFB0B77898F4AE16F432A</ManifestCertificateThumbprint>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <ApplicationIcon>vics.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <PublishUrl>ftp://10.10.5.3/apps/brokery/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://apps.vics.com.vn/brokery/</InstallUrl>
+    <SupportUrl>http://ww.vics.com.vn</SupportUrl>
+    <TargetCulture>vi</TargetCulture>
+    <ProductName>VICS - Front Office Application</ProductName>
+    <PublisherName>VICS - Utitilies</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>2.0.1.6</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Brokery.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MTGCCombobox, Version=1.3.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\MTGCCombobox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\InputDiaglogBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ListFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\AccessPermission.cs" />
+    <Compile Include="Framework\CryptoEngine.cs" />
+    <Compile Include="Framework\DateUtil.cs" />
+    <Compile Include="Framework\ErrorTracker.cs" />
+    <Compile Include="Framework\Parameter.cs" />
+    <Compile Include="Framework\SortableBindingList.cs" />
+    <Compile Include="Operation\AgencyFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\AgencyFee.Designer.cs">
+      <DependentUpon>AgencyFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\AgencyFeeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\AgencyFeeAddEdit.Designer.cs">
+      <DependentUpon>AgencyFeeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\ApproveOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\ApproveOrder.Designer.cs">
+      <DependentUpon>ApproveOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\UnitDebitLimitListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\UnitDebitLimitListForm.Designer.cs">
+      <DependentUpon>UnitDebitLimitListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\DebitLimitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\DebitLimitForm.Designer.cs">
+      <DependentUpon>DebitLimitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\DebitLimitListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\DebitLimitListForm.Designer.cs">
+      <DependentUpon>DebitLimitListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\DebitLimitLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\DebitLimitLogForm.Designer.cs">
+      <DependentUpon>DebitLimitLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\MatchedOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\MatchedOrderList.Designer.cs">
+      <DependentUpon>MatchedOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\CustomerProxyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\CustomerProxyInfo.Designer.cs">
+      <DependentUpon>CustomerProxyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\CustomerDetailInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\CustomerDetailInfo.Designer.cs">
+      <DependentUpon>CustomerDetailInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\CustomerLiteInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\CustomerLiteInfo.Designer.cs">
+      <DependentUpon>CustomerLiteInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\OrderReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\OrderReplace.Designer.cs">
+      <DependentUpon>OrderReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\RegisterCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\RegisterCustomer.Designer.cs">
+      <DependentUpon>RegisterCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\SetupDebitLimitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\SetupDebitLimitForm.Designer.cs">
+      <DependentUpon>SetupDebitLimitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Agency\AgencyTransferFeeReportCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Agency\AgencyTransferFeeReportCriteria.Designer.cs">
+      <DependentUpon>AgencyTransferFeeReportCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Agency\MonthlyTradingResultReportCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Agency\MonthlyTradingResultReportCriteria.Designer.cs">
+      <DependentUpon>MonthlyTradingResultReportCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Agency\MatchedOrderReportCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Agency\MatchedOrderReportCriteria.Designer.cs">
+      <DependentUpon>MatchedOrderReportCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CrystalReport\AgencyStockOrderReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgencyStockOrderReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport\AgentOrderHistoryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentOrderHistoryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport\AgentTransationReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentTransationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport\AgentTransferFeeReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentTransferFeeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport\CustomerTradingResultReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerTradingResultReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport\GroupOrderHistoryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GroupOrderHistoryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport\Logo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport\LostAndProfitReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LostAndProfitReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport\OrderHistoryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderHistoryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport\CustomerGeneralReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerGeneralReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport\SubCustomerTradingResult.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubCustomerTradingResult.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport\SumerizeTradingResult.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SumerizeTradingResult.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Agency\StockOrderListReportCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Agency\StockOrderListReportCriteria.Designer.cs">
+      <DependentUpon>StockOrderListReportCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CustomerReport\CustomerGeneralReportCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\CustomerReport\CustomerGeneralReportCriteria.Designer.cs">
+      <DependentUpon>CustomerGeneralReportCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CustomerReport\CustomerTradingResultReportCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\CustomerReport\CustomerTradingResultReportCriteria.Designer.cs">
+      <DependentUpon>CustomerTradingResultReportCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CustomerReport\LostAndProfitReportCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\CustomerReport\LostAndProfitReportCriteria.Designer.cs">
+      <DependentUpon>LostAndProfitReportCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CustomerReport\OrderHistoryReportCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\CustomerReport\OrderHistoryReportCriteria.Designer.cs">
+      <DependentUpon>OrderHistoryReportCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DataSet\ReportDataSet.cs">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DataSet\ReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CrystalReport\BalanceTransactionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BalanceTransactionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Framework\AccountType.cs" />
+    <Compile Include="Controls\DropDownObject.cs" />
+    <Compile Include="Framework\GUIUtil.cs" />
+    <Compile Include="Framework\Session.cs" />
+    <Compile Include="Framework\Util.cs" />
+    <Compile Include="MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI.designer.cs">
+      <DependentUpon>MDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\CustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\CustomerInfo.Designer.cs">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\OrderManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\OrderManager.Designer.cs">
+      <DependentUpon>OrderManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\OrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\OrderList.Designer.cs">
+      <DependentUpon>OrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\SubmitOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\SubmitOrder.designer.cs">
+      <DependentUpon>SubmitOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\InputDiaglogBox.resx">
+      <DependentUpon>InputDiaglogBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ListFormBase.resx">
+      <DependentUpon>ListFormBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\AgencyFee.resx">
+      <DependentUpon>AgencyFee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\AgencyFeeAddEdit.resx">
+      <DependentUpon>AgencyFeeAddEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\ApproveOrder.resx">
+      <DependentUpon>ApproveOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\UnitDebitLimitListForm.resx">
+      <DependentUpon>UnitDebitLimitListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\DebitLimitForm.resx">
+      <DependentUpon>DebitLimitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\DebitLimitListForm.resx">
+      <DependentUpon>DebitLimitListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\DebitLimitLogForm.resx">
+      <DependentUpon>DebitLimitLogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\MatchedOrderList.resx">
+      <DependentUpon>MatchedOrderList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\CustomerProxyInfo.resx">
+      <DependentUpon>CustomerProxyInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\CustomerDetailInfo.resx">
+      <DependentUpon>CustomerDetailInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\CustomerLiteInfo.resx">
+      <DependentUpon>CustomerLiteInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\OrderReplace.resx">
+      <DependentUpon>OrderReplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\RegisterCustomer.resx">
+      <DependentUpon>RegisterCustomer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\SetupDebitLimitForm.resx">
+      <DependentUpon>SetupDebitLimitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Agency\AgencyTransferFeeReportCriteria.resx">
+      <DependentUpon>AgencyTransferFeeReportCriteria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Agency\MonthlyTradingResultReportCriteria.resx">
+      <DependentUpon>MonthlyTradingResultReportCriteria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Agency\MatchedOrderReportCriteria.resx">
+      <DependentUpon>MatchedOrderReportCriteria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\AgencyStockOrderReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AgencyStockOrderReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\AgentOrderHistoryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AgentOrderHistoryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\AgentTransationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AgentTransationReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\AgentTransferFeeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AgentTransferFeeReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\CustomerTradingResultReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerTradingResultReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\GroupOrderHistoryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GroupOrderHistoryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\Logo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Logo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\LostAndProfitReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LostAndProfitReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\OrderHistoryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrderHistoryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\CustomerGeneralReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerGeneralReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\SubCustomerTradingResult.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubCustomerTradingResult.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\SumerizeTradingResult.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SumerizeTradingResult.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\BalanceTransactionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BalanceTransactionReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI.resx">
+      <DependentUpon>MDI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\CustomerInfo.resx">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\OrderManager.resx">
+      <DependentUpon>OrderManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\OrderList.resx">
+      <DependentUpon>OrderList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\SubmitOrder.resx">
+      <DependentUpon>SubmitOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport\ContigenTransactionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ContigenTransactionReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Agency\StockOrderListReportCriteria.resx">
+      <DependentUpon>StockOrderListReportCriteria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CustomerReport\CustomerGeneralReportCriteria.resx">
+      <DependentUpon>CustomerGeneralReportCriteria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CustomerReport\CustomerTradingResultReportCriteria.resx">
+      <DependentUpon>CustomerTradingResultReportCriteria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CustomerReport\LostAndProfitReportCriteria.resx">
+      <DependentUpon>LostAndProfitReportCriteria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CustomerReport\OrderHistoryReportCriteria.resx">
+      <DependentUpon>OrderHistoryReportCriteria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CustomerReport\TransactionReportCriteria.resx">
+      <DependentUpon>TransactionReportCriteria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\AgencyPermission.resx">
+      <DependentUpon>AgencyPermission.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\GroupManager.resx">
+      <DependentUpon>GroupManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\UserManager.resx">
+      <DependentUpon>UserManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\CrystalReport\ContigenTransactionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContigenTransactionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportViewer.Designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CustomerReport\TransactionReportCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\CustomerReport\TransactionReportCriteria.Designer.cs">
+      <DependentUpon>TransactionReportCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\AgencyPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\AgencyPermission.Designer.cs">
+      <DependentUpon>AgencyPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\GroupManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\GroupManager.Designer.cs">
+      <DependentUpon>GroupManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\Settings.designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\UserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\UserInfo.Designer.cs">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\UserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\UserManager.Designer.cs">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionUtil.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Web References\AgencyWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <None Include="Web References\AgencyWebService\AgencyFee1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\BalanceTransactionDataSource1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\Brokery.wsdl" />
+    <None Include="Web References\AgencyWebService\ContigenTransactionDataSource1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\Customer1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\CustomerDebitLimit.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\CustomerDebitLimitLog.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\CustomerDebitTransaction.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\CustomerDetail1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\CustomerProxy1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\CustomerService1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\Department1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\GLStockCode1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\GroupDebitLimit.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\InquiryData1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\InquiryStock1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\OnlineBank1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\Order1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\UnitTrade.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\UserGroup1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\AgencyWebService\UserLite1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Report\DataSet\ReportDataSet.xsc">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DataSet\ReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DataSet\ReportDataSet.xss">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:8080/Brokery.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AgencyWebService\</RelPath>
+      <UpdateFromURL>http://localhost:8080/Brokery.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>AgencyApp_AgencyWebService_GateWay</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.png" />
+    <None Include="Resources\action_check.png" />
+    <None Include="Resources\action_check1.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\application_edit.png" />
+    <None Include="Resources\arrow_refresh.png" />
+    <None Include="Resources\calculator_edit1.png" />
+    <None Include="Resources\Calendar_16x161.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\Check_16x161.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\find.png" />
+    <None Include="Resources\house_link.png" />
+    <None Include="Resources\link.png" />
+    <None Include="Resources\link_break.png" />
+    <None Include="Resources\map.png" />
+    <None Include="Resources\money_dollar.png" />
+    <None Include="Resources\package.png" />
+    <None Include="Resources\page_excel.png" />
+    <None Include="Resources\page_white_stack.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\slides_stack.png" />
+    <None Include="Resources\zone_money.png" />
+    <None Include="Web References\AgencyWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="vics.ico" />
+    <None Include="Web References\AgencyWebService\Brokery.disco" />
+    <None Include="Resources\coin_single_gold_edit.png" />
+    <None Include="Resources\coin_stack_silver_edit.png" />
+    <None Include="Resources\basket_edit.png" />
+    <Content Include="Resources\calculator_edit.png" />
+    <Content Include="Resources\Calendar_16x16.png" />
+    <Content Include="Resources\Check_16x16.png" />
+    <None Include="Resources\process.gif" />
+    <None Include="Resources\processing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FlashControlV71">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Auto</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ShockwaveFlashObjects">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonDomain\CommonDomain.csproj">
+      <Project>{EEF21C4F-E2E3-4D45-BE47-8DF094A78A65}</Project>
+      <Name>CommonDomain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

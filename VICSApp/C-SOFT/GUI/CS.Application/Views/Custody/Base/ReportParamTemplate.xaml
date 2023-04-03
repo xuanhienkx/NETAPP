@@ -1,0 +1,364 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:localization="clr-namespace:CS.UI.Common.Localization;assembly=CS.UI.Common"
+                    xmlns:common="clr-namespace:CS.UI.Common;assembly=CS.UI.Common"
+                    xmlns:vsdModels="clr-namespace:CS.Common.Contract.VsdModels;assembly=CS.Common.Contract">
+
+    <ResourceDictionary.MergedDictionaries>
+        <common:SharedResourceDictionary Source="../../../Themes/Default/Resources.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--#region tham số Danh sách báo cáo nghiệp vụ lưu ký-->
+    <DataTemplate DataType="{x:Type vsdModels:DE084PramaterModel}">
+        <Border x:Name="BankView" ForceCursor="False">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox
+                        Grid.Column="0"
+                        MaxLength="3"
+                        materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_StockCode}"
+                        Text="{Binding StockCode, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                        VerticalAlignment="Bottom"
+                        Margin="{StaticResource ControlMargin}" />
+
+                    <DatePicker Grid.Column="2" materialDesign:ValidationAssist.OnlyShowOnFocus="True" 
+                                HorizontalContentAlignment="Right"
+                                Style="{DynamicResource MaterialDesignFloatingHintDatePicker}"
+                                VerticalAlignment="Bottom"
+                                materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_ReportDate}"
+                                SelectedDate="{Binding ReportDate, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                                Margin="{StaticResource ControlMargin}" />
+                </Grid>
+                <ComboBox Grid.Column="2"
+                          materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_Board}"
+                          materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                          Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                          ItemsSource="{Binding Path=DataContext.BoardTypes, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=StackPanel}}"
+                          Margin="{StaticResource ControlMargin}"
+                          SelectedValue="{Binding BoardType, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                          VerticalAlignment="Bottom"
+                          DisplayMemberPath="DisplayValue"
+                          SelectedValuePath="Value" />
+            </Grid>
+        </Border>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vsdModels:DE065PramaterModel}">
+        <Border x:Name="BankView" ForceCursor="False">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <ComboBox Grid.Row="0" Grid.Column="0"
+                          materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_Board}"
+                          materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                          Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                          ItemsSource="{Binding Path=DataContext.BoardTypes, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=StackPanel}}"
+                          Margin="{StaticResource ControlMargin}"
+                          SelectedValue="{Binding BoardType, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                          VerticalAlignment="Bottom"
+                          DisplayMemberPath="DisplayValue"
+                          SelectedValuePath="Value" />
+
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_RefDocNumber}"
+                             Text="{Binding RefDocNumber,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                             Margin="{StaticResource ControlMargin}"
+                             VerticalAlignment="Bottom"
+                             MaxLength="10"
+                             TextWrapping="WrapWithOverflow" />
+                    <DatePicker Grid.Column="2" materialDesign:ValidationAssist.OnlyShowOnFocus="True" 
+                                HorizontalContentAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                Style="{DynamicResource MaterialDesignFloatingHintDatePicker}"
+                                materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_ReportDate}"
+                                SelectedDate="{Binding ReportDate, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                                Margin="{StaticResource ControlMargin}" />
+
+                </Grid>
+
+                <TextBox Grid.Row="1" Grid.Column="0"
+                         materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_StockCode_From}"
+                         Text="{Binding StockCodeFrom,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                         Margin="{StaticResource ControlMargin}"
+                         VerticalAlignment="Bottom" 
+                         MaxLength="3"
+                         TextWrapping="WrapWithOverflow" />
+                <TextBox Grid.Row="1" Grid.Column="2"
+                         materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_StockCode_To}"
+                         Text="{Binding StockCodeTo,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                         Margin="{StaticResource ControlMargin}"
+                         VerticalAlignment="Bottom"
+                         MaxLength="3"
+                         TextWrapping="WrapWithOverflow" />
+
+            </Grid>
+        </Border>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vsdModels:DE013PramaterModel}">
+        <Border x:Name="BankView" ForceCursor="False">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox
+                        Grid.Column="0"
+                        materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_StockCode}"
+                        Text="{Binding  StockCode, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                        VerticalAlignment="Bottom"
+                        MaxLength="3"
+                        Margin="{StaticResource ControlMargin}" />
+
+                    <TextBox
+                        Grid.Column="2"
+                        materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_RefDocNumber}"
+                        Text="{Binding  RefDocNumber, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                        VerticalAlignment="Bottom"
+                        MaxLength="10"
+                        Margin="{StaticResource ControlMargin}" />
+                </Grid>
+                <ComboBox Grid.Column="2"
+                          materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_Board}"
+                          materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                          Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                          VerticalAlignment="Bottom"
+                          ItemsSource="{Binding Path=DataContext.BoardTypes,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=StackPanel}}"
+                          Margin="{StaticResource ControlMargin}"
+                          SelectedValue="{Binding  BoardType, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                          DisplayMemberPath="DisplayValue"
+                          SelectedValuePath="Value" />
+            </Grid>
+        </Border>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vsdModels:DE083PramaterModel}">
+        <Border x:Name="BankView" ForceCursor="False">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <ComboBox Grid.Row="0" Grid.Column="0"
+                          materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_Board}"
+                          materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                          VerticalAlignment="Bottom"
+                          Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                          ItemsSource="{Binding Path=DataContext.BoardTypes,  RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=StackPanel}}"
+                          Margin="{StaticResource ControlMargin}"
+                          SelectedValue="{Binding  BoardType, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                          DisplayMemberPath="DisplayValue"
+                          SelectedValuePath="Value" />
+
+                <DatePicker Grid.Row="0" Grid.Column="2" materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                            Width="150"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Bottom"
+                            Style="{DynamicResource MaterialDesignFloatingHintDatePicker}"
+                            materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_ReportDate}"
+                            SelectedDate="{Binding  ReportDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, Mode=TwoWay}"
+                            Margin="{StaticResource ControlMargin}" />
+
+                <TextBox Grid.Row="1" Grid.Column="0"
+                         materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_StockCode_From}"
+                         Text="{Binding  StockCodeFrom,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                         Margin="{StaticResource ControlMargin}"
+                         VerticalAlignment="Bottom"
+                         MaxLength="3"
+                         TextWrapping="WrapWithOverflow" />
+                <TextBox Grid.Row="1" Grid.Column="2"
+                         materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_StockCode_To}"
+                         Text="{Binding  StockCodeTo, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                         Margin="{StaticResource ControlMargin}"
+                         MaxLength="3"
+                         VerticalAlignment="Bottom"
+                         TextWrapping="WrapWithOverflow" />
+
+            </Grid>
+        </Border>
+    </DataTemplate>
+    <!--#endregion-->
+
+    <!--#region Tham số Danh sách báo cáo nghiệp vụ thực hiện quyền-->
+    <DataTemplate DataType="{x:Type vsdModels:BaseRightPramaterModel}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBox
+                Grid.Column="0"
+                materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_RightNumber}"
+                Text="{Binding  RightNumber, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                VerticalAlignment="Bottom"
+                MaxLength="10"
+                Margin="{StaticResource ControlMargin}" />
+            <ComboBox Grid.Column="2"
+                      Visibility="{Binding ReportCode, Converter={StaticResource VisibilityByComparingConverter}, ConverterParameter={StaticResource False}}"
+                      materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_Board}"
+                      materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                      Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                      VerticalAlignment="Bottom"
+                      ItemsSource="{Binding Path=DataContext.BoardTypes,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=StackPanel}}"
+                      Margin="{StaticResource ControlMargin}"
+                      SelectedValue="{Binding  BoardType, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                      DisplayMemberPath="DisplayValue"
+                      SelectedValuePath="Value" />
+        </Grid>
+
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vsdModels:CA031PramaterModel}">
+        <TextBox 
+            materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_RightNumber}"
+            Text="{Binding  RightNumber, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+            VerticalAlignment="Bottom"
+            MaxLength="10"
+            Margin="{StaticResource ControlMargin}" />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vsdModels:CA069PramaterModel}">
+        <Border x:Name="BankView" ForceCursor="False">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="20" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox 
+                       materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_RightNumber}"
+                       Text="{Binding RightNumber, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                       VerticalAlignment="Bottom"
+                        MaxLength="10"
+                       Margin="{StaticResource ControlMargin}" />
+                    <TextBox
+                       Grid.Column="2"
+                       materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_ReportByCode}"
+                       Text="{Binding  ReportByCode, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                       VerticalAlignment="Bottom"
+                        MaxLength="5"
+                       Margin="{StaticResource ControlMargin}" />
+                </Grid>
+                <ComboBox Grid.Column="2"
+                          materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_Board}"
+                          materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                          Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                          VerticalAlignment="Bottom"
+                          ItemsSource="{Binding Path=DataContext.BoardTypes,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=StackPanel}}"
+                          Margin="{StaticResource ControlMargin}"
+                          SelectedValue="{Binding  BoardType, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                          DisplayMemberPath="DisplayValue"
+                          SelectedValuePath="Value" />
+            </Grid>
+        </Border>
+    </DataTemplate>
+    <!--#endregion -->
+
+    <!--#region tham số Danh sách báo cáo nghiệp vụ thanh toán bù trừ -->
+    <DataTemplate DataType="{x:Type vsdModels:ClearingAndSettlementReportRquest}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <ComboBox Grid.Column="0"
+                  materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_Board}"
+                  materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                  VerticalAlignment="Bottom"
+                  Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                  ItemsSource="{Binding Path=DataContext.BoardTypes,  RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=StackPanel}}"
+                  Margin="{StaticResource ControlMargin}"
+                  SelectedValue="{Binding  BoardType, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                  DisplayMemberPath="DisplayValue"
+                  SelectedValuePath="Value" />
+
+            <DatePicker Grid.Column="2" materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                    Width="150"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Style="{DynamicResource MaterialDesignFloatingHintDatePicker}"
+                    materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_ReportDate}"
+                    SelectedDate="{Binding  ReportDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, Mode=TwoWay}"
+                    Margin="{StaticResource ControlMargin}" />
+        </Grid>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vsdModels:ClearingAndSettlementAllBoardRequet}">
+        <DatePicker materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                    Width="150"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Style="{DynamicResource MaterialDesignFloatingHintDatePicker}"
+                    materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_ReportDate}"
+                    SelectedDate="{Binding  ReportDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, Mode=TwoWay}"
+                    Margin="{StaticResource ControlMargin}" />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vsdModels:CS091PramaterModel}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox
+                Grid.Column="0"
+                materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_ReportByCode}"
+                Text="{Binding  ReportByCode, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                VerticalAlignment="Bottom"
+                MaxLength="5"
+                Margin="{StaticResource ControlMargin}" />
+
+            <DatePicker  Grid.Column="2"
+                        materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                        Width="150"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Bottom"
+                        Style="{DynamicResource MaterialDesignFloatingHintDatePicker}"
+                        materialDesign:HintAssist.Hint="{localization:Translate Custody_Report_ReportDate}"
+                        SelectedDate="{Binding  ReportDate, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, Mode=TwoWay}"
+                        Margin="{StaticResource ControlMargin}" />
+        </Grid>
+    </DataTemplate>
+    <!--#endregion-->
+</ResourceDictionary>

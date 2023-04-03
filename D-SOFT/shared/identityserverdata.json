@@ -1,0 +1,131 @@
+﻿{
+  "IdentityServerData": {
+    "IdentityResources": [
+      {
+        "Name": "roles",
+        "Enabled": true,
+        "DisplayName": "Roles",
+        "UserClaims": [
+          "role"
+        ]
+      },
+      {
+        "Name": "openid",
+        "Enabled": true,
+        "Required": true,
+        "DisplayName": "Your user identifier",
+        "UserClaims": [
+          "sub"
+        ]
+      },
+      {
+        "Name": "profile",
+        "Enabled": true,
+        "DisplayName": "User profile",
+        "Description": "Your user profile information (first name, last name, etc.)",
+        "Emphasize": true,
+        "UserClaims": [
+          "name",
+          "family_name",
+          "given_name",
+          "middle_name",
+          "nickname",
+          "preferred_username",
+          "profile",
+          "picture",
+          "website",
+          "gender",
+          "birthdate",
+          "zoneinfo",
+          "locale",
+          "updated_at"
+        ]
+      },
+      {
+        "Name": "email",
+        "Enabled": true,
+        "DisplayName": "Your email address",
+        "Emphasize": true,
+        "UserClaims": [
+          "email",
+          "email_verified"
+        ]
+      },
+      {
+        "Name": "address",
+        "Enabled": true,
+        "DisplayName": "Your address",
+        "Emphasize": true,
+        "UserClaims": [
+          "address"
+        ]
+      }
+    ],
+    "ApiScopes": [
+      {
+        "Name": "dsoft_identity_admin_api",
+        "DisplayName": "dsoft_identity_admin_api",
+        "Required": true,
+        "UserClaims": [
+          "role",
+          "name"
+        ]
+      },
+      {
+        "Name": "dsoft_api",
+        "DisplayName": "dsoft_api",
+        "Required": true,
+        "UserClaims": [
+          "role",
+          "name"
+        ]
+      }
+    ],
+    "ApiResources": [
+      {
+        "Name": "dsoft_api",
+        "Scopes": [
+          {
+            "Name": "dsoft_api",
+            "DisplayName": "dsoft_api",
+            "Required": true,
+            "UserClaims": [ "role", "name" ]
+          }
+        ]
+      },
+      {
+        "Name": "dsoft_identity_admin_api",
+        "Scopes": [
+          "dsoft_identity_admin_api"
+        ]
+      }
+    ],
+    "Clients": [     
+      {
+        "ClientId": "dsoft_api_swaggerui",
+        "ClientName": "DSoft API Swagger UI",
+        "AllowedGrantTypes": [ "implicit" ],
+        "AllowAccessTokensViaBrowser": true,
+        "RequireClientSecret": false,
+        "RequirePkce": true,
+        "RedirectUris": [ "https://api.dsoft.local/swagger/oauth2-redirect.html" ],
+        "AllowedScopes": [ "dsoft_api" ],
+        "AllowedCorsOrigins": [ "https://api.dsoft.local" ]
+      },
+      {
+        "ClientId": "dsoft_market_gw_app",
+        "ClientName": "Dsoft Market App Client",
+        "AllowedGrantTypes": [ "implicit" ],
+        "AllowAccessTokensViaBrowser": true,
+        "AlwaysIncludeuserClaimsInIdToken": true,
+        "RequirePkce": true,
+        "AllowedScopes": [ "dsoft_api" ],
+        "ClientSecrets": [
+          {
+            "Value": "dsoft_market_gw_app_secret"
+          }
+        ]
+      }
+    ]
+  }
+}

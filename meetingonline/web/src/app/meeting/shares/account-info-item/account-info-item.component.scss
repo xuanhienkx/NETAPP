@@ -1,0 +1,31 @@
+@import "../../../@theme/styles/themes.scss";
+:host {
+    width: 100vw;
+}
+
+// @include nb-install-component() {
+//      ::ng-deep .info-list-item {
+//         .command-group {
+//             margin-top: auto;
+//             margin-bottom: auto;
+//             .command-item {
+//                 margin-left: 0.5rem;
+//                 margin-right: 0.5rem;
+//             }
+//             .command-item:last-child {
+//                 margin-right: 0 !important;
+//                 padding-right: 0 !important;
+//             }
+//         }
+//         .left-info-group {
+//             margin-top: auto;
+//             margin-bottom: auto;
+//             display: flex;
+//         }
+//         .info-right-group {
+//             margin-top: auto;
+//             margin-bottom: auto;
+//             margin-right: 0.75rem;
+//         }
+//     }
+// }

@@ -1,0 +1,21 @@
+<div *ngIf="attachments && attachments.length > 0" class="my-2">
+    <div class="text-secondary my-auto py-2">
+        <div class="border-bottom"><b>{{'shares.content-detail.attachmentFile' |translate}}:</b></div>
+    </div>
+    <div *ngFor="let ats of attachments; let idx= index"
+        class="d-flex description justify-content-between w-100 list-hover my-auto py-1 px-2">
+        <div style="cursor: pointer;" data-toggle="tooltip" data-placement="top"
+            title="{{'shares.content-detail.view' | translate}}">
+            <i class="fas fa-paperclip text-secondary" style="opacity: 50%;"></i><span class="mx-2 font-weight-light"
+                (click)="viewDoc(ats)">{{ats?.name}}</span></div>
+        <div class=" ml-3" *ngIf="!isNoCommand">
+            <a href="javascript:void(0);" class="mx-2" data-toggle="tooltip" data-placement="top"
+                title="{{'shares.content-detail.download' | translate}}" target="_blank" (click)="downloadFile(ats)"> <i
+                    class="fas fa-download text-secondary"></i> </a>
+            <a deletecomand *ngIf="allowEdit" href="javascript:void(0);" class="ml-2" data-toggle="tooltip"
+                data-placement="top" title="{{'shares.content-detail.delete.title' | translate}}"
+                (click)="onDeleteFile(ats.id,idx)">
+                <i class="fa fa-trash-alt text-secondary" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</div>

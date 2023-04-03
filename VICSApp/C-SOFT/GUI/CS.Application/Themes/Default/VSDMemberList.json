@@ -1,0 +1,472 @@
+﻿[
+    {
+        "Code": "001",
+        "ShortName": "SSI",
+        "FullName": "Công ty Cổ phần Chứng khoán Sài Gòn"
+    },
+    {
+        "Code": "002",
+        "ShortName": "ACBS",
+        "FullName": "Công ty TNHH Chứng khoán ACB"
+    },
+    {
+        "Code": "003",
+        "ShortName": "FSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Đệ Nhất"
+    },
+    {
+        "Code": "004",
+        "ShortName": "MBS",
+        "FullName": "Công ty Cổ phần Chứng khoán MB"
+    },
+    {
+        "Code": "005",
+        "ShortName": "BVSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Bảo Việt"
+    },
+    {
+        "Code": "006",
+        "ShortName": "BSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Ngân hàng Đầu tư và Phát triển Việt Nam."
+    },
+    {
+        "Code": "007",
+        "ShortName": "IBS",
+        "FullName": "Công ty Cổ phần Chứng khoán Ngân hàng Công Thương Việt Nam"
+    },
+    {
+        "Code": "008",
+        "ShortName": "AGR",
+        "FullName": "Công ty Cổ phần Chứng khoán Ngân hàng Nông Nghiệp và PTNT VN"
+    },
+    {
+        "Code": "009",
+        "ShortName": "VCBS",
+        "FullName": "Công ty TNHH Chứng khoán NHTMCP Ngoại Thương Việt Nam"
+    },
+    {
+        "Code": "010",
+        "ShortName": "HFT",
+        "FullName": "Công ty cổ phần Chứng khoán HFT"
+    },
+    {
+        "Code": "011",
+        "ShortName": "HSC",
+        "FullName": "Công ty Cổ phần Chứng khoán TP.HCM"
+    },
+    {
+        "Code": "012",
+        "ShortName": "HPS",
+        "FullName": "Công ty cổ phần chứng khoán Hải Phòng"
+    },
+    {
+        "Code": "014",
+        "ShortName": "DAS",
+        "FullName": "Công ty TNHH Một Thành viên Chứng khoán Ngân hàng Đông Á"
+    },
+    {
+        "Code": "015",
+        "ShortName": "SHBS",
+        "FullName": "Công ty Cổ phần Chứng khoán SHB"
+    },
+    {
+        "Code": "016",
+        "ShortName": "DVSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Đại Việt"
+    },
+    {
+        "Code": "017",
+        "ShortName": "SBS",
+        "FullName": "Công ty Cổ phần Chứng khoán Ngân hàng Sài Gòn Thương Tín"
+    },
+    {
+        "Code": "018",
+        "ShortName": "ABS",
+        "FullName": "Công ty Cổ phần Chứng khoán An Bình"
+    },
+    {
+        "Code": "020",
+        "ShortName": "VIS",
+        "FullName": "Công ty Cổ phần Chứng khoán Quốc tế Việt Nam"
+    },
+    {
+        "Code": "021",
+        "ShortName": "VDS",
+        "FullName": "Công ty Cổ phần Chứng khoán VNDirect"
+    },
+    {
+        "Code": "022",
+        "ShortName": "PHS",
+        "FullName": "Công ty cổ phần chứng khoán Phú Hưng"
+    },
+    {
+        "Code": "023",
+        "ShortName": "VSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Việt"
+    },
+    {
+        "Code": "024",
+        "ShortName": "DNSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Đà Nẵng"
+    },
+    {
+        "Code": "026",
+        "ShortName": "VPBS",
+        "FullName": "Công ty cổ phần Chứng khoán Ngân hàng thương mại cổ phần Việt Nam Thịnh Vượng"
+    },
+    {
+        "Code": "028",
+        "ShortName": "NSI",
+        "FullName": "Công ty Cổ phần Chứng khoán Quốc Gia"
+    },
+    {
+        "Code": "029",
+        "ShortName": "VSEC",
+        "FullName": "Công ty Cổ phần Chứng khoán Việt Nam"
+    },
+    {
+        "Code": "030",
+        "ShortName": "APEC",
+        "FullName": "Công ty Cổ phần Chứng khoán Châu á - Thái Bình Dương"
+    },
+    {
+        "Code": "032",
+        "ShortName": "SEAS",
+        "FullName": "Công ty Cổ phần Chứng khoán ASEAN"
+    },
+    {
+        "Code": "033",
+        "ShortName": "VDSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Rồng Việt"
+    },
+    {
+        "Code": "035",
+        "ShortName": "MHBS",
+        "FullName": "CTCP Chứng khoán Ngân hàng phát triển Nhà đồng bằng Sông Cửu Long"
+    },
+    {
+        "Code": "036",
+        "ShortName": "APSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Alpha"
+    },
+    {
+        "Code": "037",
+        "ShortName": "TVG",
+        "FullName": "Công ty Cổ phần Chứng khoán Trí Việt"
+    },
+    {
+        "Code": "038",
+        "ShortName": "VTSS",
+        "FullName": "Công ty Cổ phần Chứng khoán Việt Tín"
+    },
+    {
+        "Code": "039",
+        "ShortName": "WCBV",
+        "FullName": "Công ty Cổ phần Chứng khoán Woori - CBV"
+    },
+    {
+        "Code": "040",
+        "ShortName": "OCS",
+        "FullName": "Công ty Cổ phần Chứng khoán Đại Dương"
+    },
+    {
+        "Code": "041",
+        "ShortName": "TAS",
+        "FullName": "Công ty cổ phần Chứng khoán Tràng An"
+    },
+    {
+        "Code": "042",
+        "ShortName": "TVSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Thiên Việt"
+    },
+    {
+        "Code": "044",
+        "ShortName": "TVSI",
+        "FullName": "Công ty Cổ phần Chứng khoán Tân Việt"
+    },
+    {
+        "Code": "045",
+        "ShortName": "PSI",
+        "FullName": "Công ty Cổ phần Chứng khoán Dầu Khí"
+    },
+    {
+        "Code": "046",
+        "ShortName": "PGSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Phú Gia"
+    },
+    {
+        "Code": "047",
+        "ShortName": "HZS",
+        "FullName": "Công ty cổ phần Chứng khoán Hòa Trung Việt Nam"
+    },
+    {
+        "Code": "048",
+        "ShortName": "ORS",
+        "FullName": "Công ty Cổ phần Chứng khoán Phương Đông"
+    },
+    {
+        "Code": "049",
+        "ShortName": "ROSE",
+        "FullName": "Công ty Cổ phần Chứng khoán Hoàng Gia"
+    },
+    {
+        "Code": "050",
+        "ShortName": "GSI",
+        "FullName": "Công ty Cổ phần Chứng khoán Morgan Stanley Hướng Việt"
+    },
+    {
+        "Code": "055",
+        "ShortName": "SMES",
+        "FullName": "Công ty Cổ phần Chứng khoán SME"
+    },
+    {
+        "Code": "057",
+        "ShortName": "KIS",
+        "FullName": "Công ty Cổ phần Chứng khoán KIS Việt Nam"
+    },
+    {
+        "Code": "058",
+        "ShortName": "FPTS",
+        "FullName": "Công ty Cổ phần Chứng khoán FPT"
+    },
+    {
+        "Code": "059",
+        "ShortName": "IRS",
+        "FullName": "Công ty Cổ phần Chứng khoán Quốc tế Hoàng Gia"
+    },
+    {
+        "Code": "061",
+        "ShortName": "IVS",
+        "FullName": "Công ty Cổ phần Chứng khoán Đầu tư Việt Nam"
+    },
+    {
+        "Code": "062",
+        "ShortName": "GBVS",
+        "FullName": "Công ty cổ phần Chứng khoán Golden Bridge Việt Nam"
+    },
+    {
+        "Code": "064",
+        "ShortName": "DNSE",
+        "FullName": "Công ty Cổ phần Chứng khoán Đại Nam"
+    },
+    {
+        "Code": "065",
+        "ShortName": "KVS",
+        "FullName": "Công ty Cổ phần Chứng khoán Kenanga Việt Nam"
+    },
+    {
+        "Code": "067",
+        "ShortName": "APSI",
+        "FullName": "Công ty Cổ phần Chứng khoán An Phát"
+    },
+    {
+        "Code": "068",
+        "ShortName": "VCSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Bản Việt"
+    },
+    {
+        "Code": "069",
+        "ShortName": "SHS",
+        "FullName": "Công ty Cổ phần Chứng khoán Sài Gòn - Hà Nội"
+    },
+    {
+        "Code": "072",
+        "ShortName": "IBSC",
+        "FullName": "Công ty cổ phần Chứng khoán IB"
+    },
+    {
+        "Code": "073",
+        "ShortName": "WSS",
+        "FullName": "Công ty Cổ phần Chứng khoán Phố Wall"
+    },
+    {
+        "Code": "075",
+        "ShortName": "BSI",
+        "FullName": "Công ty Cổ phần Chứng khoán BETA"
+    },
+    {
+        "Code": "076",
+        "ShortName": "VICS",
+        "FullName": "Công ty Cổ phần Chứng khoán Thương mại và Công nghiệp Việt Nam"
+    },
+    {
+        "Code": "077",
+        "ShortName": "MAS",
+        "FullName": "Công ty Trách nhiệm hữu hạn Chứng khoán Mirae Asset (Việt Nam)"
+    },
+    {
+        "Code": "079",
+        "ShortName": "MBKE",
+        "FullName": "Công ty TNHH Một thành viên Chứng khoán Maybank Kim Eng"
+    },
+    {
+        "Code": "081",
+        "ShortName": "SSV",
+        "FullName": "Công ty trách nhiệm hữu hạn Chứng khoán SHINHAN Việt Nam"
+    },
+    {
+        "Code": "082",
+        "ShortName": "HBS",
+        "FullName": "Công ty Cổ phần Chứng khoán Hoà Bình"
+    },
+    {
+        "Code": "083",
+        "ShortName": "ART",
+        "FullName": "Công ty cổ phần Chứng khoán Artex"
+    },
+    {
+        "Code": "085",
+        "ShortName": "TCSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Thành Công"
+    },
+    {
+        "Code": "086",
+        "ShortName": "BMSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Bảo Minh"
+    },
+    {
+        "Code": "087",
+        "ShortName": "VDSE",
+        "FullName": "Công ty Cổ phần Chứng khoán Viễn Đông"
+    },
+    {
+        "Code": "088",
+        "ShortName": "VGSC",
+        "FullName": "Công ty Cổ phần Chứng khoán Toàn Cầu"
+    },
+    {
+        "Code": "089",
+        "ShortName": "VTS",
+        "FullName": "Công ty Cổ phần Chứng khoán Việt Thành"
+    },
+    {
+        "Code": "090",
+        "ShortName": "NVS",
+        "FullName": "Công ty Cổ phần Chứng khoán Navibank"
+    },
+    {
+        "Code": "091",
+        "ShortName": "MSI",
+        "FullName": "Công ty Cổ phần Chứng khoán Maritime"
+    },
+    {
+        "Code": "092",
+        "ShortName": "SBBS",
+        "FullName": "Công ty Cổ phần Chứng khoán SaiGonBank - Berjaya"
+    },
+    {
+        "Code": "093",
+        "ShortName": "PNS",
+        "FullName": "Công ty Cổ phần Chứng khoán Phương Nam"
+    },
+    {
+        "Code": "094",
+        "ShortName": "VFS",
+        "FullName": "Công ty Cổ phần Chứng khoán Nhất Việt"
+    },
+    {
+        "Code": "096",
+        "ShortName": "ISC",
+        "FullName": "Công ty Cổ phần Chứng khoán Công nghiệp Việt Nam"
+    },
+    {
+        "Code": "097",
+        "ShortName": "HVS",
+        "FullName": "Công ty cổ phần Chứng khoán HVS Việt Nam"
+    },
+    {
+        "Code": "098",
+        "ShortName": "TSS",
+        "FullName": "Công ty Cổ phần Chứng khoán Trường Sơn"
+    },
+    {
+        "Code": "099",
+        "ShortName": "SJCS",
+        "FullName": "Công ty Cổ phần Chứng khoán SJC"
+    },
+    {
+        "Code": "101",
+        "ShortName": "JSI",
+        "FullName": "Công ty Cổ phần Chứng khoán Nhật Bản"
+    },
+    {
+        "Code": "102",
+        "ShortName": "VNCS",
+        "FullName": "Công ty Cổ phần Chứng khoán Kiến thiết Việt Nam"
+    },
+    {
+        "Code": "103",
+        "ShortName": "LVS",
+        "FullName": "Công ty Cổ phần Chứng khoán Liên Việt"
+    },
+    {
+        "Code": "105",
+        "ShortName": "TCBS",
+        "FullName": "Công ty TNHH Chứng khoán Kỹ Thương"
+    },
+    {
+        "Code": "111",
+        "ShortName": "SISC",
+        "FullName": "Công ty Cổ phần Chứng khoán SmartInvest"
+    },
+    {
+        "Code": "201",
+        "ShortName": "BID",
+        "FullName": "Ngân hàng TMCP Đầu tư và Phát triển Việt nam"
+    },
+    {
+        "Code": "202",
+        "ShortName": "VCH",
+        "FullName": "Ngân hàng Thương Mại Cổ Phần Ngoại Thương Việt Nam"
+    },
+    {
+        "Code": "203",
+        "ShortName": "IVB",
+        "FullName": ""
+    },
+    {
+        "Code": "204",
+        "ShortName": "CTG",
+        "FullName": "Ngân hàng Thương Mại Cổ Phần Công Thương Việt Nam"
+    },
+    {
+        "Code": "205",
+        "ShortName": "TPB",
+        "FullName": "Ngân hàng Thương Mại Cổ Phần Tiên Phong"
+    },
+    {
+        "Code": "206",
+        "ShortName": "MBB",
+        "FullName": "Ngân hàng Thương mại cổ phần Quân đội"
+    },
+    {
+        "Code": "401",
+        "ShortName": "HSBC",
+        "FullName": "Ngân hàng TNHH một thành viên HSBC (Việt Nam)"
+    },
+    {
+        "Code": "402",
+        "ShortName": "SCB",
+        "FullName": "Ngân hàng TNHH MTV Standard Chartered (Việt Nam)"
+    },
+    {
+        "Code": "403",
+        "ShortName": "DBH",
+        "FullName": ""
+    },
+    {
+        "Code": "404",
+        "ShortName": "CTB",
+        "FullName": "Ngân hàng Citibank"
+    },
+    {
+        "Code": "406",
+        "ShortName": "FEN",
+        "FullName": "Ngân hàng SinoPac – Chi nhánh Thành phố Hồ Chí Minh"
+    },
+    {
+        "Code": "407",
+        "ShortName": "SHV",
+        "FullName": "Ngân hàng trách nhiệm hữu hạn một thành viên Shinhan Việt Nam"
+    }
+]

@@ -1,0 +1,101 @@
+﻿{
+    "code": "DE013",
+    "name": "DE013-Thông báo số dư cuối tháng",
+    "parameters": [{
+            "name": "RefDocNumber",
+            "start": "TXNUM:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "StockCode",
+            "start": "SICODE:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "BoardType",
+            "start": "BRID:"
+        }
+    ],
+    "csvFields": [{
+            "name": "MemberName",
+            "end": ";"
+        },
+        {
+            "name": "ParValue",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "MemberBiccode",
+            "end": ";"
+        },
+        {
+            "name": "StockCode",
+            "end": ";"
+        },
+        {
+            "name": "AccountType",
+            "end": ";"
+        },
+        {
+            "name": "Quantiry",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "PauseTradeQuantity",
+            "end": ";",
+            "type": "Integer"
+        },
+        {
+            "name": "ReleasingQuantirty",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "PendWithdrawQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "PendPaymentQuantity",
+            "end": ";",
+            "type": "Integer"
+        },
+        {
+            "name": "FreelyStockQuantity",
+            "end": ";",
+            "type": "Integer"
+        },
+        {
+            "name": "RestrictedStockQuantity",
+            "end": ";",
+            "type": "Integer"
+        },
+        {
+            "name": "PlegingQuantity",
+            "end": ";",
+            "type": "Integer"
+        },
+        {
+            "name": "PendLoansQuantity",
+            "end": ";",
+            "type": "Integer"
+        },
+        {
+            "name": "AssuranceQuantity",
+            "end": ";",
+            "type": "Integer"
+        },
+        {
+            "name": "EscrowQuantity",
+            "end": ";",
+            "type": "Integer"
+        },
+        {
+            "name": "Total",
+            "type": "Integer",
+            "end": "<BrLine>"
+        }
+    ]
+}

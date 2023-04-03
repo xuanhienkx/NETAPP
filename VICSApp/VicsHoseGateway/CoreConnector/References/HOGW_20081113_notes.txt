@@ -1,0 +1,6 @@
+OK - Test form send 1I order: 
+	+ sau khi duoc hoi xac nhan co gui hay khong, bam No van gui
+	+ Kiem tra dau cach giua cac ma chung khoan, co hay ko deu phai OK
+- Hien thi danh sach cac ma chung khoan co ROOM tu lon den nho, cac ma chung khoan available
+- Buyer deals : browse khong chuan (ko co Client ID, mau sac hien thi sai)
+OK - Gui lenh huy, sua roi khong thay doi trang thai, van hien thi len tiep

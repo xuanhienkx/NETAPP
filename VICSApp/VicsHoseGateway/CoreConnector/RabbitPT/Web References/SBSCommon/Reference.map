@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://testserver.vics.com.vn/gateway/common.net4.v1/CommonService.asmx?wsdl" filename="CommonService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://testserver.vics.com.vn/gateway/common.net4.v1/CommonService.asmx?disco" filename="CommonService.disco" />
+  </Results>
+</DiscoveryClientResultsFile>

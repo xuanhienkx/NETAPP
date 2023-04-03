@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 12.625" name="PTDB">
+  <DataContextMoniker Name="/PTDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="207f31b7-564a-4844-8e3c-58a519cdbba1" absoluteBounds="0.75, 0.75, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/PTDBDataContext/PT_ADVERTISEMENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c9d075e0-4e62-4cb4-9b1d-b1c0f8a91ad4" absoluteBounds="0.765, 1.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5b06d77d-e72b-4a48-819e-0ca7c454f742" absoluteBounds="3.75, 0.75, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/PTDBDataContext/PT_ADVERTISEMENT_ANNOUCEMENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d6ea507-ba05-4996-af9b-e9bbe2afaec2" absoluteBounds="3.765, 1.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="20e0f2fb-996d-40ea-9b4f-ab5abb74dd2e" absoluteBounds="0.75, 5.75, 2, 5.0400211588541648">
+      <DataClassMoniker Name="/PTDBDataContext/PT_ONE_FIRM_DEAL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="740e3aaf-ae94-4a94-b0f1-3e3c60c3c344" absoluteBounds="0.765, 6.21, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a1d62b2-eb4d-4f2f-b646-29728eccbd66" absoluteBounds="3.75, 5.75, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/PTDBDataContext/PT_TWO_FIRM_DEAL_BUYER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a65acc0f-d807-4a7a-8da3-5e4b2ad28462" absoluteBounds="3.765, 6.21, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1829b55b-373f-4247-ab65-250c29b96281" absoluteBounds="6.75, 0.75, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/PTDBDataContext/PT_TWO_FIRM_DEAL_SELLER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5ae1623-0620-406c-bf36-a02790d15666" absoluteBounds="6.765, 1.21, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="18616b71-27da-47a0-889d-83adce5cafcb" absoluteBounds="7, 6, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PTDBDataContext/PT_FIRM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17eb1a1d-726e-4384-8d96-9347d3c9c9b7" absoluteBounds="7.015, 6.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="060698e4-f807-4742-96b4-f5a1273b1501" absoluteBounds="6.75, 9.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PTDBDataContext/PT_TRADER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec412639-fc4f-43a5-99d0-d87f7aa9cf72" absoluteBounds="6.765, 9.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.875 : 8.15549967447917); (7.875 : 9.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PTDBDataContext/PT_FIRM/PT_FIRM_PT_TRADER" />
+      <nodes>
+        <classShapeMoniker Id="18616b71-27da-47a0-889d-83adce5cafcb" />
+        <classShapeMoniker Id="060698e4-f807-4742-96b4-f5a1273b1501" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="427c75d2-7a8c-4d47-8782-2673d0e773e9" absoluteBounds="3.875, 10.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PTDBDataContext/PT_USER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f13b388-5e88-43e6-84db-6a61f941b729" absoluteBounds="3.89, 10.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

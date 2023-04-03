@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp2.0</TargetFramework>
+        <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+        <StartupObject>CS.CoreApi.Program</StartupObject>
+        <ApplicationIcon />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="Logs\**" />
+        <Compile Remove="wwwroot\**" />
+        <Content Remove="Logs\**" />
+        <Content Remove="wwwroot\**" />
+        <EmbeddedResource Remove="Logs\**" />
+        <EmbeddedResource Remove="wwwroot\**" />
+        <None Remove="Logs\**" />
+        <None Remove="wwwroot\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.2.0" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="7.3.3" />
+        <PackageReference Include="Microsoft.AspNetCore" Version="2.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.0.0-alpha2-final" />
+        <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.0.1" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
+        <PackageReference Include="Serilog.Extensions.Logging.File" Version="1.1.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\Common\CS.Common\CS.Common.csproj" />
+        <ProjectReference Include="..\..\VSD\CS.VSD.Service\CS.VSD.Service.csproj" />
+        <ProjectReference Include="..\CS.Core.Data\CS.Domain.Data.csproj" />
+        <ProjectReference Include="..\CS.Core.Service\CS.Core.Service.csproj" />
+        <ProjectReference Include="..\CS.Domain.Audit\CS.Domain.Audit.csproj" />
+        <ProjectReference Include="..\Cs.Domain.Identity\CS.Domain.Identity.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="appsettings.Development.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Update="appsettings.json">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>

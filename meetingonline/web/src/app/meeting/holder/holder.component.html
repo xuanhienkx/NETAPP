@@ -1,0 +1,119 @@
+<vip-header-list [title]="'holder.list.title'">
+    <div class="command-header-group d-flex justify-content-between" command>
+        <div class="mr-1 my-auto mb-lg-0 mb-sm-2 mb-xs-2" data-toggle="tooltip" data-placement="top"
+            title="{{'holder.list.inputsearch' | translate}}">
+
+            <vip-search *ngIf="!showStart" class="my-auto" [placeholder]="'holder.list.inputsearch'"
+                (search)="search($event)"></vip-search>
+
+        </div>
+        <div *ngIf="allowEdit" class="my-auto">
+            <button nbButton status="primary" size="small" class="ml-lg-3 ml-sm-0 my-lg-auto"
+                (click)="lockMeetingHolderList()" *ngIf="allowLockList">
+                {{'meeting.lock.title' | translate}}
+            </button>
+            <button nbButton status="primary" size="small" class="ml-lg-3 ml-sm-0 my-lg-auto" (click)="open(dialog)"
+                *ngIf="showStart">
+                {{'holder.list.importFile' | translate}}
+            </button>
+
+            <div class="vip-group-btn btn-group ml-3 my-auto" *ngIf="!showStart">
+                <button nbButton status="primary" size="small"
+                    style="border-top-right-radius:0; border-bottom-right-radius:0;" (click)="edit()">
+                    {{'Common.add' | translate}}</button>
+                <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                    <button nbButton status="primary" size="small"
+                        style="border-top-left-radius:0; border-bottom-left-radius:0;" class="dropdown-toggle-split"
+                        ngbDropdownToggle></button>
+                    <div class="dropdown-menu p-0 mt-2" ngbDropdownMenu>
+                        <button nbButton status="info" size="small" ngbDropdownItem (click)="open(dialog)">
+                            {{'holder.list.importFile' | translate}}</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</vip-header-list>
+<nb-card accent="info" status="basic" class="m-0 p-0">
+    <nb-card-header class="py-1 my-auto">
+        <vip-meeting-summary [type]="'holder'"></vip-meeting-summary>
+    </nb-card-header>
+    <nb-card-body class="pt-0">
+        <nb-list nbInfiniteList listenWindowScroll [threshold]="500" (bottomThreshold)="loadNext()"
+            class="mt-0 pt-0 vip-list">
+
+            <nb-list-item *ngFor="let hd of items; let idx = index">
+                <vip-account-info-item [accountInfo]="hd" [index]="idx" (itemSelect)="edit(hd)">
+                    <i *ngIf="hd.identityUserId" infoStatus class="fas fa-check-circle text-success ml-1"
+                        style="font-size: small; margin-top: 5px; position: absolute;" data-toggle="tooltip"
+                        data-placement="top" title="{{'holder.list.iconTip.identityUserId' | translate}}"></i>
+
+                    <div rightInfo class="my-auto info-right-group text-right">
+                        <div class=" my-auto "><span
+                                class="description mr-2">{{'holder.list.header.shared' | translate}}:</span>
+                            <span style="font-size: 0.75rem; font-weight: 600;">{{hd.shares | number}}</span>
+                        </div>
+                        <div class=" my-auto "><span
+                                class="description mr-2">{{'holder.list.header.voteRight' | translate}}:</span>
+                            <span style="font-size: 0.75rem; font-weight: 600;">{{hd.ownedVotes | number}}</span>
+                        </div>
+                    </div>
+                    <div command class="my-auto command-group">
+                        <a size="tiny" *ngIf="allowEdit" class="command-item" data-toggle="tooltip" data-placement="top"
+                            title="{{'holder.edit.tooltip' | translate}}" (click)="edit(hd,idx)">
+                            <i class="fas fa-edit text-secondary"></i>
+                        </a>
+                        <a size="tiny" *ngIf="allowEdit" class="command-item" data-toggle="tooltip" data-placement="top"
+                            title="{{'holder.delete.tooltip' | translate}}" (click)="delete(hd,idx)">
+                            <i class="fas fa-trash-alt text-secondary"></i>
+                        </a>
+                        <i *ngIf="hd.checkedInDate" class="fas fa-check fa-2x text-success command-item"
+                            data-toggle="tooltip" title="{{'holder.confirm.checkedIn' | translate}}"></i>
+                        <i *ngIf="hd?.blockedVotes>0" class="fas fa-people-arrows fa-2x text-info command-item"
+                            data-toggle="tooltip" title="{{'holder.list.iconTip.delegation' | translate}}"></i>
+                        <a *ngIf="allowConfirm(hd)" class="command-item" (click)="confirmAttend(hd)">
+                            <i *ngIf="!hd.confirmedDate" class="fas fa-check-square fa-2x text-secondary"
+                                data-toggle="tooltip" title="{{'holder.confirm.title' | translate}}"></i>
+                            <i *ngIf="hd.confirmedDate" class="far fa-check-square fa-2x text-info"
+                                data-toggle="tooltip" title="{{'holder.confirm.cancelTitle' | translate}}"></i>
+                        </a>
+                    </div>
+                </vip-account-info-item>
+            </nb-list-item>
+        </nb-list>
+
+        <vip-empty-data [isNoData]="!items || items?.length ===0"></vip-empty-data>
+    </nb-card-body>
+</nb-card>
+
+<!--Uploade danh sach-->
+<ng-template #dialog let-ref="dialogRef">
+    <nb-card [nbSpinner]="loading" nbSpinnerStatus="primary" nbSpinnerSize="giant">
+        <nb-card-header> {{'holder.dialog.upload.title' | translate}}</nb-card-header>
+        <nb-card-body class="d-flex">
+            <div class="m-auto">
+                <div class="m-auto pb-3" [innerHtml]="'holder.dialog.content' | translate"> </div>
+                <vip-upload-file [multiple]="false" onSubmit="onSubmit" (uploadFinished)="fileUploaderCompleted($event)"
+                    acceptFileAllow=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                </vip-upload-file>
+            </div>
+
+        </nb-card-body>
+        <nb-card-footer>
+            <div class="d-flex justify-content-between">
+                <button nbButton (click)="ref.close()" size="small"> {{'Common.close' | translate}}</button>
+                <button nbButton status="primary" (click)="importHolder()" size="small">
+                    {{'holder.dialog.upload.title' | translate}}</button>
+            </div>
+        </nb-card-footer>
+    </nb-card>
+</ng-template>
+
+
+<!--Scroll to top-->
+<div class="scroll-to-top " [ngClass]="{'show-scrollTop': showScroll}">
+    <button (click)="scrollToTop()" nbButton size="small">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+</div>

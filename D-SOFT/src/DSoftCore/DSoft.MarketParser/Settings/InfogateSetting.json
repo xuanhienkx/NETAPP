@@ -1,0 +1,147 @@
+{
+  "name": "BeginString",
+  "value": "HNX.TDS.1",
+  "messages": [
+    {
+      "name": "TestRequest",
+      "type": "1",
+      "parts": [
+        {
+          "name": "Text",
+          "tag": 58
+        },
+        {
+          "name": "TestReqId",
+          "tag": 112
+        }
+      ]
+    },
+    {
+      "name": "ResendRequest",
+      "type": "2",
+      "parts": [
+        {
+          "name": "Text",
+          "tag": 58
+        }
+      ]
+    },
+    {
+      "name": "HeartBeat",
+      "type": "0",
+      "parts": [
+        {
+          "name": "Text",
+          "tag": 58
+        },
+        {
+          "name": "TestReqId",
+          "tag": 112
+        }
+      ]
+    },
+    {
+      "name": "Reject",
+      "type": "0",
+      "parts": [
+        {
+          "name": "Text",
+          "tag": 58
+        },
+        {
+          "name": "SessionRejectReason",
+          "tag": 373,
+          "type": "Integer"
+        }
+      ]
+    },
+    {
+      "name": "Index",
+      "type": "I",
+      "parts": [
+        {
+          "name": "IdIndex",
+          "tag": 1,
+          "type": "Integer"
+        },
+        {
+          "name": "IndexCode",
+          "tag": 2
+        },
+        {
+          "name": "Value",
+          "tag": 3,
+          "type": "Double"
+        },
+        {
+          "name": "CalTime",
+          "tag": 4,
+          "type": "Time",
+          "format": "HH:mm:ss:ffffff"
+        },
+        {
+          "name": "Change",
+          "tag": 5,
+          "type": "Double"
+        },
+        {
+          "name": "RatioChange",
+          "tag": 6,
+          "type": "Double"
+        },
+        {
+          "name": "TotalQtty",
+          "tag": 7,
+          "type": "Double"
+        },
+        {
+          "name": "TotalValue",
+          "tag": 14,
+          "type": "Double"
+        },
+        {
+          "name": "TradingDate",
+          "tag": 19,
+          "type": "Date"
+        },
+        {
+          "name": "CurrentStatus",
+          "tag": 21
+        },
+        {
+          "name": "TotalStock",
+          "tag": 22,
+          "type": "Integer"
+        },
+        {
+          "name": "PriorIndexVal",
+          "tag": 23,
+          "type": "Double"
+        },
+        {
+          "name": "HighestIndex",
+          "tag": 24,
+          "type": "Double"
+        },
+        {
+          "name": "LowestIndex",
+          "tag": 25,
+          "type": "Double"
+        },
+        {
+          "name": "CloseIndex",
+          "tag": 25,
+          "type": "Double"
+        },
+        {
+          "name": "TypeIndex",
+          "tag": 27
+        },
+        {
+          "name": "IndexName",
+          "tag": 18
+        }
+      ]
+    }
+  ]
+}

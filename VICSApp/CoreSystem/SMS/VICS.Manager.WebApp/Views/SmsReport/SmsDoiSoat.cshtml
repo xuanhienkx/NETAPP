@@ -1,0 +1,89 @@
+﻿ 
+ 
+
+
+<div id="header-page" class="row wrapper border-bottom  page-heading">
+    <div class="col-lg-10">
+        <h2>Đối soát tin nhắn</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Trang chủ</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index","SmsReport")">Tin nhắ</a>
+            </li>
+            <li class="active">
+                <strong>Đối soát</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div id="filter" class="row">
+    @using (Ajax.BeginForm("ListDoiSoat", "SmsReport", null, new AjaxOptions()
+{
+    HttpMethod = "get",  
+    UpdateTargetId = "listData" 
+
+}, new { id = "ajaxform" }))
+    {
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-md-2"> From:</div>
+                <div class="col-md-3">
+                    @Html.TextBox("fromDate", ViewBag.fromDate as string, new { @class = "datepicker text-center" })
+                </div>
+                <div class="col-md-2"> To:</div>
+                <div class="col-md-3">
+                    @Html.TextBox("toDate", ViewBag.toDate as string, new { @class = "datepicker text-center" })
+                </div>
+
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="middle-box">
+                <input id="submit-search" class="btn btn-primary" type="submit" value="Đối Soát ">
+                <input id="reset-search" class="btn btn-default" type="reset" value="Refesh">
+            </div>
+        </div>
+    } 
+</div>
+
+
+<div class="row clearfix">
+    <div id="listData">
+
+    </div>
+</div>
+
+<div id="dialogDetail"></div>
+
+<script type="text/javascript">
+    $(document).ready(function () { 
+        var check = $("#DoiSoatModel_IsToday").is(":checked");
+        checkIsToday(check);
+        $("#DoiSoatModel_IsToday").click(function () {
+            var ischecked = $(this).is(":checked");
+            checkIsToday(ischecked);
+        });
+        
+    });
+
+    function checkIsToday(checked) {
+        if (checked) {
+            $("#DoiSoat_From").attr("disabled", "disabled");
+            $("#DoiSoat_To").attr("disabled", "disabled");
+        } else {
+            $("#DoiSoat_From").removeAttr("disabled");
+            $("#DoiSoat_To").removeAttr("disabled");
+        }
+
+    } 
+   
+    function smsStartus(id) {
+         
+    }
+
+</script>

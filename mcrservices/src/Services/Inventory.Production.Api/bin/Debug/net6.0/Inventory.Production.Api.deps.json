@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Inventory.Production.Api/1.0.0": {
+        "runtime": {
+          "Inventory.Production.Api.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Inventory.Production.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

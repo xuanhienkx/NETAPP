@@ -1,0 +1,52 @@
+{
+    "code": "CA070",
+    "name": "CA070 - Danh sách nhà đầu tư đăng ký đặt mua chứng khoán",
+    "csvFields": [
+        {
+            "name": "StockCode",
+            "end": ";"
+        },
+        {
+            "name": "StockName",
+            "end": ";"
+        },
+        {
+            "name": "MemberBiccode",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber",
+            "end": ";"
+        },
+        {
+            "name": "IdentityIssued",
+            "end": ";"
+        },
+        {
+            "name": "IdentityIssuedDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "SharesType",
+            "end": ";"
+        },
+        {
+            "name": "OrderQuantity",
+            "end": ";"
+        },
+        {
+            "name": "OrderValue",
+            "end": ";"
+        },
+        {
+            "name": "Address",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber",
+            "end": ";"
+        }
+    ]
+}

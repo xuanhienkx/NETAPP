@@ -1,0 +1,85 @@
+{
+    "code": "CA031",
+    "name": "CA031- Danh sách nhà đầu tư được phân bổ chứng khoán phát hành thêm do đặt mua (Mẫu 23/THQ)",
+	 "parameters": [
+        {
+            "name": "RightNumber",
+			"start": "CACODE:"
+        }
+    ],
+    "csvFields": [
+        {
+            "name": "HolderName",
+            "end": ";"
+        },
+        {
+            "name": "IdentityIssued",
+            "end": ";"
+        },
+        {
+            "name": "IdentityIssuedDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "Address",
+            "end": ";"
+        },
+        {
+            "name": "Nationality",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber",
+            "end": ";"
+        },
+        {
+            "name": "HoldQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "RegisterQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "ActualQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "Note",
+            "end": ";"
+        },
+        {
+            "name": "Code",
+            "end": ";"
+        },
+        {
+            "name": "MemberCode",
+            "end": ";"
+        },
+        {
+            "name": "AccountType",
+            "end": ";"
+        },
+        {
+            "name": "BusinessType",
+            "end": ";"
+        },
+        {
+            "name": "HolderType",
+            "end": ";"
+        },
+        {
+            "name": "MemberName",
+            "end": ";"
+        },
+        {
+            "name": "DocumentRef",
+            "end": ";"
+        }
+    ]
+}

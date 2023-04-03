@@ -1,0 +1,212 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:common="clr-namespace:CS.UI.Common;assembly=CS.UI.Common" xmlns:controls="clr-namespace:CS.UI.Controls;assembly=CS.UI.Controls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:enums="clr-namespace:CS.Common.Contract.Enums;assembly=CS.Common.Contract" xmlns:interfaces="clr-namespace:CS.UI.Common.Interfaces;assembly=CS.UI.Common" xmlns:localization="clr-namespace:CS.UI.Common.Localization;assembly=CS.UI.Common" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:models="clr-namespace:CS.Common.Contract.Models;assembly=CS.Common.Contract" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:local="clr-namespace:CS.Application.Views.Group"
+              x:Class="CS.Application.Views.Group.GroupEditView" mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <common:SharedResourceDictionary Source="../../Themes/Default/Resources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <DockPanel LastChildFill="True">
+        <!--#region Tool bar-->
+        <materialDesign:ColorZone DockPanel.Dock="Top" Margin="0 0 0 5" materialDesign:ShadowAssist.ShadowDepth="Depth1" Background="{StaticResource MaterialDesignToolBarBackground}">
+            <materialDesign:ColorZone.Resources>
+                <Style TargetType="Button" BasedOn="{StaticResource CSoftToolbarButton}" />
+            </materialDesign:ColorZone.Resources>
+            <DockPanel DockPanel.Dock="Top">
+                <ToolBarPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button ToolTip="{localization:Translate Toolbar_BackTitle}" 
+                            Content="{materialDesign:PackIcon KeyboardBackspace}" 
+                            Command="{Binding BackCommand}" />
+                    <Separator />
+                    <Button ToolTip="{localization:Translate Toolbar_SaveTitle}" 
+                            Content="{materialDesign:PackIcon ContentSave}" 
+                            Command="{Binding SaveCommand}" />
+                    <Separator />
+                    <Button ToolTip="{localization:Translate Toolbar_CreateTitle}" 
+                            Content="{materialDesign:PackIcon Plus}" 
+                            Command="{Binding CreateCommand}" 
+                            CommandParameter="{StaticResource True}" />
+                    <Button ToolTip="{localization:Translate Toolbar_RemoveTitle}" 
+                            Content="{materialDesign:PackIcon Minus}" 
+                            Command="{Binding DeleteCommand}" />
+                    <Button ToolTip="{localization:Translate Toolbar_GroupRightTitle}" 
+                            Content="{materialDesign:PackIcon key}" 
+                            Command="{Binding ShowRightCommand}" 
+                            CommandParameter="{StaticResource True}" />
+                </ToolBarPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+        <!--#endregion Tool bar-->
+        <!--Edit View-->
+        <StackPanel Margin="20 0" VerticalAlignment="Top">
+            <!--#region Common field -->
+            <Label Content="{Binding ErrorMessage, Mode=TwoWay}" 
+                   Visibility="{Binding HasError, Converter={StaticResource ComparingConverter}, ConverterParameter={StaticResource True}}" 
+                   Style="{StaticResource CsErrorViewStyle}" />
+            <TextBox materialDesign:HintAssist.Hint="{localization:Translate GroupView_Name}" 
+                    MaxLength="256" 
+                    Style="{DynamicResource MaterialDesignFloatingHintTextBox}" 
+                    Text="{Binding Model.Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                    materialDesign:ValidationAssist.OnlyShowOnFocus="True" />
+            <ComboBox materialDesign:HintAssist.Hint="{localization:Translate GroupView_BranchName}"
+                    Margin="{StaticResource ControlMargin}" Style="{DynamicResource MaterialDesignFloatingHintComboBox}" 
+                    ItemsSource="{Binding Branches}" 
+                    SelectedItem="{Binding Model.Branch, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                    IsEnabled="{Binding Shell.User.Role, Converter={StaticResource ComparingConverter}, ConverterParameter={x:Static enums:UserRoleType.Admin}}" 
+                    DisplayMemberPath="BranchName" />
+            <ComboBox materialDesign:HintAssist.Hint="{localization:Translate GroupView_ParentName}" 
+                    Margin="{StaticResource ControlMargin}" 
+                    Style="{DynamicResource MaterialDesignFloatingHintComboBox}" 
+                    ItemsSource="{Binding Parents}" 
+                    SelectedItem="{Binding Model.Parent, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+                    DisplayMemberPath="Name" />
+            <!--#endregion Common field -->
+            <!--#region Member of group -->
+            <Grid Visibility="{Binding ViewType, Converter={StaticResource VisibilityByCommparingNotEqualConverter}, ConverterParameter={x:Static interfaces:ExecuteType.New}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition  Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackPanel  Margin="{StaticResource ControlMargin}" >
+                    <TextBlock Text="{localization:Translate Enum_MemberType_Group}">
+                        <TextBlock.Resources>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Visibility" Value="Visible" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding GroupMembers.Count}" Value="0">
+                                        <Setter Property="Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Resources>
+
+                    </TextBlock>
+                    <ListView ItemsSource="{Binding GroupMembers}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate DataType="{x:Type models:GroupMemberModel}">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="AccountMultiple" />
+                                    <TextBlock Margin="5 0 0 0" Text="{Binding FullName}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Margin="0 5" >
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{localization:Translate Enum_MemberType_User}"/>
+                        <Button 
+                            Width="25" Height="25"
+                            Margin="10,0,0,0"  
+                            Visibility="{Binding IsShowAddUser, Converter={StaticResource VisibilityByComparingConverter}, ConverterParameter={StaticResource False}}"
+                            Command="{Binding ShowAddUserCommand}"
+                            CommandParameter="{StaticResource True}"
+                            Style="{DynamicResource MaterialDesignFloatingActionMiniAccentButton}">
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                Kind="AccountPlus" />
+                        </Button>
+                        <Button 
+                            Width="25" Height="25"
+                            Margin="10,0,0,0"  
+                            Visibility="{Binding IsShowAddUser, Converter={StaticResource VisibilityByComparingConverter}, ConverterParameter={StaticResource True}}"
+                            Command="{Binding ShowAddUserCommand}"
+                            CommandParameter="{StaticResource False}"
+                            Style="{DynamicResource MaterialDesignFloatingActionMiniAccentButton}">
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                Kind="ArrowLeft" />
+                        </Button>
+                    </StackPanel>
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <controls:AutoCompleteTextBox Width="200" Grid.Row="0"
+                                                          Margin="10 0 0 10"
+                                                          materialDesign:HintAssist.Hint="{localization:Translate UserModel_FullName}"
+                                                          MaxLength="10" Focusable="True"
+                                                          HorizontalAlignment="Left" 
+                                                          materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                                                          DisplayMember="FullName"
+                                                          Visibility="{Binding IsShowAddUser, Converter={StaticResource VisibilityByComparingConverter}, ConverterParameter={StaticResource True}}"
+                                                          IsEnabled="{Binding ViewType, Converter={StaticResource ComparingConverter}, ConverterParameter={x:Static interfaces:ExecuteType.Edit}}"
+                                                          FilterTextChangedCommand="{Binding FilterCommand}"
+                                                          SelectedItem="{Binding SuggestionUser, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}">
+                            <controls:AutoCompleteTextBox.LoadingContent>
+                                <TextBlock Text="Loading..." Margin="5" />
+                            </controls:AutoCompleteTextBox.LoadingContent>
+                            <controls:AutoCompleteTextBox.ItemTemplate>
+                                <DataTemplate DataType="{x:Type models:UserModel}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding AccountLogin}" />
+                                        <TextBlock Text="{Binding FullName}" Margin="3 0 0 0" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </controls:AutoCompleteTextBox.ItemTemplate>
+                        </controls:AutoCompleteTextBox>
+                        <ListView  Grid.Row="1" ItemsSource="{Binding UserMembers}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate DataType="{x:Type models:GroupMemberModel}">
+                                    <Grid>
+                                        <Grid.Resources>
+                                            <Style TargetType="{x:Type TextBlock}" >
+                                                <Setter Property="Margin" Value="5 0 0 0" />
+                                                <Setter Property="FontSize" Value="12"/>
+                                                <Setter Property="VerticalAlignment" Value="Center"/>
+                                            </Style>
+                                            <Style TargetType="{x:Type Label}">
+                                                <Setter Property="Margin" Value="10 0 0 0" />
+                                                <Setter Property="FontSize" Value="13"/>
+                                                <Setter Property="VerticalAlignment" Value="Center"/>
+                                                <Setter Property="Foreground" Value="LightSlateGray"/>
+                                            </Style>
+                                        </Grid.Resources>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="14"/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition  Width="30"/>
+                                        </Grid.ColumnDefinitions>
+                                        <materialDesign:PackIcon Kind="Account" />
+                                        <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                            <Label Foreground="DarkGray"  Margin="3 -3 0 0" Content="{localization:Translate UserModel_FullName}"/>
+                                            <TextBlock Margin="3 0 0 0" Text="{Binding FullName}"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                            <Label Foreground="DarkGray"  Margin="3 -3 0 0" Content="{localization:Translate UserModel_UserName}"/>
+                                            <TextBlock  Margin="3 0 0 0" Text="{Binding AccountLogin}"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="3" Orientation="Horizontal">
+                                            <Label Foreground="DarkGray" Margin="3 -3 0 0" Content="{localization:Translate UserModel_Email}"/>
+                                            <TextBlock  Margin="3 0 0 0" Text="{Binding Email}"/>
+                                        </StackPanel>
+                                        <Button Margin="5 0 0 0" Width="15" Height="15" Grid.Column="4"
+                                                CommandParameter="{Binding}"
+                                                Visibility="{Binding MemberType, Converter={StaticResource VisibilityByComparingConverter}, ConverterParameter={x:Static models:MemberType.User}}" 
+                                                Command="{Binding  Path=DataContext.RemoveUserMemberCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ItemsControl}}"
+                                                ToolTip="Remove member"
+                                                Style="{DynamicResource MaterialDesignFloatingActionMiniLightButton}" >
+                                            <materialDesign:PackIcon
+                                                Width="12"
+                                                Height="12"
+                                                Kind="Minus" />
+                                        </Button>
+                                    </Grid>
+
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <!--#endregion Member of group -->
+        </StackPanel>
+    </DockPanel>
+</UserControl>

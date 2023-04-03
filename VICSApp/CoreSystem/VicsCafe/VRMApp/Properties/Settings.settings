@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="VRMApp.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DefaultRowBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="DefaultSelectedRowBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">ControlLight</Value>
+    </Setting>
+    <Setting Name="AlternateRowBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">MintCream</Value>
+    </Setting>
+    <Setting Name="AlternateSelectedRowBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Control</Value>
+    </Setting>
+    <Setting Name="VRMApp_VRMGateway_RoundFee" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="VRMApp_VRMGateway_CUSTODYFEE" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.4</Value>
+    </Setting>
+    <Setting Name="VRMApp_VRMGateway_VRMService" Type="(Web Service URL)" Scope="User">
+      <Value Profile="(Default)">http://localhost:3492/VRMService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

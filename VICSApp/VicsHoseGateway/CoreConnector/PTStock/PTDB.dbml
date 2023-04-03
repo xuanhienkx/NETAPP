@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PT_SBS" Class="PTDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=10.20.2.111;Initial Catalog=PT_SBS;Persist Security Info=True;User ID=sa;Password=vics" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PT_ADVERTISEMENT" Member="PT_ADVERTISEMENTs">
+    <Type Name="PT_ADVERTISEMENT">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="FIRM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TRADER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SECURITY_SYMBOL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="BOARD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="TIME" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="ADD_CANCEL_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="CONTACT" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RECEIVED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="APPROVED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ENTRY_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PT_ADVERTISEMENT_ANNOUCEMENT" Member="PT_ADVERTISEMENT_ANNOUCEMENTs">
+    <Type Name="PT_ADVERTISEMENT_ANNOUCEMENT">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="SECURITY_NUMBER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="FIRM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TRADER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="BOARD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="TIME" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="ADD_CANCEL_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="CONTACT" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RECEIVED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="APPROVED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SECURITY_SYMBOL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ENTRY_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PT_ONE_FIRM_DEAL" Member="PT_ONE_FIRM_DEALs">
+    <Type Name="PT_ONE_FIRM_DEAL">
+      <Column Name="MESSAGE_STATUS" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="FIRM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TRADER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BUYER_CLIENT_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SELLER_CLIENT_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SECURITY_SYMBOL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="BOARD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DEAL_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BUYER_PORTFOLIO_VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="BUYER_CLIENT_VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="BUYER_MUTUAL_FUND_VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="BUYER_FOREIGN_VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SELLER_PORTFOLIO_VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SELLER_CLIENT_VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SELLER_MUTUAL_FUND_VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SELLER_FOREIGN_VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="RECEIVED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="APPROVED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ENTRY_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PT_TWO_FIRM_DEAL_BUYER" Member="PT_TWO_FIRM_DEAL_BUYERs">
+    <Type Name="PT_TWO_FIRM_DEAL_BUYER">
+      <Column Name="DEAL_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="BUYER_FIRM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BUYER_TRADER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="SELLER_CONTRA_FIRM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SELLER_TRADER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SECURITY_SYMBOL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="BOARD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RECEIVED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="APPROVED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BUYER_CLIENT_ID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ENTRY_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PT_TWO_FIRM_DEAL_SELLER" Member="PT_TWO_FIRM_DEAL_SELLERs">
+    <Type Name="PT_TWO_FIRM_DEAL_SELLER">
+      <Column Name="MESSAGE_STATUS" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="SELLER_FIRM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SELLER_TRADER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SELLER_CLIENT_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="BUYER_FIRM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BUYER_TRADER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SECURITY_SYMBOL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="BOARD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DEAL_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BROKER_PORTFOLIO_VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="BROKER_CLIENT_VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="BROKER_MUTUAL_FUND_VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="BROKER_FOREIGN_VOLUME" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="RECEIVED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="APPROVED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ENTRY_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PT_FIRMS" Member="PT_FIRMs">
+    <Type Name="PT_FIRM">
+      <Column Name="FIRM_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FIRM_NAME" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="NUMBER_OF_TRADERS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CONTACT" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="CORE_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM_CODE" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="NOTE" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Association Name="PT_FIRM_PT_TRADER" Member="PT_TRADERs" ThisKey="FIRM_ID" OtherKey="FIRM_ID" Type="PT_TRADER" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PT_TRADERS" Member="PT_TRADERs">
+    <Type Name="PT_TRADER">
+      <Column Name="FIRM_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TRADER_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TRADER_NAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NOTE" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Association Name="PT_FIRM_PT_TRADER" Member="PT_FIRM" ThisKey="FIRM_ID" OtherKey="FIRM_ID" Type="PT_FIRM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PT_USER" Member="PT_USERs">
+    <Type Name="PT_USER">
+      <Column Name="USER_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PASSWORD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GROUP_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TRADER_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FIRM_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ROLE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BRANCH_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

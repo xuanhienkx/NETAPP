@@ -1,0 +1,28 @@
+<nb-card class="full-width-dialog-meber">
+    <nb-card-header>{{'member.dialog.user.title' | translate}}</nb-card-header>
+    <nb-card-body>
+        <form [formGroup]="frm" #form="ngForm" (ngSubmit)="submit()" class="step-container" autocomplete="off" novalidate>
+            <div class="form-group">
+                <label for="displayname">{{'member.dialog.user.name.label'| translate}}</label>
+                <input nbInput size="small" autofocus fullWidth id="displayname" [status]="(frm.controls.displayName.dirty && frm.controls.displayName.invalid)  ? 'danger'  : 'basic'" class="form-control form-control-md" formControlName="displayName" />
+                <span class="text-danger mt-2" *ngIf="((frm.controls.displayName.dirty && frm.controls.displayName.touched) || submitted) && frm.controls.displayName.errors?.required">
+                    {{'member.dialog.user.name.required' | translate }}
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="email">{{'member.dialog.user.email.label'| translate}}</label>
+                <input type="email" size="small" nbInput autofocus fullWidth id="email" [status]="(frm.controls.email.dirty && frm.controls.email.invalid)  ? 'danger'  : 'basic'" class="form-control form-control-md" formControlName="email" />
+                <span class="text-danger mt-2" *ngIf="((frm.controls.email.dirty && frm.controls.email.touched) || submitted) && frm.controls.email.errors?.required">
+                    {{'member.dialog.user.email.required' | translate }}
+                </span>
+                <span class="text-danger mt-2" *ngIf="(frm.controls.email.touched || submitted) && frm.controls.email.errors?.email">
+                    {{'member.dialog.user.email.valid' | translate }}
+                </span>
+            </div>
+        </form>
+    </nb-card-body>
+    <nb-card-footer class="d-flex justify-content-between">
+        <button nbButton status="basic" size="small" (click)="cancel()">{{'Common.close' |translate}}</button>
+        <button nbButton status="primary" size="small" (click)="form.ngSubmit.emit()">{{'Common.saveAndCreate' |translate}}</button>
+    </nb-card-footer>
+</nb-card>

@@ -1,0 +1,66 @@
+{
+    "Common": {
+        "requestErrorTittle": "Yêu cầu thực hiện bị lỗi",
+        "commonErrorTitle": "Thông báo lỗi",
+        "commonWarningTitle": "Cảnh báo",
+        "commonInformTitle": "Thông báo",
+        "login": "Đăng nhập",
+        "getStartNow": "Hãy bắt đầu nào!",
+        "hotLine": "098-902.5568",
+        "email": "contact@skylar-tech.com",
+        "hello": "Xin chào!",
+        "profile": "Thông tin tài khoản",
+        "logout": "Đăng xuất",
+        "contactTrouble": "Nếu có bất kỳ vấn đề gì hãy <a href='/contactUs'>liên hệ quản trị</a>",
+        "gotoHome": "Đi tới trang chủ",
+        "gotoAdmin": "Vào trang quản trị",
+        "loading": "Đang xử lý dữ liệu"
+    },
+    "page": {
+        "login": "Đăng nhập",
+        "register": "Đăng ký",
+        "forgot": "Quên mật khẩu",
+        "home": "Về trang chủ",
+        "contact": "Liên hệ để hỗ trợ"
+    },
+    "Nav": {
+        "intro": "Trang chủ",
+        "about": "Chúng tôi",
+        "solutions": "Giải pháp",
+        "price": "Bảng giá",
+        "customer": "Khách hàng",
+        "news": "Tin tức"
+    },
+    "Intro": {
+        "title": "<strong>Giải pháp về hội nghị trực tuyến hoàn thiện hàng đầu</strong>",
+        "desc": "<ul><li>Nền tảng hoàn thiện nhất</li><li>Tiết kiệm chi phí</li><li>Thông tin chính xác và hiệu quả</li><li>An toàn, bảo mật và tin cậy</li></ul>"
+    },
+    "Register": {
+        "header": "Cần giải pháp dành riêng cho mình?",
+        "callUs": "GỌI NGAY CHO CHÚNG TÔI",
+        "emailUs": "GỬI THƯ ĐIỆN TỬ",
+        "requestAQuote": "Yêu cầu giải pháp"
+    },
+    "About": {
+        "title": "Chúng tôi",
+        "weAre": "Là đội ngũ chuyên gia hàng đầu về công nghệ và xây dựng về giải pháp hội nghị và bầu cử trực tuyến.",
+        "introduce": "Với nền tảng công nghệ mạnh mẽ, đội ngũ nhân viên năng động và chuyên nghiệp, chúng tôi cung cấp cho quý vị giải pháp toàn diện nhất, hiệu quả và thông minh nhất về tổ chức và thu thập ý kiến biểu quyết, bầu cử hội nghị với phương châm:<p><h5 class='slogan'>Trải nghiệm người dùng là ưu tiên hàng đầu!</h5></p>",
+        "ourSolution": "Giải pháp của chúng tôi"
+    },
+    "Solution": {
+        "title": "Giải pháp",
+        "subTitle": "Dịch vụ của chúng tôi"
+    },
+    "errors": {
+        "404-title": "404 Not Found",
+        "404-comtent": "Sorry Page NotFound, Không tìn thấy trang yêu cầu!",
+        "500-title": "500 Lỗi từ server",
+        "500-comtent": "Lỗi từ API, vui lòng liên hệ quản trị hệ thống!",
+        "500": "Lỗi 500  SERVER ERROR, Vui lòng liên hệ với quản trị hệ thống ",
+        "404": "Lỗi 404  Page NotFound, Không tìn thấy trang yêu cầu",
+        "401": "Tên đăng nhập hoặc mật khẩu không đúng",
+        "ERR_CONNECTION_REFUSED": "Không kết nối được máy chủ API!",
+        "Invalid_token": "Phiên đăng nhập hết hạn, vui lòng đăng nhập lại"
+    }
+
+}

@@ -1,0 +1,12 @@
+﻿# Bang nay luu ty le chuyen doi don vi cua cac truong giua BROKER va HOSE
+# Vi du:	PRICE*100 co nghia la Price(HOSE)=Price(BROKER) * 100
+#			PRICE/100 co nghia la Price(HOSE)=Price(BROKER) / 100
+# Bat dau:
+1I:PRICE/1000
+1E:PRICE/10
+1F:PRICE/10
+1G:PRICE/10
+2D:PRICE/1000
+2E:PRICE/1000
+2F:PRICE/10
+TP:PRICE*10

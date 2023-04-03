@@ -1,0 +1,63 @@
+﻿@model VICS.Manager.WebApp.Models.RequetsViewModel
+
+@using SMS.DataAccess.Models
+@using VicsManageWeb.Common.UI.Grid
+@{
+    // update this field on client side
+    Model.ActionName = "List";
+    Model.ControllerName = "SmsReport";
+    Model.UpdateTargetId = "ListData";
+}
+
+
+@Html.PagedGrid("RequestGrid", Model,
+    columns =>
+    {
+
+        columns.Add(o => o.SmsIdResponse)
+               .Encoded(false)
+               .Sanitized(false)
+               .Titled("SMS ID")
+               .RenderValueAs(c => !string.IsNullOrEmpty(c.SmsIdResponse) ? Html.ActionLink(c.SmsIdResponse, "SmsDetail", "SmsReport", new { smsId = c.SmsIdResponse, isBrandName = c.IsBrandName }, new { @class = "viewDetail", id = "viewDetail_" + c.Id }).ToString() : string.Empty)
+               .Sortable(true);
+        /* Adding "Status" column: */
+        columns.Add(o => o.Type)
+        .Titled("Loại")
+        .RenderValueAs(c =>
+        {
+            var name = Enum.GetName(typeof(SmsType), c.Type);
+            return name ?? "";
+        })
+        .Sortable(true);
+        /* Adding "Headline" column: */
+        columns.Add(o => o.Message)
+        .Titled("Nội dung")
+        .Sortable(true)
+        .Css("text-left");
+
+        /* Adding "Status" column: */
+        columns.Add(o => o.IsSent)
+        .Titled("Trạng thái")
+        .RenderValueAs(c => c.IsSent ? "Đã gửi" : "Chưa gửi")
+        .Sortable(true);
+
+        /* Adding "CreatedDate" column: */
+        columns.Add(o => o.CreatedTime)
+        .Titled("Thời gian")
+        .Format("{0:HH:mm:ss}")
+        .SetWidth(80)
+        .Sortable(true);
+    })
+<script type="text/javascript">
+    $(function () {
+        $(".viewDetail").on('click', function (e) {
+            e.preventDefault();
+            var url = $(this).attr("href");
+            $.mbqDialog({
+                width: 850,
+                content: 'url:' + url,
+                title: "Thông tin của tin nhắn"
+            });
+        });
+    });
+</script>

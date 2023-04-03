@@ -1,0 +1,15 @@
+﻿table {
+    width: 100%;
+}
+
+/* ReSharper disable once Html.AttributeNotResolved */
+th[sortable-column] {
+    cursor: pointer !important;
+}
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+}

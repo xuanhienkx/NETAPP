@@ -1,0 +1,95 @@
+﻿{
+    "code": "DE083",
+    "name": "DE083- Thông tin số dư tài khoản lưu ký chứng khoán chi tiết của NĐT",
+    "parameters": [{
+            "name": "ReportDate",
+            "start": "TXDATE:",
+            "format": "yyyyMMdd",
+            "type": "Date",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "StockCodeFrom",
+            "start": "FRSICODE:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "StockCodeTo",
+            "start": "TOSICODE",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "BoardType",
+            "start": "BRID:"
+        }
+    ],
+    "csvFields": [{
+            "name": "PinNumber",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "ShortName",
+            "end": ";"
+        },
+        {
+            "name": "FullName",
+            "end": ";"
+        },
+        {
+            "name": "CardIdentity",
+            "end": ";"
+        },
+        {
+            "name": "MemberBiccode",
+            "end": ";"
+        },
+        {
+            "name": "MemberName",
+            "end": ";"
+        },
+        {
+            "name": "StockCode",
+            "end": ";"
+        },
+        {
+            "name": "SStockName",
+            "end": ";"
+        },
+        {
+            "name": "CardIssuedDate",
+            "end": ";",
+            "format": "dd/MM/yyyy",
+            "type": "Date"
+        },
+        {
+            "name": "Nationality",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber",
+            "end": ";"
+        },
+        {
+            "name": "StockBangGl",
+            "end": ";"
+        },
+        {
+            "name": "BankGL",
+            "end": ";"
+        },
+        {
+            "name": "AccountType",
+            "end": ";"
+        },
+        {
+            "name": "Quantity",
+            "end": ";",
+            "type": "Integer"
+        },
+        {
+            "name": "Note",
+            "end": ";"
+        }
+    ]
+}

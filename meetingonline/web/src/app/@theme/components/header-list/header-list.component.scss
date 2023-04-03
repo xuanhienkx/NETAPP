@@ -1,0 +1,27 @@
+@import "../../../@theme/styles/themes.scss";
+:host {
+    width: 100%;
+}
+
+@include nb-install-component() {
+     ::ng-deep .hearder-list {
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 100%;
+        padding: 0 0 0.75rem 0 !important;
+        .command-header-group {
+            margin-left: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            .command-header-item {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            .command-header-item:last-child {
+                margin-right: 0 !important;
+            }
+        }
+    }
+}

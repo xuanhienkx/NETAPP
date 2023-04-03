@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Web Fonts  -->
+
+    <title>Vote-template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap"
+          rel="stylesheet" media="screen">
+    ##style##
+</head>
+
+<body>
+    <page size="A4">
+        <div class="container">
+            <header>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="logo" id="logo">
+                                <img class="img-fluid" src="##logo##">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="header-content text-center" id="header-content">
+                                ##header##
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+
+
+            </header>
+            <div class="body">
+
+                <div class="report-title text-center">
+                    <div class="text-uppercase title-optional">Thẻ biểu Quyết</div>
+                    <div class="text-description title-name">( Biểu quyết chung các vấn đề tại ĐHCD năm ##year##)</div>
+                </div>
+
+                <div style="border: 1px solid #dee2e6; height: 12rem; width: 100%; display: block; margin: 2rem auto">
+                    <div class="text-center" style="font-size: 1.5rem; display: block"><span>Số lượng cổ phần biểu quyết</span></div>
+                    <div class="text-center" style="font-size: 6rem; display: block"><span><b> ##attendeeRight## CP</b></span></div>
+                </div>
+
+                <div class="report-content-info">
+                    <div class="report-content-info-base"> 
+                        <div class="info-item" style="align-items: center;">
+                            <span>Tên đại biểu:</span>
+                            <b>
+                                ##attendeeName##
+                            </b>
+                        </div>
+                        <div class="info-item" style="align-self: flex-end;">
+                            <span>Số CMT/Hộ chiếu/ĐKKD: </span>
+                            <b> ##attendeeIdentity##</b>
+                        </div>
+                    </div>
+                    <div class="info-item"> <span>Địa chỉ/Trụ sở: </span> <span> ##attendeeAddress##</span> </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </page>
+</body>
+
+</html>

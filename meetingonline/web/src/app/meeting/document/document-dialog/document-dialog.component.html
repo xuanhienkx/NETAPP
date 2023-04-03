@@ -1,0 +1,52 @@
+<nb-card class="vip-full-width-dialog">
+    <nb-card-header>
+        <h6>{{'document.form.title' |translate}}</h6>
+    </nb-card-header>
+    <nb-card-body class=" w-100">
+        <form [formGroup]="frm" #fForm="ngForm" (ngSubmit)="onSubmit()" class="step-container" autocomplete="off"
+            novalidate>
+            <div class="form-group">
+                <label for="name" class="required">{{'document.form.name.label' |translate}}</label>
+                <input nbInput autofocus fullWidth class="form-control" id="name" formControlName="name"
+                    [status]="f.name.dirty && f.name.touched && f.name.invalid  ? 'danger' : 'basic'">
+                <span class="text-danger"
+                    *ngIf="f.name.touched && f.name.invalid && f.name.errors.required">{{'document.form.name.required' |translate}}.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="description">{{'document.form.description.label' |translate}}</label>
+                <textarea nbInput autofocus fullWidth class="form-control" rows="6" id="description"
+                    formControlName="description">
+                </textarea>
+
+            </div>
+            <div class="form-group d-flex" *ngIf="!isEdit">
+                <nb-toggle id="isCreateVote" formControlName="isCreateVote" size="small">
+                    {{'document.form.isVote.label' | translate}}
+                </nb-toggle>
+            </div>
+
+            <div class="">
+                <vip-upload-file multiple="true" onSubmit="onSubmit" (uploadFinished)="fileUploaderCompleted($event)">
+                </vip-upload-file>
+                <vip-document-list [attachments]="attachments" [contentId]="f.id.valid"
+                    [allowEdit]="canEdit" (deleteFileInfo)="removeFileOnForm($event)"></vip-document-list> 
+            </div>
+        </form>
+    </nb-card-body>
+    <nb-card-footer>
+        <div class="d-flex justify-content-between">
+            <button nbButton type="button" size="small" status="basic"
+                (click)="onClose()">{{'Common.close' |translate}}</button>
+            <div *ngIf="canEdit">
+                <button (click)="fForm.ngSubmit.emit()" size="small" class="mx-2" nbButton status="primary"
+                    [disabled]="!fForm.valid" [class.btn-pulse]="submitted"
+                    value="">{{'Common.save' | translate}}</button>
+                <button (click)="onSubmit(true)" class="ml-2" size="small" nbButton status="primary"
+                    [disabled]="!fForm.valid" [class.btn-pulse]="submitted"
+                    value="">{{'Common.saveAndCreate' | translate}}</button>
+
+            </div>
+        </div>
+    </nb-card-footer>
+</nb-card>

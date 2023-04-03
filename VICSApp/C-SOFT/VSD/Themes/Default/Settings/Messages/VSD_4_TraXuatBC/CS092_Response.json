@@ -1,0 +1,59 @@
+{
+    "code": "CS092",
+    "name": "CS092- Thông báo kết quả thanh toán",
+    "parameters": [
+        {
+            "name": "MemberCode",
+            "start": "MICODE:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "ReportDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "start": "TRANDATE:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "Period",
+            "start": "PERIOD:"
+        }
+    ],
+    "csvFields": [
+        {
+            "name": "MemberCode",
+            "end": ";"
+        },
+        {
+            "name": "MemberName",
+            "end": ";"
+        },
+        {
+            "name": "TradeDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+
+        {
+            "name": "PaymentDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "Exchenge",
+            "end": ";"
+        },
+        {
+            "name": "DocumentRef",
+            "end": ";"
+        },
+        {
+            "name": "ConfirmType",
+            "end": ";"
+        }
+
+    ]
+
+}

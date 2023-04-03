@@ -1,0 +1,902 @@
+{
+    "Common": {
+        "commonErrorTitle": "Thông báo lỗi",
+        "commonWarningTitle": "Cảnh báo",
+        "commonInformTitle": "Thông báo",
+        "requestErrorTittle": "Yêu cầu thực hiện bị lỗi",
+        "contactTrouble": "Nếu có bất kỳ vấn đề gì hãy <a href='/contactUs'>liên hệ quản trị</a>",
+        "gotoHome": "Đi tới trang chủ",
+        "addSuccess": "Tạo {{value}} thành công",
+        "editSuccess": "Cập nhật {{value}} thành công",
+        "confirmOk": "Đồng ý",
+        "confirmCancel": "Hủy",
+        "confirmTitle": "Vui lòng xác nhận",
+        "save": "Lưu",
+        "resetForm": "Reset",
+        "add": "Thêm mới",
+        "saveAndCreate": "Lưu & tạo mới",
+        "close": "Đóng",
+        "delete": "Xóa",
+        "download": "Tải xuống",
+        "edit": "Sửa",
+        "viewDoc": "Click vào để xem",
+        "submitSuccess": "Lưu thành công.",
+        "deleteSuccess": "xoá thành công.",
+        "confirmMessage": "Bạn thực sự muốn xóa thông tin này không?",
+        "confirmReasonPlaceholder": "Nhập vào lý do",
+        "confirmReasonLabel": "Nhập vào lý do",
+        "emptyData": "Không có dữ liệu",
+        "loading": "Đang xử lý dử liệu"
+    },
+    "enum": {
+        "MeetingType": {
+            "GeneralMeeting": "Đại hội cổ đông",
+            "ApartmentMeeting": "Hội nghị cư dân"
+        },
+        "MeetingStatus": {
+            "Started": "Đang thiết lập",
+            "Locking": "Đang chốt danh sách cổ đông",
+            "Lock": "Chốt danh sách cổ đông",
+            "Open": "Đang mở",
+            "Closing": "Đang kết thúc",
+            "Close": "Kết thúc"
+        },
+        "Permission": {
+            "meeting_manage_members": "Thêm/Xóa/Khóa thành viên ban tổ chức",
+            "meeting_manage_documents": "Tạo nội dung về tài liệu hội nghị",
+            "meeting_manage_electionmatters": "Tạo nội dung về các vấn đề bầu cử",
+            "meeting_manage_holders": "Thiết lập/tải nhập danh sách cổ đông",
+            "meeting_complete_holders": "Chốt danh sách cổ đông",
+            "meeting_open_session": "Mở phiên hội nghị",
+            "meeting_checkin_attendees": "Check-in đại biểu tham dự hội nghị/Tạo ủy quyền",
+            "meeting_manage_delegaterequests": "Duyệt/Từ chối đề nghị ủy quyền online",
+            "meeting_manage_votes": "Nhập thông tin bầu cử",
+            "meeting_close_session": "Kết thúc hội nghị",
+            "meeting_manage_reports": "Xem báo cáo kết quả hội nghị",
+            "meeting_access_view": "Xem thông tin hội nghị"
+        }
+    },
+    "page": {
+        "login": "Đăng nhập",
+        "register": "Đăng ký",
+        "forgot": "Quên mật khẩu",
+        "home": "Về trang chủ",
+        "contact": "Liên hệ để hỗ trợ"
+    },
+    "errors": {
+        "404-title": "404 Not Found",
+        "404-comtent": "Sorry Page NotFound, Không tìn thấy trang yêu cầu!",
+        "500-title": "500 Lỗi từ server",
+        "500-comtent": "Lỗi từ API, vui lòng liên hệ quản trị hệ thống!",
+        "500": "Lỗi 500  SERVER ERROR, Vui lòng liên hệ với quản trị hệ thống ",
+        "404": "Lỗi 404  Page NotFound, Không tìn thấy trang yêu cầu",
+        "401": "Tên đăng nhập hoặc mật khẩu không đúng",
+        "ERR_CONNECTION_REFUSED": "Không kết nối được máy chủ API!",
+        "Invalid_token": "Phiên đăng nhập hết hạn, vui lòng đăng nhập lại",
+        "permission_retricted": "Xin lỗi! Bạn bị giới hạn quyền sử dụng và không được phép"
+    },
+    "document-viewer": {
+        "showList": "Hiện thị danh sách tài liệu",
+        "hideList": "Ẩn danh sách tài liệu"
+    },
+    "menu": {
+        "profile": "Tài khoản",
+        "logout": "Đăng xuất",
+        "meeting": {
+            "meeting": "Quay lại danh sách",
+            "admin": "Trang quản lý",
+            "meeting-info": "Thông tin hội nghị",
+            "member": "Thành viên hệ thống",
+            "document": "Tài liệu hội nghị",
+            "matter": "Các vấn đề bầu cử",
+            "holder": "Cổ đông",
+            "attendee": "Đại biểu tham dự",
+            "g-delegate": "Thông tin ủy quyền",
+            "delegate": "Duyệt danh sách ủy quyền",
+            "attendee-checkin": "Check In",
+            "delegate-info": "Thông tin quyền",
+            "vote": "Biểu quyết và bầu cử",
+            "vote-result": "Kết quả biểu quyết và bầu cử"
+        }
+    },
+    "breadcrumb": {
+        "meeting": "Hội nghị",
+        "meeting-info": "Thông tin hội nghị",
+        "member": "Thành viên hệ thống",
+        "document": "Tài liệu hội nghị",
+        "matter": "Các vấn đề bầu cử",
+        "holder": "Cổ đông",
+        "attendee": "Đại biểu",
+        "delegate": "Ủy quyền",
+        "attendee-checkin": "Check In",
+        "delegate-info": "Thông tin quyền",
+        "vote": "Biểu quyết và bầu cử",
+        "vote-result": "Kết quả biểu quyết và bầu cử"
+    },
+    "shares": {
+        "account-info-right": {
+            "title": "Xin chào {{name}}! Thông tin quyền của bạn:",
+            "titleAdmin": "Thông tin quyền của đại biểu {{name}}:",
+            "shares": "Số cổ phần",
+            "ownedVotes": "Quyền được chia",
+            "delegatingVotes": "Đã ủy quyền",
+            "delegatedVotes": "Được ủy quyền",
+            "availableVotes": "Còn lại",
+            "totalVotes": "Quyền biểu quyết"
+        },
+        "account-info-item": {
+            "noEmail": "Không có thư điện tử",
+            "address": "Địa chỉ",
+            "identity": "Số đăng ký sở hữu",
+            "phone": "Điện thoại",
+            "email": "Thư điện tử"
+        },
+        "content-detail": {
+            "attachmentFile": "Tài liệu đính kèm",
+            "download": "Tải xuống",
+            "view": "Xem tài liệu",
+            "delete": {
+                "title": "Xóa tài liệu",
+                "confirm": "Bạn thực sự muốn xóa tài liệu này?",
+                "success": "Xóa tài liệu thành công"
+            }
+        },
+        "delegate-dialog": {
+            "add": {
+                "title": "Ủy quyền",
+                "tooltip": "Cập nhật thông tin ủy quyền",
+                "success": "Cập nhật thông tin ủy quyền thành công"
+            },
+            "edit": {
+                "title": "Sửa",
+                "tooltip": "Sửa thông tin ủy quyền",
+                "success": "Cập nhật thông tin ủy quyền thành công"
+            },
+            "find": {
+                "resetButton": "Hủy chọn"
+            },
+            "typeSelect": {
+                "attendeeRefTitle": "Chọn Ủy Quyền Ban Quản Trị",
+                "holder": "Cổ đông khác",
+                "ortherAttendy": "Đại biểu khác"
+            },
+            "form": {
+                "title": {
+                    "addNew": "Thêm thông tin ủy quyền",
+                    "edit": "Thông tin ủy quyền",
+                    "attendeeInfo": "Thông tin người nhận ủy quyền"
+                },
+                "name": {
+                    "label": "Họ và Tên",
+                    "required": "Trường này không được để trống"
+                },
+                "identity": {
+                    "label": "Chứng minh nhân dân",
+                    "required": "Trường này không được để trống",
+                    "smallDesc": "CMND, Hộ Chiếu,CCCD, Giấy DKKD... "
+                },
+                "identityType": {
+                    "label": "Loại",
+                    "required": "Trường này không được để trống",
+                    "smallDesc": "CMND | CCDC | Passport | DKKD"
+                },
+                "identityIssuedDate": {
+                    "label": "Ngày cấp",
+                    "required": "Trường này không được để trống"
+                },
+                "identityIssuer": {
+                    "label": "Nơi cấp",
+                    "required": "Trường này không được để trống"
+                },
+                "address": {
+                    "label": "Địa chỉ",
+                    "required": "Trường này không được để trống",
+                    "minlength": "Địa chỉ phải lơn hơn 6 ký tự"
+                },
+                "phone": {
+                    "label": "Điện thoại",
+                    "required": "Trường này không được để trống",
+                    "minlength": "Địa chỉ phải lơn hơn hoặc bằng 9 ký tự"
+                },
+                "email": {
+                    "label": "Email",
+                    "required": "Trường này không được để trống",
+                    "valid": "Email không đúng định dạng"
+                },
+                "votes": {
+                    "label": "Số quyền nhận",
+                    "requiredMin": "Số quyền bắt buộc phải lớn hơn 0",
+                    "invalidLessThen": "Số quyền nhận phải phải lớn hơn 0 và nhỏ hơn hoặc bằng  {{value}}"
+                },
+                "searchTitle": {
+                    "label": "Tìm thông tin người nhận ủy quyền",
+                    "note": "Hoặc ủy quyền cho người khác bằng cách điền đầy thông tin form bên dưới"
+                },
+                "holderSearch": {
+                    "label": "Tìm trên danh sách cổ đông",
+                    "placeholder": "Tìm cổ đông theo chứng minh nhân nhân dân"
+                },
+                "attendeeSelect": {
+                    "label": "Tìm trên danh sách đại biểu nhận ủy quyền",
+                    "placeholder": "Chọn đại biểu nhận ủy quyền"
+                },
+                "shareInfo": {
+                    "title": "Thông tin quyền của bạn",
+                    "shares": "Số cổ phần",
+                    "ownedVotes": "Số quyền",
+                    "sharedVotes": "Đã ủy quyền",
+                    "availableVotes": "Số quyền còn lại"
+                }
+            }
+        },
+        "holder-autocomplete": {
+            "identity": "CMDD | Hộ Chiếu | Thẻ CCCD | GP DKKD ",
+            "phone": "Điện thoại",
+            "email": "Email"
+        },
+        "meeting-summary": {
+            "totalHolder": "Số cổ đông",
+            "totalShares": "Số cổ phần",
+            "totalVoteRight": "Số quyền",
+            "totalRegister": "Cổ đông xác nhận tham dự",
+            "totalAttends": "Đại biểu tham dự",
+            "confirmVotes": "Số quyền đăng ký tham dự",
+            "remainVotes": "Số quyền còn lại",
+            "holderVotes": "Số quyền của bạn",
+            "attendedVotes": "Quyền biểu quyết"
+        }
+    },
+    "fileUpload": {
+        "title": "click hoặc kéo thả file vào đầy",
+        "errorTitle": "Tải nhập Lỗi",
+        "totalSelect": "Filie đã chọn",
+        "file": {
+            "uploadFailed": "File Tải nhập không thành công  {{fileName}}",
+            "typeInvalid": "File tải nhập không được hỗ trợ  {{fileName}}"
+        }
+    },
+    "meeting": {
+        "lock": {
+            "invalid": "Trạng thái đại hội hiện tại không hợp lệ để chốt danh sách",
+            "title": "Chốt danh sách",
+            "confirm": "Lưu ý khi bạn chốt danh sách bạn sẽ KHÔNG có cơ hội quay trở về trạng thái trước. Bạn có thực sự muốn thực hiện?",
+            "success": "Hệ thống đang xử lý chốt danh sách cổ đông và gửi thông báo đến các cổ đông có thư điện tử. Sau khi hoàn tất, hệ thống sẽ thông báo cho bạn!"
+        },
+        "open": {
+            "invalid": "Trạng thái đại hội hiện tại không hợp lệ để mở phiên",
+            "title": "Mở phiên",
+            "desc": "Xác nhận danh sách cổ đông và chính thức mở trạng thái hội nghị để cố đông có thể đăng ký tham gia và bầu cử trực tuyến",
+            "confirm": "Bạn đang thực hiện mở trạng thái hội nghị để cổ đông có thể đăng ký và bầu cử trực tuyến. Sau thời điểm này, thông tin hội nghị, danh sách cổ đông sẽ không cho phép thay đổi. Bạn thực sự muốn thực hiện",
+            "success": "Mở phiên hội nghị thành công. Cổ đông băt đầu xác nhận và biểu quyết trực tuyến"
+        },
+        "close": {
+            "invalid": "Trạng thái đại hội hiện tại không hợp lệ để đóng phiên",
+            "title": "Đóng phiên",
+            "desc": "Xác nhận kết thúc đại hội",
+            "confirm": "Bạn có thực sự muốn kết thúc đại hội để hệ thống xuất báo cáo cho đại hội",
+            "success": "Hội nghị kết thúc thành công"
+        }
+    },
+    "member": {
+        "name": {
+            "label": "Thông tin thành viên",
+            "placeholder": "Tìm theo tên hoặc email",
+            "required": "Vui lòng chọn chính xác tên đăng nhập của thành viên"
+        },
+        "role": {
+            "label": "Chức năng",
+            "placeholder": "--Chọn chức năng--",
+            "required": "Vui lòng chọn ít nhất 1 chức năng",
+            "isLock": "Đang khóa",
+            "isOwner": "Owner",
+            "itsYou": "It's you"
+        },
+        "list": {
+            "title": "Danh sách thành viên",
+            "form": "Thêm thành viên cho hội nghị",
+            "search": "Tìm theo tên"
+        },
+        "add": {
+            "title": "Thêm mới",
+            "success": "Tạo thành viên thành công"
+        },
+        "edit": {
+            "title": "Sửa",
+            "success": "Cập nhật thông tin thành viên thành công"
+        },
+        "lock": {
+            "title": "Khóa chức năng",
+            "tooltip": "Khoá trạng thái hoạt động của thành viên",
+            "success": "Khoá trạng thái hoạt động của thành viên. Thành viên không được phép tham gia hội nghị đến khi mở khóa"
+        },
+        "unlock": {
+            "title": "Mở khóa chức năng",
+            "tooltip": "Mở khóa trạng thái hoạt động của thành viên",
+            "success": "Mở khoá trạng thái hoạt động của thành viên. Thành viên không được phép tham gia hội nghị!"
+        },
+        "delete": {
+            "title": "Xóa",
+            "confirm": "Bạn thực sự muốn loại thành viên khỏi hội nghị?",
+            "success": "Loại bỏ thành viên khỏi hội nghị thành công"
+        },
+        "grantAccess": {
+            "ok": "OK",
+            "title": "Cập nhật phân quyền nhanh cho thành viên",
+            "success": "Cập nhật thông tin quyền truy xuất cho thành viên thành công"
+        },
+        "dialog": {
+            "user": {
+                "title": "Tạo thành viên",
+                "name": {
+                    "label": "Họ Tên",
+                    "required": "Trường này không được để trống"
+                },
+                "email": {
+                    "label": "Địa chỉ email",
+                    "required": "Trường này không được để trống",
+                    "valid": "Email không đúng định dạng"
+                },
+                "add": {
+                    "title": "Thêm mới",
+                    "tooltip": "Tự tạo mới tài khoản người dùng nếu không tìm thấy trong hệ thống",
+                    "success": "Tạo người dùng thành công"
+                }
+            }
+        }
+    },
+    "document": {
+        "list": {
+            "title": "Danh sách tài liệu hội nghị",
+            "inputsearch": "Tìm tên tài liệu",
+            "attachmentFile": "Tài liệu đính kèm",
+            "buttonDetail": "Chi tiết"
+        },
+        "form": {
+            "title": "Thêm tài liệu cho hội nghị",
+            "name": {
+                "label": "Tiêu đề",
+                "required": "Trường này không được để trống"
+            },
+            "description": {
+                "label": "Nội dung"
+            },
+            "isVote": {
+                "label": "Đưa nội dung vào lấy ý kiến biểu quyết"
+            },
+            "file": {
+                "label": "Các tài liệu liên quan",
+                "required": "Trường này không được để trống"
+            },
+            "buttonFile": "Chọn file"
+        },
+        "add": {
+            "title": "Thêm mới",
+            "success": "Thêm mới thông tin hội nghị thành công"
+        },
+        "edit": {
+            "title": "Sửa",
+            "success": "Cập nhật thông tin hội nghị thành công"
+        },
+        "delete": {
+            "title": "Xóa",
+            "confirm": "Bạn thực sự muốn xóa thông tin hội nghị?",
+            "success": "Xóa tài liệu thành công"
+        },
+        "file": {
+            "download": "Tải xuống",
+            "view": "Xem tài liệu",
+            "delete": {
+                "title": "Xóa tài liệu",
+                "confirm": "Bạn thực sự muốn xóa tài liệu này?",
+                "success": "Xóa tài liệu thành công"
+            }
+        }
+    },
+    "matter": {
+        "list": {
+            "title": "Các vấn đề về bầu cử và biểu quyết",
+            "inputsearch": "Tìm theo tên",
+            "electionMatterHeader": "Nội dung biểu quyết và bầu cử",
+            "electionInfo": "Nội dung cần lấy ý kiến biểu quyết",
+            "electionMatter": "Danh sách bầu cử",
+            "createMatterButton": "Tạo nội dung",
+            "infoMember": "Thành viên bầu cử",
+            "help": "(*) Sử dụng chuột kéo thả các vấn đề bầu cử và biểu quyết theo thứ tự",
+            "dropIndex": {
+                "errorMessage": "Bạn không thể thay đổi thứ tự khi hội nghị đang ở thạng thái mở hoặc đã đóng",
+                "title": "Lỗi di thay đổi thứ tự nội dung"
+            }
+        },
+        "form": {
+            "title": "Nội dung bầu cử và thành viên bầu cử",
+            "name": {
+                "label": "Tiêu đề",
+                "required": "Trường này không được để trống",
+                "smallDesc": "Thông tin bầu cử thí dụ nhu: Bầu HDQT hoặc Bầu ban Kiểm soát..."
+            },
+            "optional": {
+                "isActive": "Bầu cử ",
+                "isDeative": "Phiếu biểu quyết"
+            },
+            "description": {
+                "label": "Nội dung"
+            },
+            "member": {
+                "label": "Chọn thành viên",
+                "smallDesc": "Thêm thành viên bằng cách điền nội dung rồi nhấn nút thêm hoặc Enter",
+                "placeholder": "Tìm thành viên trong hệ thống",
+                "createMemberTip": "Thêm thành viên hội đồng",
+                "required": "Thành viên bầu cử phải lớn hơn hoặc bằng {{taken}}",
+                "delete": {
+                    "title": "Loại bỏ thành viên khỏi danh sách bầu cử",
+                    "confirm": "Bạn thực sự muốn xóa thành viên khỏi danh sách bầu cử?",
+                    "success": "Xóa nội thành viên khỏi danh sách bầu cử thành công"
+                }
+            },
+            "file": {
+                "delete": {
+                    "title": "Xóa tài liệumem",
+                    "confirm": "Bạn thực sự muốn xóa tài liệu này?",
+                    "success": "Xóa tài liệu thành công"
+                }
+            },
+            "taken": {
+                "label": "Số lượng cần bầu",
+                "required": "Số lượng cần bầu cử phải lớn hơn hoặc bằng 1"
+            }
+        },
+        "add": {
+            "title": "Thêm mới",
+            "success": "Thêm mới nội dung bầu cử thành công"
+        },
+        "edit": {
+            "title": "Sửa",
+            "success": "Cập nhật nội dung bầu cử thành công"
+        },
+        "delete": {
+            "title": "Xóa",
+            "confirm": "Bạn thực sự muốn xóa  nội dung bầu cử của hội nghị?",
+            "success": "Xóa nội dung bầu cử thành công"
+        }
+    },
+    "holder": {
+        "list": {
+            "title": "Danh sách cổ đông",
+            "importFile": "Tải nhập danh sách",
+            "inputsearch": "Tìm theo tên hoặc số CMND",
+            "header": {
+                "info": "Thông tin cổ đông",
+                "shared": "Số cổ phần",
+                "voteRight": "Số quyền"
+            },
+            "iconTip": {
+                "identity": "CMDD | Hộ Chiếu | Thẻ CCCD | GP DKKD ",
+                "phone": "Điện thoại",
+                "email": "Email",
+                "address": "Địa chỉ",
+                "notEmail": "Cổ đông không có email.",
+                "identityUserId": "Đã có tài khoản.",
+                "delegation":"Cổ đông đã ủy quyền"
+            }
+        },
+        "form": {
+            "title": {
+                "addNew": "Thêm cổ đông",
+                "edit": "Sửa thông tin cổ đông"
+            },
+            "name": {
+                "label": "Tên cổ đông",
+                "required": "Trường này không được để trống"
+            },
+            "identity": {
+                "label1": "Số đăng ký sở hữu",
+                "label2": "Chứng minh nhân dân",
+                "required": "Trường này không được để trống",
+                "smallDesc": "CMND, Hộ Chiếu,CCCD, Giấy DKKD... "
+            },
+            "identityType": {
+                "label": "Loại",
+                "required": "Trường này không được để trống",
+                "smallDesc": "CMND | CCDC | Passport | DKKD"
+            },
+            "identityIssuedDate": {
+                "label": "Ngày cấp",
+                "required": "Trường này không được để trống"
+            },
+            "identityIssuer": {
+                "label": "Nơi cấp",
+                "required": "Trường này không được để trống"
+            },
+            "address": {
+                "label": "Địa chỉ",
+                "required": "Trường này không được để trống",
+                "minlength": "Địa chỉ phải lơn hơn 6 ký tự"
+            },
+            "phone": {
+                "label": "Điện thoại",
+                "required": "Trường này không được để trống",
+                "minlength": "Địa chỉ phải lơn hơn hoặc bằng 9 ký tự"
+            },
+            "email": {
+                "label": "Email",
+                "required": "Trường này không được để trống",
+                "valid": "Email không đúng định dạng"
+            },
+            "shares": {
+                "label": "Số cổ phần",
+                "requiredMin": "Số cổ phần bắt buộc phải lớn hơn 0"
+            },
+            "ownedVotes": {
+                "label": "Số quyền biểu quyết",
+                "requiredMin": "Quyền biểu quyết bắt buộc phải lớn hơn 0"
+            }
+        },
+        "dialog": {
+            "note": "Thực hiện thêm danh ",
+            "importHolder": "Import Danh sach cổ đông",
+            "spinnerMessage": "Đang import danh sách cổ đông",
+            "content": "<p class='m-auto'>Tải excel theo <a href='#'>file mẫu</a>, Đưa danh sách vào file sau đó Import Danh sach cổ đông</p>",
+            "upload": {
+                "title": "Tải nhập",
+                "success": "Tải nhập danh sách cổ đông thành công"
+            }
+        },
+        "delete": {
+            "title": "Xóa",
+            "tooltip": "Xóa cổ đông khỏi danh sách",
+            "confirm": "Bạn có thực sự muốn loại bỏ cổ đông khỏi danh sách?",
+            "success": "Xóa thông tin cổ đông thành công"
+        },
+        "edit": {
+            "title": "Sửa",
+            "tooltip": "Sửa thông tin cổ đông",
+            "success": "Cập nhật thông tin cổ đông thành công"
+        },
+        "add": {
+            "title": "Thêm mới",
+            "success": "Thêm mới thông tin cổ đông thành công"
+        },
+        "checkin": {
+            "title": "Đăng ký",
+            "success": "Đăng ký tham gia hội nghị thành công"
+        }, 
+        "confirm": {
+            "title": "Xác nhận tham gia",
+            "cancelTitle": "Hủy xác nhận",
+            "success": "Cập nhật xác nhận tham gia hội nghị thành công",
+            "checkedIn": "Đã đăng ký tham gia hội nghị"
+        }
+    },
+    "attendee": {
+        "list": {
+            "title": "Danh sách đại biểu",
+            "inputsearch": "Tìm theo tên hoặc số CMND",
+            "header": {
+                "info": "Thông tin đại biểu tham dự hội nghị",
+                "shared": "Số cổ phần",
+                "voteRight": "Số quyền"
+            },
+            "iconTip": {
+                "identity": "CMDD | Hộ Chiếu | Thẻ CCCD | GP DKKD ",
+                "phone": "Điện thoại",
+                "email": "Email",
+                "address": "Địa chỉ",
+                "notEmail": "Đại biểu không có email.",
+                "identityUserId": "Đã có tài khoản."
+            }
+        },
+        "form": {
+            "title": {
+                "addNew": "Thêm đại biểu",
+                "edit": "Sửa thông tin đại biểu",
+                "view": "Thông tin đại biểu",
+                "infoTitle": "Thông tin cơ bản",
+                "delegateTitle": "Thông tin quyền",
+                "holderRef": "Ban quản trị"
+            },
+            "name": {
+                "label": "Tên đại biểu",
+                "required": "Trường này không được để trống"
+            },
+            "identity": {
+                "label1": "Số đăng ký sở hữu",
+                "label2": "Chứng minh nhân dân",
+                "required": "Trường này không được để trống",
+                "smallDesc": "CMND, Hộ Chiếu,CCCD, Giấy DKKD... "
+            },
+            "identityType": {
+                "label": "Loại",
+                "required": "Trường này không được để trống",
+                "smallDesc": "CMND | CCDC | Passport | DKKD"
+            },
+            "identityIssuedDate": {
+                "label": "Ngày cấp",
+                "required": "Trường này không được để trống"
+            },
+            "identityIssuer": {
+                "label": "Nơi cấp",
+                "required": "Trường này không được để trống"
+            },
+            "address": {
+                "label": "Địa chỉ",
+                "required": "Trường này không được để trống",
+                "minlength": "Địa chỉ phải lơn hơn 6 ký tự"
+            },
+            "phone": {
+                "label": "Điện thoại",
+                "required": "Trường này không được để trống",
+                "minlength": "Địa chỉ phải lơn hơn hoặc bằng 9 ký tự"
+            },
+            "email": {
+                "label": "Email",
+                "required": "Trường này không được để trống",
+                "valid": "Email không đúng định dạng"
+            },
+            "isRepresentative": {
+                "label": "ĐB nhận ủy quyền"
+            },
+            "repTitle": {
+                "label": "Chức vụ",
+                "required": "Trường này không được để trống",
+                "errorTitle": "Chức vụ rổng",
+                "repTitleErrMs": "Chức vụ là bắt buộc nhập khi chọn đại biểu nhận ủy quyền"
+            },
+            "holderSearch": {
+                "checkSearch": "Tìm đại biểu",
+                "holder": "Cổ đông",
+                "attendee": "Đại biểu",
+                "label": "Chọn cổ đông ủy quyền",
+                "placeholder": "Tìm theo chứng minh nhân dân"
+            },
+            "holderDelegate": {
+                "title": "Danh sách được ủy quyền",
+                "shareVote": "Số cổ phần ủy quyền",
+                "uploadDescription": "File đính kèm ủy quyền liên quan"
+            },
+            "addDeleage": {
+                "label": "Thêm ủy quyền"
+            }
+        },
+        "rightInfo": {
+            "shares": "Cổ phần",
+            "ownedVotes": "Quyền",
+            "delegatingVotes": "Ủy quyền",
+            "sharedVotes": "Được ủy quyền",
+            "available": "Số quyền hiện có",
+            "totalVotes": "Quyền biểu quyết"
+        },
+        "dialogDelegate": {
+            "title": "Thông tin ủy quyền của đại biểu"
+        },
+        "delete": {
+            "title": "Xóa",
+            "tooltip": "Xóa đại biểu khỏi danh sách",
+            "confirm": "Bạn có thực sự muốn loại bỏ đại biểu khỏi danh sách?",
+            "success": "Xóa thông tin đại biểu thành công"
+        },
+        "edit": {
+            "title": "Sửa",
+            "tooltip": "Sửa thông tin đại biểu",
+            "success": "Cập nhật thông tin đại biểu thành công"
+        },
+        "add": {
+            "title": "Check In",
+            "success": "Thêm mới thông tin đại biểu thành công"
+        },
+        "checkin": {
+            "title": "Đăng ký",
+            "success": "Đăng ký tham gia hội nghị thành công",
+            "lostDelegateErrMs": "Bạn phải thêm ủy quyền cho đại biểu này",
+            "lostDelegateTitle": "Thêm ủy quyền",
+            "dialog": {
+                "title": "Đăng ký tham gia hội nghị"
+            }
+        },
+        "confirm": {
+            "title": "Xác nhận tham gia",
+            "cancelTitle": "Hủy xác nhận",
+            "success": "Cập nhật xác nhận tham gia hội nghị thành công"
+        },
+        "find": {
+            "title": "Tìm cổ đông"
+        },
+        "vote": {
+            "tooltip": "Thông tin bầu cử"
+        },
+        "print": {
+            "tooltip": "Kết xuất tài liệu cho đại biểu"
+        }
+    },
+    "delegateInfo": {
+        "title": "Thông tin quyền",
+        "note": "Chức năng này danh riêng cho đại biểu",
+        "checkIn": {
+            "title": "Xác nhận tham gia",
+            "desc": "Ban đã đăng ký tham dự trực tuyến ngày {{date}} vào lúc {{time}}",
+            "errorMessge": "Không thể xác nhận tham gia, vui long liên hệ ban quản trị hội nghị đễ được hỗ trợ",
+            "success": "Bạn đã đang ký tham gia hội nghị thành công, vui lòng vào hội nghị để thực hiện các quyền lợi của bạn"
+        },
+        "checkOut": {
+            "title": "Hủy xác nhận tham gia",
+            "errorMessge": "Đã xác nhận tham gia không thể check out, vui long liên hệ ban quản trị hội nghị đễ được hỗ trợ",
+            "success": "Bạn đã từ chối tham gia hội nghị thành công"
+        },
+        "request": {
+            "tooltip": "Gửi yêu cầu xét duyệt thông tin đại biểu ủy quyền",
+            "status": {
+                "submit": "Chờ duyệt",
+                "reject": "Từ chối",
+                "approve": "Duyệt"
+            }
+        },
+        "delegated": {
+            "title": "Ủy quyền",
+            "confirmTitle": "Xác nhận ủy quyền",
+            "errorMessge": "Bạn không thể ủy quyền, vui long liên hệ ban quản trị hội nghị đễ được hỗ trợ",
+            "successRequest": "Bạn đã tạo yêu cầu ủy quyền thành công",
+            "successConfirm": "Bạn đã ủy quyền thành công"
+        },
+        "holder": {
+            "delegation": {
+                "titleList": "Ủy quyền cho đại biểu",
+                "votes": "Đã ủy quyền",
+                "totalVotes": "Tổng số đã ủy quyền: {{total}}",
+                "delete": {
+                    "confirm": "Bạn có thực sự muốn loại ủy quyền này?",
+                    "title": "Xóa ủy quyền",
+                    "success": "Câp nhật danh sách ủy quyền thành công"
+                }
+            },
+            "mandator": {
+                "titleList": "Nhận ủy quyền từ cổ đông",
+                "totalVotes": "Tổng số quyền được nhận: {{total}}",
+                "votes": "Số quyền nhận"
+            }
+        },
+        "shareInfo": {
+            "title": "Thông tin quyền của bạn",
+            "shares": "Số cổ phần",
+            "ownedVotes": "Số quyền",
+            "delegatedVotes": "Đã ủy quyền",
+            "sharedVotes": "Quyền nhận được",
+            "avilabeVotes": "Có thể ủy quyền",
+            "totalVotes": "Quyền biểu quyết",
+            "attendedVotes": "Quyền biểu quyết"
+        },
+        "activities": {
+            "title": "Lịch sử"
+        }
+    },
+    "info": {
+        "title": "Thông tin hội nghị",
+        "holder": {
+            "title": "Thông tin quyền và đại biệu tham dự",
+            "roleUser": "Tham gia hội nghị",
+            "totalHolder": "Tổng số cổ đông",
+            "totalApartment": "Tổng số căn hộ",
+            "totalShared": "Tổng số cổ phần",
+            "totalRight": "Quyền biểu quyết",
+            "attendee": "Số đại biểu tham dự",
+            "totalAttendeeHolder": " Số cổ đông trực tiếp tham dự",
+            "delegation": "Số đại biểu nhận ủy quyền",
+            "totalAttendee": "Tổng số cổ đông tham dự và ủy quyền",
+            "attendeeVotes": "Số quyền biểu quyết tại hội nghị",
+            "attendeeRatio": "Tỷ lệ tham dự",
+            "onlineCheckIn": "Số cổ đông tham dự online"
+        },
+        "checkIn": {
+            "title": "Xác nhận tham gia",
+            "errorMessge": "Không thể xác nhận tham gia, vui long liên hệ ban quản trị hội nghị đễ được hỗ trợ",
+            "success": "Bạn đã đang ký tham gia hội nghị thành công, vui lòng vào hội nghị để thực hiện các quyền lợi của bạn"
+        },
+        "checkOut": {
+            "title": "Hủy đăng ký tham dự",
+            "errorMessge": "Đã xác nhận tham gia không thể check out, vui long liên hệ ban quản trị hội nghị đễ được hỗ trợ",
+            "success": "Bạn đã từ chối tham gia hội nghị thành công"
+        },
+        "vote": {
+            "voteTitle": "Biểu quyết",
+            "electionTitle": "Bầu cử",
+            "title": "Kết quả bầu cử và biểu quyết"
+        },
+        "counting": {
+            "title": "Tính lại"
+        }
+    },
+    "delegate": {
+        "list": {
+            "title": "Danh sách ủy quyền",
+            "inputsearch": "Tìm theo số đăng ký sở hữu"
+        },
+        "rightInfo": {
+            "title": {
+                "delegationTitle": "Dách sách đã ủy quyện",
+                "mandatorTitle": "Dách sách nhận ủy quyện"
+            },
+            "shares": "Số cổ phần",
+            "ownedVotes": "Số quyền",
+            "delegatedVotes": "Đã ủy quyền",
+            "sharedVotes": "Quyền nhận được",
+            "availableVotes": "Có thể ủy quyền",
+            "blockedVotes": "Đã ủy quyền",
+            "totalVotes": "Số quyền"
+        },
+        "holder": {
+            "delegation": {
+                "titleList": "Ủy quyền cho đại biểu",
+                "votes": "Đã ủy quyền",
+                "delete": {
+                    "confirm": "Bạn có thực sự muốn loại ủy quyền này?",
+                    "title": "Xóa ủy quyền",
+                    "success": "Câp nhật danh sách ủy quyền thành công"
+                }
+            },
+            "mandator": {
+                "titleList": "Nhận ủy quyền từ cổ đông",
+                "votes": "Số quyền nhận"
+            }
+        },
+        "delegation": {
+            "votes": {
+                "tilte": "Số quyền biểu quyết"
+            },
+            "approval": {
+                "tooltip": "Duyệt thông tin đại biểu ủy quyền",
+                "success": "Bạn đã duyệt ủy quyền thành công",
+                "title": "Duyệt"
+            },
+            "reject": {
+                "confirm": "Bạn thực sự muốn từ chối ủy quyền này? Vui lòng nhập lý do để từ chối",
+                "tooltip": "Từ chối thông tin đại biểu ủy quyền",
+                "success": "Bạn đã từ chối ủy quyền thành công",
+                "title": "từ chối"
+            },
+            "status": {
+                "submit": "Chờ duyệt",
+                "reject": "Từ chối",
+                "approve": "Duyệt"
+            },
+            "delete": {
+                "tooltip": "Xóa",
+                "success": "Bạn đã  xóa ủy quyền thành công",
+                "confirm": "Bạn thực sự muốn xóa ủy quyền này",
+                "title": "Xóa ủy quyền"
+            }
+        }
+    },
+    "vote": {
+        "title": "Biểu quyết và bầu cử",
+        "shared": "cổ phần",
+        "options": {
+            "yes": "Đồng ý",
+            "no": "Không đồng ý",
+            "ignore": "Không ý kiến"
+        },
+        "voteTitle": "Biểu quyết",
+        "electionTitle": "Bầu cử: Đại hội bầu <b>{{count}}</b> ứng viên chọn <b>{{taken}} ứng viên</b> có số quyền cao nhât",
+        "electionAttendTitle": "Bầu cử: Đại hội bầu <b>{{count}}</b> ứng viên chọn <b>{{taken}} ứng viên</b> có số quyền cao nhât, quyền biểu quyết tối đa: <b>{{total}}</b>",
+        "equalizeElection": "Chia đều",
+        "manuallyElection": "Tự chia",
+        "electionVotes": "Quyền biểu quyết",
+        "totalVotes": {
+            "title": "Tổng quyền biểu quyết",
+            "warning": "Quyền biểu quyết tối đa là: {{total}}, số lượng chọn tối đa là: {{taken}}",
+            "minError": "Số lượng quyền biểu quyết cho mối bầu cử đã chọn phải lớn hơn 0.",
+            "maxError": "Tổng số quyền đã biểu quyết {{actual}} vượt quá số lượng cho phép {{max}}"
+        },
+        "taken": {
+            "title": "Số lượng cần bầu:",
+            "minError": "Vui lòng lựa chọn ít nhất 1 bầu cử",
+            "maxError": "Số lượng bầu cử đã chọn {{actual}} vượt quá số lượng cho phép {{max}}"
+        },
+        "submit": {
+            "confirm": "Cảm ơn bạn đã dành thời gian để thực hiện nội dung bầu cử. Bạn chắc chắn và tin tưởng với lựa chọn và quyết định của mình?",
+            "success": "Bạn xác nhận bầu cử thành công, kết quả bầu cử hệ thống sẽ tổng hợp sua khi kết thúc chương trình bầu cử.",
+            "title": "Xác nhận bầu cử"
+        }
+    },
+    "votes-result": {
+        "title": "Kết quả biểu quyết và bầu cử",
+        "shared": "cổ phần"
+    }
+}

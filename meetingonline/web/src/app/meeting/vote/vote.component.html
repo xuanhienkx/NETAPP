@@ -1,0 +1,19 @@
+<div class="page-vote-header  " #headerPageVote>
+    <vip-header-list [title]="'vote.title'">
+    </vip-header-list>
+    <vip-account-right-info  type="vote" *ngIf="attendee"></vip-account-right-info>
+</div>
+<div *ngIf="attendee">
+    <div *ngIf="!attendee?.votes || attendee?.votes?.length === 0">
+        <vip-vote-confirm [attendee]="attendee" [items]="items" [mt]="mt" isOnline></vip-vote-confirm>
+    </div>
+
+    <div *ngIf="attendee?.votes && attendee?.votes.length > 0">
+        <vip-vote-result [attendee]="attendee" [items]="items"></vip-vote-result>
+    </div>
+</div>
+
+
+<vip-empty-data [isNoData]="(!items || items?.length === 0)&&!attendee">
+    <div note>{{'delegateInfo.note'|translate}} </div>
+</vip-empty-data>

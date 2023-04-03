@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    Oops!</h1>
+                <div *ngIf="errorType==='404'; else show500">
+
+                    <h2>
+                        {{'errors.404-title' | translate}} </h2>
+                    <div class="error-details">
+                        {{'errors.404-comtent' | translate}}
+                        <h3 class="my-3 pb-3 text-danger">
+                            {{message}}
+                        </h3>
+                    </div>
+                    
+                </div>
+                <ng-template #show500>
+
+                    <h2>
+                        {{'errors.500-title' | translate}} </h2>
+                    <div class="error-details">
+                        {{'errors.500-comtent' | translate}}
+                    </div>
+
+
+                </ng-template>
+                <div class="error-actions">
+                    <a routerLink='/' class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
+                        {{'Common.gotoHome' | translate}} </a>
+                    <a [routerLink]="['/home#about']" class="btn btn-default btn-lg"><span
+                            class="glyphicon glyphicon-envelope"></span>
+                        {{'page.contact' | translate}} </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

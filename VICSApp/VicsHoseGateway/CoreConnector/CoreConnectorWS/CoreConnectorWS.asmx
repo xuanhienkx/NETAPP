@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="CoreConnectorWS.asmx.cs" Class="CoreConnectorWS.CoreConnectorWS" %>

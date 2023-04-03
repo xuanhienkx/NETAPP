@@ -1,0 +1,20 @@
+SwiftTime=20160506 
+NonRep=FALSE 
+DeliveryTime=20160506 
+MsgId=160524 
+Creationtime=20160506 
+PDIndication=FALSE 
+Requestor=o=VSDSVNV0, o=swift 
+Responder=o=VSDTVGXX, o=swift 
+Service=camt.xxx.fisp.rep 
+Priority=Normal
+RequestRef=
+TransferRef=160524
+TransferDescription=160524
+TransferInfo=VSDTVGXX.160524.20160506.160524
+PossibleDuplicate=TRUE
+OrigTransferRef=0155948128
+AckIndicator=FALSE
+LogicalName=tvg'CA009'01+0155948128-03+VCA-03+VCA-04+05052016-09+037-09+037-'06052016'092059'160524.csv
+FileInfo=SwCompression=None
+Size=317

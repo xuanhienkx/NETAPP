@@ -1,0 +1,124 @@
+<vip-header-list [title]="'matter.list.title'">
+    <div class="command-header-group d-flex justify-content-between" command>
+        <button nbButton status="primary" size="small" class="command-header-item" (click)="editInfo()"
+            *ngIf="canContentEdit">
+            {{'matter.add.title' | translate}}
+        </button>
+    </div>
+</vip-header-list>
+<nb-card accent="info" status="basic" class="m-0 p-0">
+    <nb-card-body class="pt-0 mb-0 pb-0">
+        <div cdkDropList (cdkDropListDropped)="itemDroped($event)" class="dragable-list">
+            <div class="dragable-box " *ngFor="let info of electionMatters; let idx = index; let lastItem = last"
+                cdkDrag [ngClass]="{'border-bottom': !lastItem}">
+                <div class="dragable-custom-placeholder" *cdkDragPlaceholder></div>
+                <vip-item-list>
+                    <div itemlogo class="group-logo rounded-circle initials border-secondary border text-info">
+                        <strong>{{idx + 1}}</strong>
+                    </div>
+                    <div itemInfo class="item-info flex-column">
+                        <div class="item-info flex-column">
+                            <div class="item-info-top">
+                                <a href="javascript:void(0)" *ngIf="canContentEdit || mt.isOwner"
+                                    class="text-reset text-decoration-none meeting-name font-weight-bold"
+                                    (click)="editInfo(info)">
+                                    {{ info?.name }} </a>
+                                <span *ngIf="!canContentEdit &&  !mt.isOwner"
+                                    class="text-reset text-decoration-none meeting-name font-weight-bold">
+                                    {{ info?.name }} </span>
+
+                            </div>
+                            <div class="item-info-bottom mt-1 description ">
+                                <div class="item-info-bottom truncate" [innerHtml]="info?.description"
+                                    style="max-width: 35rem">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div rightInfo class="description d-flex justify-content-end text-right my-auto info-right-group">
+                        <div class="description d-flex my-auto justify-content-end text-right mr-2">
+                            <div class="mr-2 mr-lg-4">
+                                <div *ngIf="info?.attachments && info?.attachments.length > 0" class="">
+                                    <i class="fas fa-paperclip text-secondary" style="opacity: 50%;"></i>
+                                    {{'document.list.attachmentFile' | translate}}( {{info?.attachments?.length}})
+                                </div>
+                                <div *ngIf="info?.optional">
+                                    <nb-icon icon="checkmark-circle-outline" class="text-secondary"
+                                        style="opacity: 50%;">
+                                    </nb-icon>
+                                    {{'matter.list.infoMember' | translate}}( {{info?.options?.length}})
+                                </div>
+                            </div>
+                            <div class="my-auto ml-auto mr-lg-2">
+                                <a nbButton outline status="info" size="tiny" href="javascript:void(0);" 
+                                    [nbPopover]="matterDetial" [nbPopoverContext]="{info: info}" nbPopoverTrigger="click"
+                                    nbPopoverPlacement="start-bottom">
+                                    {{'document.list.buttonDetail' | translate}}
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div command class="my-auto command-group" *ngIf="canContentEdit">
+                        <a href="javascript:void(0);" (click)="editInfo(info)" class="command-item"
+                            data-toggle="tooltip" data-placement="top" title="{{'meetingRole.edit' | translate}}">
+                            <i class="fas fa-edit text-secondary"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="command-item" data-toggle="tooltip" data-placement="top"
+                            title="{{'document.button.delete.title' | translate}}" (click)="delete(info, idx)">
+                            <i class="fas fa-trash-alt text-secondary"></i>
+                        </a>
+                    </div>
+                </vip-item-list>
+            </div>
+        </div>
+
+        <vip-empty-data [isNoData]="!electionMatters || electionMatters?.length ===0"></vip-empty-data>
+    </nb-card-body>
+</nb-card>
+<div class="mt-2" [ngStyle]="{'display': !electionMatters || electionMatters?.length < 2 ?'none':''}">
+    <span class="description mt-1">{{'matter.list.help' | translate}}</span>
+</div>
+
+<ng-template #matterDetial let-data>
+    <vip-content-detail>
+        <h6 infoHeader>{{data?.info?.name}}</h6>
+        <button buttonEdit nbButton status="info" *ngIf="canContentEdit" size="small" class="ml-3 py-1 float-right"
+            (click)="editInfo(data?.info)">
+            {{'document.edit.title' | translate}}
+        </button>
+        <div descriptionContent>
+            <div class="my-2">
+                <div for="description" class="text-secondary border-bottom ">
+                    <b class="">{{'document.form.description.label' |translate}}:</b></div>
+                <div id="description" class="py-2 description"
+                    style="max-width: 60rem; white-space: wrap; min-width: 40rem;"
+                    [innerHtml]="data?.info?.description | replaceLineBreaks">
+                </div>
+            </div>
+            <div *ngIf="data?.info?.optional" class="my-2">
+                <div class="text-secondary my-auto py-2">
+                    <div class="border-bottom "><b> {{'matter.list.infoMember' | translate}}:</b></div>
+                </div>
+                <div *ngFor="let op of data?.info?.options; let idx = index"
+                    class="d-flex justify-content-between w-100 list-hover my-auto py-1 px-2">
+
+                    <div class="d-flex">
+
+                        <div style="width: 1.5rem; height: 1.5rem;"
+                            class="rounded-circle initials border-secondary border text-primary my-auto  text-center">
+                            <span class="my-auto text-center"
+                                style="font-size: 0.8rem; font-weight: 500;">{{idx + 1}}</span>
+                        </div>
+                        <span class="mx-2 font-weight-light text-capitalize">{{op?.name}}</span>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <vip-document-list documentList [attachments]="data?.info?.attachments" [contentId]="data?.info?.id"
+        (deleteFileInfo)="deleteFile($event)" [allowEdit]="canContentEdit"></vip-document-list>
+
+    </vip-content-detail>
+</ng-template>

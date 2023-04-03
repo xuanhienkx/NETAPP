@@ -1,0 +1,82 @@
+<div class="d-lg-flex w-lg-100 pb-3 border-bottom">
+    <h4 class="list-title" *ngIf="!isEdit">{{'meetingGroup.add.headline' | translate}} </h4>
+    <h4 class="list-title" *ngIf="isEdit">{{'meetingGroup.edit.headline' | translate}}</h4>
+</div>
+
+<form novalidate (ngSubmit)="onSubmit()" #fr="ngForm" [formGroup]="frm" autocomplete="off">
+    <div class="p-3 row">
+        <div class="col-lg-8 ">
+            <div class="form-group">
+                <label for="name" class="required label">{{'meetingGroup.name.label' | translate}}:</label>
+                <input nbInput autofocus fullWidth id="name" [status]="f.name.dirty ? (f.name.invalid  ? 'danger' : 'basic') : 'basic'" class="form-control form-control-md" formControlName="name" />
+                <span class="text-danger" *ngIf="(f.name.touched || submitted) && f.name.errors?.required">
+                    {{'meetingGroup.name.required' | translate }}
+                </span>
+            </div>
+            <!-- <div class="form-group">
+                <label for="header" class="required label">{{'meetingGroup.header.label' | translate}}:</label>
+                <textarea nbInput autofocus fullWidth id="header" rows="3" [status]="f.header.dirty ? (f.header.invalid  ? 'danger' : 'basic') : 'basic'" class="form-control form-control-md" formControlName="header"></textarea>
+                <span class="text-danger" *ngIf="(f.header.touched || submitted) && f.header.errors?.required">
+                    {{'meetingGroup.header.required' | translate }}
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="footer" class="required label">{{'meetingGroup.footer.label' | translate}}:</label>
+                <textarea nbInput autofocus fullWidth id="footer" rows="3" [status]="f.footer.dirty ? (f.footer.invalid  ? 'danger' : 'basic') : 'basic'" class="form-control form-control-md" formControlName="footer"> </textarea>
+                <span class="text-danger" *ngIf="(f.footer.touched || submitted) && f.footer.errors?.required">
+                    {{'meetingGroup.footer.required' | translate }}
+                </span>
+            </div> -->
+            <div class="">
+                <div class="d-flex mb-1">
+                    <a nbButton outline size="small" [status]=" isHeader ? 'info': 'basic'" class="mr-2" (click)="changeHeaderFooter()">{{'meetingGroup.header.label' | translate}}</a>
+                    <a nbButton outline size="small" [status]=" isFooter ? 'info': 'basic'" class="ml-2" (click)="changeHeaderFooter()">{{'meetingGroup.footer.label' | translate}}</a>
+                </div>
+
+                <vip-tiny-mce [height]="300" [ngStyle]="{'display': isHeader ? 'block': 'none'}" [statusbarText]="'header'" [elementId]="'header'" [statusbarText]="'header'" [content]="f.header?.value" (editorKeyup)="keyupHandlerHeaderFunction($event)" [status]="isHeaderValid  ?  'basic':'danger'"
+                    [ngClass]="{'danger': !isHeaderValid}">
+                </vip-tiny-mce>
+                <span class="text-danger" *ngIf="(f.header.touched || submitted) && f.header.errors?.required" [ngStyle]="{'display': isHeader ? 'block': 'none'}">
+                    {{'meetingGroup.footer.required' | translate }}
+                </span>
+                <vip-tiny-mce [height]="300" [ngStyle]="{'display': isFooter ? 'block': 'none'}" [statusbarText]="'footer'" [elementId]="'footer'" [statusbarText]="'footer'" [content]="f.footer?.value" (editorKeyup)="keyupHandlerFooterFunction($event)" [status]="isFooterValid  ?  'basic':'danger'"
+                    [ngClass]="{'danger': !isFooterValid}">
+                </vip-tiny-mce>
+                <span class="text-danger" *ngIf="(f.footer.touched || submitted) && f.footer.errors?.required" [ngStyle]="{'display': isFooter ? 'block': 'none'}">
+                    {{'meetingGroup.footer.required' | translate }}
+                </span>
+
+            </div>
+
+        </div>
+        <div class="col-lg-4 d-flex">
+            <div class="m-auto">
+                <input #inputfile type="file" #avatar name="avatar" class="form-control" style="display: none;" (change)="getFiles(inputfile)" accept="image/*">
+                <div class="d-flex justify-content-center my-2 flex-column">
+                    <label class="label text-center">{{'meetingGroup.logoUrl.label' | translate}}:</label>
+                    <div class="m-auto border d-flex align-items-center" style="width: 150px; height: 150px;" (click)="inputfile.click()">
+                        <img class="img-fluid w-100 h-100" [src]="getUrl(f.logo.value)" #imgLogo *ngIf="f.logo.value" />
+                        <i class="m-auto far fa-file-image fa-5x" style="color: #DEE2E6;" *ngIf="!f.logo.value"></i>
+                    </div>
+
+                </div>
+                <div class="d-flex flex-column">
+                    <a nbButton size="small" class="m-auto my-2" size="tiny" (click)="inputfile.click()" style="width: 150px;">
+                        {{'meetingGroup.logoUrl.buttonFile' | translate}}</a>
+                    <div class="pt-3 description text-center">
+                        {{'meetingGroup.logoUrl.acceptType' | translate}} <span class="mx-1">&</span> {{'meetingGroup.logoUrl.fileSize' | translate}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clear-fixd"></div>
+    <div class="d-flex justify-content-between py-3 border-top">
+        <button class="cancel" type="button" size="small" nbButton (click)="close()">{{'Common.close' | translate}}</button>
+        <div  *allow="['@MODERATOR']">
+            <button type="submit" size="small" nbButton status="primary" [disabled]="!fr.valid" [class.btn-pulse]="submitted" value="">{{'Common.save' | translate}}</button>
+            <button type="button" nbButton size="small" status="primary" [disabled]="!fr.valid" [class.btn-pulse]="submitted" (click)="onSubmit(true)" class="mx-4">{{'Common.saveAndCreate' | translate}}</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,354 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\BrokerCommunication.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\BrokerCommunication.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About BrokerCommunication"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Auto-T Engine Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_BROKERCOMMUNICATION_DIALOG DIALOGEX 0, 0, 388, 222
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Auto-T Engine"
+MENU IDR_MENU_BROKER_COMM
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_DIALOG_CONNECT DIALOG DISCARDABLE  0, 0, 388, 222
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setting"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "IPAddress1",IDC_HOSE_IPADDRESS,"SysIPAddress32",
+                    WS_TABSTOP,86,28,100,14
+    EDITTEXT        IDC_HOSE_PORT,86,48,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_UDP_PORT,86,68,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_RETRY_TIMES,86,88,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TIMEOUT,86,108,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MAX_PACKET_SIZE,86,128,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MAX_PACKET_TIME,86,148,40,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_CONNECTION_MODE,261,48,114,62,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_PASSWORD,261,66,40,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MARKET_ID,261,86,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FIRM_ID,261,106,40,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,136,192,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,197,192,50,14
+    LTEXT           "IP Address",IDC_STATIC,12,28,35,8
+    LTEXT           "TCP Port",IDC_STATIC,12,49,30,8
+    GROUPBOX        "Network Setting",IDC_STATIC,7,7,186,175,BS_CENTER
+    LTEXT           "Timeout (sec)",IDC_STATIC,12,109,44,8
+    LTEXT           "Retry Times",IDC_STATIC,12,91,38,8
+    LTEXT           "UDP Port",IDC_STATIC,12,70,31,8
+    LTEXT           "Connection Mode",IDC_STATIC,198,48,57,8
+    LTEXT           "Password",IDC_STATIC,198,68,32,8
+    LTEXT           "Market ID (1 char)",IDC_STATIC,198,88,58,8
+    LTEXT           "Firm ID (3 char)",IDC_STATIC,198,108,49,8
+    LTEXT           "Max Packet Size",IDC_STATIC,12,133,54,8
+    LTEXT           "Max Packet Time (sec)",IDC_STATIC,12,154,74,8
+    GROUPBOX        "Connection Setting",IDC_STATIC,192,7,189,175,BS_CENTER
+    GROUPBOX        "",IDC_STATIC,7,180,374,35
+    EDITTEXT        IDC_EDIT_LINK_ID,261,28,40,14,ES_AUTOHSCROLL
+    LTEXT           "Link-ID",IDC_STATIC,198,28,24,8
+    GROUPBOX        "Sequence Number",IDC_STATIC,192,127,98,54
+    EDITTEXT        IDC_EDIT_SEQUENCE_NO,261,139,25,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ACK_SEQUENCE_NO,261,159,25,14,ES_AUTOHSCROLL
+    LTEXT           "Sequence No.",IDC_STATIC,198,141,47,8
+    LTEXT           "ACK Sequence No.",IDC_STATIC,198,161,63,8
+    GROUPBOX        "Queue Address",IDC_STATIC,288,127,93,54
+    EDITTEXT        IDC_EDIT_QUEUE_ADDRESS,303,139,71,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_QUEUE_RECEIVING,303,159,71,14,ES_AUTOHSCROLL
+    LTEXT           "(S)",IDC_STATIC,290,141,10,8
+    LTEXT           "(R)",IDC_STATIC,290,161,10,8
+    CONTROL         "Auto Connect",IDC_CHECK_AUTOCONNECT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,310,90,59,10
+END
+
+IDD_DIALOG_RETRANSMISSION_BROADCAST DIALOG DISCARDABLE  0, 0, 209, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Restransmission Broadcast Packet"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,45,84,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,105,84,50,14
+    LTEXT           "From Seq",IDC_STATIC,13,65,31,8
+    EDITTEXT        IDC_EDITSEQ_FROM,52,62,40,14,ES_AUTOHSCROLL
+    LTEXT           "To Seq",IDC_STATIC,112,65,24,8
+    EDITTEXT        IDC_EDIT_SEQ_TO,142,62,40,14,ES_AUTOHSCROLL
+    LTEXT           "Restransmission Information",
+                    IDC_STATIC_RETRANSMISSION_INFOR,13,23,169,31
+    LTEXT           "Boadcast_Seq_No",IDC_STATIC_BROADCAST_SEQ_NO,13,10,169,
+                    8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "BrokerCommunication MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "BrokerCommunication\0"
+            VALUE "LegalCopyright", "Copyright (C) 2008\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "BrokerCommunication.EXE\0"
+            VALUE "ProductName", "BrokerCommunication Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_BROKERCOMMUNICATION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 381
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 215
+    END
+
+    IDD_DIALOG_CONNECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 381
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 215
+    END
+
+    IDD_DIALOG_RETRANSMISSION_BROADCAST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_BROKER_COMM MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_APP_EXIT
+    END
+    POPUP "Connection Setup"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "Connect",                     ID_CONNECTIONSETUP_CONNECT
+        MENUITEM SEPARATOR
+        MENUITEM "Disconnect",                  ID_CONNECTIONSETUP_DISCONNECT
+        , GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Start new day",               ID_START_NEW_DAY, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Setting",                     ID_CONNECTIONSETUP_SETTING
+        MENUITEM SEPARATOR
+        MENUITEM "Retransmission",              ID_CONNECTIONSETUP_RETRANSMISSION
+
+        MENUITEM SEPARATOR
+        MENUITEM "Testing",                     ID_CONNECTIONSETUP_TESTING
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "About",                       ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_CONNECT DLGINIT
+BEGIN
+    IDC_COMBO_CONNECTION_MODE, 0x403, 19, 0
+0x4128, 0x2029, 0x654e, 0x2077, 0x6f43, 0x6e6e, 0x6365, 0x6974, 0x6e6f, 
+"\000" 
+    IDC_COMBO_CONNECTION_MODE, 0x403, 33, 0
+0x4228, 0x2029, 0x6c42, 0x6e69, 0x6c64, 0x2079, 0x6f43, 0x746e, 0x6e69, 
+0x6575, 0x2064, 0x6f43, 0x6e6e, 0x6365, 0x6974, 0x6e6f, "\000" 
+    IDC_COMBO_CONNECTION_MODE, 0x403, 25, 0
+0x4328, 0x2029, 0x6f43, 0x746e, 0x6e69, 0x6575, 0x2064, 0x6f43, 0x6e6e, 
+0x6365, 0x6974, 0x6e6f, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_BACKGROUND   BITMAP  DISCARDABLE     "Background.bmp"
+IDB_BITMAP_DIS_BACKGROUND BITMAP  DISCARDABLE     "Background_Dis.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About BrokerCommunication..."
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\BrokerCommunication.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

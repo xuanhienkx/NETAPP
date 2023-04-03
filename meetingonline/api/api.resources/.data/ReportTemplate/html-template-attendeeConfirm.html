@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Web Fonts  -->
+
+    <title>Vote-template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap"
+          rel="stylesheet" media="screen">
+    ##style##
+</head>
+
+<body>
+    <page size="A4">
+        <div class="container">
+            <header>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="logo" id="logo">
+                                <img class="img-fluid" src="##logo##">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="header-content text-center" id="header-content">
+                                ##header##
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+
+
+            </header>
+            <div class="body">
+
+                <div class="report-title text-center">
+                    <div class="text-uppercase title-optional">Phiếu xác nhận tham dự</div>
+                    <div class="text-description title-name">( Đại hội đồng cổ đông năm ##year##)</div>
+                </div>
+
+                <div class="report-content-info">
+                    <div class="report-content-info-base">
+                        <div class="info-item" style="align-items: center;">
+                            <span>Tên đại biểu:</span>
+                            <b>
+                                ##attendeeName##
+                            </b>
+                        </div>
+                        <div class="info-item" style="align-self: flex-end;">
+                            <span>Số CMT/Hộ chiếu/ĐKKD: </span>
+                            <b> ##attendeeIdentity##</b>
+                        </div>
+                    </div>
+                    <div class="info-item"> <span>Địa chỉ/Trụ sở: </span> <span> ##attendeeAddress##</span> </div>
+                    <div class="info-item"> <span>Số lượng cổ phần được quyền biểu quyế: </span> <b> ##attendeeRight## CP</b> </div>
+                </div>
+                <div>
+                    <p>
+                        Xác nhận đã tham dự, nhận tài liệu và thực hiện quyền biểu quyết tại <b>##meetingName## </b> được tổ chức vào <b>ngày ##day##/##month##/##year##</b>  với tư cách như sau: (đánh dấu X vào ô lựa chọn)
+                    </p>
+                    <div class="confirm-box" style="display: flex">
+                        <span style="margin-right: 2rem; margin-bottom: auto; margin-top: auto;"><b>1)  Cổ đông trực tiếp tham dự:</b></span>
+                        <span style="text-align: right; margin-bottom: auto; margin-top: auto;"><input type="checkbox" /></span><span></span>
+
+                    </div>
+                    <div class="confirm-box" style="display: flex">
+                        <span style="margin-right: 2rem; margin-bottom: auto; margin-top: auto"><b>2) Người được Cổ đông ủy quyền tham dự:</b></span>
+                        <span style="text-align: right; margin-bottom: auto; margin-top: auto;"><input type="checkbox" /></span><span></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="report-signingstar">
+                <table>
+                    <tr>
+                        <td style="text-align: left">++qrcode++</td>
+                        <td>
+                            <div class="date"> <span> Ngày ##day## tháng ##month## năm ##year##</span> </div>
+                            <div class="title"> <span>Đại biểu</span> </div>
+                            <div class="note"> <span>(Ký và ghi rõ họ tên)</span> </div>
+                            <div class="name"> <span> ##attendeeName##</span> </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </page>
+    <page size="A4" class=" ##showHide## ">
+        <div class="report-title">
+            <div class="text-uppercase title"> Cổ đông ủy quyền</div>
+        </div>
+        <table>
+            <tr>
+                <td>==rowIndex==</td>
+                <td class="text-capitalize"> ==holderName== </td>
+            </tr>
+        </table>
+    </page>
+</body>
+
+</html>

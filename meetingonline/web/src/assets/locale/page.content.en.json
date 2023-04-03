@@ -1,0 +1,33 @@
+{
+    "Common": {
+        "login": "Đăng nhập",
+        "getStartNow": "Bắt đầu nào",
+        "hotLine": "098-902.5568",
+        "email": "contact@skylar-tech.com"
+    },
+    "Nav": {
+        "intro": "Trang chủ",
+        "about": "Về chúng tôi",
+        "solutions": "Giải pháp",
+        "price": "Bảng giá",
+        "customer": "Khách hàng",
+        "news": "Tin tức"
+    },
+    "Intro": {
+        "title": "<strong>Giải pháp đại hội trực tuyến hàng đầu</strong> đáp ứng nhu cầu tổ chức đại hội cổ đông, đại hội cư dân",
+        "desc": "Giải pháp toàn diện, tiết kiệm chi phí, hiệu quả tức thì cho tổ chức và các đại biểu tham dự đại hội online để lựa chọn các quyết sách và bầu chọn những cá nhân, quyết định quan trọng."
+    },
+    "Register": {
+        "header": "Bạn muốn có giải pháp dành riêng cho mình?",
+        "callUs": "GỌI CHÚNG TÔI NGAY",
+        "emailUs": "GỬI THƯ ĐIỆN TỬ",
+        "requestAQuote": "Yêu cầu giải pháp"
+    },
+    "About": {
+        "title": "Chúng tôi",
+        "weAre": "Là công ty đi đầu về công nghệ và cung cấp giải pháp về đại hội trực tuyến tại Việt Nam",
+        "introduce": "Với nền tảng công nghệ mạnh mẽ, đội ngũ nhân viên năng động và chuyên nghiệp, chúng tôi cung cấp đầy đủ và .....",
+        "ourSolution": "Giải pháp của chúng tôi"
+    }
+
+}

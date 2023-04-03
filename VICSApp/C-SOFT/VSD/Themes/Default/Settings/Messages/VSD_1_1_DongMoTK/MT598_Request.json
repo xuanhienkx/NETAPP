@@ -1,0 +1,239 @@
+[
+    {
+        "tag": "20",
+        "parts": [
+            {
+                "name": "OutReferenceNumber",
+                "length": 16,
+				 "format": "D16",
+                "type": "Integer"
+            }
+        ]
+    },
+    {
+        "tag": "12",
+        "parts": [
+            {
+                "name": "SubMessageType",
+                "length": 3,
+                "default": "001"
+            }
+        ]
+    },
+    {
+        "tag": "77E",
+        "parts": [
+            {
+                "name": "Proprietary",
+                "length": 73
+            }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "system": true,
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "23G",
+        "parts": [
+            {
+                "name": "MessageFunction",
+                "length": 4,
+                "default": "NEWM"
+            }
+        ]
+    },
+    {
+        "tag": "22H",
+        "qualifier": "ACCT",
+        "part_start": "/",
+        "qualifier_start": "",
+        "parts": [
+            {
+                "name": "AccountProcessInstruction",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "PREP",
+        "part_start": "/",
+        "optional": true,
+        "parts": [
+            {
+                "name": "RequestDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "system": true,
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "system": true,
+        "parts": [
+            { "default": "REGDET" }
+        ]
+    },
+    {
+        "tag": "97A",
+        "qualifier": "SAFE",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "CustomerNumber",
+                "length": 35
+            }
+        ]
+    },
+    {
+        "tag": "95Q",
+        "qualifier": "INVE",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "FullNameLocal",
+                "length": 35,
+                "line": 4
+            }
+        ]
+    },
+    {
+        "tag": "95S",
+        "qualifier": "ALTE",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "Custody",
+                "length": 8, 
+                "default": "VISD"
+            },
+            {
+                "name": "CardType",
+                "length": 4
+            },
+            {
+                "name": "NationalityCode",
+                "length": 2
+            },
+            {
+                "name": "CardIdentity",
+                "length": 30
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "ISSU",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "CardIssuedDate",
+                "length": 8,
+                "format": "yyyyMMdd",
+                "type": "Date"
+            }
+        ]
+    },
+    {
+        "tag": "94G",
+        "qualifier": "ISSU",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "CardIssuer",
+                "length": 35,
+                "line": 2
+            }
+        ]
+    },
+    {
+        "tag": "94G",
+        "qualifier": "EMAI",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "Email",
+                "length": 35,
+                "line": 2
+            }
+        ]
+    },
+    {
+        "tag": "94G",
+        "qualifier": "PHON",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "PhoneNumber",
+                "length": 35,
+                "line": 2
+            }
+        ]
+    },
+    {
+        "tag": "94G",
+        "qualifier": "ADDR",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "Address",
+                "length": 35,
+                "line": 2
+            }
+        ]
+    },
+    {
+        "tag": "94D",
+        "qualifier": "CITY",
+        "part_start": "/",
+        "optional": true,
+        "parts": [
+            {
+                "name": "CountryCode",
+                "length": 2,
+                "optional": true
+            },
+            {
+                "name": "City",
+                "length": 35
+            }
+        ]
+    },
+    {
+        "tag": "70E",
+        "qualifier": "ADTX",
+        "part_start": "/",
+        "optional": true,
+        "parts": [
+            {
+                "name": "Notes",
+                "length": 35,
+                "line": 10,
+                "optional": true
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "system": true,
+        "parts": [
+            { "default": "REGDET" }
+        ]
+    }
+]

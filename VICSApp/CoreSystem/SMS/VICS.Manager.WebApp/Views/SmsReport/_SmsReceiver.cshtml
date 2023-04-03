@@ -1,0 +1,42 @@
+﻿@model SMS.Common.Models.SmsReceiver
+
+<div>
+    <h4>SmsReceiver</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodeResult)
+           
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodeResult) 
+            -
+            @ViewBag.SmsId
+        </dd>
+        <dt>Details</dt>
+        <dd>
+            <table class="table table-striped">
+                <tr>
+                    <th>NO</th>
+                    <th>Phone</th>
+                    <th>IsSent</th>
+                    <th>SentResult</th>
+                </tr>
+                @{
+                    var no = 1;
+                }
+                @foreach (var it in Model.ReceiverList.Receiver)
+                {
+                    <tr>
+                        <td>@no</td>
+                        <td>@it.Phone</td>
+                        <td>@string.Format("{0}", (it.IsSent ? "Yes" : "No"))</td>
+                        <td>@string.Format("{0}", (it.SentResult ? "Yes" : "No"))</td>
+                    </tr>
+                    no++;
+                }
+            </table>
+        </dd>
+    </dl>
+</div>

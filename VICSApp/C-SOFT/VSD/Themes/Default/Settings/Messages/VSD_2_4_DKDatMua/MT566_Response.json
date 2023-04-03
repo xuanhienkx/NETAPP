@@ -1,0 +1,482 @@
+﻿[
+  {
+    "tag": "16R",
+    "type": "Open",
+    "parts": [
+      {
+        "default": "GENL"
+      }
+    ]
+  },
+  {
+    "tag": "20C",
+    "qualifier": "CORP",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "OrigTransferRef",
+        "length": 16
+      }
+    ]
+  },
+  {
+    "tag": "20C",
+    "qualifier": "COAF",
+    "optional": true,
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "OfficialEventReference",
+        "length": 16
+      }
+    ]
+  },
+  {
+    "tag": "20C",
+    "qualifier": "SEME",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "IntReferenceNumber",
+        "length": 16
+      }
+    ]
+  },
+  {
+    "tag": "23G",
+    "parts": [
+      {
+        "name": "MessageFunctional",
+        "length": 4
+      }
+    ]
+  },
+  {
+    "tag": "22F",
+    "part_start": "/",
+    "qualifier": "CAEV",
+    "parts": [
+      {
+        "name": "CorporateIndicator",
+        "length": 4
+      }
+    ]
+  },
+  {
+    "tag": "98A",
+    "qualifier": "PREP",
+    "optional": true,
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "SettlementDate",
+        "length": 8,
+        "type": "Date",
+        "format": "yyyyMMdd"
+      }
+    ]
+  },
+  {
+    "tag": "16R",
+    "type": "Open",
+    "optional": true,
+    "parts": [
+      {
+        "default": "LINK"
+      }
+    ]
+  },
+  {
+    "tag": "13A",
+    "qualifier": "LINK",
+    "optional": true,
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "LinkedMessageId",
+        "length": 3
+      }
+    ]
+  },
+  {
+    "tag": "20C",
+    "qualifier": "RELA",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "OutReferenceNumber",
+        "length": 16
+      }
+    ]
+  },
+  {
+    "tag": "16S",
+    "type": "Close",
+    "optional": true,
+    "parts": [
+      {
+        "default": "LINK"
+      }
+    ]
+  },
+  {
+    "tag": "16S",
+    "type": "Close",
+    "parts": [
+      {
+        "default": "GENL"
+      }
+    ]
+  },
+  {
+    "tag": "16R",
+    "type": "Open",
+    "parts": [
+      {
+        "default": "USECU"
+      }
+    ]
+  },
+  {
+    "tag": "97A",
+    "qualifier": "SAFE",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "CustomerNumber",
+        "length": 35
+      }
+    ]
+  },
+  {
+    "tag": "35B",
+    "parts": [
+      {
+        "name": "StockCountryCode",
+        "length": 2,
+        "default": "VN",
+        "start": "/",
+        "end": "/"
+      },
+      {
+        "start": "/",
+        "name": "Code"
+      }
+    ]
+  },
+  {
+    "tag": "16R",
+    "type": "Open",
+    "optional": true,
+    "parts": [
+      {
+        "default": "FIA"
+      }
+    ]
+  },
+  {
+    "tag": "12A",
+    "qualifier": "CLAS",
+    "optional": true,
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "ActivityType",
+        "default": "CORP",
+        "length": 4
+      },
+      {
+        "name": "SubType",
+        "length": 1
+      }
+    ]
+  },
+  {
+    "tag": "16S",
+    "type": "Close",
+    "optional": true,
+    "parts": [
+      {
+        "default": "FIA"
+      }
+    ]
+  },
+  {
+    "tag": "93B",
+    "qualifier": "CONB",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "BalanceUnit",
+        "length": 4,
+        "start": "/"
+      },
+      {
+        "name": "BalanceElig",
+        "length": 4,
+        "start": "/",
+        "end": "/"
+      },
+      {
+        "name": "Amount",
+        "length": 15,
+        "type": "Integer"
+      }
+    ]
+  },
+  {
+    "tag": "16S",
+    "type": "Close",
+    "parts": [
+      {
+        "default": "USECU"
+      }
+    ]
+  },
+  {
+    "tag": "16R",
+    "type": "Open",
+    "optional": true,
+    "parts": [
+      {
+        "default": "CACONF"
+      }
+    ]
+  },
+  {
+    "tag": "13A",
+    "qualifier": "CAON",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "IdentifiAdditional",
+        "length": 3,
+        "format": "D3",
+        "type": "Integer"
+      }
+    ]
+  },
+  {
+    "tag": "22F",
+    "qualifier": "CAOP",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "CorporateOptionCodeIndicator",
+        "length": 4
+      }
+    ]
+  },
+  {
+    "tag": "16S",
+    "type": "Close",
+    "optional": true,
+    "parts": [
+      {
+        "default": "CACONF"
+      }
+    ]
+  },
+  {
+    "tag": "16R",
+    "type": "Open",
+    "optional": true,
+    "parts": [
+      {
+        "default": "SECMOVE"
+      }
+    ]
+  },
+  {
+    "tag": "22H",
+    "qualifier": "CRDB",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "Debit",
+        "default": "DEBT",
+        "length": 4
+      }
+    ]
+  },
+  {
+    "tag": "35B",
+    "qualifier": "ISIN",
+    "parts": [
+      {
+        "name": "IsinCodeDebit",
+        "length": 17,
+        "optional": true,
+        "start": "ISIN ",
+        "end": "<BrLine>"
+      },
+      {
+        "name": "StockCountryCodeDebit",
+        "length": 2,
+        "default": "VN",
+        "start": "/"
+      },
+      {
+        "start": "/",
+        "name": "CodeDebit"
+      }
+    ]
+  },
+  {
+    "tag": "36B",
+    "qualifier": "PSTA",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "UnitTypeDebit",
+        "length": 4
+      },
+      {
+        "name": "QuantityDebit",
+        "length": 15,
+        "type": "Integer"
+      }
+    ]
+  },
+  {
+    "tag": "98A",
+    "qualifier": "POST",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "DateAccountingDebit",
+        "length": 8,
+        "type": "Date",
+        "format": "yyyyMMdd"
+      }
+    ]
+  },
+  {
+    "tag": "16S",
+    "type": "Close",
+    "optional": true,
+    "parts": [
+      {
+        "default": "SECMOVE"
+      }
+    ]
+  },
+  {
+    "tag": "16R",
+    "type": "Open",
+    "optional": true,
+    "parts": [
+      {
+        "default": "SECMOVE"
+      }
+    ]
+  },
+  {
+    "tag": "22H",
+    "qualifier": "CRDB",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "Credit",
+        "length": 4
+      }
+    ]
+  },
+  {
+    "tag": "35B",
+    "qualifier": "ISIN",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "IsinCodeCredit",
+        "length": 15,
+        "optional": true,
+        "start": "ISIN ",
+        "end": "<BrLine>"
+      },
+      {
+        "name": "StockCountryCodeCredit",
+        "length": 2,
+        "optional": true,
+        "start": "/",
+        "end": "/"
+      },
+      {
+        "name": "CodeCredit",
+        "end": "<BrLine>"
+      }
+    ]
+  },
+  {
+    "tag": "36B",
+    "qualifier": "PSTA",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "UnitTypeCredit",
+        "length": 4
+      },
+      {
+        "name": "QuantityCredit",
+        "length": 15,
+        "type": "Integer"
+      }
+    ]
+  },
+  {
+    "tag": "98A",
+    "qualifier": "POST",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "DateAccountingCredit",
+        "length": 8,
+        "type": "Date",
+        "format": "yyyyMMdd"
+      }
+    ]
+  },
+  {
+    "tag": "16S",
+    "type": "Close",
+    "optional": true,
+    "parts": [
+      {
+        "default": "SECMOVE"
+      }
+    ]
+  },
+  {
+    "tag": "16R",
+    "type": "Open",
+    "optional": true,
+    "parts": [
+      {
+        "default": "ADDINFO"
+      }
+    ]
+  },
+  {
+    "tag": "70E",
+    "qualifier": "ADTX",
+    "optional": true,
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "Notes",
+        "length": 35,
+        "line": 10
+      }
+    ]
+  },
+  {
+    "tag": "16S",
+    "type": "Close",
+    "optional": true,
+    "parts": [
+      {
+        "default": "ADDINFO"
+      }
+    ]
+  }
+]

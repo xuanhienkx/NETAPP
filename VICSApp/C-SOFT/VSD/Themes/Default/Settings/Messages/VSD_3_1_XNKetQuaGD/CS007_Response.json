@@ -1,0 +1,76 @@
+{
+    "code": "CS007",
+    "name": "CS007 -Thông báo tài khoản bán thiếu chứng khoán và thiếu thông tin tài khoản",
+    "parameters": [{
+        "name": "ReportDate",
+        "type": "Date",
+        "format": "yyyyMMdd",
+        "start": "TRANDATE:"
+    }],
+    "csvFields": [{
+            "name": "MemberCode",
+            "end": ";"
+        },
+        {
+            "name": "SubAccount",
+            "end": ";"
+        },
+        {
+            "name": "TradeDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "TradeCode",
+            "end": ";"
+        },
+        {
+            "name": "Code",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber",
+            "end": ";"
+        },
+        {
+            "name": "BankGL",
+            "end": ";"
+        },
+        {
+            "name": "Notes",
+            "end": ";"
+        },
+        {
+            "name": "ConfirmNumber",
+            "end": ";"
+        },
+        {
+            "name": "Quantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "PaymemtDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "OrderSequence",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "TradingDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "PaymemtDate2",
+            "end": ";"
+        }
+
+    ]
+}

@@ -1,0 +1,122 @@
+{
+    "code": "CA029",
+    "name": "CA029- Danh sách người sở hữu trái phiếu lưu ký nhận thanh toán lãi/ lãi và gốc trái phiếu",
+    "parameters": [
+         {
+		  "name": "RightNumber",
+		  "start": "CACODE:",
+		  "end": "<BrLine>"
+		},
+		{
+		  "name": "BoardType",
+		  "start": "BRID:"
+		}
+    ],
+    "csvFields": [
+        {
+            "name": "BondsType",
+            "end": ";"
+        },
+        {
+            "name": "Code",
+            "end": ";"
+        },
+        {
+            "name": "MemberCode",
+            "end": ";"
+        },
+        {
+            "name": "DepositQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "HoldQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "TotalQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "ParValue",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "TotalAmount",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "AccruedInterest",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "Note",
+            "end": ";"
+        },
+        {
+            "name": "HolderName",
+            "end": ";"
+        },
+        {
+            "name": "IdentityIssued",
+            "end": ";"
+        },
+        {
+            "name": "IdentityIssuedDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "Address",
+            "end": ";"
+        },
+        {
+            "name": "AccountType",
+            "end": ";"
+        },
+        {
+            "name": "TAX",
+            "end": ";"
+        },
+        {
+            "name": "BusinessType",
+            "end": ";"
+        },
+        {
+            "name": "Nationaltity",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber",
+            "end": ";"
+        },
+        {
+            "name": "MemberName",
+            "end": ";"
+        },
+        {
+            "name": "DocumentRef",
+            "end": ";"
+        },
+        {
+            "name": "ReportName1",
+            "end": ";"
+        },
+        {
+            "name": "ReportName2",
+            "end": ";"
+        },
+        {
+            "name": "DividendYield",
+            "end": ";"
+        }
+    ]
+
+}

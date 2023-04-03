@@ -1,0 +1,35 @@
+<!-- <div class="modal-header">
+    <h4 class="modal-title">{{ title }}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    {{ message }}
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn" (click)="decline()">{{ btnCancelText }}</button>
+    <button type="button" class="btn btn-primary" (click)="accept()">{{ btnOkText }}</button>
+</div> -->
+
+<nb-card class="full-width-dialog-confirm" status="basic">
+    <nb-card-header>
+        <i class="fas fa-exclamation-triangle fa-2x mr-2 text-warning"></i> {{confirm?.title | translate}}
+    </nb-card-header>
+    <nb-card-body class="d-flex">
+        <div class="my-auto  w-100">
+            <p> {{ confirm?.message | translate}}</p>
+            <div class="form-group" *ngIf=" confirm?.config?.requiredNote">
+                <textarea #reasonInput rows="3" nbInput autofocus fullWidth class="form-control" id="reason" [formControl]="reason" placeholder="{{'Common.confirmReasonPlaceholder' |translate}}" [status]="reason.touched && reason.invalid? 'danger' : 'basic'"></textarea>
+
+                <div class="text-danger" *ngIf="reason.touched && reason.invalid && reason.errors.required">
+                    {{'holder.form.name.required' |translate}}.</div>
+            </div>
+
+        </div>
+    </nb-card-body>
+    <nb-card-footer class="d-flex justify-content-between">
+        <button nbButton size="small" status="basic" (click)="decline()">{{ confirm?.config?.btnCancelText  | translate}}</button>
+        <button nbButton size="small" status="primary" (click)="accept()">{{ confirm?.config?.btnOkText  | translate}}</button>
+    </nb-card-footer>
+</nb-card>

@@ -1,0 +1,122 @@
+{
+    "Common": {
+        "commonErrorTitle": "Thông báo lỗi",
+        "commonWarningTitle": "Cảnh báo",
+        "commonInformTitle": "Thông báo",
+        "requestErrorTittle": "Yêu cầu thực hiện bị lỗi",
+        "alerOk": "Đồng ý",
+        "alerCancel": "Hủy",
+        "unauthorized": "Lỗi chứng thực, vui lòng đăng nhập lại để tiếp tục",
+        "gotoHome": "Đi tới trang chủ",
+        "wellcome": "Chào mừng ",
+        "messageActiveAcount": "Cảm ơn bạn đã đăng ký ứng dụng <b>Skylar Meeting</b>. Hãy nhấn vào kích hoạt để hoàn thành đăng ký.",
+        "buttonActive": "Kích hoạt",
+        "thankyou": "Cảm ơn!!!",
+        "forgotSuccessTitle": "Khôi phục mật khẩu thành công",
+        "messageSuccesSigup": "<b>Vui lòng kiểm tra email</b> để kích hoạt tài khoản khi để tiếp sử dụng các chức năng của ứng dụng",
+        "messageSuccesForgot": "<b>Vui lòng kiểm tra email</b> để tiến hành cài đặt lại mật khẩu",
+        "contactTrouble": "Nếu có bất kỳ vấn đề gì hãy <a href='/contactUs'>liên hệ quản trị</a>",
+        "forceLogout": "Phiên làm việc của bạn đã hết hạn. Yêu cầu đăng nhập lại!",
+        "loginSessionViolent": "Tài khoản của bạn đang được đăng nhập tại thiết bị hoặc trình duyệt khác. Phiên làm việc của bạn hiện tại bị hủy!",
+        "invalidToken": "Hệ thống xác định mã bảo mật của bạn đã hết hạn hoặc không hợp lệ. Vì sự bảo mật, yêu cầu bạn đăng nhập lại"
+    },
+    "page": {
+        "login": "Đăng nhập",
+        "register": "Đăng ký",
+        "forgot": "Quên mật khẩu",
+        "home": "Về trang chủ",
+        "contact": "Liên hệ để hỗ trợ"
+    },
+    "login": {
+        "header": "Đăng nhập",
+        "button": "Đăng nhập",
+        "rememberMe": "Nhớ mật khẩu",
+        "linkRegister": "Bạn chưa có tài khoản?",
+        "userName": {
+            "label": "Tên đăng nhập",
+            "required": "Bạn cần nhập tên đăng nhập",
+            "placeholder": "Nhập vào tên đăng nhập hoặc email"
+        },
+        "password": {
+            "label": "Mật khẩu",
+            "required": "Bạn cần nhập mật khẩu",
+            "placeholder": "Nhập vào mật khẩu của bạn"
+        },
+        "socialUser": {
+            "title": "Hoặc đăng với:",
+            "facebook": "Facebook",
+            "google": "Google"
+        }
+    },
+    "Register": {
+        "callUs": "GỌI CHÚNG TÔI NGAY",
+        "emailUs": "GỬI THƯ ĐIỆN TỬ",
+        "requestAQuote": "Hãy đăng ký tham gia để trải nghiệm hội nghị trực tuyến tuyệt vời!",
+        "displayName": {
+            "label": "Họ và tên",
+            "required": "Bạn cần nhập tên đầy đủ",
+            "valid": "Tên hiển thị yêu cầu phải nhập không được để trống",
+            "validLength": "Tên đăng nhập phải từ {{min}} đến {{max}} ký tự"
+        },
+        "email": {
+            "label": "Địa chỉ email",
+            "required": "Bạn cần nhập địa chỉ email",
+            "valid": "Email không đúng định dạng"
+        },
+        "password": {
+            "label": "Mật khẩu",
+            "required": "Bạn cần nhập mật khẩu",
+            "valid": "Mật khẩu phải lớn hơn hoặc bằng 6 ký tự và có ít nhất một ký tự số"
+        },
+        "confirmPassword": {
+            "label": "Xác nhận mật khẩu",
+            "required": "Bạn cần nhập xác nhận mật khẩu",
+            "notMatch": "Mậu khẩu xác nhận không trùng khớp"
+        },
+        "header": "Tạo tài khoản skylar",
+        "roleService": "Tôi đã đọc và đồng ý với các <a href='{{url}}'> điều khoản dịch vụ </a>",
+        "registerButton": "Đăng ký"
+    },
+    "resetPassword": {
+        "password": {
+            "label": "Mật khẩu mới",
+            "required": "Bạn cần nhập mật khẩu",
+            "valid": "Mật khẩu phải lớn hơn hoặc bằng 6 ký tự và có ít nhất một ký tự số"
+        },
+        "confirmPassword": {
+            "label": "Xác nhận mật khẩu",
+            "required": "Bạn cần nhập xác nhận mật khẩu",
+            "notMatch": "Mậu khẩu xác nhận không trùng khớp"
+        },
+        "header": "Cài đặt lại mặt khẩu",
+        "button": "Đặt lại mật khẩu"
+    },
+    "forgot": {
+        "header": "Khôi phục mật khẩu",
+        "button": "Khôi phục",
+        "sub-title": "Nhập địa chỉ email và gui link cài đặt lại mật khẩu",
+        "email": {
+            "label": "Địa chỉ email",
+            "required": "Thông tin không được để trống",
+            "placeholder": "Nhập vào địa chỉ email hoặc tên đăng nhập"
+        },
+        "About": {
+            "title": "Chúng tôi",
+            "weAre": "Là công ty đi đầu về công nghệ và cung cấp giải pháp về đại hội trực tuyến tại Việt Nam",
+            "introduce": "Với nền tảng công nghệ mạnh mẽ, đội ngũ nhân viên năng động và chuyên nghiệp, chúng tôi cung cấp đầy đủ và .....",
+            "ourSolution": "Giải pháp của chúng tôi"
+        }
+    },
+    "errors": {
+        "404-title": "404 Not Found",
+        "404-comtent": "Sorry Page NotFound, Không tìn thấy trang yêu cầu!",
+        "500-title": "500 Lỗi từ server",
+        "500-comtent": "Lỗi từ API, vui lòng liên hệ quản trị hệ thống!",
+        "500": "Lỗi 500  SERVER ERROR, Vui lòng liên hệ với quản trị hệ thống ",
+        "404": "Lỗi 404  Page NotFound, Không tìn thấy trang yêu cầu",
+        "401": "Tên đăng nhập hoặc mật khẩu không đúng",
+        "ERR_CONNECTION_REFUSED": "Không kết nối được máy chủ API!",
+        "invalidToken": "Hệ thống xác định mã bảo mật của bạn đã hết hạn hoặc không hợp lệ. Vì sự bảo mật, yêu cầu bạn đăng nhập lại",
+        "permission_retricted": "Xin lỗi! Bạn bị giới hạn quyền sử dụng và không được phép"
+    }
+}

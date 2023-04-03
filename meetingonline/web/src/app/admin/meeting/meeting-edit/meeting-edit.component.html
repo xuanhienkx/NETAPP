@@ -1,0 +1,134 @@
+<div class="d-lg-flex w-lg-100 pb-3 border-bottom">
+    <h4 class="list-title" *ngIf="!f.id?.value">{{'meeting.add.headline' | translate}}</h4>
+    <h4 class="list-title" *ngIf="f.id?.value">{{'meeting.edit.headline' | translate}}</h4>
+</div>
+
+<form novalidate (ngSubmit)="onSubmit()" #fr="ngForm" [formGroup]="frm" autocomplete="off">
+    <div class="d-flex justify-content-between pt-3">
+        <div class="col-lg-7">
+
+            <div class="form-group">
+                <label for="name" class="required label">{{'meeting.name.label' | translate}}:</label>
+                <input nbInput autofocus fullWidth id="name" [status]="f.name.dirty ? (f.name.invalid  ? 'danger' : 'basic') : 'basic'" class="form-control form-control-md" formControlName="name" />
+                <span class="text-danger" *ngIf="(f.name.touched || submitted) && f.name.errors?.required">
+                    {{'meeting.name.required' | translate }}
+                </span>
+            </div>
+
+            <div *ngIf="f.id.value" class="form-group d-flex flex-row">
+                <label for="meetingType" class="label mt-1">{{'meeting.type.label' | translate}}:</label>
+                <strong class="badge badge-primary mx-2 px-2 mt-0 pt-2">{{meetingTypeName}}</strong>
+            </div>
+
+            <div class="form-group py-1" *ngIf="!f.id.value">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <nb-radio-group formControlName="type" *ngFor="let type of meetingTypes">
+                        <nb-radio [value]="type.value">{{type.name}}</nb-radio>
+                    </nb-radio-group>
+                    <strong class="badge badge-primary mx-2 px-2 mt-0 pt-2">{{meetingTypeName}}</strong>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address" class="required label">{{'meeting.address.label' | translate}}:</label>
+                <input nbInput autofocus fullWidth id="address" [status]="f.address.dirty ? (f.address.invalid  ? 'danger' : 'basic') : 'basic'" class="form-control form-control-md" formControlName="address" />
+                <span class="text-danger" *ngIf="(f.address.touched || submitted) && f.address.errors?.required">
+                    {{'meeting.address.required' | translate }}
+                </span>
+                <span class="text-danger" *ngIf="(f.address.touched || submitted) && f.address.errors?.minlength">
+                    {{'meeting.address.minlength' | translate }}
+                </span>
+            </div>
+
+            <div class="form-group">
+                <label for="openedDate" class="label required">{{'meeting.openedDate.label' | translate}}:</label>
+                <input nbInput autofocus placeholder="dd/MM/yyyy" [value]="f.openedDate?.value | date:'dd/MM/yyyy'" [nbDatepicker]="picker" [status]="f.openedDate.dirty ? (f.openedDate.invalid  ? 'danger' : 'basic') : 'basic'" class="form-control form-control-md" formControlName="openedDate"
+                />
+
+                <nb-datepicker #picker [min]="min" [max]="max"></nb-datepicker>
+                <span class="text-danger" *ngIf="(f.openedDate.touched || submitted) && f.openedDate.errors?.required">
+                    {{'meeting.openedDate.required' | translate }}
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="description" class="label">{{'meeting.description.label' | translate}}:</label>
+                <textarea nbInput autofocus fullWidth id="description" rows="3" class="form-control form-control-md" formControlName="description"></textarea>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+
+            <div class="form-group d-flex flex-column">
+                <label for="name" class="label">{{'meeting.group.label' | translate}}:</label>
+                <nb-select fullWidth placeholder="{{'meeting.group.placeholder' | translate}}" [formControl]="f.groupId" formControlName="groupId">
+                    <nb-option>{{'meeting.group.placeholder' | translate}}</nb-option>
+                    <nb-option *ngFor="let g of groups" [value]="g.id">{{g.name}}</nb-option>
+                </nb-select>
+            </div>
+
+            <input #inputfile type="file" #avatar name="avatar" class="form-control" style="display: none;" (change)="getFiles(inputfile)" accept="image/*">
+            <div class="form-group d-flex flex-column">
+                <div class="d-flex">
+                    <label class="label">{{'meeting.logoUrl.label' | translate}}:</label>
+                    <div   *ngIf="canEdit"  class="mx-2 ml-auto" >
+                        <a  *ngIf="f.groupId.value" size="tiny" data-toggle="tooltip" data-placement="top" title="{{'meeting.logoUrl.copy.tooltip' | translate}}" (click)="copyFromGroup('logo')">
+                            <i class="far fa-clone text-info mr-2"></i>{{'meeting.logoUrl.copy.title' | translate}}
+                        </a>
+                    </div>
+                  
+                </div>
+
+                <div class="d-flex justify-content-center my-2">
+                    <div  *ngIf="canEdit" class="m-auto border d-flex align-items-center" style="width: 150px; height: 150px;" (click)="inputfile.click()">
+                        <img class="img-fluid w-100 h-100" [src]="getUrl(f.logo.value)" #imgLogo *ngIf="f.logo.value" />
+                        <i class="m-auto far fa-file-image fa-5x" style="color: #DEE2E6;" *ngIf="!f.logo.value"></i>
+                    </div>
+                    <div  *ngIf="!canEdit" class="m-auto border d-flex align-items-center" style="width: 150px; height: 150px;" >
+                        <img class="img-fluid w-100 h-100" [src]="getUrl(f.logo.value)" #imgLogo *ngIf="f.logo.value" />
+                        <i class="m-auto far fa-file-image fa-5x" style="color: #DEE2E6;" *ngIf="!f.logo.value"></i>
+                    </div>
+
+
+                </div>
+                <div class="d-flex flex-column">
+                    <a nbButton size="small" *ngIf="canEdit" class="m-auto my-2" size="tiny" (click)="inputfile.click()" style="width: 150px;">
+                        {{'meeting.logoUrl.buttonFile' | translate}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 form-group">
+        <div class="d-flex mb-1">
+            <a nbButton outline size="small" [status]=" isHeader ? 'info': 'basic'" class="mr-2" (click)="changeHeaderFooter()">{{'meeting.header.label' | translate}}</a>
+            <a nbButton outline size="small" [status]=" isFooter ? 'info': 'basic'" class="ml-2" (click)="changeHeaderFooter()">{{'meeting.footer.label' | translate}}</a>
+            <div class="ml-auto my-auto" *ngIf="f.groupId.value">
+                <a  *ngIf="canEdit"   [ngStyle]="{'display': isHeader ? 'block': 'none'}" class="mx-2 text-info " data-toggle="tooltip" data-placement="top" title="{{'meeting.header.copy.tooltip' | translate}}" (click)="copyFromGroup('header')">
+                    <i class="far fa-clone mr-2"></i>{{'meeting.header.copy.title' | translate}}
+                </a>
+                <a *ngIf="canEdit" @*A  [ngStyle]="{'display': isFooter ? 'block': 'none'}" class="mx-2 text-info" data-toggle="tooltip" data-placement="top" title="{{'meeting.header.copy.tooltip' | translate}}" (click)="copyFromGroup('footer')">
+                    <i class="far fa-clone mr-2"></i>{{'meeting.header.copy.title' | translate}}
+                </a>
+                <!-- <a class="mx-2 text-info description" data-toggle="tooltip" data-placement="top" title="{{'meeting.header.open.tooltip' | translate}}" (click)="open('header')">
+                    <i class="fas fa-external-link-alt"></i> {{'meeting.header.open.title' | translate}}
+                </a> -->
+            </div>
+        </div>
+
+        <vip-tiny-mce #meetingHeader [ngStyle]="{'display': isHeader ? 'block': 'none'}" updateContent="headerContent" [statusbarText]="'header'" [elementId]="'header'" [statusbarText]="'header'" [content]="f.header?.value" (editorKeyup)="keyupHandlerHeaderFunction($event)">
+        </vip-tiny-mce>
+        <vip-tiny-mce #meetingFooter [ngStyle]="{'display': isFooter ? 'block': 'none'}" [statusbarText]="'footer'" [elementId]="'footer'" [statusbarText]="'footer'" [content]="f.footer?.value" (editorKeyup)="keyupHandlerFooterFunction($event)">
+        </vip-tiny-mce>
+
+    </div>
+
+
+    <div class="clear-fixd"></div>
+
+    <div class="d-flex justify-content-between py-3 border-top">
+        <button type="button" size="small" class="cancel" nbButton (click)="close()">{{'Common.close' | translate}}</button>
+
+        <button  *ngIf="canEdit"   type="submit" size="small" nbButton status="primary" [disabled]="(!fr.valid)" [class.btn-pulse]="submitted" value="">{{'Common.save' | translate}}</button>
+
+    </div>
+
+
+</form>

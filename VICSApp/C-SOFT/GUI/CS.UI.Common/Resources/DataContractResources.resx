@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BranchModel_Address_Validation" xml:space="preserve">
+    <value>Dia chi validation</value>
+  </data>
+  <data name="BranchModel_BranchCode_Validation" xml:space="preserve">
+    <value>Mã chi nhánh phải là 3 ký tự số</value>
+  </data>
+  <data name="BranchModel_BranchName_Validation" xml:space="preserve">
+    <value>Branch name validation</value>
+  </data>
+  <data name="BrokerGroupModel_GroupName_Validation" xml:space="preserve">
+    <value>Tên nhóm không dược để trống và không lớn hơn 100 ký tự</value>
+  </data>
+  <data name="BrokerGroupModel_Branch_SameAsParentValidation" xml:space="preserve">
+    <value>Đơn vị quản lý phải cùng đơn vị quản lý với nhóm quản lý</value>
+  </data>
+  <data name="BrokerGroupModel_Parent_Validation" xml:space="preserve">
+    <value>Nhóm quản lý phải cùng đơn vị quản lý</value>
+  </data>
+  <data name="BrokerModel_BranchId_Validation" xml:space="preserve">
+    <value>Branch field is required</value>
+  </data>
+  <data name="BrokerModel_Email_Validation" xml:space="preserve">
+    <value>Phải nhập dúng định dạng email (vd: tuan@gmail.com)</value>
+  </data>
+  <data name="BrokerModel_FullName_Validation" xml:space="preserve">
+    <value>FullName field is required</value>
+  </data>
+  <data name="BrokerModel_Password_Validation" xml:space="preserve">
+    <value>Mật khẩu phải nhập ít nhất 3 ký tự</value>
+  </data>
+  <data name="BrokerModel_UserName_Validation" xml:space="preserve">
+    <value>Username field is required</value>
+  </data>
+  <data name="CredentialLoginModel_Password_Required" xml:space="preserve">
+    <value>Password field is required</value>
+  </data>
+  <data name="CredentialLoginModel_Username_Required" xml:space="preserve">
+    <value>Username field is required</value>
+  </data>
+  <data name="Custody524Model_ContractNumber_Validation" xml:space="preserve">
+    <value>Số hợp đồng không được để truống</value>
+  </data>
+  <data name="Custody524Model_Quantity_Validation" xml:space="preserve">
+    <value>Khối lượng phải là số lớn 0</value>
+  </data>
+  <data name="Custody524Model_SubType_Validation" xml:space="preserve">
+    <value>Loại chứng khoán lưu ký không phù hợp</value>
+  </data>
+  <data name="CustodyModel_Quantity_Validation" xml:space="preserve">
+    <value>Khối lượng phải lớn hơn 0.</value>
+  </data>
+  <data name="CustodyModel_SubType_Validation" xml:space="preserve">
+    <value>Kiểu chứng khoán lưu ký không phù hợp</value>
+  </data>
+  <data name="CustodySecurityModel_Customer_Validation" xml:space="preserve">
+    <value>Customer không được phép null</value>
+  </data>
+  <data name="CustodySecurityModel_Stock_Validation" xml:space="preserve">
+    <value>Chứng khoán không dược phép null</value>
+  </data>
+  <data name="CustomerModel_Address_Validation" xml:space="preserve">
+    <value>Địa chỉ phải từ 10 đến 70 ký tự</value>
+  </data>
+  <data name="CustomerModel_BirthDay_Validation" xml:space="preserve">
+    <value>Ngày sinh không hợp lệ</value>
+  </data>
+  <data name="CustomerModel_CardIdentity_Validation" xml:space="preserve">
+    <value>Số đăng ký không được để trống</value>
+  </data>
+  <data name="CustomerModel_CardIssuedDate_Validation" xml:space="preserve">
+    <value>Ngày cấp không hợp lệ</value>
+  </data>
+  <data name="CustomerModel_CardIssuer_Validation" xml:space="preserve">
+    <value>Nơi cấp không được để trống</value>
+  </data>
+  <data name="CustomerModel_City_Validation" xml:space="preserve">
+    <value>Thành phố không được để trống</value>
+  </data>
+  <data name="CustomerModel_CountryCode_Validation" xml:space="preserve">
+    <value>Phải chọn quốc gia</value>
+  </data>
+  <data name="CustomerModel_CustomerNumber_Validation" xml:space="preserve">
+    <value>Số tài khoản phải là 10 ký tự</value>
+  </data>
+  <data name="CustomerModel_Email_Validation" xml:space="preserve">
+    <value>Email không hợp lệ</value>
+  </data>
+  <data name="CustomerModel_FullNameLocal_Validation" xml:space="preserve">
+    <value>Tên khách hàng không được để trống</value>
+  </data>
+  <data name="CustomerModel_NationalityCode_Validation" xml:space="preserve">
+    <value>Phải chọn quốc tịch</value>
+  </data>
+  <data name="CustomerModel_PhoneNumber_Validation" xml:space="preserve">
+    <value>Điện thoại không được để trống</value>
+  </data>
+  <data name="DepartmentModel_Name_Validation" xml:space="preserve">
+    <value>Tên phòng không dược để trống và không lớn hơn 100 ký tự</value>
+  </data>
+  <data name="Enum_ContactType_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Enum_ContactType_Phone" xml:space="preserve">
+    <value>Điện thoại</value>
+  </data>
+  <data name="Enum_ContactType_Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="Enum_ContactType_Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="Enum_ContactType_Delegate" xml:space="preserve">
+    <value>Người đại diện</value>
+  </data>
+  <data name="Enum_ActivityType_Normal" xml:space="preserve">
+    <value>Chứng khoán thông thường</value>
+  </data>
+  <data name="Enum_ActivityType_RestictedStock" xml:space="preserve">
+    <value>Chứng khoán chờ giao dịch</value>
+  </data>
+  <data name="Enum_AssetSubType_CommonStock" xml:space="preserve">
+    <value>CK phổ thông</value>
+  </data>
+  <data name="Enum_AssetSubType_None" xml:space="preserve">
+    <value>Không xác định</value>
+  </data>
+  <data name="Enum_AssetSubType_PreferentialDividendUnVoteStock" xml:space="preserve">
+    <value>CK ưu đãi cổ tức không biểu quyết</value>
+  </data>
+  <data name="Enum_AssetSubType_PreferentialOtherVotingStock" xml:space="preserve">
+    <value>CK ưu đãi khác không biểu quyết</value>
+  </data>
+  <data name="Enum_AssetSubType_PreferentialRefundUnVoteStock" xml:space="preserve">
+    <value>CK ưu đãi hoàn lại không biểu quyết</value>
+  </data>
+  <data name="Enum_AssetSubType_PreferentialVotingStock" xml:space="preserve">
+    <value>CK ưu đãi biểu quyết</value>
+  </data>
+  <data name="Enum_AssetSubType_RestictedStock" xml:space="preserve">
+    <value>CK HCCN</value>
+  </data>
+  <data name="Enum_CardType_DomesticCorpIdentity" xml:space="preserve">
+    <value>Giấy đăng ký kinh doanh</value>
+  </data>
+  <data name="Enum_CardType_DomesticIdentity" xml:space="preserve">
+    <value>CMND</value>
+  </data>
+  <data name="Enum_CardType_ForeignCorpIdentity" xml:space="preserve">
+    <value>Trading Code cho tổ chức nước ngoài</value>
+  </data>
+  <data name="Enum_CardType_ForeignIdentity" xml:space="preserve">
+    <value>Trading Code cho cá nhân nước ngoài</value>
+  </data>
+  <data name="Enum_CardType_Government" xml:space="preserve">
+    <value>Cơ quan chính phủ</value>
+  </data>
+  <data name="Enum_CardType_Passport" xml:space="preserve">
+    <value>Hộ chiếu</value>
+  </data>
+  <data name="Enum_CardType_SocialSecurity" xml:space="preserve">
+    <value>An sinh xã hội</value>
+  </data>
+  <data name="Enum_CustodyRequestType_Cancel" xml:space="preserve">
+    <value>Điện huỷ</value>
+  </data>
+  <data name="Enum_CustodyRequestType_New" xml:space="preserve">
+    <value>Điện tạo mới</value>
+  </data>
+  <data name="Enum_CustomerStatus_Close" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="Enum_CustomerStatus_Initial" xml:space="preserve">
+    <value>Tạo mới</value>
+  </data>
+  <data name="Enum_CustomerStatus_Open" xml:space="preserve">
+    <value>Mở</value>
+  </data>
+  <data name="Enum_CustomerStatus_PendingClose" xml:space="preserve">
+    <value>Chời duyệt đóng từ lưu ký</value>
+  </data>
+  <data name="Enum_CustomerStatus_PendingOpen" xml:space="preserve">
+    <value>Chờ duyệt mở từ lưu ký</value>
+  </data>
+  <data name="Enum_CustomerStatus_RequestDeleted" xml:space="preserve">
+    <value>Tạo đóng</value>
+  </data>
+  <data name="Enum_CustomerType_DomesticOrganization" xml:space="preserve">
+    <value>Tổ chức trong nước</value>
+  </data>
+  <data name="Enum_CustomerType_DomesticPrivate" xml:space="preserve">
+    <value>Cá nhân trong nước</value>
+  </data>
+  <data name="Enum_CustomerType_ForeignOrganization" xml:space="preserve">
+    <value>Tổ chức nước ngoài</value>
+  </data>
+  <data name="Enum_CustomerType_ForeignPrivate" xml:space="preserve">
+    <value>Cá nhân nước ngoài</value>
+  </data>
+  <data name="Enum_GenereType_Female" xml:space="preserve">
+    <value>Nữ</value>
+  </data>
+  <data name="Enum_GenereType_Male" xml:space="preserve">
+    <value>Nam</value>
+  </data>
+  <data name="Enum_GenereType_Undefine" xml:space="preserve">
+    <value>Tổ chức</value>
+  </data>
+  <data name="Enum_IdentityUserRole_Manager" xml:space="preserve">
+    <value>Quản lý</value>
+  </data>
+  <data name="Enum_IdentityUserRole_SuperAdmin" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="Enum_MessagePriority_Normal" xml:space="preserve">
+    <value>Bình thường</value>
+  </data>
+  <data name="Enum_MessagePriority_Urgent" xml:space="preserve">
+    <value>Điện khẩn</value>
+  </data>
+  <data name="Enum_PledgeReleasingType_Pledging" xml:space="preserve">
+    <value>Phong toả chứng khoán</value>
+  </data>
+  <data name="Enum_PledgeReleasingType_Releasing" xml:space="preserve">
+    <value>Giải toả chứng khoán</value>
+  </data>
+  <data name="Enum_RateOption_DividendsNoTax" xml:space="preserve">
+    <value>Cổ tức không khấu trừ thuế tại TCPH</value>
+  </data>
+  <data name="Enum_RateOption_DividendsTax" xml:space="preserve">
+    <value>Cổ tức khấu trừ thuế tại TCPH</value>
+  </data>
+  <data name="Enum_RateOption_Interest" xml:space="preserve">
+    <value>Lãi suất thanh toán</value>
+  </data>
+  <data name="Enum_RightBuyType_NonRightTransferable" xml:space="preserve">
+    <value>Quyền mua không được chuyển nhượng</value>
+  </data>
+  <data name="Enum_RightBuyType_RightAreTransferred" xml:space="preserve">
+    <value>Quyền mua được chuyển nhượng</value>
+  </data>
+  <data name="Enum_SettlementType_MoveAllStockAndCloseAcount" xml:space="preserve">
+    <value>Chuyển khoản toàn bộ và tất toán đóng tài khoản</value>
+  </data>
+  <data name="Enum_SettlementType_MoveAllStockAndNotCloseAcount" xml:space="preserve">
+    <value>Chuyển khoản toàn bộ nhưng không đóng tài khoản</value>
+  </data>
+  <data name="Enum_SettlementType_TransactionOnOneMember" xml:space="preserve">
+    <value>Chuyển khoản cùng TVLK</value>
+  </data>
+  <data name="Enum_SettlementType_TransactionStandard" xml:space="preserve">
+    <value>chuyển khoản lô lẻ/ký gửi , rút chứng khoán</value>
+  </data>
+  <data name="Enum_SettlementType_TransactionWithOtherMember" xml:space="preserve">
+    <value>Chuyển khoản khác TVLK</value>
+  </data>
+  <data name="Enum_UnitType_BondsUnit" xml:space="preserve">
+    <value>Trái phiếu</value>
+  </data>
+  <data name="Enum_UnitType_StockUnit" xml:space="preserve">
+    <value>Cổ phiếu, chứng chỉ quỹ</value>
+  </data>
+  <data name="Enum_CustodyRequestStatus_ApprovalPending" xml:space="preserve">
+    <value>Điện được chấp nhận ở VSD nhưng chưa hoàn thành</value>
+  </data>
+  <data name="Enum_CustodyRequestStatus_FailureRejected" xml:space="preserve">
+    <value>Lỗi do validion từ VSD (NAK)</value>
+  </data>
+  <data name="Enum_CustodyRequestStatus_Finished" xml:space="preserve">
+    <value>Hoàn thành</value>
+  </data>
+  <data name="Enum_CustodyRequestStatus_PendingProcess" xml:space="preserve">
+    <value>Chờ duyệt từ VSD (ACK)</value>
+  </data>
+  <data name="Enum_CustodyRequestStatus_Published" xml:space="preserve">
+    <value>Điện mới tạo</value>
+  </data>
+  <data name="Enum_CustodyRequestStatus_PublishedFailed" xml:space="preserve">
+    <value>Lỗi tạo điện </value>
+  </data>
+  <data name="Enum_CustodyRequestStatus_RequestRejected" xml:space="preserve">
+    <value>VSD không chấp nhân duyệt điện</value>
+  </data>
+  <data name="Enum_CustodyRequestStatus_ResponseInfo" xml:space="preserve">
+    <value>Điện nhận từ VSD</value>
+  </data>
+  <data name="Enum_CustodyRequestType_Response" xml:space="preserve">
+    <value>Điện nhận từ VSD</value>
+  </data>
+  <data name="Enum_BoardType_Bond" xml:space="preserve">
+    <value>Sàn Trái phiếu</value>
+  </data>
+  <data name="Enum_BoardType_BTNP" xml:space="preserve">
+    <value>Sàn BTNP</value>
+  </data>
+  <data name="Enum_BoardType_Hnx" xml:space="preserve">
+    <value>Sàn HNX</value>
+  </data>
+  <data name="Enum_BoardType_Hose" xml:space="preserve">
+    <value>Sàn Hose</value>
+  </data>
+  <data name="Enum_BoardType_Otc" xml:space="preserve">
+    <value>Sàn DCCNY</value>
+  </data>
+  <data name="Enum_BoardType_Upcom" xml:space="preserve">
+    <value>Sàn Upcom</value>
+  </data>
+  <data name="Enum_BoardType_UsdBond" xml:space="preserve">
+    <value>Sàn UsdBond</value>
+  </data>
+  <data name="CustodyModel_ReceiverAccount_Validation" xml:space="preserve">
+    <value>Tài khoản nhận không hợp lệ</value>
+  </data>
+  <data name="CustodyModel_ReceverBiccode_Validation" xml:space="preserve">
+    <value>Thành viên cần chuyển không hợp lệ</value>
+  </data>
+  <data name="Custody598FinalSettAccountModel_ReceiverAccount_Dulicate_Validation" xml:space="preserve">
+    <value>Tài khoản nhận không được trùng thành viên với tài khoản chuyển.</value>
+  </data>
+  <data name="CustodyModel_ReceiverAccount_Dulicate_Validation" xml:space="preserve">
+    <value>Tài khoản nhận không được trùng với tài khoản chuyển.</value>
+  </data>
+  <data name="Enum_BoardType_Dccny" xml:space="preserve">
+    <value>Đại chúng chư niêm yết</value>
+  </data>
+  <data name="Enum_TypeOfRightInfo_CashDividend" xml:space="preserve">
+    <value>Chia cổ tức bằng tiền mặt</value>
+  </data>
+  <data name="Enum_TypeOfRightInfo_ExtraordinaryShareHolderMeeting" xml:space="preserve">
+    <value>Thông báo DHCD Bất thường</value>
+  </data>
+  <data name="Enum_TypeOfRightInfo_Other" xml:space="preserve">
+    <value>Hoán đổi cổ phiếu</value>
+  </data>
+  <data name="Enum_TypeOfRightInfo_PaymentInterestBonds" xml:space="preserve">
+    <value>Thanh toán Lãi trái phiếu</value>
+  </data>
+  <data name="Enum_TypeOfRightInfo_PaymentPrincipalBonds" xml:space="preserve">
+    <value>Thanh toán Vốn gốc trái phiếu</value>
+  </data>
+  <data name="Enum_TypeOfRightInfo_PrincipalPaymentAndBondInterest" xml:space="preserve">
+    <value>Thanh toán Vốn gốc + Lãi trái phiếu</value>
+  </data>
+  <data name="Enum_TypeOfRightInfo_RightBuySecurities" xml:space="preserve">
+    <value>Quyền mua thêm chứng khoán</value>
+  </data>
+  <data name="Enum_TypeOfRightInfo_ShareHolderMeeting" xml:space="preserve">
+    <value>Thông báo DHCDNT</value>
+  </data>
+  <data name="Enum_TypeOfRightInfo_StockDividend" xml:space="preserve">
+    <value>Chia cổ tức bằng cổ phiếu</value>
+  </data>
+  <data name="Enum_TypeOfRightInfo_StockRating" xml:space="preserve">
+    <value>Thưởng cổ phiếu</value>
+  </data>
+  <data name="Enum_TypeOfRightInfo_SwapBonds" xml:space="preserve">
+    <value>Hoán đổi trái phiếu thành cổ phiếu</value>
+  </data>
+  <data name="Enum_ReportType_Confirm" xml:space="preserve">
+    <value>Phản hồi</value>
+  </data>
+  <data name="Enum_ReportStatus_Confirmed" xml:space="preserve">
+    <value>Đã phản hồi</value>
+  </data>
+  <data name="Enum_ReportStatus_Fineshed" xml:space="preserve">
+    <value>Hoàn thành</value>
+  </data>
+  <data name="Enum_ReportType_Info" xml:space="preserve">
+    <value>Chỉ Thông báo</value>
+  </data>
+  <data name="Enum_ReportStatus_Receive" xml:space="preserve">
+    <value>Đã nhận</value>
+  </data>
+  <data name="Enum_ReportStatus_RequestConfirm" xml:space="preserve">
+    <value>Đã tạo điện phản hồi</value>
+  </data>
+  <data name="Enum_ConfirmType_Confirm" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="Enum_ConfirmType_Rejected" xml:space="preserve">
+    <value>Từ chối</value>
+  </data>
+  <data name="ChangePasswordModel_ConfirmPassword_Validation" xml:space="preserve">
+    <value>Xác nhận mật khẩu không hợp lệ</value>
+  </data>
+  <data name="ChangePasswordModel_Password_Validation" xml:space="preserve">
+    <value>Mật khẩu không để trống</value>
+  </data>
+  <data name="Enum_IdentityUserRole_Agency" xml:space="preserve">
+    <value>Cộng tác viên</value>
+  </data>
+  <data name="Enum_IdentityUserRole_Broker" xml:space="preserve">
+    <value>Môi giới</value>
+  </data>
+  <data name="Enum_IdentityUserRole_Customer" xml:space="preserve">
+    <value>Khách hàng</value>
+  </data>
+  <data name="Enum_IdentityUserRole_Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="UserModel_AccountLogin_Validation" xml:space="preserve">
+    <value>Tên đăng nhập không được để trống</value>
+  </data>
+  <data name="Enum_AccessType_Add" xml:space="preserve">
+    <value>Tạo</value>
+  </data>
+  <data name="Enum_AccessType_Allow" xml:space="preserve">
+    <value>Cho phép</value>
+  </data>
+  <data name="Enum_AccessType_Delete" xml:space="preserve">
+    <value>Xoá</value>
+  </data>
+  <data name="Enum_AccessType_Deny" xml:space="preserve">
+    <value>Không cho phép</value>
+  </data>
+  <data name="Enum_AccessType_Override" xml:space="preserve">
+    <value>Ghi đè</value>
+  </data>
+  <data name="Enum_AccessType_View" xml:space="preserve">
+    <value>Xem</value>
+  </data>
+  <data name="Enum_UserType_Agency" xml:space="preserve">
+    <value>Cộng tác viên</value>
+  </data>
+  <data name="Enum_UserType_Broker" xml:space="preserve">
+    <value>Môi giới</value>
+  </data>
+  <data name="Enum_UserType_Manager" xml:space="preserve">
+    <value>Trưởng phòng</value>
+  </data>
+  <data name="Enum_UserType_None" xml:space="preserve">
+    <value>Không xác định</value>
+  </data>
+  <data name="Enum_UserType_Operator" xml:space="preserve">
+    <value>Quản lý</value>
+  </data>
+  <data name="Enum_MemberType_Group" xml:space="preserve">
+    <value>Thành viên nhóm</value>
+  </data>
+  <data name="Enum_MemberType_User" xml:space="preserve">
+    <value>Thành viên người dùng</value>
+  </data>
+</root>

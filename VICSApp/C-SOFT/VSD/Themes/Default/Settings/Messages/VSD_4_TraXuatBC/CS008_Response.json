@@ -1,0 +1,42 @@
+{
+    "code": "CS008",
+    "name": "CS008 - Thông báo về việc cập nhật thông tin tài khoản người đầu tư mua",
+    "parameters": [
+        {
+            "name": "ReportDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "start": "TRANDATE:" 
+        } 
+    ],
+	"csvFields": [
+        {
+            "name": "TradeDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "PaymentDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "TradeType",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber",
+            "end": ";"
+        },
+        {
+            "name": "MemberName",
+            "end": ";"
+        },
+        {
+            "name": "MemberCode",
+            "end": ";"
+        }
+    ]
+}

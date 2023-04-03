@@ -1,0 +1,191 @@
+﻿<UserControl x:Class="CS.Application.Views.User.UserEditView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:CS.Application.Views.Group"
+             xmlns:models="clr-namespace:CS.Common.Contract.Models;assembly=CS.Common.Contract"
+             xmlns:interfaces="clr-namespace:CS.UI.Common.Interfaces;assembly=CS.UI.Common"
+             xmlns:localization="clr-namespace:CS.UI.Common.Localization;assembly=CS.UI.Common"
+             xmlns:common="clr-namespace:CS.UI.Common;assembly=CS.UI.Common"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="700"
+             Background="{DynamicResource MaterialDesignPaper}">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <common:SharedResourceDictionary Source="../../Themes/Default/Resources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <CollectionViewSource x:Key="PermissionItemViewModelGroup" 
+                                  Source="{Binding Model.Rights}">
+                <CollectionViewSource.GroupDescriptions>
+                    <PropertyGroupDescription PropertyName="GroupTypeName" />
+                </CollectionViewSource.GroupDescriptions>
+            </CollectionViewSource>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <DockPanel LastChildFill="True">
+        <!--Tool bar-->
+        <materialDesign:ColorZone DockPanel.Dock="Top" 
+                                  Margin ="0 0 0 5"
+                                  materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                                  Background="{StaticResource MaterialDesignToolBarBackground}">
+            <materialDesign:ColorZone.Resources>
+                <Style TargetType="Button" BasedOn="{StaticResource CSoftToolbarButton}"/>
+            </materialDesign:ColorZone.Resources>
+
+            <DockPanel DockPanel.Dock="Top">
+                <ToolBarPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button ToolTip="{localization:Translate Toolbar_BackTitle}" 
+                            Content="{materialDesign:PackIcon KeyboardBackspace}"
+                            Command="{Binding BackCommand}"/>
+                    <Separator/>
+                    <Button ToolTip="{localization:Translate Toolbar_SaveTitle}" 
+                            Content="{materialDesign:PackIcon ContentSave}"
+                            Command="{Binding SaveCommand}"/>
+                    <Separator/>
+                    <Button ToolTip="{localization:Translate Toolbar_CreateTitle}" 
+                            Content="{materialDesign:PackIcon Plus}"
+                            Command="{Binding CreateCommand}"  
+                            CommandParameter="{StaticResource True}"/>
+                    <Button ToolTip="{localization:Translate Toolbar_RemoveTitle}"
+                            Content="{materialDesign:PackIcon Minus}"
+                            Command="{Binding DeleteCommand}"/>
+                    <Button Command="{Binding ResetPasswordCommand}"
+                            ToolTip="{localization:Translate ResetPassword_Title}"
+                            Visibility="{Binding ViewType ,Converter={StaticResource VisibilityByComparingConverter}, ConverterParameter={x:Static interfaces:ExecuteType.New}}"
+                            Content="{materialDesign:PackIcon AccountKey}"/>
+                </ToolBarPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+
+        <!--Edit View-->
+        <StackPanel Margin="10" Orientation="Vertical">
+            <Label Content="{Binding ErrorMessage, Mode=TwoWay}"
+                   Visibility="{Binding HasError, Converter={StaticResource ComparingConverter}, ConverterParameter={StaticResource True}}"
+                   Style="{StaticResource CsErrorViewStyle}" />
+
+            <controls:ToggleSwitch IsChecked="{Binding Model.IsActive}" 
+                                   Content="{localization:Translate UserModel_Active}"
+                                   HorizontalAlignment="Right"/>
+
+            <controls:MetroTabControl TabStripPlacement="Left"
+                                      
+                                      Background="{StaticResource MaterialDesignPaper}" 
+                                      controls:TabControlHelper.Underlined="TabPanel">
+
+                <!--general info-->
+                <TabItem>
+                    <TabItem.Header>
+                        <TextBlock Text="{localization:Translate UserEditView_GeneralInfomation_Header, CharacterCasing=Upper}" FontSize="{StaticResource ExtraNormalSize}" />
+                    </TabItem.Header>
+                    <StackPanel Margin="{StaticResource ControlTabBody}">
+                        <TextBox materialDesign:HintAssist.Hint="{localization:Translate UserModel_UserName}"  
+                                 MaxLength="15"
+                                 IsEnabled="{Binding ViewType, Converter={StaticResource VisibilityByComparingConverter}, ConverterParameter={x:Static interfaces:ExecuteType.New}}" 
+                                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                                 Text="{Binding Model.AccountLogin, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                                 materialDesign:ValidationAssist.OnlyShowOnFocus="True"/>
+
+                        <TextBox materialDesign:HintAssist.Hint="{localization:Translate UserModel_FullName}"  
+                                 MaxLength="256"
+                                 Margin="{StaticResource ControlMargin}"
+                                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                                 Text="{Binding Model.FullName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                                 materialDesign:ValidationAssist.OnlyShowOnFocus="True"/>
+
+                        <ComboBox materialDesign:HintAssist.Hint="{localization:Translate BranchView_BranchParent}"   
+                                  Margin="{StaticResource ControlMargin}" materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                                  Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                                  ItemsSource="{Binding Branches}"                          
+                                  SelectedItem="{Binding Model.Branch, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                                  DisplayMemberPath="BranchName"/>
+                        <ComboBox materialDesign:HintAssist.Hint="{localization:Translate BrokerModel_Department}"   
+                                  Margin="{StaticResource ControlMargin}"
+                                  Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                                  ItemsSource="{Binding Departments}" materialDesign:ValidationAssist.OnlyShowOnFocus="True"                       
+                                  SelectedItem="{Binding Model.Department, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                                  DisplayMemberPath="Name"/>
+
+                        <TextBox materialDesign:HintAssist.Hint="{localization:Translate UserModel_Email}"  
+                                 MaxLength="256"
+                                 Margin="{StaticResource ControlMargin}"
+                                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                                 Text="{Binding Model.Email, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                                 materialDesign:ValidationAssist.OnlyShowOnFocus="True"/>
+                        <TextBox materialDesign:HintAssist.Hint="{localization:Translate UserModel_PhoneNumber}"  
+                                 MaxLength="15"
+                                 Margin="{StaticResource ControlMargin}"
+                                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                                 Text="{Binding Model.PhoneNumber, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                                 materialDesign:ValidationAssist.OnlyShowOnFocus="True"/>
+
+                        <ComboBox materialDesign:HintAssist.Hint="{localization:Translate UserModel_UserType}"   
+                                  Margin="{StaticResource ControlMargin}"
+                                  Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                                  ItemsSource="{Binding UserTypes}"                          
+                                  SelectedValue="{Binding Model.UserType, Mode=TwoWay}"
+                                  DisplayMemberPath="DisplayValue"
+                                  SelectedValuePath="Value"/>
+                    </StackPanel>
+                </TabItem>
+
+
+                <!--user right info & groups-->
+                <TabItem Visibility="{Binding ViewType, Converter={StaticResource VisibilityByCommparingNotEqualConverter}, ConverterParameter={x:Static interfaces:ExecuteType.New}}">
+                    <TabItem.Header>
+                        <TextBlock Text="{localization:Translate UserEditView_UserRight_Header,CharacterCasing=Upper}" FontSize="{StaticResource ExtraNormalSize}" />
+                    </TabItem.Header>
+
+                    <StackPanel Margin="{StaticResource ControlTabBody}">
+                        <StackPanel  >
+                            <TextBlock FontSize="{StaticResource NormalSize}" Text="{localization:Translate UserView_MemberOfGroup, CharacterCasing=Upper}">
+                                <TextBlock.Resources>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Model.Groups.Count}" Value="0">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Resources>
+
+                            </TextBlock>
+                            <ListView ItemsSource="{Binding Model.Groups}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate DataType="{x:Type models:GroupModel}">
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="AccountMultiple" />
+                                            <TextBlock FontSize="{StaticResource NormalSize}" Margin="5 0 0 0" Text="{Binding Name}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackPanel>
+                        <StackPanel Margin="{StaticResource ControlMargin}">
+                            <TextBlock FontSize="{StaticResource NormalSize}" Text="{localization:Translate UserView_RightOfUser, CharacterCasing=Upper}">
+                                <TextBlock.Resources>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="Visibility" Value="Visible" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Model.Rights.Count}" Value="0">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Resources>
+                            </TextBlock>
+                            <local:PermissionAccessView DataContext="{Binding UserRights}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </TabItem>
+            </controls:MetroTabControl>
+        </StackPanel>
+    </DockPanel>
+</UserControl>
+

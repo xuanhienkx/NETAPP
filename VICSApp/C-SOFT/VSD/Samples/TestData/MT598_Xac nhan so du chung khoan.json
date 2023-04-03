@@ -1,0 +1,22 @@
+﻿{
+    "BusinessId": "A6BEBACB-A40D-4E5E-83E8-CAA87C734A9F",
+    "MessageType": "MT",
+    "ApplicationIdentifier": "F",
+    "ServiceIdentifier": "01",
+    "SenderBicode": "VSDMSCXXAXXX",
+    "SessionInteger": "1012",
+    "InputSequenceInteger": "241214",
+    "InputIdentifier": "I",
+    "MessageId": "598",
+    "ReceiverBicode": "VSDSVN01XXXX",
+    "MessagePriority": "N",
+    "DeliveryMonitor": "",
+    "ObsolesencePriod": "",
+    "TransactionReferenceNumber": "10041",
+    "SubMessageType": "005",
+    "Proprietary": "BALANCE\r\nRPTID:CS070\r\nTRANDATE:20140923\r\nBRID:0003",
+    "MessageFunction": "NEWM",
+    "CreatedDate": "Date#2014-09-23",
+    "ReportReference": "100415",
+    "ConfirmationStatus": "CONF"
+}

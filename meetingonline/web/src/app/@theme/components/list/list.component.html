@@ -1,0 +1,31 @@
+<!-- header -->
+<div class="d-lg-flex w-lg-100 pb-3">
+    <h4 class="list-title">{{title}}</h4>
+    <div class="action d-lg-flex my-auto justify-content-end ml-lg-auto">
+        <ng-content select=[headerCommands]></ng-content>
+    </div>
+</div>
+
+<!-- body -->
+<nb-card accent="info" status="basic" class="m-0 p-0">
+    <nb-card-header class="py-1 my-auto">
+        <ng-content select="itemHeader"></ng-content>
+    </nb-card-header>
+    
+    <nb-card-body class="pt-0">
+        <nb-list nbInfiniteList listenWindowScroll [threshold]="500" (bottomThreshold)="loadNext()"
+            class="mt-0 pt-0 vip-list">
+            <nb-list-item *ngFor="let item of items; let idx = index" class="border-bottom">
+                <ng-content select="[itemContent]"></ng-content>
+            </nb-list-item>
+        </nb-list>
+        <vip-empty-data [isNoData]="!items || items?.length ===0"></vip-empty-data>
+    </nb-card-body>
+</nb-card>
+
+<!--Scroll to top-->
+<div class="scroll-to-top " [ngClass]="{'show-scrollTop': showScroll}">
+    <button (click)="scrollToTop()" nbButton size="small">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+</div>

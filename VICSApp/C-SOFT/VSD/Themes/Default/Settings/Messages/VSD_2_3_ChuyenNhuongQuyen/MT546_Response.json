@@ -1,0 +1,311 @@
+[
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "20C",
+        "qualifier": "SEME",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "Reference",
+                "length": 16
+            }
+        ]
+    },
+    {
+        "tag": "23G",
+        "parts": [
+            {
+                "name": "MessageFunctional",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "PREP",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "PreparationDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "LINK" }
+        ]
+    },
+    {
+        "tag": "13A",
+        "qualifier": "LINK",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ReferenceIdentification",
+                "length": 3
+            }
+        ]
+    },
+    {
+        "tag": "20C",
+        "qualifier": "RELA",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "OutReferenceNumber",
+                "length": 16
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "LINK" }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "TRADDET" }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "ESET",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "TradeDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "35B",
+        "parts": [
+            {
+                "name": "IsinCode",
+                "length": 12,
+                "optional": true,
+                "start": "ISIN ",
+                "end": "<BrLine>"
+            },
+            {
+                "name": "CountryCode",
+                "length": 2,
+                "optional": true,
+                "start": "/",
+                "end": "/"
+            },
+            {
+                "name": "Code",
+                "end": "<BrLine>"
+            }
+        ]
+    },
+    {
+        "tag": "70E",
+        "qualifier": "SPRO",
+        "part_start": "/",
+        "optional": true,
+        "parts": [
+            {
+                "name": "Narrative",
+                "length": 35,
+                "line": 10
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "TRADDET" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "FIAC" }
+        ]
+    },
+    {
+        "tag": "36B",
+        "qualifier": "ESTT",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "SecurityType",
+                "length": 4
+            },
+            {
+                "name": "Quantity",
+                "length": 15,
+                "type": "Integer"
+            }
+        ]
+    },
+    {
+        "tag": "95P",
+        "qualifier": "ACOW",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "DeliveryAccountOwner",
+                "length": 35
+            }
+        ]
+    },
+    {
+        "tag": "97A",
+        "qualifier": "SAFE",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "DeliveryCustomerNumber",
+                "length": 35
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "FIAC" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "SETDET" }
+        ]
+    },
+    {
+        "tag": "22F",
+        "qualifier": "SETR",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "SettlementType",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "22F",
+        "qualifier": "STCO",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "SettlementCondition",
+                "length": 4
+            }
+        ]
+    },
+
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "SETPRTY" }
+        ]
+    },
+    {
+        "tag": "95P",
+        "qualifier": "PSET",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "AccountOwnerVSD",
+                "length": 11
+            }
+        ]
+    },
+    {
+        "tag": "20C",
+        "qualifier": "PROC",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ProcessingReference",
+                "length": 16
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "SETPRTY" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "SETPRTY" }
+        ]
+    },
+    {
+        "tag": "95P",
+        "qualifier": "REAG",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ReceivingAgent",
+                "length": 11
+            }
+        ]
+    },
+    {
+        "tag": "97A",
+        "qualifier": "SAFE",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ReceivingCustomerNumber",
+                "length": 35
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "SETPRTY" }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "SETDET" }
+        ]
+    }
+]

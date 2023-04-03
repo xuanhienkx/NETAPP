@@ -1,0 +1,36 @@
+﻿@using VicsManageWeb.Common.UI.Grid
+@model VICS.Manager.WebApp.Models.CustomerSendList
+
+    @{
+        // update this field on client side
+        Model.ActionName = "GetFileInput";
+        Model.ControllerName = "SendSms";
+        Model.UpdateTargetId = "ListData";
+    }
+
+
+    @Html.PagedGrid("SendGrid", Model,
+    columns =>
+    {
+        /*Hidden id column*/
+        columns.Add(o => o.IsInfo)
+            .Encoded(false)
+            .Sanitized(false)
+            .SetWidth(10)
+            .Titled("Gửi")
+            .RenderValueAs(c => Html.CheckBox(c.Id, true, new { @class = "xls_checked" }).ToString());
+
+        columns.Add(o => o.Id)
+            .Titled("Tài khoản");
+
+        /* Adding "Headline" column: */
+        columns.Add(o => o.CustomerName) 
+            .Css("text-left");
+
+        /* Adding "CreatedDate" column: */
+        columns.Add(o => o.Mobile)
+            .Titled("Điện thoại")
+            .SetWidth(80); 
+        columns.Add(o => o.MessageContent)
+            .Titled("Nội dung").Css("text-left");
+    })

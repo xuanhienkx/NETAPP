@@ -1,0 +1,20 @@
+SwiftTime=20170602 
+NonRep=FALSE 
+DeliveryTime=20170602 
+MsgId=517172 
+Creationtime=20170602 
+PDIndication=FALSE 
+Requestor=o=VSDSVNV0, o=swift 
+Responder=o=VSDKLSXX, o=swift 
+Service=camt.xxx.fisp.rep 
+Priority=Normal
+RequestRef=01706026856350
+TransferRef=517172
+TransferDescription=517172
+TransferInfo=VSDKLSXX.517172.20170602.517172
+PossibleDuplicate=TRUE
+OrigTransferRef=
+AckIndicator=FALSE
+LogicalName=kls'CS077'01+019-04+01062017-07+019-08+019-'02062017'090925'517172.csv
+FileInfo=SwCompression=None
+Size=2763471

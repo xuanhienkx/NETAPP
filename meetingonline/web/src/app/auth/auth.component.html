@@ -1,0 +1,15 @@
+<nb-layout>
+    <nb-layout-column>
+        <vip-auth-block>
+            <div class=" row justify-content-center align-items-center  clearfix">
+                <a href="/"> <img alt="logo" src="assets/img/logo-header.jpg" width="100" height="60" class="acountlog img-fluid"
+                    data-toggle="tooltip" data-placement="top" title="Quay về trang chủ" /></a>
+            </div>
+            <router-outlet></router-outlet>
+            <section aria-label="home" class="another-action">
+                <a href="/" class="text-link"><i class="fas fa-long-arrow-alt-left px-2"></i>{{'Common.gotoHome' | translate}}</a>
+            </section>
+        </vip-auth-block>
+
+    </nb-layout-column>
+</nb-layout>

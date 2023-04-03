@@ -1,0 +1,12 @@
+D:\Projects\mcrservices\src\BuildingBlocks\EventBus.Message\bin\Debug\net6.0\EventBus.Message.deps.json
+D:\Projects\mcrservices\src\BuildingBlocks\EventBus.Message\bin\Debug\net6.0\EventBus.Message.dll
+D:\Projects\mcrservices\src\BuildingBlocks\EventBus.Message\bin\Debug\net6.0\EventBus.Message.pdb
+D:\Projects\mcrservices\src\BuildingBlocks\EventBus.Message\obj\Debug\net6.0\EventBus.Message.csproj.AssemblyReference.cache
+D:\Projects\mcrservices\src\BuildingBlocks\EventBus.Message\obj\Debug\net6.0\EventBus.Message.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\mcrservices\src\BuildingBlocks\EventBus.Message\obj\Debug\net6.0\EventBus.Message.AssemblyInfoInputs.cache
+D:\Projects\mcrservices\src\BuildingBlocks\EventBus.Message\obj\Debug\net6.0\EventBus.Message.AssemblyInfo.cs
+D:\Projects\mcrservices\src\BuildingBlocks\EventBus.Message\obj\Debug\net6.0\EventBus.Message.csproj.CoreCompileInputs.cache
+D:\Projects\mcrservices\src\BuildingBlocks\EventBus.Message\obj\Debug\net6.0\EventBus.Message.dll
+D:\Projects\mcrservices\src\BuildingBlocks\EventBus.Message\obj\Debug\net6.0\refint\EventBus.Message.dll
+D:\Projects\mcrservices\src\BuildingBlocks\EventBus.Message\obj\Debug\net6.0\EventBus.Message.pdb
+D:\Projects\mcrservices\src\BuildingBlocks\EventBus.Message\obj\Debug\net6.0\ref\EventBus.Message.dll

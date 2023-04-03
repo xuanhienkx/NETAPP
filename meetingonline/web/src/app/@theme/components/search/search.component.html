@@ -1,0 +1,8 @@
+<nb-form-field status="info">
+    <div nbSuffix>
+        <i class="fas fa-search text-secondary" style="transform: rotate(90deg);"
+            (click)="emitSearchInput(searchInput.value)"></i></div>
+    <input #searchInput fieldSize="small" nbInput autofocus fullWidth class="form-control"
+        type="text" (keyup.enter)="submitSearch(searchInput.value)" (input)="emitSearchInput(searchInput.value)"
+        tabindex="-1"   placeholder="{{placeholder | translate}}" />
+</nb-form-field>

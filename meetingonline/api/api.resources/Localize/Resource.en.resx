@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="account.createMeetingGroupFailed" xml:space="preserve">
+    <value>Không thực hiện tạo nhóm hội nghị. Lỗi: {0}</value>
+  </data>
+  <data name="account.deleteMeetingGroupFailed" xml:space="preserve">
+    <value>Không xóa được nhóm hội nghị do lỗi: {0}</value>
+  </data>
+  <data name="account.duplicateMeetingGroupName" xml:space="preserve">
+    <value>Đã tồn tại nhóm hội nghị có tên là {0}</value>
+  </data>
+  <data name="account.grantAccessToYourself" xml:space="preserve">
+    <value>Bạn không được phép thêm quyền cho chính bạn</value>
+  </data>
+  <data name="account.meetingGroupHasChildren" xml:space="preserve">
+    <value>Nhóm hội nghị đang sử dụng quản lý hội nghị</value>
+  </data>
+  <data name="account.meetingGroupNotFound" xml:space="preserve">
+    <value>Không tìm thấy nhóm hội nghị</value>
+  </data>
+  <data name="account.roleExistAndTheSameMeetingType" xml:space="preserve">
+    <value>Quyền truy cập không đúng hoặc quyền không phù hợp với hội nghị</value>
+  </data>
+  <data name="account.updateMeetingGroupFailed" xml:space="preserve">
+    <value>Cập nhật nhóm hội nghị không thành công do lỗi: {0}</value>
+  </data>
+  <data name="account.userNotFound" xml:space="preserve">
+    <value>Không tồn tại người dùng</value>
+  </data>
+  <data name="account.userOrMeetingNotFound" xml:space="preserve">
+    <value>Người dùng hay hội nghị không tìm thấy</value>
+  </data>
+  <data name="attendee.alreadyTookTheVote" xml:space="preserve">
+    <value>Bạn đã thực hiện bầu cử và biểu quyết, hệ thống không cho phép bạn thay đổi kết quả mà bạn đã thực hiện</value>
+  </data>
+  <data name="attendee.delegatedVotesInvalid" xml:space="preserve">
+    <value>Số lượng quyền biểu quyết được ủy quyền của đại biểu không khớp với số lượng quyền biểu quyết trong danh sách ủy quyền</value>
+  </data>
+  <data name="attendee.existedHolder" xml:space="preserve">
+    <value>Không cho phép đăng ký đại biểu tự do khi có số đăng ký sở hữu trùng với số đăng ký sở hữu của cổ đông.</value>
+  </data>
+  <data name="attendee.existedIdentityOrEmail" xml:space="preserve">
+    <value>Đã tồn tại đại biểu có cùng số đăng ký sở hữu hoặc email, vui lòng kiểm tra lại.</value>
+  </data>
+  <data name="attendee.updateAttendeeVote" xml:space="preserve">
+    <value>Không cập nhật được dữ liệu</value>
+  </data>
+  <data name="common.resourceNotFound" xml:space="preserve">
+    <value>Nội dung yêu cầu cập nhật không thực hiện đươc do không tìm thấy dữ liệu gốc</value>
+  </data>
+  <data name="delegateRequest.delegateRequiredNotEmpty" xml:space="preserve">
+    <value>Danh sách người ủy quyền bắt buộc không được để trống</value>
+  </data>
+  <data name="delegateRequest.holderNotFound" xml:space="preserve">
+    <value>Không tìm thấy cổ đông hoặc thông tin không hợp lệ</value>
+  </data>
+  <data name="delegateRequest.meetingNotFoundOrInvalidStatus" xml:space="preserve">
+    <value>Không tìm thấy hội nghị hoặc trạng thái hội nghị không cho phép thực hiện yêu cầu này</value>
+  </data>
+  <data name="delegation.cannotDelete" xml:space="preserve">
+    <value>Trạng thái yêu cầu không cho phép thực hiện hoặc không tìm thấy nội dung cần xóa</value>
+  </data>
+  <data name="delegationRequest.cannotApprove" xml:space="preserve">
+    <value>Trạng thái yêu cầu không cho phép thực hiện hoặc không tìm thấy nội dung cần duyệt</value>
+  </data>
+  <data name="delegationRequest.cannotSubmit" xml:space="preserve">
+    <value>Trạng thái yêu cầu không cho phép thực hiện hoặc không tìm thấy nội dung cần gửi</value>
+  </data>
+  <data name="delegationRequest.invalidCurrentUser" xml:space="preserve">
+    <value>Hệ thống không cho phép bạn sử dụng chức năng này</value>
+  </data>
+  <data name="delegationRequest.invalidMandator" xml:space="preserve">
+    <value>Thông tin người ủy quyền không đúng, yêu cầu thông tin người ủy quyền là thông tin người dùng</value>
+  </data>
+  <data name="file.notFound" xml:space="preserve">
+    <value>Không tìm thấy file</value>
+  </data>
+  <data name="holder.alreadyCheckedIn" xml:space="preserve">
+    <value>Bạn đã đăng ký đại biểu tham dự hội nghị</value>
+  </data>
+  <data name="holder.alreadyConfirmed" xml:space="preserve">
+    <value>Cổ đông đã xác nhận tham dự</value>
+  </data>
+  <data name="holder.delegateExists" xml:space="preserve">
+    <value>Đã tồn tại đại diện ủy quyền</value>
+  </data>
+  <data name="holder.delegateIsApproved" xml:space="preserve">
+    <value>Yêu cầu đã được phê duyệt, bạn không thể xóa</value>
+  </data>
+  <data name="holder.delegationNotFound" xml:space="preserve">
+    <value>Không tìm thấy đại diện ủy quyền</value>
+  </data>
+  <data name="holder.delegationUpdateFailed" xml:space="preserve">
+    <value>Trạng thái của cổ đông không cho phép thực hiện hoặc không tìm thấy cổ đông</value>
+  </data>
+  <data name="holder.existedDelegationIsInProcess" xml:space="preserve">
+    <value>Đại biểu bạn ủy quyền đã có trong danh sách chờ thực hiện, vui lòng chờ yêu cầu của bạn hoàn tất.</value>
+  </data>
+  <data name="holder.existedIdentityOrEmail" xml:space="preserve">
+    <value>Đã tồn tại cổ đông có cùng số đăng ký sở hữu hoặc email, vui lòng kiểm tra lại.</value>
+  </data>
+  <data name="holder.exitedAttendeeHasTheSameIdentityNumber" xml:space="preserve">
+    <value>Đã tồn tại đại biểu có cùng số đăng ký sở hữu. Xin vui lòng chọn lại đại biểu từ danh sách để cập nhật lại nội dung</value>
+  </data>
+  <data name="holder.invalidDelegateVotes" xml:space="preserve">
+    <value>Số lượng quyền ủy quyền vượt quá số lượng quyền đang có</value>
+  </data>
+  <data name="holder.invalidStateForDeletingOrResourceNotFound" xml:space="preserve">
+    <value>Không tìm thấy đại biểu hoặc đại biểu đã thực hiện đăng ký tham dự trực tuyến</value>
+  </data>
+  <data name="holder.listIsEmpty" xml:space="preserve">
+    <value>Danh sách cổ đông không được phép để trống</value>
+  </data>
+  <data name="holder.locklist.completed" xml:space="preserve">
+    <value>Danh sách cổ đông đã chốt thành công: {0} cổ đông, {1} đã gửi thư điện tử thông báo.</value>
+  </data>
+  <data name="holder.meetingNotFound" xml:space="preserve">
+    <value>Không tìm thấy hội nghị</value>
+  </data>
+  <data name="holder.notCheckedIn" xml:space="preserve">
+    <value>Bạn chưa đăng ký tham dự đại biểu</value>
+  </data>
+  <data name="holder.notConfirmed" xml:space="preserve">
+    <value>Cổ đông chưa xác nhận tham dự</value>
+  </data>
+  <data name="holder.notFindAttendee" xml:space="preserve">
+    <value>Không xác định được đại biểu</value>
+  </data>
+  <data name="holder.notFindHolder" xml:space="preserve">
+    <value>Không xác định được cổ đông</value>
+  </data>
+  <data name="holder.notFindIndex" xml:space="preserve">
+    <value>Không xác định được trang chỉ mục</value>
+  </data>
+  <data name="holder.notFindMeeting" xml:space="preserve">
+    <value>Không xác định được hội nghị</value>
+  </data>
+  <data name="holder.notFindMeetingOrHolderOrHolderConfirmedOnline" xml:space="preserve">
+    <value>Hội nghị hoặc cổ đông không tìm thấy hoặc cổ đông đã xác nhận tham gia online</value>
+  </data>
+  <data name="holder.notFindSize" xml:space="preserve">
+    <value>Không xác định được số lượng hội nghị</value>
+  </data>
+  <data name="holder.notFound" xml:space="preserve">
+    <value>Không tìm thấy cổ đông</value>
+  </data>
+  <data name="holder.requestDelegationFailed" xml:space="preserve">
+    <value>Không thực hiện được nội dung yêu cầu</value>
+  </data>
+  <data name="holder.resourceNotFound" xml:space="preserve">
+    <value>Nội dung hội nghị hoặc cổ đông hoặc đại diện ủy quyền không xác định được</value>
+  </data>
+  <data name="meeting.accessLimit" xml:space="preserve">
+    <value>Bạn không được phép truy xuất thông tin của hội nghị hiện tại</value>
+  </data>
+  <data name="meeting.groupNotExisted" xml:space="preserve">
+    <value>Nhóm hội nghị không xác định</value>
+  </data>
+  <data name="meeting.matterNotFound" xml:space="preserve">
+    <value>Không tìm thấy nội dung bầu cử</value>
+  </data>
+  <data name="meeting.notAllowToDelete" xml:space="preserve">
+    <value>Bạn không được phép xóa thông tin đại hội mà không phải do bạn tạo ra</value>
+  </data>
+  <data name="meeting.notFindContent" xml:space="preserve">
+    <value>Không xác định được nội dung cần thực hiện</value>
+  </data>
+  <data name="meeting.notFound" xml:space="preserve">
+    <value>Thông tin hội nghị không tìm thấy</value>
+  </data>
+  <data name="meeting.notSupport" xml:space="preserve">
+    <value>Nội dung yêu cầu chưa được thực hiện</value>
+  </data>
+  <data name="meeting.statusNotAllowToPerform" xml:space="preserve">
+    <value>Trạng thái của hội nghị không cho phép thực hiện yêu cầu này</value>
+  </data>
+  <data name="meetingRole.duplicateName" xml:space="preserve">
+    <value>Tồn tại chức năng người dùng có tên trùng nhau</value>
+  </data>
+  <data name="meetingRole.isInUsed" xml:space="preserve">
+    <value>Chức năng người dùng đang được sử dụng bởi tài khoản khác</value>
+  </data>
+  <data name="meetingRole.notAllowToAccess" xml:space="preserve">
+    <value>Bạn không đủ quyền để thực hiện</value>
+  </data>
+  <data name="meetingRole.notFound" xml:space="preserve">
+    <value>Không tìm thấy chức năng người dùng</value>
+  </data>
+  <data name="resource.contenTypeInvalid" xml:space="preserve">
+    <value>Yêu cầu không khai báo thành phần nội dung Multipart Content-Type</value>
+  </data>
+  <data name="resource.uploadFailed" xml:space="preserve">
+    <value>Tải nhập file dữ liệu không thành công do không có nội dung hoặc định dạng file không hỗ trợ</value>
+  </data>
+  <data name="user.addRoleFailed" xml:space="preserve">
+    <value>Không tạo quyền cho tài khoản. Lỗi: {0}</value>
+  </data>
+  <data name="user.changePasswordFailed" xml:space="preserve">
+    <value>Không thay đổi được mật khẩu. Lỗi: {0}</value>
+  </data>
+  <data name="user.createFailed" xml:space="preserve">
+    <value>Không tạo được tài khoản người dùng. Lỗi: {0}</value>
+  </data>
+  <data name="user.hasBeenLocked" xml:space="preserve">
+    <value>Tài khoản đăng nhập bị khóa do đăng nhập sai quá số lần cho phép. Vui lòng thực hiện đăng nhập một lúc sau.</value>
+  </data>
+  <data name="user.loginSessionExpired" xml:space="preserve">
+    <value>Phiên đăng nhập bị hết hạn hoặc token không hợp lệ</value>
+  </data>
+  <data name="user.notAuthenticated" xml:space="preserve">
+    <value>Lỗi do tài khoản chưa đăng nhập</value>
+  </data>
+  <data name="user.notFound" xml:space="preserve">
+    <value>Không tìm thấy người dùng</value>
+  </data>
+  <data name="user.notSupport" xml:space="preserve">
+    <value>Nội dung chưa được hỗ trợ thực hiện</value>
+  </data>
+  <data name="user.resetPasswordFailed" xml:space="preserve">
+    <value>Không tạo lại mật khẩu đăng nhập. Lỗi: {0}</value>
+  </data>
+  <data name="user.roleIsInvalid" xml:space="preserve">
+    <value>Bạn không đủ quyền để thực hiện</value>
+  </data>
+  <data name="user.roleListRequiredNotEmpty" xml:space="preserve">
+    <value>Danh sách chức năng yêu cầu không được để trống</value>
+  </data>
+  <data name="user.tokenInvalid" xml:space="preserve">
+    <value>Mã token không hợp lệ</value>
+  </data>
+</root>

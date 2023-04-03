@@ -1,0 +1,231 @@
+﻿<controls:MetroWindow
+        x:Class="CS.Application.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:framework="clr-namespace:CS.Application.Framework"
+        xmlns:localization="clr-namespace:CS.UI.Common.Localization;assembly=CS.UI.Common"
+        xmlns:local="clr-namespace:CS.UI.Common;assembly=CS.UI.Common"
+        xmlns:navigator="clr-namespace:CS.UI.Controls;assembly=CS.UI.Controls"
+        xmlns:home="clr-namespace:CS.Application.Views.Home"
+        mc:Ignorable="d"        
+        materialDesign:TransitionAssist.DisableTransitions="False"
+        BorderThickness="1"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        WindowState="Maximized"
+        Closing="MainWindow_OnClosing">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <local:SharedResourceDictionary Source="../Themes/Default/Resources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="MainMenuStyle" TargetType="materialDesign:PackIcon">
+                <Setter Property="Margin" Value="0 0 10 0"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="Width" Value="20"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <controls:MetroWindow.LeftWindowCommands>
+        <controls:WindowCommands ShowSeparators="False">
+            <!--hamburger menu icon-->
+            <ToggleButton Style="{DynamicResource MaterialDesignHamburgerToggleButton}"
+                          Visibility="{Binding IsVisibleNavigationMenu, Converter={StaticResource BooleanToVisibilityConverter}}"
+                          IsChecked="{Binding IsShowNavigationMenu}"
+                          IsEnabled="{Binding IsEnabledNavigationMenu}"
+                          Background="{StaticResource SecondaryAccentBrush}"
+                          Height="30"
+                          Padding="10 0"
+                          x:Name="MenuToggleButton"/>
+
+            <StackPanel Orientation="Horizontal">
+                <Image Source="../vics.ico" Margin="10 0" VerticalAlignment="Center"/>
+
+                <ItemsControl ItemsSource="{Binding NavigationItems}"
+                              ItemTemplate="{StaticResource NavigationLinkTemplate}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </StackPanel>
+        </controls:WindowCommands>
+    </controls:MetroWindow.LeftWindowCommands>
+
+    <controls:MetroWindow.RightWindowCommands>
+        <controls:WindowCommands>
+            <!--user login-->
+            <materialDesign:PopupBox PlacementMode="BottomAndAlignLeftEdges" PopupMode="Click"
+                                     Visibility="{Binding IsAuthenticated, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <materialDesign:PopupBox.ToggleContent>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="5 0 5 0"
+                                Tag="{localization:Translate MainView_HelloTitle}">
+                        <StackPanel.ToolTip>
+                            <MultiBinding Converter="{StaticResource StringFormatConverter}" ConverterParameter="{}{0} {1}!">
+                                <Binding Path="Tag" RelativeSource="{RelativeSource Self}"/>
+                                <Binding Path="Text" ElementName="LoginUserName"/>
+                            </MultiBinding>
+                        </StackPanel.ToolTip>
+
+                        <materialDesign:PackIcon Kind="AccountCircle" 
+                                                 VerticalAlignment="Center"
+                                                 Margin="0 0 5 0" Height="30" Width="30"
+                                                 Foreground="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=controls:WindowCommands}}"/>
+                        <TextBlock x:Name="LoginUserName" 
+                                   Text="{Binding User.FullName}"
+                                   FontSize="{StaticResource NormalFontSize}"
+                                   Style="{StaticResource HyperLinkTextBlock}"
+                                   Foreground="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=controls:WindowCommands}}"
+                                   VerticalAlignment="Center">
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:PopupBox.ToggleContent>
+
+                <materialDesign:PopupBox.PopupContent>
+                    <StackPanel>
+                        <Button Command="{Binding UserProfileCommand}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="AccountBox" Style="{StaticResource MainMenuStyle}"/>
+                                <TextBlock Text="{localization:Translate MainWindow_UserProfileSettingTitle}"/>
+                            </StackPanel>
+                        </Button>
+                        <Separator/>
+                        <Button Command="{Binding SignOutCommand}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Logout" Style="{StaticResource MainMenuStyle}"/>
+                                <TextBlock Text="{localization:Translate MainWindow_SignOutTitle}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Command="{x:Static framework:ApplicationCommands.CloseCommand}">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="ExitToApp" Style="{StaticResource MainMenuStyle}"/>
+                                <TextBlock Text="{localization:Translate MainWindow_ExitTitle}"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </materialDesign:PopupBox.PopupContent>
+            </materialDesign:PopupBox>
+
+            <!--settings-->
+            <ToggleButton VerticalAlignment="Stretch" x:Name="SettingToggleButton" ToolTip="{localization:Translate MainWindow_SettingTitle}">
+                <materialDesign:PackIcon Kind="Settings"/>
+            </ToggleButton>
+
+        </controls:WindowCommands>
+    </controls:MetroWindow.RightWindowCommands>
+
+    <controls:MetroWindow.WindowButtonCommands>
+        <controls:WindowButtonCommands Template="{DynamicResource MahApps.Metro.Templates.WindowButtonCommands.Win10}"
+                                       Minimize="{localization:Translate WindowView_MinimizeTitle}"
+                                       Maximize="{localization:Translate WindowView_MaximizeTitle}"
+                                       Restore="{localization:Translate WindowView_RestoreTitle}"
+                                       Close="{localization:Translate WindowView_CloseTitle}"/>
+    </controls:MetroWindow.WindowButtonCommands>
+
+    <controls:MetroWindow.Flyouts>
+        <controls:FlyoutsControl>
+            <controls:Flyout Position="Right"
+                             CloseButtonVisibility="Collapsed"
+                             TitleVisibility="Collapsed"
+                             IsPinned="False"
+                             IsOpen="{Binding ElementName=SettingToggleButton, Path=IsChecked}"
+                             MinWidth="300">
+                <Grid Background="{DynamicResource PrimaryHueLightBrush}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10 30 10 10">
+                        <TextBlock Text="{localization:Translate MainWindow_SettingTitle}" 
+                                   FontSize="20" 
+                                   FontWeight="DemiBold"
+                                   VerticalAlignment="Center" />
+                    </StackPanel>
+                    <home:SettingsView Grid.Row="1" DataContext="{Binding Settings}"/>
+                </Grid>
+            </controls:Flyout>
+        </controls:FlyoutsControl>
+    </controls:MetroWindow.Flyouts>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!--progressing-->
+        <ProgressBar IsIndeterminate="True"
+                     VerticalAlignment="Top"
+                     Margin="0 0 0 0"
+                     Panel.ZIndex="1000"
+                     HorizontalAlignment="Stretch"
+                     Foreground="#F9A51A"
+                     Visibility="{Binding IsBusy, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+
+        <!--main content-->
+        <DockPanel Grid.Row="0" LastChildFill="True">
+            <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
+                <materialDesign:DrawerHost.LeftDrawerContent>
+                    <!--content of hamburger menu-->
+                    <navigator:NavigationMenu ItemsSource="{Binding Path=Items, Source={x:Static local:NavigationManager.Instance}}" 
+                                              Command="{Binding NavigationItemSelectedCommand}"
+                                              Width="350"/>
+
+                </materialDesign:DrawerHost.LeftDrawerContent>
+
+                <!--content-->
+                <Grid>
+                    <ScrollContentPresenter Content="{Binding ElementView, Mode=OneWay}" />
+
+                    <materialDesign:Snackbar HorizontalAlignment="Stretch" MessageQueue="{Binding MessageQueue}"/>
+                </Grid>
+            </materialDesign:DrawerHost>
+        </DockPanel>
+
+        <!--footer bar-->
+        <StackPanel Grid.Row="1">
+            <!--footer bar-->
+            <StatusBar>
+                <StatusBarItem>
+                    <Grid>
+                        <materialDesign:PackIcon Kind="AccessPoint"
+                                                 Visibility="{Binding IsBusy, Converter={StaticResource VisibilityByComparingConverter}, ConverterParameter={StaticResource False}}"/>
+                        <StackPanel Visibility="{Binding IsBusy, Converter={StaticResource VisibilityByComparingConverter}, ConverterParameter={StaticResource True}}"
+                                    Orientation="Horizontal">
+                            <ProgressBar Style="{DynamicResource MaterialDesignCircularProgressBar}"      
+                                         Value="0" Height="16"
+                                         VerticalAlignment="Center"
+                                         Foreground="{StaticResource AccentSelectedColorBrush}"
+                                         IsIndeterminate="True"
+                                         Margin="0 0 5 0"/>
+                            <TextBlock Text="{Binding Source={x:Static local:MessageListener.Instance},Path=Message, Mode=OneWay}"/>
+                        </StackPanel>
+                    </Grid>
+                </StatusBarItem>
+
+                <Separator/>
+
+                <StatusBarItem>
+                    <TextBlock Text="{Binding Description, Mode=OneWay}"/>
+                </StatusBarItem>
+
+                <StatusBarItem HorizontalAlignment="Right">
+                    <TextBlock VerticalAlignment="Center"
+                                   Margin="0 0 10 0"
+                                   Text="@Copyright 2017, C-Soft"/>
+                </StatusBarItem>
+            </StatusBar>
+        </StackPanel>
+    </Grid>
+</controls:MetroWindow>

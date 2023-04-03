@@ -1,0 +1,70 @@
+<div class="d-lg-flex w-lg-100 pb-3">
+    <h4 class="list-title my-auto">{{'meetingRole.list.title'| translate}}</h4>
+    <div class="action d-lg-flex justify-content-lg-between ml-md-auto">
+        <nb-select [(selected)]="meetingType" class="mr-2 my-auto" (selectedChange)="loadData($event)" size="small">
+            <nb-option *ngFor="let meetingType of meetingTypes" [value]="meetingType.value">{{meetingType.name}}
+            </nb-option>
+        </nb-select>
+        <button nbButton status="primary" size="small" class="ml-2 float-right my-auto"
+            [routerLink]="[route(routeConfig.MEETING_ROLE_EDIT)]">
+            {{'meetingRole.add.title' | translate}}
+        </button>
+    </div>
+</div>
+<nb-card accent="info" status="basic" class="m-0 p-0">
+    <nb-card-body class="pt-0 mb-0 pb-0">
+        <nb-list class="pt-0 mt-0  vip-list">
+            <nb-list-item *ngFor="let role of roles">
+                <div class="d-flex w-100">
+                    <div class="logo-image mr-2">
+                        <div class="group-logo rounded-circle initials border-secondary border text-secondary">
+                            {{role.name[0]}}
+                        </div>
+                    </div>
+                    <div class="info-container d-flex justify-content-between">
+                        <div class="item-info flex-column">
+
+                            <div class="item-info-top" style="position: relative;">
+                                <a class="text-reset text-decoration-none meeting-name font-weight-bold"
+                                    [routerLink]="[route(routeConfig.MEETING_ROLE_EDIT)]"
+                                    [queryParams]="{id: role.id}">{{ role.name }}</a>
+                                <span *ngIf="role.isDisabled" class="badge badge-danger mx-2">locked</span>
+                            </div>
+
+                            <div class="item-info-bottom mt-2 description">
+                                <span class="mr-3 font-weight-light">{{role.description}}</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="list-item-action ml-auto my-auto">
+                        <a *ngIf="!role.isDisabled; else showUnlock" href="javascript:void(0);" class="mx-2 "
+                            data-toggle="tooltip" data-placement="top" title="{{'meetingRole.lock' | translate}}"
+                            (click)="lockRole(role, true)">
+                            <i class="fas fa-user-lock text-secondary"></i>
+                        </a>
+                        <ng-template #showUnlock>
+                            <a href="javascript:void(0);" class="mx-2 " data-toggle="tooltip" data-placement="top"
+                                title="{{'meetingRole.unlock' | translate}}" (click)="lockRole(role, false)">
+                                <i class="fas fa-unlock-alt text-secondary"></i>
+                            </a>
+                        </ng-template>
+
+                        <a href="javascript:void(0);" class="mx-2 " data-toggle="tooltip" data-placement="top"
+                            [routerLink]="[route(routeConfig.MEETING_ROLE_EDIT)]" [queryParams]="{id: role.id}"
+                            title="{{'meetingRole.edit.title' | translate}}">
+                            <i class="fas fa-edit text-secondary"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="ml-2" data-toggle="tooltip" data-placement="top"
+                            title="{{'meetingRole.delete.title' | translate}}" (click)="delete(role)">
+                            <i class="fas fa-trash-alt text-secondary"></i>
+                        </a>
+                    </div>
+                </div>
+            </nb-list-item>
+        </nb-list>
+
+        <vip-empty-data [isNoData]="!roles || roles?.length === 0"></vip-empty-data>
+    </nb-card-body>
+</nb-card>

@@ -1,0 +1,93 @@
+[
+  {
+    "tag": "20",
+    "parts": [
+      {
+        "name": "IntReferenceNumber",
+        "length": 16
+      }
+    ]
+  },
+  {
+    "tag": "12",
+    "parts": [
+      {
+        "name": "SubMessageType",
+        "length": 3,
+		"default": "007"
+      }
+    ]
+  },
+  {
+    "tag": "77E",
+    "parts": [
+      {
+        "name": "Proprietary",
+        "length": 73,
+        "default": "ESET"
+      }
+    ]
+  },
+  {
+    "tag": "16R",
+    "type": "Open",
+    "parts": [
+      {
+        "default": "GENL"
+      }
+    ]
+  },
+  {
+    "tag": "23G",
+    "parts": [
+      {
+        "name": "MessageFunction",
+        "length": 4,
+        "default": "NEWM"
+      }
+    ]
+  },
+  {
+    "tag": "98A",
+    "qualifier": "PREP",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "CreatedDate",
+        "length": 8,
+        "type": "Date",
+        "format": "yyyyMMdd"
+      }
+    ]
+  },
+  {
+    "tag": "70E",
+    "qualifier": "SPRO",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "TradingDate",
+        "type": "Date",
+        "format": "ddMMyyyy",
+        "end": "<BrLine>"
+      },
+      {
+        "name": "Prerio",
+        "end": "<BrLine>"
+      },
+      {
+        "name": "Content",
+        "end": "<BrLine>"
+      }
+    ]
+  },
+  {
+    "tag": "16S",
+    "type": "Close",
+    "parts": [
+      {
+        "default": "GENL"
+      }
+    ]
+  }
+]

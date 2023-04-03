@@ -1,0 +1,53 @@
+:host {
+    width: 100%;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid #0095ff;
+    border-radius: 0.25rem;
+    display: flex;
+    background-color: #0095ff;
+    .account-info-icon {
+        background-color: #fff;
+        color: #0095ff;
+        padding: 1rem;
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+    }
+
+    .status-info {
+        color: #fff;
+        flex-grow: 1;
+    }
+
+    .summary-title {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .summary-item {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+
+        .item-title {
+            &.strong {
+                font-weight: 600;
+            }
+        }
+
+        .number {
+            font-size: 0.9rem;
+            margin-left: 0.25rem;
+            margin-right: 0.3rem;
+            &.size-1rem {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            &.size-1.25rem {
+                font-size: 1.25rem;
+                font-weight: bolder;
+            }
+        }
+    }
+}

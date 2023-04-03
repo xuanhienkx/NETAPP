@@ -1,0 +1,86 @@
+<nb-list class="pt-0 mt-0  vip-list">
+    <nb-list-item *ngFor="let mt of meetings">
+        <div class="col-lg-10 d-flex px-0 mx-0">
+            <div class="logo-image mr-2">
+                <div class="group-logo rounded-circle initials border-secondary border text-secondary"
+                    [ngStyle]="{'background': '#fff url(' + getUrl(mt.logo) + ') no-repeat 0 0','background-size': '48px 48px'}"
+                    *ngIf="mt.logo">
+
+                </div>
+                <div class="group-logo rounded-circle initials border-secondary border text-secondary"
+                    *ngIf="!mt.logo && mt.groupId" [innerHTML]="mt.groupId | groupLogo">
+                </div>
+                <div class="group-logo rounded-circle initials border-secondary border text-secondary"
+                    *ngIf="!mt.logo && !mt.groupId">
+                    {{mt.name.charAt(0).toUpperCase()}}
+                </div>
+            </div>
+            <div class="list-info info-container d-flex justify-content-between my-auto mx-2">
+                <div class="item-info flex-column">
+                    <div class="item-info-top" placement="right-bottom" tooltipClass="text-secondary">
+                        <a *ngIf="canEdit(mt)" class="text-reset text-decoration-none meeting-name font-weight-bold"
+                            [routerLink]="[route(urlRoute.MEETING_EDIT)]" [queryParams]="{id: mt.id}">{{ mt.name }}</a>
+                        <span *ngIf="!canEdit(mt)"
+                            class="text-reset text-decoration-none meeting-name font-weight-bold">{{ mt.name }}</span>
+                        <span class="mx-2 badge badge-vip font-italic">{{getStatus(mt?.status)}}</span>
+                    </div>
+
+                    <div class="item-info-bottom mt-1 ">
+                        <div class="item-info-bottom pr-2 description text-capitalize" data-toggle="tooltip"
+                            data-placement="top" title="{{'meeting.list.tooltip.address' | translate}}">
+                            <i class="fas fa-map-marker-alt mr-2" aria-hidden="true"></i> {{mt.address}}
+                        </div>
+
+                        <div class="description">
+                            <span class="mr-2" data-toggle="tooltip" data-placement="top"
+                                title="{{'meeting.list.tooltip.openedDate' | translate}}">
+                                <i class="far fa-calendar-alt text-secondary mr-1"></i>
+                                {{ mt.openedDate.value | date:'dd/MM/yyyy' }}
+                            </span>
+
+                            <span *ngIf="mt?.userRoles" class="mr-2" data-toggle="tooltip" data-placement="top"
+                                title="{{'meeting.list.tooltip.roles' | translate}}">
+                                <i class="fas fa-user-check text-secondary mr-1"></i>
+                                {{buildRoles(mt?.userRoles)}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 d-flex justify-content-end px-0 mx-0">
+            <div class="list-item-action ml-auto my-auto">
+                <a href="javascript:void(0);" class="mx-2" data-toggle="tooltip" data-placement="top"
+                    title="{{'meeting.goto' | translate}}" (click)="gotoMeeting(mt)">
+                    <i class="fas fa-external-link-alt text-secondary"></i>
+                </a>
+
+                <a *ngIf="enum(mt.status) === enum('Started')  && mt.isOwner" href="javascript:void(0);" class="mx-2"
+                    data-toggle="tooltip" data-placement="top" title="{{'meeting.lock' | translate}}"
+                    (click)="changeStatus(mt.id, enum('Lock'))">
+                    <i class="far fa-pause-circle text-secondary"></i>
+                </a>
+
+                <a *ngIf="enum(mt.status) === enum('Lock')  && mt.isOwner" href="javascript:void(0);" class="mx-2"
+                    data-toggle="tooltip" data-placement="top" title="{{'meeting.open' | translate}}"
+                    (click)="changeStatus(mt.id, enum('Open'))">
+                    <i class="far fa-play-circle text-secondary"></i>
+                </a>
+
+                <a *ngIf="enum(mt.status) === enum('Open') && mt.isOwner" href="javascript:void(0);" class="mx-2"
+                    data-toggle="tooltip" data-placement="top" title="{{'meeting.close' | translate}}"
+                    (click)="changeStatus(mt.id, enum('Close'))">
+                    <i class="far fa-stop-circle text-secondary"></i>
+                </a>
+
+                <a *ngIf="canEdit(mt)" href="javascript:void(0);" class="ml-2"
+                    title="{{'meeting.delete.title' | translate}}" nbTooltipPlacement="top" nbTooltipStatus="info"
+                    (click)="delete(mt.id)">
+                    <i class="fas fa-trash-alt text-secondary"></i>
+                </a>
+            </div>
+        </div>
+    </nb-list-item>
+</nb-list>
+<vip-empty-data [isNoData]="!meetings || meetings?.length ===0"></vip-empty-data>

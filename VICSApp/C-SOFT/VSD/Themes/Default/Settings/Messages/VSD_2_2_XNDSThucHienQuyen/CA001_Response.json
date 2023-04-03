@@ -1,0 +1,93 @@
+{
+    "code": "CA001",
+    "name": "CA001- Danh sách người sở hữu chứng khoán lưu ký nhận phân bổ quyền bỏ phiếu",
+    "parameters": [{
+            "name": "RightNumber",
+            "start": "CACODE:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "BoardType",
+            "start": "BRID:"
+        }
+    ],
+    "csvFields": [{
+            "name": "StockCode",
+            "end": ";"
+        },
+        {
+            "name": "MemberBiccode",
+            "end": ";"
+        },
+        {
+            "name": "HoldQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "DepositQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "TotalQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "VoteQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "Notes",
+            "end": ";"
+        },
+        {
+            "name": "CustomerName",
+            "end": ";"
+        },
+        {
+            "name": "CardIdentity",
+            "end": ";"
+        },
+        {
+            "name": "CardIssuedDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "Address",
+            "end": ";"
+        },
+        {
+            "name": "AccountType",
+            "end": ";"
+        },
+        {
+            "name": "BusinessType",
+            "end": ";"
+        },
+        {
+            "name": "Nationality",
+            "end": ";"
+        },
+        {
+            "name": "CustomerType",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber",
+            "end": ";"
+        },
+        {
+            "name": "MemberName",
+            "end": ";"
+        },
+        {
+            "name": "DocumentRef",
+            "end": ";"
+        }
+    ]
+}

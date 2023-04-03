@@ -1,0 +1,281 @@
+{
+    "Common": {
+        "commonErrorTitle": "Thông báo lỗi",
+        "commonWarningTitle": "Cảnh báo",
+        "commonInformTitle": "Thông báo",
+        "requestErrorTittle": "Yêu cầu thực hiện bị lỗi",
+        "contactTrouble": "Nếu có bất kỳ vấn đề gì hãy <a href='/contactUs'>liên hệ quản trị</a>",
+        "gotoHome": "Đi tới trang chủ",
+        "addSuccess": "Tạo {{value}} thành công",
+        "editSuccess": "Cập nhật {{value}} thành công",
+        "confirmOk": "Đồng ý",
+        "confirmCancel": "Hủy",
+        "confirmTitle": "Vui lòng xác nhận",
+        "save": "Lưu lại",
+        "saveAndCreate": "Lưu & tạo mới",
+        "close": "Đóng",
+        "forceLogout": "Phiên làm việc của bạn đã hết hạn. Yêu cầu đăng nhập lại!",
+        "loginSessionViolent": "Tài khoản của bạn đang được đăng nhập tại thiết bị hoặc trình duyệt khác. Phiên làm việc của bạn hiện tại bị hủy!",
+        "invalidToken": "Hệ thống xác định mã bảo mật của bạn đã hết hạn hoặc không hợp lệ. Vì sự bảo mật, yêu cầu bạn đăng nhập lại",
+        "emptyData": "Không có dữ liệu",
+        "loading": "Đang xử lý dữ liệu"
+    },
+    "enum": {
+        "MeetingType": {
+            "GeneralMeeting": "Đại hội cổ đông",
+            "ApartmentMeeting": "Hội nghị cư dân"
+        },
+        "MeetingStatus": {
+            "Started": "Đang thiết lập",
+            "Locking": "Đang chốt danh sách cổ đông",
+            "Lock": "Chốt danh sách cổ đông",
+            "Open": "Đang mở",
+            "Close": "Kết thúc"
+        }, 
+        "Permission": {
+            "meeting_manage_members": "Thêm/Xóa/Khóa thành viên ban tổ chức",
+            "meeting_manage_documents": "Tạo nội dung về tài liệu hội nghị",
+            "meeting_manage_electionmatters": "Tạo nội dung về các vấn đề bầu cử",
+            "meeting_manage_holders": "Thiết lập/tải nhập danh sách cổ đông",
+            "meeting_complete_holders": "Chốt danh sách cổ đông",
+            "meeting_open_session": "Mở phiên hội nghị",
+            "meeting_checkin_attendees": "Check-in đại biểu tham dự hội nghị/Tạo ủy quyền",
+            "meeting_manage_delegaterequests": "Duyệt/Từ chối đề nghị ủy quyền online",
+            "meeting_manage_votes": "Nhập thông tin bầu cử",
+            "meeting_close_session": "Kết thúc hội nghị",
+            "meeting_manage_reports": "Xem báo cáo kết quả hội nghị",
+            "meeting_access_view":"Xem thông tin hội nghị"
+        }
+    },
+    "page": {
+        "login": "Đăng nhập",
+        "register": "Đăng ký",
+        "forgot": "Quên mật khẩu",
+        "home": "Về trang chủ",
+        "contact": "Liên hệ để hỗ trợ"
+    },
+    "errors": {
+        "404-title": "404 Not Found",
+        "404-comtent": "Sorry Page NotFound, Không tìn thấy trang yêu cầu!",
+        "500-title": "500 Lỗi từ server",
+        "500-comtent": "Lỗi từ API, vui lòng liên hệ quản trị hệ thống!",
+        "500": "Lỗi 500  SERVER ERROR, Vui lòng liên hệ với quản trị hệ thống ",
+        "404": "Lỗi 404  Page NotFound, Không tìn thấy trang yêu cầu",
+        "401": "Tên đăng nhập hoặc mật khẩu không đúng",
+        "ERR_CONNECTION_REFUSED": "Không kết nối được máy chủ API!",
+        "Invalid_token": "Phiên đăng nhập hết hạn, vui lòng đăng nhập lại",
+        "permission_retricted": "Xin lỗi! Bạn bị giới hạn quyền sử dụng và không được phép",
+        "common": "Yêu cầu không thực hiện được vì có lỗi xảy ra!",
+        "meetingNotFound": "Không xác định được hội nghị mà bạn đang muốn mở"
+    },
+    "menu": {
+        "profile": "Tài khoản",
+        "logout": "Đăng xuất",
+        "admin": {
+            "home": "Trang quản trị",
+            "profile": "Thông tin tài khoản",
+            "rest-password": "Đặt lại mật khẩu",
+            "dashboard": "Dashboard",
+            "meeting": "Danh sách hội nghị",
+            "meeting-group": "Danh sách nhóm hội nghị",
+            "meeting-role": "Chức năng người dùng",
+            "g-settings": "Cấu hình hệ thống",
+            "settings": "Thiết lập tham số"
+        }
+    },
+    "breadcrumb": {
+        "admin": "Quản trị",
+        "meeting": "Hội nghị",
+        "dashboard": "Dashboard",
+        "profile": "Thông tin tài khoản",
+        "meeting-group": "Nhóm hội nghị",
+        "meeting-role": "Chức năng người dùng",
+        "edit": "Chi tiết",
+        "settings": "Cấu hình"
+    },
+    "meeting": {
+        "add": {
+            "headline": "Tạo mới hội nghị",
+            "title": "Thêm mới",
+            "success": "Tạo hội nghị thành công"
+        },
+        "edit": {
+            "headline": "Sửa hội hội nghị",
+            "title": "Sửa",
+            "success": "Sửa hội nghị thành công"
+        },
+        "delete": {
+            "title": "Xóa",
+            "confirm": "Bạn thực sự muốn xóa hội nghị này không?",
+            "success": "Xóa hội nghị thành công"
+        },
+        "changeStatus": {
+            "title": "Chốt danh sách",
+            "confirm": "Lưu ý khi thay đổi trạng thái của hội nghị bạn sẽ KHÔNG có cơ hội quay trở về trạng thái trước. Bạn có thực sự muốn thực hiện?",
+            "success": "Chốt danh sách cổ đông thực hiện thành công"
+        },
+        "list": {
+            "title": "Danh sách hội nghị",
+            "search": "Tìm theo tên",
+            "addGroupTitle": "Thêm nhóm hội nghị",
+            "activeTitle": "Danh sách đang mở",
+            "archiveTitle": "Danh sách đã kết thúc",
+            "tooltip": {
+                "address": "Địa điểm tổ chức hội nghị",
+                "openedDate": "Ngày đại hội sẽ diễn ra",
+                "roles": "Chức năng & vị trí của bạn tham gia trong hội nghị"
+            }
+        },
+        "goto": "Vào hội nghị",
+        "lock": "Chốt danh sách cổ đông",
+        "open": "Mở trạng thái hội nghị",
+        "close": "Kết thúc hội nghị",
+        "name": {
+            "label": "Tên hội nghị",
+            "required": "Bạn phải nhập tên hội nghị"
+        },
+        "group": {
+            "label": "Tổ chức",
+            "placeholder": "---Chọn tổ chức---"
+        },
+        "address": {
+            "label": "Địa chị tổ chức",
+            "required": "Trường này không được để trống",
+            "minlength": "Địa chỉ có độ dài tối thiểu 11 ký tự"
+        },
+        "description": {
+            "label": "Mô tả"
+        },
+        "openedDate": {
+            "label": "Ngày đại hội",
+            "required": "Trường này không được để trống",
+            "valid": "Ngày đại hội phải lớn hơn ngày hiện tại"
+        },
+        "type": {
+            "label": "Loại hội nghị",
+            "generalMeeting": "Đại hội cổ động",
+            "apartmentMeeting": "Đại hội cư dân"
+        },
+        "logoUrl": {
+            "label": "Hình đại diện",
+            "buttonFile": "Chọn lại",
+            "copy":{
+                "title": "Sao chép",
+                "tooltip": "Sử dụng lại hình đại diện từ đơn vị tổ chức"
+            }
+        },
+        "header": {
+            "label": "Thông tin header",
+            "copy": {
+                "tooltip": "Sử dụng lại nội dung từ đơn vị tổ chức",
+                "title": "Sao chép"
+            },
+            "open": {
+                "title": "Mở",
+                "tooltip": "Mở rộng trên màn hình"
+            }
+        },
+        "footer": {
+            "label": "Thông tin footer",
+            "copy": {
+                "tooltip": "Sử dụng lại nội dung từ đơn vị tổ chức",
+                "title": "Sao chép"
+            },
+            "open": {
+                "title": "Mở",
+                "tooltip": "Mở rộng trên màn hình"
+            }
+        }
+    },
+    "meetingGroup": {
+        "add": {
+            "headline": "Tạo mới nhóm hội nghị",
+            "title": "Thêm mới",
+            "success": "Tạo nhóm hội nghị thành công"
+        },
+        "edit": {
+            "headline": "Thay đổi thông tin nhóm hội nghị",
+            "title": "Sửa",
+            "success": "Cập nhật thông tin nhóm hội nghị thành công"
+        },
+        "delete": {
+            "title": "Xóa",
+            "confirm": "Bạn có thực sự xóa thông tin nhóm hội nghị không?"
+        },
+        "list": {
+            "title": "Danh sách nhóm hội nghị"
+        },
+        "name": {
+            "label": "Tên tổ chức",
+            "required": "Bạn phải nhập tên group"
+        },
+        "header": {
+            "label": "Thông tin header",
+            "required": "Thông tin header không được để trống"
+        },
+        "footer": {
+            "label": "Thông tin footer",
+            "required": "Thông tin footer không được để trống"
+        },
+        "locked": {
+            "label": "Khóa",
+            "required": "Trường này không được để trống"
+        },
+        "logoUrl": {
+            "label": "Logo",
+            "buttonFile": "Thay đổi",
+            "acceptType": "Chỉ hỗ trợ định dạng *.png, *.jpg, *.jpeg",
+            "fileSize": "Kích thước tối đa của file là 1MB."
+        }
+    },
+    "meetingRole": {
+        "add": {
+            "headline": "Tạo mới chức năng người dùng",
+            "title": "Thêm mới",
+            "success": "Tạo chức năng người dùng thành công"
+        },
+        "edit": {
+            "headline": "Sửa chức năng người dùng",
+            "title": "Sửa",
+            "success": "Cập nhật chức năng người dùng thành công"
+        },
+        "delete": {
+            "confirm": "Bạn có thực sự muốn xóa chức năng này?",
+            "title": "Xóa",
+            "success": "Xóa thành công",
+            "error": "Không xóa được chức năng đang sử dụng"
+        },
+        "list": {
+            "title": "Danh mục chức năng",
+            "search": "Tìm theo tên"
+        },
+        "name": {
+            "label": "Tên",
+            "required": "Tên bắt buộc không được để trống"
+        },
+        "meetingType": {
+            "label": "Loại hội nghị"
+        },
+        "description": {
+            "label": "Mô tả"
+        },
+        "permission": {
+            "label": "Quyền được sử dụng"
+        },
+        "status": {
+            "label": "Trạng thái",
+            "locked": "Đang khóa",
+            "active": "Hoạt động"
+        },
+        "lock": "Khóa",
+        "unlock": "Mở khóa"
+    },
+    "profile": {
+        "title": "Quản lý thông tin cá nhân",
+        "language": {
+            "label": "Ngôn ngữ",
+            "en": "Tiếng Anh",
+            "vi": "Tiếng Việt"
+        }
+    }
+}

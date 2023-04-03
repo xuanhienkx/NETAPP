@@ -1,0 +1,12 @@
+D:\Projects\mcrservices\src\BuildingBlocks\Infartructure\bin\Debug\net6.0\Infartructure.deps.json
+D:\Projects\mcrservices\src\BuildingBlocks\Infartructure\bin\Debug\net6.0\Infartructure.dll
+D:\Projects\mcrservices\src\BuildingBlocks\Infartructure\bin\Debug\net6.0\Infartructure.pdb
+D:\Projects\mcrservices\src\BuildingBlocks\Infartructure\obj\Debug\net6.0\Infartructure.csproj.AssemblyReference.cache
+D:\Projects\mcrservices\src\BuildingBlocks\Infartructure\obj\Debug\net6.0\Infartructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\mcrservices\src\BuildingBlocks\Infartructure\obj\Debug\net6.0\Infartructure.AssemblyInfoInputs.cache
+D:\Projects\mcrservices\src\BuildingBlocks\Infartructure\obj\Debug\net6.0\Infartructure.AssemblyInfo.cs
+D:\Projects\mcrservices\src\BuildingBlocks\Infartructure\obj\Debug\net6.0\Infartructure.csproj.CoreCompileInputs.cache
+D:\Projects\mcrservices\src\BuildingBlocks\Infartructure\obj\Debug\net6.0\Infartructure.dll
+D:\Projects\mcrservices\src\BuildingBlocks\Infartructure\obj\Debug\net6.0\refint\Infartructure.dll
+D:\Projects\mcrservices\src\BuildingBlocks\Infartructure\obj\Debug\net6.0\Infartructure.pdb
+D:\Projects\mcrservices\src\BuildingBlocks\Infartructure\obj\Debug\net6.0\ref\Infartructure.dll

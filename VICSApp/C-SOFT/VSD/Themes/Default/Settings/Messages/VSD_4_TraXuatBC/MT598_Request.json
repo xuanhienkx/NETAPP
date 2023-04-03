@@ -1,0 +1,89 @@
+[
+  {
+    "tag": "20",
+    "parts": [
+      {
+        "name": "OutReferenceNumber",
+        "length": 16,
+        "type": "Integer",
+        "format": "D16"
+      }
+    ]
+  },
+  {
+    "tag": "12",
+    "parts": [
+      {
+        "name": "SubMessageType",
+        "length": 3,
+        "default": 3,
+        "type": "Integer",
+        "format": "D3"
+      }
+    ]
+  },
+  {
+    "tag": "77E",
+    "parts": [
+      {
+        "name": "Parameters",
+        "length": 73
+      }
+    ]
+  },
+  {
+    "tag": "16R",
+    "type": "Open",
+    "system": true,
+    "parts": [
+      {
+        "default": "GENL"
+      }
+    ]
+  },
+  {
+    "tag": "23G",
+    "parts": [
+      {
+        "name": "MessageFunction",
+        "length": 4,
+        "default": "NEWM"
+      }
+    ]
+  },
+  {
+    "tag": "98A",
+    "qualifier": "PREP",
+    "part_start": "/",
+    "optional": true,
+    "parts": [
+      {
+        "name": "RequestDate",
+        "length": 8,
+        "type": "Date",
+        "format": "yyyyMMdd"
+      }
+    ]
+  },
+  {
+    "tag": "13B",
+    "qualifier": "STAT",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "ReportCode",
+        "length": 30
+      }
+    ]
+  },
+  {
+    "tag": "16S",
+    "type": "Close",
+    "system": true,
+    "parts": [
+      {
+        "default": "GENL"
+      }
+    ]
+  }
+]

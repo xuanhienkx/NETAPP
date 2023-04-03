@@ -1,0 +1,342 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CS.Application.Views.Custody.Base"
+                    xmlns:common="clr-namespace:CS.UI.Common;assembly=CS.UI.Common"
+                    xmlns:models="clr-namespace:CS.Common.Contract.Models;assembly=CS.Common.Contract"
+                    xmlns:localization="clr-namespace:CS.UI.Common.Localization;assembly=CS.UI.Common"
+                    xmlns:vsdModels="clr-namespace:CS.Common.Contract.VsdModels;assembly=CS.Common.Contract"
+                    xmlns:framework="clr-namespace:CS.Application.Framework">
+    <ResourceDictionary.MergedDictionaries>
+        <common:SharedResourceDictionary Source="../../../Themes/Default/Resources.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <framework:VsdReportNameConverter  x:Key="VsdReportNameConverter"/>
+    <Style TargetType="{x:Type TextBlock}" x:Key="TextBlockInfo">
+        <Setter Property="Margin" Value="5 0 0 0" />
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    <Style TargetType="{x:Type Label}"  x:Key="LabelInfo">
+        <Setter Property="Margin" Value="10 0 0 0" />
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="LightSlateGray"/>
+    </Style>
+    <DataTemplate DataType="{x:Type models:CustomerModel}">
+        <DataTemplate.Resources>
+            <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockInfo}"/>
+            <Style TargetType="{x:Type Label}" BasedOn="{StaticResource LabelInfo}"/>
+        </DataTemplate.Resources>
+        <Grid >
+            <StackPanel>
+                <Border  
+                   BorderThickness="0,0,0,1" 
+                   BorderBrush="Gray">
+                    <Label FontSize="13" Content="{localization:Translate CustodyView_Customer_Info}" />
+                </Border>
+                <StackPanel Orientation="Horizontal">
+                    <Label Width="100" Content="{localization:Translate CustomerView_FullNameLocal}" />
+                    <TextBlock Text="{Binding FullNameLocal}" TextWrapping="Wrap" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label  Width="100" HorizontalAlignment="Left"  Content="{localization:Translate CustomerView_Address}" />
+                    <TextBlock Text="{Binding Address}" TextWrapping="Wrap" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="110"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Column="0" Grid.Row="0" Content="{localization:Translate CustomerView_CustomerNumber}" />
+                        <TextBlock Grid.Column="1"  Grid.Row="0" Text="{Binding CustomerNumber}" />
+                        <Label Grid.Column="0" Grid.Row="1" Content="{localization:Translate CustomerView_CustomerType}" />
+                        <TextBlock  Grid.Column="1" Grid.Row="1" Text="{Binding Type, Converter={StaticResource EnumLocalizedConverter}}" />
+                        <Label Grid.Column="0" Grid.Row="2" Content="{localization:Translate CustomerView_CardType}" />
+                        <TextBlock  Grid.Column="1" Grid.Row="2" Text="{Binding CardType, Converter={StaticResource EnumLocalizedConverter}}" />
+                        <Label Grid.Column="0" Grid.Row="3" Content="{localization:Translate CustomerView_CardIdentity}" />
+                        <TextBlock  Grid.Column="1" Grid.Row="3"   Text="{Binding CardIdentity}" />
+                        <Label  Grid.Column="0" Grid.Row="4" Content="{localization:Translate CustomerView_CardIssuer}" />
+                        <TextBlock Grid.Column="1" Grid.Row="4" Text="{Binding CardIssuer}" />
+                        <Label  Grid.Column="0" Grid.Row="5" Content="{localization:Translate CustomerView_CardIssuedDate}" />
+                        <TextBlock Grid.Column="1" Grid.Row="5" Text="{Binding CardIssuedDate, StringFormat='{}{0:dd/MM/yyyy}'}" />
+                        <Label Grid.Column="0" Grid.Row="6" Content="{localization:Translate CustomerView_Nationality}" />
+                        <TextBlock Grid.Column="1" Grid.Row="6" Text="{Binding NationalityCode}" />
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" Content="{localization:Translate CustomerView_City}" />
+                        <TextBlock  Grid.Column="1" Grid.Row="0" Text="{Binding City}" />
+                        <Label Grid.Column="0" Grid.Row="1" Content="{localization:Translate CustomerView_Country}" />
+                        <TextBlock  Grid.Column="1" Grid.Row="1" Text="{Binding CountryCode}" />
+                        <Label Grid.Column="0" Grid.Row="2"  Content="{localization:Translate CustomerView_Genere}" />
+                        <TextBlock  Grid.Column="1" Grid.Row="2" Text="{Binding Genere, Converter={StaticResource EnumLocalizedConverter}}" />
+                        <Label Grid.Column="0" Grid.Row="3" Content="{localization:Translate CustomerView_BirthDay}" />
+                        <TextBlock  Grid.Column="1" Grid.Row="3" Text="{Binding BirthDay, StringFormat='{}{0:dd/MM/yyyy}'}" />
+                        <Label Grid.Column="0" Grid.Row="4" Content="{localization:Translate CustomerView_Status}" />
+                        <TextBlock Grid.Column="1" Grid.Row="4" Text="{Binding Status, Converter={StaticResource EnumLocalizedConverter}}" />
+                        <Label Grid.Column="0" Grid.Row="5" Content="{localization:Translate UserModel_Email}" />
+                        <TextBlock  Grid.Column="1" Grid.Row="5" Text="{Binding Email}" />
+                        <Label Grid.Column="0" Grid.Row="6" Content="{localization:Translate UserModel_PhoneNumber}" />
+                        <TextBlock  Grid.Column="1" Grid.Row="6" Text="{Binding PhoneNumber}" />
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+    </DataTemplate>
+    <DataTemplate x:Key="BaseVsdCustomerStock" DataType="{x:Type vsdModels:VsdCustomerStock}">
+        <DataTemplate.Resources>
+            <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockInfo}"/>
+            <Style TargetType="{x:Type Label}" BasedOn="{StaticResource LabelInfo}"/>
+        </DataTemplate.Resources>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{localization:Translate CustomerView_CustomerNumber}" />
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding CustomerNumber}"/>
+            <Label  Grid.Row="1" Grid.Column="0"  Content="{localization:Translate CustomerView_FullNameLocal}" />
+            <TextBlock  Grid.Row="1" Grid.Column="1"  Text="{Binding CustomerName}"/>
+            <Label Grid.Row="2" Grid.Column="0"  Content="{localization:Translate CustodyView_StockCode}" />
+            <TextBlock  Grid.Row="2" Grid.Column="1"  Text="{Binding Code}"/>
+            <Label  Grid.Row="3" Grid.Column="0"  Content="{localization:Translate CustodyView_StockName}" />
+            <TextBlock  Grid.Row="3" Grid.Column="1"  Text="{Binding StockName}"/>
+            <Label Grid.Row="4" Grid.Column="0"  Content="{localization:Translate CustodyView_Quantity}" />
+            <TextBlock  Grid.Row="4" Grid.Column="1"  Text="{Binding Quantity}"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vsdModels:VsdCustomerStock}">
+        <ContentPresenter Content="{Binding}" ContentTemplate="{StaticResource BaseVsdCustomerStock}"/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vsdModels:Custody542TranferModel}" >
+        <DataTemplate.Resources>
+            <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockInfo}"/>
+            <Style TargetType="{x:Type Label}" BasedOn="{StaticResource LabelInfo}"/>
+        </DataTemplate.Resources>
+        <StackPanel>
+            <ContentPresenter Content="{Binding}" ContentTemplate="{StaticResource BaseVsdCustomerStock}"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0"  Content="{localization:Translate CustodyView_Partner_Number}" />
+                <TextBlock Grid.Row="0" Grid.Column="1"  Text="{Binding ReceiverAccount}"/>
+                <Label Grid.Row="1" Grid.Column="0"  Content="{localization:Translate CustodyView_Partner_CompanyName}" />
+                <TextBlock Grid.Row="1" Grid.Column="1"  Text="{Binding ReceiverCompanyName}"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="{localization:Translate CustodyView_SettlementType}" />
+                <TextBlock Grid.Row="2" Grid.Column="1"  Text="{Binding SettlementType, Converter={StaticResource EnumLocalizedConverter}}"/>
+            </Grid>
+        </StackPanel>
+
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vsdModels:Custody542RightTranferModel}" >
+        <DataTemplate.Resources>
+            <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockInfo}"/>
+            <Style TargetType="{x:Type Label}" BasedOn="{StaticResource LabelInfo}"/>
+        </DataTemplate.Resources>
+        <StackPanel>
+            <ContentPresenter Content="{Binding}" ContentTemplate="{StaticResource BaseVsdCustomerStock}"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0"  Content="{localization:Translate CustodyView_Partner_Number}" />
+                <TextBlock Grid.Row="0" Grid.Column="1"  Text="{Binding ReceiverAccount}"/>
+                <Label Grid.Row="1" Grid.Column="0"  Content="{localization:Translate CustodyView_Partner_CompanyName}" />
+                <TextBlock Grid.Row="1" Grid.Column="1"  Text="{Binding ReceiverCompanyName}"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="{localization:Translate CustodyView_SettlementType}" />
+                <TextBlock Grid.Row="2" Grid.Column="1"  Text="{Binding SettlementType, Converter={StaticResource EnumLocalizedConverter}}"/>
+                <Label Grid.Row="3" Grid.Column="0" Content="{localization:Translate ReprotView_OrigTransferRef}" />
+                <TextBlock Grid.Row="3" Grid.Column="1"  Text="{Binding OrigTransferRef}"/>
+            </Grid>
+        </StackPanel>
+
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vsdModels:Custody524Model}">
+        <DataTemplate.Resources>
+            <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockInfo}"/>
+            <Style TargetType="{x:Type Label}" BasedOn="{StaticResource LabelInfo}"/>
+        </DataTemplate.Resources>
+        <StackPanel>
+            <ContentPresenter Content="{Binding}" ContentTemplate="{StaticResource BaseVsdCustomerStock}"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0"  Content="{localization:Translate CustodyView_Contract_Balance}" />
+                <TextBlock  Grid.Row="0" Grid.Column="1"  Text="{Binding FromBalance,Converter={StaticResource EnumLocalizedConverter}}"/>
+                <Label Grid.Row="1" Grid.Column="0" Content="{localization:Translate CustodyView_Bank_FullName}" />
+                <TextBlock  Grid.Row="1" Grid.Column="1" Text="{Binding BankName}" TextWrapping="Wrap"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="{localization:Translate CustodyView_Contract_Number}" />
+                <TextBlock  Grid.Row="2" Grid.Column="1" Text="{Binding ContractNumber}"/>
+            </Grid>
+        </StackPanel>
+
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vsdModels:Custody598FinalSettAccountModel}">
+        <DataTemplate.Resources>
+            <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockInfo}"/>
+            <Style TargetType="{x:Type Label}" BasedOn="{StaticResource LabelInfo}"/>
+        </DataTemplate.Resources>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{localization:Translate CustomerView_CustomerNumber}" />
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding CustomerNumber}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="{localization:Translate CustomerView_FullNameLocal}" />
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding CustomerName}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="{localization:Translate CustodyView_Partner_Number}" />
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding ReceiverAccount}"/>
+            <Label Grid.Row="3" Grid.Column="0"  Content="{localization:Translate CustodyView_Partner_CompanyName}" />
+            <TextBlock Grid.Row="3" Grid.Column="1"  Text="{Binding ReceiverCompanyName}"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="{localization:Translate CustodyView_SettlementType}" />
+            <TextBlock Grid.Row="4" Grid.Column="1"  Text="{Binding AccountProcessInstruction, Converter={StaticResource EnumLocalizedConverter}}"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vsdModels:Custody598Confirm}">
+        <DataTemplate.Resources>
+            <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockInfo}"/>
+            <Style TargetType="{x:Type Label}" BasedOn="{StaticResource LabelInfo}"/>
+        </DataTemplate.Resources>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{localization:Translate CustodyView_Report_Code}"/>
+            <TextBlock  Grid.Row="0" Grid.Column="1"  Text="{Binding ReportCode}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="{localization:Translate ReprotView_ReportName}"/> 
+            <TextBlock  Grid.Row="1" Grid.Column="1"  Text="{Binding ReportCode,Converter={StaticResource VsdReportNameConverter}}" TextWrapping="Wrap" />
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vsdModels:Custody565Model}">
+        <DataTemplate.Resources>
+            <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockInfo}"/>
+            <Style TargetType="{x:Type Label}" BasedOn="{StaticResource LabelInfo}"/>
+        </DataTemplate.Resources>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ContentPresenter Grid.ColumnSpan="2" Content="{Binding}" ContentTemplate="{StaticResource BaseVsdCustomerStock}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="{localization:Translate ReprotView_OrigTransferRef}" />
+            <TextBlock Grid.Row="1" Grid.Column="1"  Text="{Binding OrigTransferRef}"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vsdModels:IReportRequest}" x:Key="BaseInfoReportRequest">
+        <DataTemplate.Resources>
+            <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockInfo}"/>
+            <Style TargetType="{x:Type Label}" BasedOn="{StaticResource LabelInfo}"/>
+        </DataTemplate.Resources>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="{localization:Translate CustodyView_Report_Code}"/>
+            <TextBlock  Grid.Row="0" Grid.Column="1"  Text="{Binding ReportCode}"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="{localization:Translate ReprotView_ReportName}"/>
+            <TextBlock  Grid.Row="1" Grid.Column="1"  Text="{Binding ReportCode,Converter={StaticResource VsdReportNameConverter}}" TextWrapping="Wrap" />
+        </Grid>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vsdModels:BaseDEPramaterModel}">
+        <ContentPresenter Content="{Binding}" ContentTemplate="{StaticResource BaseInfoReportRequest}"/>
+    </DataTemplate>
+     <DataTemplate DataType="{x:Type vsdModels:BaseRightPramaterModel}">
+         <DataTemplate.Resources>
+             <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TextBlockInfo}"/>
+             <Style TargetType="{x:Type Label}" BasedOn="{StaticResource LabelInfo}"/>
+         </DataTemplate.Resources>
+        <StackPanel>
+            <ContentPresenter Content="{Binding}" ContentTemplate="{StaticResource BaseInfoReportRequest}"/> 
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="{localization:Translate Custody_Report_RightNumber}"/>
+                <TextBlock Grid.Column="1" Text="{Binding RightNumber}" /> 
+            </Grid>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vsdModels:ClearingAndSettlementAllBoardRequet}">
+        <ContentPresenter Content="{Binding}" ContentTemplate="{StaticResource BaseInfoReportRequest}"/>
+    </DataTemplate>
+
+</ResourceDictionary>

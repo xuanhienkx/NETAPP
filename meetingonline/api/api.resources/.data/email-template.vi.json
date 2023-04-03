@@ -1,0 +1,30 @@
+﻿{
+  "register": {
+    "title": "[Skylar Tech] Xác thực tài khoản email",
+    "body": "Xin chào {{NAME}}! <p>Cảm ơn bạn đã đăng ký tài khoản trên hệ thống của Skylar Tech.</p><p>Tài khoản đăng nhập của bạn là: <strong>{{USER_NAME}}</strong></p><p>Vui lòng click vào <a href='{{PASS_URL}}'>đây</a> để tạo mật khẩu, hoặc sử dụng code như bên dưới để đăng nhập.<br/><h2>{{CODE}}</h2></p><br/>Skylar Tech Team"
+  },
+  "reset-password": {
+    "title": "[Skylar Tech] Lấy lại mật khẩu đăng nhập",
+    "body": "Xin chào {{NAME}}! <p>Cảm ơn bạn sử dụng dịch vụ của Skylar Tech. Vui lòng click vào <a href='{{URL}}'>đây</a> để lấy lại mật khẩu</p><br/>Skylar Tech Team"
+  },
+  "confirm-email": {
+    "title": "",
+    "body": ""
+  },
+  "request-delegation": {
+    "title": "[Skylar Tech] Đề nghị ủy quyền tham dự đại hội",
+    "body": "Xin chào {{NAME}}! <p>Bạn được mời làm đại diện ủy quyền tham gia đại hội với nội dung như sau:<p><h6>{{MEETING_NAME}}</h6></br>Diễn ra ngày: {{MEETING_NAME}}</br>Địa chỉ: {{MEETING_DATE}}</br>Người ủy quyền: <strong>{{HOLDER_NAME}}</strong>Số ủy quyền: <h6>{{VOTES}}</h6></p>Vui lòng click vào <a href='{{URL}}'>đây</a> để biết thêm thông tin.</p><br/>Skylar Tech Team"
+  },
+  "request-holder": {
+    "title": "[Skylar Tech] Thông báo tham dự đại hội",
+    "body": "Xin chào {{NAME}}! <p>Bạn được mời tham dự đại hội với tư cách là cổ đông, nội dung như sau:<p><h6>{{MEETING_NAME}}</h6></br>Diễn ra ngày: {{MEETING_NAME}}</br>Địa chỉ: {{MEETING_DATE}}</br>Số cổ phần: <h6>{{SHARES}}</h6></br>Quyền biểu quyết: <h6>{{VOTES}}</h6></p>Vui lòng click vào <a href='{{URL}}'>đây</a> để biết thêm thông tin.</p><br/>Skylar Tech Team"
+  },
+  "request-delegation-reminder": {
+    "title": "[Skylar Tech] Đề nghị duyệt ủy quyền tham dự đại hội",
+    "body": "Xin chào! <p>Bạn nhận được email này vì bạn có trách nhiệm duyệt đề nghị ủy quyền của {{HOLDER_NAME}}, ủy quyền tham dự đại hội:<p><h6>{{MEETING_NAME}}</h6></br>Diễn ra ngày: {{MEETING_NAME}}</br>Địa chỉ: {{MEETING_DATE}}</br></p>Vui lòng click vào <a href='{{URL}}'>đây</a> để biết thêm thông tin.</p><br/>Skylar Tech Team"
+  },
+  "request-delegation-answer": {
+    "title": "[Skylar Tech] Thông báo về việc xác nhận ủy quyền tham dự đại hội",
+    "body": "Xin chào {{NAME}}! <p>Yêu cầu của bạn về đề nghị duyệt ủy quyền thay bạn đại hội:<p><h6>{{MEETING_NAME}}</h6></br>Diễn ra ngày: {{MEETING_NAME}}</br>Địa chỉ: {{MEETING_DATE}}</br>Kết quả duyệt: {{APPROVE_RATE}}</p>Vui lòng click vào <a href='{{URL}}'>đây</a> để biết thêm thông tin.</p><br/>Skylar Tech Team"
+  }
+}

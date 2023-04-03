@@ -1,0 +1,65 @@
+<h1 id="title" class="title">{{'login.header'| translate}}</h1>
+
+<form [formGroup]="frm" (ngSubmit)="onSubmit()" novalidate aria-labelledby="title">
+
+    <div class="form-row">
+        <div class="form-group col">
+            <label class="required font-weight-bold text-dark text-2">{{'login.userName.label'| translate}}</label>
+            <input nbInput autofocus fullWidth class="form-control form-control-md" formControlName="userName"
+                placeholder="{{'login.userName.placeholder'| translate}}"
+                [ngClass]="{ 'is-invalid': submitted && frmcontrol.userName.errors }" />
+            <span class="text-danger"
+                *ngIf="(frmcontrol.userName.touched || submitted) && frmcontrol.userName.errors?.required">
+                {{'login.userName.required'| translate}}
+            </span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+            <a routerLink="{{route(urlRoute.FORGOT)}}" tabindex="-1" class="float-right">{{'page.forgot'| translate}}
+            </a>
+            <label class="required font-weight-bold text-dark text-2"> {{'login.password.label'| translate}}</label>
+            <input nbInput autofocus fullWidth type="password" class="form-control form-control-md"
+                placeholder="{{'login.password.placeholder'| translate}}" formControlName="password"
+                [ngClass]="{ 'is-invalid': submitted && frmcontrol.password.errors }" />
+            <ng-container
+                *ngIf="(frmcontrol.password.touched || submitted) && frmcontrol.password.errors?.required; then arlerError; else showEmpty">
+
+            </ng-container>
+            <ng-template #arlerError>
+                <span class="text-danger">
+                    {{'login.password.required'| translate}}
+                </span>
+            </ng-template>
+            <ng-template #showEmpty>
+                <span style="height: 40px;"></span>
+            </ng-template>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="submit" fullWidth status="primary" nbButton [disabled]="!frm.valid"
+            value="{{ 'login.button' | translate}}" data-loading-text="Loading...">
+
+    </div>
+</form>
+<section aria-label="Social sign in">
+    {{'login.socialUser.title'| translate}}
+    <div class="d-flex justify-content-between mt-2">
+        <button class="btn btn-facebook" (click)="socialSignIn('facebook')">
+            <i class="fab fa-facebook-f mr-2"></i>
+            {{'login.socialUser.facebook'| translate}}
+        </button>
+
+        <button class="btn btn-google" (click)="socialSignIn('google')">
+            <i class="fab fa-google  mr-2"></i>
+            {{'login.socialUser.google'| translate}}
+        </button>
+
+    </div>
+</section>
+
+<section class="another-action" aria-label="Register">
+    {{ 'login.linkRegister' | translate}} <a class="text-link"
+        routerLink="{{route(urlRoute.SIGNUP)}}">{{'page.register'| translate}}</a>
+</section>

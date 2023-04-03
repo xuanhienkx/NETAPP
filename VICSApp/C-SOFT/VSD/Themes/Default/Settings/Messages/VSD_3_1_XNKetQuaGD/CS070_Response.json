@@ -1,0 +1,112 @@
+{
+    "code": "CS070",
+    "name": "CS070- Thông báo tổng hợp kết quả giao dịch trái phiếu",
+    "parameters": [{
+            "name": "MemberCode",
+            "start": "MICODE:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "Period",
+            "start": "PERIOD:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "ReportDate",
+            "type": "Date",
+            "format": "yyyyMMdd",
+            "start": "TRANDATE:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "BoardId",
+            "start": "BRID:"
+        }
+    ],
+    "csvFields": [{
+            "name": "CurrencyUnit",
+            "end": ";"
+        },
+        {
+            "name": "BondOrStockFund",
+            "end": ";"
+        },
+        {
+            "name": "DateOfValidity",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "Code",
+            "end": ";"
+        },
+        {
+            "name": "SecurityName",
+            "end": ";"
+        },
+        {
+            "name": "Exchange",
+            "end": ";"
+        },
+        {
+            "name": "ConfirmCode",
+            "end": ";"
+        },
+        {
+            "name": "DocumentRef",
+            "end": ";"
+        },
+        {
+            "name": "MemberCode",
+            "end": ";"
+        },
+        {
+            "name": "MenberName",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber",
+            "end": ";"
+        },
+        {
+            "name": "ConfirmTime",
+            "type": "Time",
+            "format": "HH:mm:ss:ffffff",
+            "end": ";"
+        },
+        {
+            "name": "MemberAccount",
+            "end": ";"
+        },
+        {
+            "name": "Price",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "BuyQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "BuyValue",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "SellQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "SellValue",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "Type",
+            "end": ";"
+        }
+    ]
+}

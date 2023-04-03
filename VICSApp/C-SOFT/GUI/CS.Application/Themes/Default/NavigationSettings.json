@@ -1,0 +1,202 @@
+﻿[
+    {
+        "id": "Custody",
+        "icon": "Domain",
+        "subItems": [
+            {
+                "id": "VSD_1_1_DongMoTK",
+                "icon": "AccountConvert",
+                "accessRights": {
+                    "DongMoTk": "Allow"
+                },
+                "path": "Custody/Index"
+            },
+            {
+                "id": "kyguirutchungkhoan",
+                "icon": "CreditCardMultiple",
+                "accessRights": {
+                    "Kyguirutchungkhoan": "Allow" 
+                },
+                "subItems": [
+                    {
+                        "id": "VSD_1_2_1_KyGuiCK",
+                        "path": "Custody/IndexFilter/VSD_1_2_1_KyGuiCK"
+                    },
+                    {
+                        "id": "VSD_1_2_2_RutCK",
+                        "path": "Custody/IndexFilter/VSD_1_2_2_RutCK"
+                    } //,
+                    /*     {
+            "id": "VSD_1_2_3_KyGuiTP",
+            "path": "Custody"
+          },
+          {
+            "id": "VSD_1_2_4_KyGuiCKTuQuyen",
+            "path": "Custody"
+          },
+          {
+            "id": "VSD_1_2_5_RutCKDoHuy",
+            "path": "Custody"
+          }*/
+                ]
+            },
+            {
+                "id": "VSD_1_3_ChuyenKhoanCK",
+                "icon": "Transfer",
+                "accessRights": {
+                    "ChuyenKhoanCk": "Allow" 
+                },
+                "path": "Custody/IndexFilter/VSD_1_3_ChuyenKhoanCK"
+            },
+            {
+                "id": "VSD_1_4_TatToanTK",
+                "icon": "AccountSwitch",
+                "accessRights": { "TatToanTk": "Allow" },
+                "path": "Custody/IndexFilter/VSD_1_4_TatToanTK"
+            },
+            {
+                "id": "VSD_1_5_PhongToaGiaiToaCK",
+                "icon": "AccountOff",
+                "accessRights": {
+                    "PhongToaGiaiToaCk": "Allow" 
+                },
+                "path": "Custody/IndexFilter/VSD_1_5_PhongToaGiaiToaCK"
+            },
+            /* {
+           "id": "VSD_1_6_TBDieuChinhCK",
+           "icon": "ArrangeSendBackward",
+           "path": "Custody"
+         },
+         {
+           "id": "VSD_1_7_TBThayDoiChuyenNhuong",
+           "icon": "ArrowTopRight",
+           "path": "Custody"
+         },
+         {
+           "id": "VSD_1_8_XNSoDuCK",
+           "icon": "CheckAll",
+           "path": "Custody"
+         },*/
+            {
+                "id": "VSD_2_1_TBQuyen",
+                "accessRights": {
+                    "RightInfomation": "Allow" 
+                },
+                "icon": "InformationOutline",
+                "path": "Custody/IndexRightInfo"
+            }, /*
+      {
+        "id": "VSD_2_2_XNDSThucHienQuyen",
+        "icon": "InformationOutline",
+        "path": "RightInformation"
+      },*/
+            {
+                "id": "VSD_2_3_ChuyenNhuongQuyen",
+                "icon": "TranscribeClose",
+                "accessRights": {
+                    "ChuyenNhuongQuyen": "Allow" 
+                },
+                "path": "Custody/IndexFilter/VSD_2_3_ChuyenNhuongQuyen"
+            },
+            {
+                "id": "VSD_2_4_DKDatMua",
+                "icon": "Cash",
+                "accessRights": {
+                    "DkDatMua": "Allow" 
+                },
+                "path": "Custody/IndexFilter/VSD_2_4_DKDatMua"
+            },
+            {
+                "id": "VSD_4_TraXuatBC",
+                "icon": "Poll",
+                "accessRights": {
+                    "TraXuatBc": "Allow" 
+                },
+                "path": "Custody/IndexFilter/VSD_4_TraXuatBC"
+            },
+            {
+                "id": "VSD_Report",
+                "icon": "ChartAreaspline",
+                "accessRights": {
+                    "CustodyReport": "Allow" 
+                },
+                "path": "Custody/IndexReportInfo"
+            }
+        ]
+    },
+    {
+        "id": "AdminSetting",
+        "icon": "Settings",
+        "accessRights": {
+            "AdminSetting": "Allow"
+        },
+        "subItems": [
+            {
+                "id": "AdminProfile",
+                "path": "User/UserProfile",
+                "accessRights": { "AdminProfile": "Allow" }
+            },
+            {
+                "id": "Branch",
+                "path": "Branch/Index",
+                "accessRights": { "Branch": "Allow" }
+            },
+            {
+                "id": "Department",
+                "accessRights": { "Department": "Allow" },
+                "path": "Department/Index"
+            },
+            {
+                "id": "Group",
+                "accessRights": { "Group": "Allow" },
+                "path": "Group/Index"
+            },
+            {
+                "id": "User",
+                "accessRights": { "User": "Allow" },
+                "path": "User/Index"
+            },
+            {
+                "id": "Customer",
+                "icon": "AccountBoxOutline",
+                "accessRights": { "Customer": "Allow" },
+                "path": "Customer/Index"
+            }
+        ]
+    },
+    {
+        "id": "Catalogue",
+        "accessRights": { "Group": "Allow" },
+        "subItems": [
+            {
+                "id": "Group",
+                "accessRights": { "Group": "Allow" },
+                "path": "Group/Index"
+            }
+        ]
+    },
+    {
+        "id": "CustomerManager",
+        "icon": "AccountCardDetails",
+      "subItems": [
+        {
+          "id": "CustomerCreate",
+          "icon": "AccountPlus",
+          "accessRights": { "Customer": "Add" },
+          "path": "Customer/Create"
+        },
+        {
+          "id": "Customer",
+          "icon": "AccountBoxOutline",
+          "accessRights": { "Customer": "Allow" },
+          "path": "Customer/Index"
+        },
+        {
+          "id": "Asset",
+          "icon": "CashMultiple",
+          "accessRights": { "Asset": "Allow" },
+          "path": "Asset/Index"
+        }
+      ]
+    }
+]

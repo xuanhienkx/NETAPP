@@ -1,0 +1,279 @@
+<nb-card class="vip-full-width-dialog-attendee">
+    <nb-card-header>
+        <div class="row">
+            <div class="col-md-6 col-12" *ngIf="canEdit">
+                <h6 *ngIf="!isEdit" class="my-auto">{{'attendee.form.title.addNew' |translate}}</h6>
+                <h6 *ngIf="isEdit" class="my-auto">{{'attendee.form.title.edit' |translate}}</h6>
+
+            </div>
+            <div class="col-md-6 col-12" *ngIf="!canEdit">
+                <h6 class="my-auto">{{'attendee.form.title.view' |translate}}</h6>
+            </div>
+            <div class="col-md-4 col-12 ml-md-auto" *ngIf="!isEdit">
+                <vip-holder-autocomplete id="holdeSearch" (holderSelect)="onSelectHolder($event)" isClearText="true"
+                    [placeholdertextKey]="'attendee.form.holderSearch.placeholder'" [meetingId]="mt?.id"
+                    [holdersExten]="mtIdentities">
+                </vip-holder-autocomplete>
+            </div>
+        </div>
+
+
+    </nb-card-header>
+    <nb-card-body class="w-100">
+        <form [formGroup]="frm" #fForm="ngForm" (ngSubmit)="onSubmit(false)" autocomplete="off" novalidate>
+            <div class="form-group row">
+                <div class=" col-md-6 col-12">
+                    <label for="displayName" class="required">{{'attendee.form.name.label' |translate}}</label>
+                    <input nbInput autofocus fullWidth class="form-control" fieldSize="small" id="displayName"
+                        maxlength="200" formControlName="displayName"
+                        [status]="f.displayName.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger invalid-text"
+                        *ngIf="(f.displayName.touched  && f.displayName.invalid) && f.displayName.errors.required">
+                        {{'attendee.form.name.required' |translate}}.</div>
+                </div>
+
+                <div class="col-md-3 col-12 col-sm-6">
+                    <div class="my-auto" style="padding-top: 25px;">
+                        <nb-toggle id="isRepresentative" formControlName="isRepresentative" size="small"
+                            labelPosition="start" (click)=changeRepresentative($event)>
+                            {{'attendee.form.isRepresentative.label' | translate}}
+                        </nb-toggle>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12 col-sm-6" *ngIf="f.isRepresentative.value">
+                    <label for="repTitle" class="required">{{'attendee.form.repTitle.label' |translate}}</label>
+                    <input nbInput autofocus class="form-control" fieldSize="small" id="repTitle" maxlength="20"
+                        formControlName="repTitle"
+                        [status]="f.isRepresentative.value && f.repTitle.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger invalid-text"
+                        *ngIf="f.repTitle.touched && f.repTitle.invalid &&  f.isRepresentative.value && f.repTitle.errors.required">
+                        {{'attendee.form.repTitle.required' |translate}}.</div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3 col-12 col-sm-6">
+                    <label for="identity" *ngIf="mt?.type === 'GeneralMeeting'"
+                        class="required">{{'attendee.form.identity.label1' |translate}}</label>
+                    <label for="identity" *ngIf="mt?.type !== 'GeneralMeeting'"
+                        class="required">{{'attendee.form.identity.label2' |translate}}</label>
+
+                    <input nbInput autofocus fullWidth class="form-control" fieldSize="small" maxlength="20"
+                        formControlName="identityNumber" [status]=" f.identityNumber.invalid  ? 'danger' : 'basic'" />
+
+                    <div class="text-danger"
+                        *ngIf="f.identityNumber.touched && f.identityNumber.invalid && f.identityNumber.errors.required">
+                        {{'attendee.form.identity.required' |translate}}.</div>
+                </div>
+                <div class="col-md-3 col-12 col-sm-6">
+                    <label for="identityIssuedDate"
+                        class="required">{{'attendee.form.identityIssuedDate.label' |translate}}</label>
+                    <input mask="00/00/0000" nbInput autofocus fullWidth placeholder="dd/MM/yyyy" maxlength="10"
+                        class="form-control" fieldSize="small" id="identityIssuedDate"
+                        formControlName="identityIssuedDate"
+                        [status]="f.identityIssuedDate.invalid  ? 'danger' : 'basic'">
+                    <nb-datepicker #datepicker format="dd/MM/yyyy" [max]="max"></nb-datepicker>
+                    <div class="text-danger invalid-text"
+                        *ngIf="f.identityIssuedDate.touched && f.identityIssuedDate.invalid && f.identityIssuedDate.errors.required">
+                        {{'attendee.form.identityIssuedDate.required' |translate}}.</div>
+                </div>
+
+                <div class="col-md-3 col-12 col-sm-6">
+                    <label for="identityType">{{'attendee.form.identityType.label' |translate}}</label>
+                    <input nbInput autofocus fullWidth class="form-control" fieldSize="small" id="identityType"
+                        maxlength="20" formControlName="identityType"
+                        placeholder="{{'attendee.form.identityType.smallDesc' |translate}}"
+                        [status]="f.identityType.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger invalid-text"
+                        *ngIf="(f.identityType.touched && f.identityType.invalid) && f.identityType.errors.required">
+                        {{'attendee.form.identityType.required' |translate}}.</div>
+                </div>
+
+                <div class="col-md-3 col-12 col-sm-6">
+                    <label for="identityIssuer">{{'attendee.form.identityIssuer.label' |translate}}</label>
+                    <input nbInput autofocus fullWidth class="form-control" fieldSize="small" id="identityIssuer"
+                        maxlength="30" formControlName="identityIssuer"
+                        [status]="f.identityIssuer.dirty && f.identityIssuer.touched && f.identityIssuer.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger invalid-text"
+                        *ngIf="f.identityIssuer.touched && f.identityIssuer.invalid && f.identityIssuer.errors.required">
+                        {{'attendee.form.identityIssuer.required' |translate}}.</div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class=" col-md-6 col-12">
+                    <label for="address">{{'attendee.form.address.label' |translate}}</label>
+                    <input nbInput autofocus fullWidth class="form-control" fieldSize="small" id="address"
+                        formControlName="address" [status]=" f.address.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger invalid-text"
+                        *ngIf="f.address.touched && f.address.invalid && f.address.errors.required">
+                        {{'attendee.form.address.required' |translate}}.</div>
+                    <div class="text-danger invalid-text"
+                        *ngIf="f.address.touched && f.address.invalid && f.address.errors.minlength ">
+                        {{'attendee.form.address.minlength' |translate}}.</div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <label for="phoneNumber">{{'attendee.form.phone.label' |translate}}</label>
+                    <input nbInput autofocus fullWidth class="form-control" fieldSize="small" id="phoneNumber"
+                        formControlName="phone" maxlength="15" [status]=" f.phone.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger invalid-text"
+                        *ngIf="f.phone.touched && f.phone.invalid && f.phone.errors.required">
+                        {{'attendee.form.phone.required' |translate}}.</div>
+                    <div class="text-danger invalid-text"
+                        *ngIf="f.phone.touched && f.phone.invalid && f.phone.errors.minlength">
+                        {{'attendee.form.phone.minlength' |translate}}.</div>
+
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <label for="emailAddress">{{'attendee.form.email.label' |translate}}</label>
+                    <input type="email" nbInput autofocus fullWidth class="form-control" fieldSize="small"
+                        id="emailAddress" formControlName="emailAddress" maxlength="150"
+                        [status]="  f.emailAddress.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger invalid-text"
+                        *ngIf="(f.emailAddress.touched && f.emailAddress.invalid) && f.emailAddress.errors.required">
+                        {{'attendee.form.email.required' |translate}}.</div>
+                    <div class="text-danger invalid-text mt-2"
+                        *ngIf="(f.emailAddress.touched && f.emailAddress.invalid) && f.emailAddress.errors?.email">
+                        {{'attendee.form.email.valid' | translate }}.</div>
+                </div>
+
+            </div>
+            <nb-card accent="info" status="basic">
+                <nb-card-header class="d-flex justify-content-between my-auto py-2">
+                    <div>{{'attendee.form.title.delegateTitle' |translate}}</div>
+                    <div class="d-flex justify-content-center vip-summary-header ">
+                        <div *ngIf="f?.shares?.value>0" class="d-flex justify-content-center">
+                            <div class="summary-item">
+                                <label>{{'attendee.rightInfo.shares' |translate}}:</label>
+                                <span class="item-number">{{f?.shares?.value | number:'1.0-0'}}</span>
+                            </div>
+                            <div class="summary-item">
+                                <label>{{'attendee.rightInfo.ownedVotes' |translate}}:</label>
+                                <span class="item-number">{{f?.ownedVotes?.value | number:'1.0-0'}}</span>
+                            </div>
+                            <div class="summary-item">
+                                <label>{{'attendee.rightInfo.delegatingVotes' |translate}}:</label>
+                                <span class="item-number">{{f?.delegatingVotes?.value | number:'1.0-0'}}</span>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <label>{{'attendee.rightInfo.sharedVotes' |translate}}:</label>
+                            <span class="item-number">{{f?.sharedVotes?.value | number:'1.0-0'}}</span>
+                        </div>
+                        <div class="summary-item">
+                            <label>{{'attendee.rightInfo.totalVotes' |translate}}:</label>
+                            <span class="item-number">{{f?.totalVotes?.value | number:'1.0-0'}}</span>
+                        </div>
+
+                    </div>
+                </nb-card-header>
+                <nb-card-body>
+                    <div class="row">
+                        <!-- #region Begin holder Delegate-->
+                        <div class="col-md-6 col-12">
+                            <div class="my-2">
+                                <div class="form-group" *ngIf="canEdit && f.identityNumber.value">
+                                    <label
+                                        for="searchMandator">{{'attendee.form.holderSearch.label' |translate}}</label>
+                                    <vip-holder-autocomplete class="w-100" id="searchMandator"
+                                        (holderSelect)="addMandator($event)" [holdersExten]="mtIdentities"
+                                        isClearText="true"
+                                        [placeholdertextKey]="'attendee.form.holderSearch.placeholder'"
+                                        [meetingId]="mt?.id" [status]="requiredMadator?'danger':'basic'" checkAvailable>
+                                    </vip-holder-autocomplete>
+                                </div>
+                                <div *ngIf="mandators && mandators?.controls.length > 0" class="mt-2 ml-0 description">
+                                    <div class="text-secondary my-auto py-2">
+                                        <div class="border-bottom">
+                                            <b>{{'attendee.form.holderDelegate.title' |translate}}:</b>
+                                        </div>
+                                    </div>
+                                    <div style="max-height: 10rem; overflow-y: auto;">
+                                        <div *ngFor="let hd of mandators.controls; let i = index" class=""
+                                            formArrayName="mandators">
+                                            <div [formGroupName]="i">
+                                                <div class="d-flex justify-content-between w-100 list-hover my-auto py-1
+                                                px-2" *ngIf="!hd.controls.isHide?.value">
+                                                    <div
+                                                        class="item-info-top my-auto d-lg-flex justify-content-between">
+                                                        <div>
+                                                            <i class="far fa-user-circle vip-icon mr-2 my-auto"
+                                                                data-toggle="tooltip"
+                                                                title="{{'member.name.label' | translate}}"></i>
+
+                                                            <span
+                                                                class="text-capitalize text-decoration-none meeting-name font-weight-bold  mr-2 my-auto ">
+                                                                {{ hd.controls.mandator.value?.displayName}} </span>
+                                                        </div>
+
+                                                        <div class=" mr-2 my-auto" data-toggle="tooltip"
+                                                            data-placement="top"
+                                                            title="{{'holder.list.iconTip.identity' | translate}}">
+                                                            <i class="far fa-address-card text-secondary mr-1"></i>
+                                                            {{hd?.controls.mandator.value?.identityNumber}}
+                                                        </div>
+                                                    </div>
+                                                    <div class="ml-auto my-auto d-flex justify-content-between">
+                                                        <input nbInput autofocus type="number"
+                                                            onkeydown="return event.keyCode !== 69" min="1"
+                                                            class="form-control mx-2 text-right" formControlName="votes"
+                                                            fieldSize="small" [id]="'votes_'+i" maxlength="10"
+                                                            style="width: 8rem;"
+                                                            [readonly]="hd?.controls?.readOnly?.value"
+                                                            [status]="hd?.controls.votes.invalid  ? 'danger' : 'basic'"
+                                                            [max]="hd?.controls?.maxVotes?.value"
+                                                            placeholder="{{'attendee.form.holderDelegate.shareVote' |translate}}" />
+                                                        <a size="tiny" class="mx-2 ml-auto my-auto "
+                                                            data-toggle="tooltip" data-placement="top" *ngIf="canEdit"
+                                                            title="{{'holder.delete.tooltip' | translate}}"
+                                                            (click)="removeMandator(i)">
+                                                            <i class="fas fa-trash-alt text-secondary"></i>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="text-danger invalid-text text-right mr-4"
+                                                    [translate]="'delegate.form.votes.invalidLessThen'"
+                                                    [translateParams]="{value: hd?.controls?.maxVotes?.value}"
+                                                    *ngIf="hd?.controls.votes.touched  && hd?.controls.votes.invalid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #endregion end holder Delegate-->
+                        <!-- #region Begin holder Delegate upload file-->
+                        <div class="col-md-6 col-12">
+                            <div class="form-group" *ngIf="canEdit">
+                                <vip-upload-file multiple="true" (uploadFinished)="fileUploaderCompleted($event)">
+                                </vip-upload-file>
+                            </div>
+                            <vip-document-list [attachments]="attachments" [contentId]="f.id.valid"
+                                [allowEdit]="canEdit" (deleteFileInfo)="removeFileOnForm($event)"></vip-document-list>
+
+                        </div>
+                        <!-- #endregion end holder Delegate upload file-->
+                    </div>
+                </nb-card-body>
+            </nb-card>
+        </form>
+    </nb-card-body>
+    <nb-card-footer>
+        <div class="d-flex justify-content-between">
+            <div>
+                <button nbButton size="small" type="button" status="basic"
+                    (click)="onClose()">{{'Common.close' |translate}}</button>
+            </div>
+            <div>
+                <button (click)="fForm.ngSubmit.emit()" type="button" size="small" class="mx-2" nbButton
+                    status="primary" [disabled]="!fForm.valid" [class.btn-pulse]="submitted" *ngIf="canEdit"
+                    value="">{{'Common.save' | translate}}</button>
+                <!-- <button (click)="onSubmit(true)" class="mx-2" size="small" nbButton status="primary" [disabled]="!fForm.valid" [class.btn-pulse]="submitted" value="">{{'Common.saveAndCreate' | translate}}</button> -->
+                <button nbButton size="small" class="ml-2" type="button" status="primary" *ngIf="!isMeetingClose"
+                    (click)="resetForm()">{{'Common.add' |translate}}</button>
+            </div>
+        </div>
+    </nb-card-footer>
+</nb-card>

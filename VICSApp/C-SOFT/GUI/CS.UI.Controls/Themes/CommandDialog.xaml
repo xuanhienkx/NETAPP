@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:CS.UI.Controls"
+                    xmlns:simpleChildWindow="clr-namespace:MahApps.Metro.SimpleChildWindow;assembly=MahApps.Metro.SimpleChildWindow">
+
+    <Style TargetType="controls:CommandDialog">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <simpleChildWindow:ChildWindow EnableDropShadow="True"
+                                                   IsModal="True" 
+                                                   AllowMove="True"
+                                                   ShowCloseButton="True"   
+                                                   ShowTitleBar="True"
+                                                   BorderThickness="1"
+                                                   AllowFocusElement ="True"
+                                                   CloseByEscape="True"
+                                                   Background="{DynamicResource MaterialDesignPaper}"
+                                                   BorderBrush="{DynamicResource AccentBaseColorBrush}"	  
+                                                   GlowBrush="{DynamicResource AccentColorBrush}"
+                                                   IsOpen="{Binding IsOpen, RelativeSource={RelativeSource TemplatedParent}}"  
+                                                   Title="{Binding Title, RelativeSource={RelativeSource TemplatedParent}}"
+                                                   ChildWindowWidth="{Binding ChildWindowWidth, RelativeSource={RelativeSource TemplatedParent}}"
+                                                   ChildWindowHeight="{Binding ChildWindowHeight, RelativeSource={RelativeSource TemplatedParent}}">
+                        <simpleChildWindow:ChildWindow.OverlayBrush>
+                            <SolidColorBrush Opacity="0.4" Color="{DynamicResource Gray2}" />
+                        </simpleChildWindow:ChildWindow.OverlayBrush>
+
+                        <StackPanel Margin="10 10 10 20">
+                            <ContentPresenter Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}"
+                                              VerticalAlignment="Stretch"
+                                              HorizontalAlignment="Stretch"/>
+                            
+                            <StackPanel Orientation="Horizontal" Margin="4 15 10 0" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                <ContentPresenter Content="{Binding Commands, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                <Button x:Name="PART_AcceptButton" Style="{DynamicResource MaterialDesignRaisedAccentButton}" 
+                                        Margin="10 0"  
+                                        MinWidth="100"/>
+                                <Button x:Name="PART_CloseButton" Style="{DynamicResource MaterialDesignRaisedAccentButton}"   
+                                        MinWidth="100" />
+                            </StackPanel>
+                        </StackPanel>
+                    </simpleChildWindow:ChildWindow>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

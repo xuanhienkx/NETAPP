@@ -1,0 +1,122 @@
+{
+    "code": "CS077",
+    "name": "CS077- Thông báo tổng hợp kết quả giao dịch Cổ phiếu,chứng chỉ quỹ",
+    "parameters": [{
+            "name": "MemberCode",
+            "start": "MICODE:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "Period",
+            "start": "PERIOD:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "ReportDate",
+            "type": "Date",
+            "format": "yyyyMMdd",
+            "start": "TRANDATE:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "MemberCode",
+            "start": "FROM:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "MemberCode",
+            "start": "TO:"
+        }
+    ],
+    "csvFields": [{
+            "name": "CurrencyUnit",
+            "end": ";"
+        },
+        {
+            "name": "BondOrStockFund",
+            "end": ";"
+        },
+        {
+            "name": "DateOfValidity",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "Exchange",
+            "end": ";"
+        },
+        {
+            "name": "Code",
+            "end": ";"
+        },
+        {
+            "name": "SecurityName",
+            "end": ";"
+        },
+        {
+            "name": "DateAndCode",
+            "end": ";"
+        },
+        {
+            "name": "PaymentPeriod",
+            "end": ";"
+        },
+        {
+            "name": "ConfirmCode",
+            "end": ";"
+        },
+        {
+            "name": "MemberCode",
+            "end": ";"
+        },
+        {
+            "name": "MenberName",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber",
+            "end": ";"
+        },
+        {
+            "name": "ConfirmTime",
+            "type": "Time",
+            "format": "HH:mm:ss:ffffff",
+            "end": ";"
+        },
+        {
+            "name": "MemberAccount",
+            "end": ";"
+        },
+        {
+            "name": "Price",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "BuyQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "BuyValue",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "SellQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "SellValue",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "Type",
+            "end": ";"
+        }
+    ]
+
+}

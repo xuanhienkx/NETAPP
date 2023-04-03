@@ -1,0 +1,17 @@
+2009//01//06-10:22:15 Start Program ...
+2009//01//06-10:22:15 Inbox queue address is \Private$\inboxqueue
+2009//01//06-10:22:15 UDP Sequence is 1378
+2009//01//06-10:22:15 UDP Port is 30000
+2009//01//06-10:22:15 AutoT IP Address is 10.21.80.233
+2009//01//06-10:22:15 AutoT TCP Port is 9999
+2009//01//06-10:22:15 Successful reading parameters from file
+2009//01//06-10:22:15 Initiating queue successful
+2009//01//06-10:22:15 Initiating broadcast socket successful
+2009//01//06-10:22:15 Load ReTransmission Infomation From File(ReTransmission.bin) 
+2009//01//06-10:22:15 Retransmission data after reading from file: 
+2009//01//06-10:22:15 Initiating broadcast packet receiving thread successful
+2009//01//06-10:22:15 Start Thread: ThreadReceiveBroadcastMsgFromHOSE
+2009//01//06-10:22:15 Initiating retransmission handling thread successful
+2009//01//06-10:22:15 Broker start with broadcast seq_no(1378)
+2009//01//06-10:22:15 Start Thread: RetransmissionHandlingThread
+2009//01//06-10:22:15 Initiating handling manager thread thread successful

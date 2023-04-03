@@ -1,0 +1,12 @@
+{
+  "MessageType": "ACKNAK",
+  "ApplicationIdentifier": "F",
+  "ServiceIdentifier": "21",
+  "SenderBicode": "VSDCTBXXAXXX",
+  "SessionInteger": "0020",
+  "InputSequenceInteger": "000021",
+  "ReceiverDate": "2014-03-14T17:29:32",
+  "AcceptReject": "1",
+  "RejectionReasonCode": "NAK",
+  "RejectionReasonMessage": "Dong 1: TKGD CTBBD10010 da co giao dich dang ky 2013 dang cho xac nhan co ma chung tu (0107725127) thuoc giao dich quan ly 2012 co ma chung tu (0107725126)_"
+}

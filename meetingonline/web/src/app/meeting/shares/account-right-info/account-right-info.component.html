@@ -1,0 +1,37 @@
+<div class="account-info-icon">
+    <i class="fas fa-address-card fa-3x"></i>
+</div>
+<div class="status-info my-auto mx-3">
+    <div *ngIf="!hideTitle" class="summary-title mb-2">
+        <span *ngIf="type==='admin'" [translate]="'shares.account-info-right.titleAdmin'" [translateParams]="{name: account?.displayName}"></span>
+        <span *ngIf="type!=='admin'"  [translate]="'shares.account-info-right.title'" [translateParams]="{name: account?.displayName}"></span>
+    </div>
+
+    <div class="summary-item">
+        <div class="my-auto">
+            <span class="item-title">{{'shares.account-info-right.shares' |translate}}:</span>
+            <span class="number">{{account?.shares | number}}</span>
+        </div>
+        <div class="my-auto">
+            <span class="item-title">{{'shares.account-info-right.ownedVotes' |translate}}:</span>
+            <span class="number">{{account?.ownedVotes | number}}</span>
+        </div>
+        <div class="my-auto" *ngIf="showDelegatedVotes">
+            <span class="item-title">{{'shares.account-info-right.delegatedVotes' |translate}}:</span>
+            <span class="number">{{delegatedVotes | number}}</span>
+        </div>
+        <div class="my-auto">
+            <span class="item-title">{{'shares.account-info-right.delegatingVotes' |translate}}:</span>
+            <span class="number">{{delegatingVotes | number}}</span>
+        </div>
+        <div class="my-auto" *ngIf="showAvailableVotes">
+            <span class="item-title">{{'shares.account-info-right.availableVotes' |translate}}:</span>
+            <span class="number size-1rem">{{availableVotes | number}}</span>
+        </div>
+        <div class="my-auto" *ngIf="showTotalVotes" >
+            <span class="item-title">{{'shares.account-info-right.totalVotes' |translate}}:</span>
+            <span class="number size-1rem">{{ totalVotes | number}}</span>
+        </div>
+
+    </div>
+</div>

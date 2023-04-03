@@ -1,0 +1,43 @@
+<nb-form-field status="info">
+    <div nbSuffix><i class="fas fa-search text-secondary" style="transform: rotate(90deg);"
+            (click)="searchHolder()"></i></div>
+    <input [nbAutocomplete]="holderAutocomplete" fieldSize="small" nbInput autofocus fullWidth
+        [formControl]="holderFindControl" class="form-control" type="text" [status]="status"
+        placeholder="{{placeholdertextKey | translate}}" />
+</nb-form-field>
+
+<nb-autocomplete #holderAutocomplete (selectedChange)="onHolderSelected($event)">
+    <nb-option *ngFor="let op of filtered$ | async; let idx = index" [value]="op.identityNumber">
+        <div class="d-flex">
+            <div class="logo-image mr-2">
+                <i class="far fa-user-circle vip-icon dialog-member " style="opacity: 30%;"></i>
+            </div>
+            <div class="info-container d-flex justify-content-between">
+                <div class="item-info flex-column">
+                    <div class="item-info-top" style="position: relative;">
+                        <div class="text-reset text-decoration-none meeting-name font-weight-bold mr-2">
+                            {{ op.displayName }}</div>
+                    </div>
+                    <div class="item-info-bottom mt-1 description ">
+                        <span class="mr-2" data-toggle="tooltip" data-placement="top"
+                            title="{{'shares.holder-autocomplete.identity' | translate}}">
+                            <i class="far fa-address-card text-secondary mr-1"></i>
+                            {{op.identityNumber}}
+                        </span>
+                        <span class="mx-2" *ngIf="op?.phoneNumber" data-toggle="tooltip" data-placement="top"
+                            title="{{'shares.holder-autocomplete.phone' | translate}}">
+                            <i class="fas fa-phone  text-secondary mr-1"
+                                style="transform: rotate(90deg);"></i>{{op.phoneNumber?.value}}
+                        </span>
+                        <span class="mx-2" *ngIf="op.email" data-toggle="tooltip" data-placement="top"
+                            title="{{'shares.holder-autocomplete.email' | translate}}">
+                            <i class="far fa-envelope text-secondary mr-1"></i>
+                            {{op.email?.value}}
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nb-option>
+</nb-autocomplete>

@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="HoseGateway" Class="GWStockDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.1.4;Initial Catalog=HoseGateway;Persist Security Info=True;User ID=sa" SettingsObjectName="GWStock.Properties.Settings" SettingsPropertyName="HoseGatewayConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.HOGW_1C" Member="HOGW_1Cs">
+    <Type Name="HOGW_1C">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_NUMBER" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_ENTRY_DATE" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_TS" Member="HOSE_TS">
+    <Type Name="HOSE_TS">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="TIMESTAMP" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_1D" Member="HOGW_1Ds">
+    <Type Name="HOGW_1D">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_NUMBER" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_ENTRY_DATE" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIENT_ID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FILLER" Type="System.String" DbType="VarChar(17)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_1E" Member="HOGW_1Es">
+    <Type Name="HOGW_1E">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TRADER_ID" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="SECURITY_SYMBOL" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="VOLUME" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(12,0) NOT NULL" CanBeNull="false" />
+      <Column Name="BOARD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="TIME" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ADD_CANCEL_FLAG" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CONTACT" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_1F" Member="HOGW_1Fs">
+    <Type Name="HOGW_1F">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TRADER_ID" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="BUYER_CLIENT_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SELLER_CLIENT_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SECURITY_SYMBOL" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(12,0) NOT NULL" CanBeNull="false" />
+      <Column Name="BOARD" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="DEAL_ID" Type="System.Decimal" DbType="Decimal(5,0)" CanBeNull="true" />
+      <Column Name="BUYER_PORTFOLIO_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="BUYER_CLIENT_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="BUYER_MUTUAL_FUND_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="BUYER_FOREIGN_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="SELLER_PORTFOLIO_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="SELLER_CLIENT_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="SELLER_MUTUAL_FUND_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="SELLER_FOREIGN_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FILLER" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="FILLER1" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="FILLER2" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_1G" Member="HOGW_1Gs">
+    <Type Name="HOGW_1G">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="SELLER_FIRM" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="SELLER_TRADER_ID" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="SELLER_CLIENT_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="BUYER_CONTRA_FIRM" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="BUYER_TRADER_ID" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="SECURITY_SYMBOL" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="BOARD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DEAL_ID" Type="System.Decimal" DbType="Decimal(5,0)" CanBeNull="true" />
+      <Column Name="BROKER_PORTFOLIO_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="BROKER_CLIENT_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="BROKER_MUTUAL_FUND_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="BROKER_FOREIGN_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FILLER" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="FILLER1" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_1I" Member="HOGW_1Is">
+    <Type Name="HOGW_1I">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="TRADER_ID" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ORDER_NUMBER" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="CLIENT_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SECURITY_SYMBOL" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="PUBLISHED_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="BOARD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="PORT_CLIENT_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FILLER1" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="FILLER" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="ORDER_SESSION" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_2B" Member="HOGW_2Bs">
+    <Type Name="HOGW_2B">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_NUMBER" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_ENTRY_DATE" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_2C" Member="HOGW_2Cs">
+    <Type Name="HOGW_2C">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="CANCEL_SHARES" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="ORDER_NUMBER" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_ENTRY_DATE" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_CANCEL_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_2D" Member="HOGW_2Ds">
+    <Type Name="HOGW_2D">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="ORDER_NUMBER" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_ENTRY_DATE" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="CLIENT_ID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PORT_CLIENT_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="PUBLISHED_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FILLER" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_2E" Member="HOGW_2Es">
+    <Type Name="HOGW_2E">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ORDER_NUMBER" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORDER_ENTRY_DATE" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="VOLUME" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FILLER" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_2F" Member="HOGW_2Fs">
+    <Type Name="HOGW_2F">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="BUYER_FIRM" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="BUYER_TRADER_ID" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="SELLER_CONTRA_FIRM" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="SELLER_TRADER_ID" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="SECURITY_SYMBOL" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="BOARD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_2G" Member="HOGW_2Gs">
+    <Type Name="HOGW_2G">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="REJECT_REASON_CODE" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORIGINAL_TEXT_MESSAGE" Type="System.String" DbType="VarChar(233) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_2I" Member="HOGW_2Is">
+    <Type Name="HOGW_2I">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="BUYER_ORDER_NUMBER" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="BUYER_ORDER_ENTRY_DATE" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="SELLER_ORDER_NUMBER" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="SELLER_ORDER_ENTRY_DATE" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_2L" Member="HOGW_2Ls">
+    <Type Name="HOGW_2L">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DEAL_ID" Type="System.Decimal" DbType="Decimal(5,0)" CanBeNull="true" />
+      <Column Name="CONTRA_FIRM" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_3A" Member="HOGW_3As">
+    <Type Name="HOGW_3A">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="SENDER_TRADER_ID" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="RECEIVER_TRADER_ID" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="CONTRA_FIRM" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="ADMIN_MESSAGE_TEXT" Type="System.String" DbType="VarChar(66)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_3B" Member="HOGW_3Bs">
+    <Type Name="HOGW_3B">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="DEAL_ID" Type="System.Decimal" DbType="Decimal(5,0)" CanBeNull="true" />
+      <Column Name="BUYER_CLIENT_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="REPLY_CODE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="BROKER_PORTFOLIO_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="BROKER_CLIENT_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="BROKER_MUTUAL_FUND_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="BROKER_FOREIGN_VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FILLER" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="FILLER1" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_3C" Member="HOGW_3Cs">
+    <Type Name="HOGW_3C">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="CONTRA_FIRM" Type="System.Decimal" DbType="Decimal(3,0)" CanBeNull="true" />
+      <Column Name="TRADER_ID" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="SECURITY_SYMBOL" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_3D" Member="HOGW_3Ds">
+    <Type Name="HOGW_3D">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(3,0) NOT NULL" CanBeNull="false" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" CanBeNull="false" />
+      <Column Name="REPLY_CODE" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_RN" Member="HOGW_RNs">
+    <Type Name="HOGW_RN">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="ERROR_CODE" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ORIGINAL_MESSAGE_TEXT" Type="System.String" DbType="VarChar(478)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_RP" Member="HOGW_RPs">
+    <Type Name="HOGW_RP">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="MARKET_ID" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="PREVIOUS_SEQ_NUMBER" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" CanBeNull="false" />
+      <Column Name="SEQ_NUMBER" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_COUNT" Type="System.Decimal" DbType="Decimal(2,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ORIGINAL_BROADCAST_MESSAGE" Type="System.String" DbType="VarChar(472)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOGW_RQ" Member="HOGW_RQs">
+    <Type Name="HOGW_RQ">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="MARKET_ID" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="RETRANS_START_SEQ" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="RETRANS_END_SEQ" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_AA" Member="HOSE_AAs">
+    <Type Name="HOSE_AA">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="SECURITY_NUMBER" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="VOLUME" Type="System.Decimal" DbType="Decimal(8,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PRICE" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TRADER" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="BOARD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="TIME" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ADD_CANCEL_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="CONTACT" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_BR" Member="HOSE_BRs">
+    <Type Name="HOSE_BR">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="MARKET_ID" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="VOLUME_SOLD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VALUE_SOLD" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="VOLUME_BOUGHT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VALUE_BOUGHT" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_BS" Member="HOSE_BS">
+    <Type Name="HOSE_BS">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="AUTOMATCH_HALT_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="PT_HALT_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_CO" Member="HOSE_COs">
+    <Type Name="HOSE_CO">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="REFERENCE_NUMBER" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_DC" Member="HOSE_DCs">
+    <Type Name="HOSE_DC">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Decimal" DbType="Decimal(6,0) NOT NULL" CanBeNull="false" />
+      <Column Name="SECURITY_NUMBER" Type="System.Decimal" DbType="Decimal(4,0) NOT NULL" CanBeNull="false" />
+      <Column Name="VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="BOARD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_GA" Member="HOSE_GAs">
+    <Type Name="HOSE_GA">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="ADMIN_MESSAGE_LENGTH" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="ADMIN_MESSAGE_TEXT" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_IU" Member="HOSE_IUs">
+    <Type Name="HOSE_IU">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="INDEX_HOSE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="TOTAL_TRADES" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="TOTAL_SHARES_TRADED" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="TOTAL_VALUE_TRADED" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="UP_VOLUME" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="DOWN_VOLUME" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="NOCHANGE_VOLUME" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="ADVANCE_STOCKS_COUNT" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="DECLINE_STOCKS_COUNT" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="NOCHANGE_STOCKS_COUNT" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="MARKET_ID" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="INDEX_TIME" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FILLER" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="FILLER1" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_LO" Member="HOSE_LOs">
+    <Type Name="HOSE_LO">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="SECURITY_NUMBER" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="ODD_LOT_VOLUME" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="REFERENCE_NUMBER" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_LS" Member="HOSE_LS">
+    <Type Name="HOSE_LS">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="SECURITY_NUMBER" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="LOT_VOLUME" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_NH" Member="HOSE_NHs">
+    <Type Name="HOSE_NH">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="NEWS_NUMBER" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="SECURITY_SYMBOL" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="NEWS_HEADLINE_LENGTH" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="TOTAL_NEWS_STORY_PAGES" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="NEWS_HEADLINE_TEXT" Type="System.String" DbType="VarChar(70)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_NS" Member="HOSE_NS">
+    <Type Name="HOSE_NS">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="NEWS_NUMBER" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="NEWS_PAGE_NUMBER" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="NEWS_TEXT_LENGTH" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="NEWS_TEXT" Type="System.String" DbType="VarChar(215)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_OL" Member="HOSE_OLs">
+    <Type Name="HOSE_OL">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="SECURITY_NUMBER" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="ODD_LOT_VOLUME" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="REFERENCE_NUMBER" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_OS" Member="HOSE_OS">
+    <Type Name="HOSE_OS">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="SECURITY_NUMBER" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_PD" Member="HOSE_PDs">
+    <Type Name="HOSE_PD">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CONFIRM_NUMBER" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="SECURITY_NUMBER" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="VOLUME" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="BOARD" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_PO" Member="HOSE_POs">
+    <Type Name="HOSE_PO">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="SECURITY_NUMBER" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_SC" Member="HOSE_SCs">
+    <Type Name="HOSE_SC">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="SYSTEM_CONTROL_CODE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_SI" Member="HOSE_SIs">
+    <Type Name="HOSE_SI">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="INDEX_SECTORAL" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="INDEX_TIME" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FILLER" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_SR" Member="HOSE_SRs">
+    <Type Name="HOSE_SR">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="SECURITY_NUMBER" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="MAIN_OR_FOREIGN_DEAL" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="MAIN_OR_FOREIGN_ACC_VOLUME" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="MAIN_OR_FOREIGN_ACC_VALUE" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="BIG_LOT_DEAL" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="BIG_LOT_ACC_VOLUME" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="BIG_LOT_ACC_VALUE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="ODD_LOT_DEAL" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="ODD_LOT_ACC_VOLUME" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ODD_LOT_ACC_VALUE" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_SS" Member="HOSE_SSes">
+    <Type Name="HOSE_SS">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="SECURITY_NUMBER" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="SECTOR_NUMBER" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="HALT_RESUME_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="SYSTEM_CONTROL_CODE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="SUSPENSION" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DELIST" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="CEILING_PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="FLOOR_PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="SECURITY_TYPE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="PRIOR_CLOSE_PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="SPLIT" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="BENEFIT" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="MEETING" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="NOTICE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="BOARD_LOT" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FILLER" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FILLER1" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FILLER2" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FILLER3" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FILLER4" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="FILLER5" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_SU" Member="HOSE_SUs">
+    <Type Name="HOSE_SU">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="SECURITY_NUMBER_NEW" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="SECURITY_NUMBER_OLD" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="SECTOR_NUMBER" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="SECURITY_SYMBOL" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="SECURITY_TYPE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="CEILING_PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="FLOOR_PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="LAST_SALE_PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="MARKET_ID" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="SECURITY_NAME" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="SUSPENSION" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="DELIST" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="HALT_RESUME_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="SPLIT" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="BENEFIT" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="MEETING" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="NOTICE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="CLIENT_ID_REQUIRED" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="PAR_VALUE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="SDC_FLAG" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="PRIOR_CLOSE_PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="PRIOR_CLOSE_DATE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="OPEN_PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="HIGHEST_PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="LOWEST_PRICE" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="TOTAL_SHARES_TRADED" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="TOTAL_VALUE_TRADED" Type="System.Decimal" DbType="Decimal(10,0)" CanBeNull="true" />
+      <Column Name="BOARD_LOT" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FILLER" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FILLER1" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FILLER2" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="FILLER3" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FILLER4" Type="System.Char" DbType="VarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_TC" Member="HOSE_TCs">
+    <Type Name="HOSE_TC">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRM" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="TRADER_ID" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="TRADER_STATUS" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_TP" Member="HOSE_TPs">
+    <Type Name="HOSE_TP">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="SECURITY_NUMBER" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="SIDE" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="PRICE1" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="VOLUME1" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="PRICE2" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="VOLUME2" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="PRICE3" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="VOLUME3" Type="System.Decimal" DbType="Decimal(6,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOSE_TR" Member="HOSE_TRs">
+    <Type Name="HOSE_TR">
+      <Column Name="LAST_MODIFIED" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MESSAGE_STATUS" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="MESSAGE_TYPE" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="SECURITY_NUMBER" Type="System.Decimal" DbType="Decimal(4,0)" CanBeNull="true" />
+      <Column Name="TOTAL_ROOM" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="CURRENT_ROOM" Type="System.Decimal" DbType="Decimal(12,0)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

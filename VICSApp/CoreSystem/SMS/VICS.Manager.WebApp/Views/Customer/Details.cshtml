@@ -1,0 +1,138 @@
+﻿@model SMS.DataAccess.Models.SmsCustomer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SmsCustomer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpenDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpenDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CloseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CloseDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BranchCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BranchCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsInfo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsInfo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsOrder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsOrder)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAccountStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAccountStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsResult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DomesticForeign)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DomesticForeign)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsClose)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsClose)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

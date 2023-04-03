@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  #database section
+  sqlserverdb:
+   image: mcr.microsoft.com/mssql/server:2019-latest 
+
+  mysqldb:
+   image: mysql:8.0.29 
+
+# networks section
+networks:
+  default:
+   name: dsoft_microservices
+   driver: bridge
+
+# Volume section
+volumes:
+  sqlserver_data:
+    name: sqlserver_data
+    driver: local
+  mysql_data:
+    name: mysql_data
+    driver: local
+  
+  

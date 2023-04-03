@@ -1,0 +1,162 @@
+[
+    {
+        "tag": "20",
+        "parts": [
+            {
+                "name": "IntReferenceNumber",
+                "length": 16
+            }
+        ]
+    },
+    {
+        "tag": "12",
+        "parts": [
+            {
+                "name": "SubMessageType",
+                "length": 3,
+                "default": "002"
+            }
+        ]
+    },
+    {
+        "tag": "77E",
+        "parts": [
+            {
+                "name": "Proprietary",
+                "length": 73,
+                "default": "NORMAL"
+            }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "system": true,
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "23G",
+        "parts": [
+            {
+                "name": "MessageFunction",
+                "length": 4,
+                "default": "NEWM"
+            }
+        ]
+    },
+    {
+        "tag": "22H",
+        "qualifier": "ACCT",
+        "part_start": "/",
+        "qualifier_start": "",
+        "parts": [
+            {
+                "name": "Status",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "PREP",
+        "part_start": "/",
+        "optional": true,
+        "parts": [
+            {
+                "name": "CreatedDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "system": true,
+        "parts": [
+            { "default": "LINK" }
+        ]
+    },
+    {
+        "tag": "20C",
+        "qualifier": "RELA",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "OutReferenceNumber",
+                "length": 16
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "system": true,
+        "parts": [
+            { "default": "LINK" }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "system": true,
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "system": true,
+        "parts": [
+            { "default": "STAT" }
+        ]
+    },
+    {
+        "tag": "25D",
+        "qualifier": "IPRC",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ConfirmCode",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "70D",
+        "qualifier": "REAS",
+        "part_start": "/",
+        "optional": true,
+        "parts": [
+            {
+                "name": "ErrorMessage",
+                "length": 35,
+                "line": 6
+            }
+        ]
+    },
+    {
+        "tag": "97A",
+        "qualifier": "SAFE",
+        "part_start": "/",
+        "optional": true,
+        "parts": [
+            {
+                "name": "CustomerNumber",
+                "length": 35
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "system": true,
+        "parts": [
+            { "default": "STAT" }
+        ]
+    }
+]

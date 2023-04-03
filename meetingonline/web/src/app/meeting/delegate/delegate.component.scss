@@ -1,0 +1,43 @@
+@import "../../@theme/styles/themes.scss";
+@include nb-install-component() {
+    ::ng-deep nb-accordion {
+        box-shadow: unset !important;
+
+        nb-accordion-item-header {
+            &.accordion-item-header-expanded {
+                border: 0 !important;
+                padding-bottom: 0rem !important;
+            }
+        }
+
+        div.list-delegate-hover {
+            border-left: 0.3rem solid #ffffff;
+            border-top: 1px solid #ffffff;
+            border-right: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+            border-radius: 0.25rem;
+            &:hover {
+                border-left: 0.3rem solid #0095ff;
+                border-top: 1px solid #e4e9f2;
+                border-right: 1px solid #e4e9f2;
+                border-bottom: 1px solid #e4e9f2;
+            }
+            &:visited {
+                border-left: 0.3rem solid #0095ff;
+                border-top: 1px solid #e4e9f2;
+                border-right: 1px solid #e4e9f2;
+                border-bottom: 1px solid #e4e9f2;
+            }
+            &:active,
+            &.active {
+                border-left: 0.3rem solid #0095ff;
+                border-top: 1px solid #0095ff;
+                border-right: 1px solid #0095ff;
+                border-bottom: 1px solid #0095ff;
+            }
+        }
+        .right-cammand {
+            min-width: 145px;
+        }
+    }
+}

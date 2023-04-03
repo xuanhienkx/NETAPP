@@ -1,0 +1,176 @@
+﻿<UserControl x:Class="CS.Application.Views.Custody.VSD_2_3_ChuyenNhuongQuyenView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:CS.UI.Controls;assembly=CS.UI.Controls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:localization="clr-namespace:CS.UI.Common.Localization;assembly=CS.UI.Common" 
+             xmlns:common="clr-namespace:CS.UI.Common;assembly=CS.UI.Common"
+             xmlns:models="clr-namespace:CS.Common.Contract.Models;assembly=CS.Common.Contract"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="700">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <common:SharedResourceDictionary Source="../../Themes/Default/Resources.xaml" />
+                <common:SharedResourceDictionary Source="Base/CustomerInfoTemplate.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid MinWidth="800" Margin="{StaticResource DialoglMargin}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="{Binding ErrorMessage, Mode=TwoWay}" Margin="5 5 5 0"
+               Style="{StaticResource CsErrorViewStyle}" />
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0 -30 0 0">
+            <ContentControl Margin="{StaticResource ControlMargin}" Focusable="False" Content="{Binding}"
+                            ContentTemplate="{StaticResource CustomerAutosuggestAndInfo}" />
+            <ContentControl Focusable="False" Content="{Binding}"
+                            ContentTemplate="{StaticResource StockAutosuggestAndInfo}" />
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <ComboBox Grid.Row="0" Grid.Column="0"
+                          materialDesign:HintAssist.Hint="{localization:Translate CustodyView_SettlementType}"
+                          materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                          Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                          ItemsSource="{Binding SettlementTypes}" Margin="{StaticResource ControlMargin}"
+                          SelectedValue="{Binding Model.ContentModel.SettlementType, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                          IsEnabled="{Binding IsEnableEdit}"
+                          DisplayMemberPath="DisplayValue"
+                          SelectedValuePath="Value" />
+                <TextBox Grid.Row="0" Grid.Column="2"
+                         materialDesign:HintAssist.Hint="{localization:Translate CustodyView_Partner_Number}"
+                         MaxLength="10"
+                         Visibility="{Binding IsOneFirm, Converter={StaticResource VisibilityByComparingConverter}, ConverterParameter={StaticResource False}}"
+                         IsEnabled="{Binding IsEnableEdit}" Margin="{StaticResource ControlMargin}"
+                         Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                         Text="{Binding Model.ContentModel.ReceiverAccount,StringFormat=N0, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                         materialDesign:ValidationAssist.OnlyShowOnFocus="True" />
+                <StackPanel Grid.Row="0" Grid.Column="2"
+                            Visibility="{Binding IsOneFirm, Converter={StaticResource BooleanToVisibilityConverter}}"
+                            Orientation="Horizontal">
+                    <controls:AutoCompleteTextBox Width="200"
+                                                  materialDesign:HintAssist.Hint="{localization:Translate CustodyView_Partner_Number}"
+                                                  MaxLength="10"
+                                                  HorizontalAlignment="Left"
+                                                  Margin="{StaticResource ControlMargin}"
+                                                  materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                                                  DisplayMember="CustomerNumber"
+                                                  FilterTextChangedCommand="{Binding FilterCommand}"
+                                                  SelectedItem="{Binding Receiver, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}">
+                        <controls:AutoCompleteTextBox.LoadingContent>
+                            <TextBlock Text="Loading..." Margin="5" />
+                        </controls:AutoCompleteTextBox.LoadingContent>
+                        <controls:AutoCompleteTextBox.ItemTemplate>
+                            <DataTemplate DataType="{x:Type models:CustomerModel}">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding CustomerNumber}" />
+                                    <TextBlock Text="{Binding FullName}" Margin="3 0 0 0" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </controls:AutoCompleteTextBox.ItemTemplate>
+                    </controls:AutoCompleteTextBox>
+                    <Border BorderThickness="0 0 0 1" BorderBrush="Gray" Margin="10 20 0 0">
+                        <TextBlock Text="{Binding Receiver.FullName}" VerticalAlignment="Bottom"
+                                   Margin="0 0 0 3" />
+                    </Border>
+                    <materialDesign:PopupBox Focusable="False"
+                                             PlacementMode="RightAndAlignTopEdges"
+                                             Style="{DynamicResource MaterialDesignMultiFloatingActionPopupBox}"
+                                             ToolTip="{localization:Translate CustodyView_Customer_Info}"
+                                             ToolTipService.Placement="Right"
+                                             VerticalAlignment="Bottom" Margin="-2 0 0 -2"
+                                             Visibility="{Binding Receiver, Converter={StaticResource NullVisibilityConverter}}"
+                                             UnfurlOrientation="Vertical">
+                        <ContentControl Content="{Binding Receiver}"
+                                        ContentTemplate="{StaticResource CustomerInfoTemplate}" />
+                    </materialDesign:PopupBox>
+
+                </StackPanel>
+                <ContentControl
+                    Focusable="False"
+                    Content="{Binding VsdMember}"
+                    Grid.Row="1" Grid.ColumnSpan="3"
+                    Margin="0 5"
+                    Grid.Column="0" ContentTemplate="{StaticResource MemberInfoTemplate}" />
+               
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition  />
+                        <ColumnDefinition  />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBox materialDesign:HintAssist.Hint="{localization:Translate CustodyView_Quantity}"
+                             MaxLength="18"
+                             IsEnabled="{Binding IsEnableEdit}"
+                             Margin="{StaticResource ControlMargin}"
+                             Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                             Text="{Binding Model.ContentModel.Quantity,StringFormat=N0, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                             TextAlignment="Right"
+                             materialDesign:ValidationAssist.OnlyShowOnFocus="True" />
+                    <TextBox Grid.Column="1"  materialDesign:HintAssist.Hint="{localization:Translate ReprotView_OrigTransferRef}"
+                             MaxLength="16"
+                             IsEnabled="{Binding IsEnableEdit}"
+                             Margin="20 20 0 0"
+                             Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                             Text="{Binding Model.ContentModel.OrigTransferRef,StringFormat=N0, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                             TextAlignment="Right"
+                             materialDesign:ValidationAssist.OnlyShowOnFocus="True" />
+                    <DatePicker Grid.Column="2" materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                                Width="120"
+                                HorizontalContentAlignment="Right"
+                                Style="{DynamicResource MaterialDesignFloatingHintDatePicker}"
+                                IsEnabled="{Binding IsEnableEdit}"
+                                materialDesign:HintAssist.Hint="{localization:Translate CustodyView_SettlementDate}"
+                                SelectedDate="{Binding Model.ContentModel.SettlementDate, Mode=TwoWay}"
+                                VerticalAlignment="Bottom"
+                                Margin="20 20 0 0" />
+                </Grid>
+                <ComboBox Grid.Row="2" Grid.Column="2"
+                          materialDesign:HintAssist.Hint="{localization:Translate CustodyView_UnitType}"
+                          materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                          Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                          ItemsSource="{Binding UnitTypes}" Margin="{StaticResource ControlMargin}"
+                          SelectedValue="{Binding Model.ContentModel.UnitType, Mode=TwoWay}"
+                          IsEnabled="{Binding IsEnableEdit}"
+                          DisplayMemberPath="DisplayValue"
+                          SelectedValuePath="Value" />
+                <ComboBox Grid.Row="3" Grid.Column="0"
+                          materialDesign:HintAssist.Hint="{localization:Translate CustodyView_ActivityType}"
+                          materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                          Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                          ItemsSource="{Binding ActivitiesItems}" Margin="{StaticResource ControlMargin}"
+                          SelectedValue="{Binding Model.ContentModel.ActivityType, Mode=TwoWay}"
+                          IsEnabled="{Binding IsEnableEdit}"
+                          DisplayMemberPath="DisplayValue"
+                          SelectedValuePath="Value" />
+                <ComboBox Grid.Row="3" Grid.Column="2"
+                          materialDesign:HintAssist.Hint="{localization:Translate CustodyView_SubType}"
+                          materialDesign:ValidationAssist.OnlyShowOnFocus="True"
+                          Style="{DynamicResource MaterialDesignFloatingHintComboBox}"
+                          ItemsSource="{Binding StockTypes}" Margin="{StaticResource ControlMargin}"
+                          SelectedValue="{Binding Model.ContentModel.SubType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                          IsEnabled="{Binding IsEnableEdit}"
+                          DisplayMemberPath="DisplayValue"
+                          SelectedValuePath="Value" />
+            </Grid>
+
+            <ContentControl Focusable="False" Content="{Binding Model}"
+                            ContentTemplate="{StaticResource CustodyRequestHeaderTemplateCreate}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

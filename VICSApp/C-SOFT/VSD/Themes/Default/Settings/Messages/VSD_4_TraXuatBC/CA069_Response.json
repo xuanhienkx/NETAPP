@@ -1,0 +1,88 @@
+{
+    "code": "CA069",
+    "name": "CA069- Báo cáo tổng hợp thông báo xác nhận danh sách người sở hữu chứng khoán lưu ký của TVLK",
+   "parameters": [
+    {
+      "name": "RightNumber",
+      "start": "CACODE:",
+      "end": "<BrLine>"
+    },
+	 {
+      "name": "ReportByCode",
+      "start": "RPTID:",
+      "end": "<BrLine>"
+    },
+    {
+      "name": "BoardType",
+      "start": "BRID:"
+    }
+  ],
+    "csvFields": [
+        {
+            "name": "MemberCode",
+            "end": ";"
+        },
+        {
+            "name": "MemberName",
+            "end": ";"
+        },
+        {
+            "name": "Status",
+            "end": ";"
+        },
+        {
+            "name": "ConfirmStatus",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "ReportCode",
+            "end": ";"
+        },
+        {
+            "name": "StockCode",
+            "end": ";"
+        },
+        {
+            "name": "RightName",
+            "end": ";"
+        },
+        {
+            "name": "RightCode",
+            "end": ";"
+        },
+        {
+            "name": "Description",
+            "end": ";"
+        },
+        {
+            "name": "ConfirmApproval",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "ConfirmDisappral",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "NotConfirm",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "Total",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "Summary",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "Code",
+            "end": ";"
+        }
+    ]
+}

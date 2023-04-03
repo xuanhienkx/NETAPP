@@ -1,0 +1,11 @@
+<div class="text-center">
+    <h1 class="display-3 text-uppercase">{{'Common.wellcome' | translate}}</h1>
+    <p class="lead" *ngIf="signup" [innerHTML]="'Common.messageActiveAcount' | translate">
+    </p>
+    <hr>
+    <p [innerHTML]="'Common.contactTrouble' | translate">
+    </p>
+    <p class="lead">
+        <a nbButton status="primary" size="medium" (click)="virify()" role="button">{{'Common.buttonActive' | translate}}</a>
+    </p>
+</div>

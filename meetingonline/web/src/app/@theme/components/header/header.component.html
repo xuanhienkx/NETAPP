@@ -1,0 +1,32 @@
+<div class="header-container">
+    <div class="logo-container">
+        <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
+            <nb-icon icon="menu-2-outline"></nb-icon>
+        </a>
+        <a href="/" class="logo">
+            <img *ngIf='logoUrl' alt="skylar-tech" [src]="logoUrl" class="acountlog img-fluid" data-toggle="tooltip"
+                data-placement="top" title="skylar-tech" />
+            <img *ngIf='!logoUrl' alt="skylar-tech" src="assets/img/logo-header.jpg" class="acountlog img-fluid"
+                data-toggle="tooltip" data-placement="top" title="skylar-tech" />
+        </a>
+
+    </div>
+    <div class="d-flex flex-column header-page pl-2">
+        <div class="breadcrumb">
+            <h4 class="page-header-title">{{pageHeaderTitle}}</h4>
+            <span *ngIf="pageHeaderBagde" class="mx-2 my-1 py-1 px-2 badge badge-vip font-italic"
+                [ngClass]="isBagdeLocked? 'text-danger' : ''">{{pageHeaderBagde}}</span>
+        </div>
+        <vip-breadcrumb></vip-breadcrumb>
+    </div>
+</div>
+
+<div class="header-container">
+    <nb-actions size="small">
+        <nb-action class="user-action">
+            <nb-user [nbContextMenu]="userMenu" nbContextMenuTag="user-menu-header" [onlyPicture]="userPictureOnly"
+                [name]="user?.displayName" [picture]="user?.photoUrl">
+            </nb-user>
+        </nb-action>
+    </nb-actions>
+</div>

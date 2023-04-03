@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CreateStockOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderSide" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stockCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderVolume" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderPrice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tradeCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="receivedBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateStockOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateStockOrderResult" type="tns:ResultData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Successful" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnValue" type="tns:ArrayOfAnyType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeleteStockOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderSeq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deleteBy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteStockOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteStockOrderResult" type="tns:ResultData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockOrderList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OrderBookData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OrderDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderTime" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderSeq" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderSide" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BoardType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderVolume" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderPrice" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PCFlag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MatchedVolume" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="MatchedValue" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FeeRate" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PublishedVolume" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PublishedPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CancelledVolume" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceivedBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApprovedBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOrderBookData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderBookData" nillable="true" type="tns:OrderBookData" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStockOrderListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockOrderListResult" type="tns:ArrayOfOrderBookData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StockData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParValue" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BoardType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockNameViet" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStockData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StockData" nillable="true" type="tns:StockData" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStockListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockListResult" type="tns:ArrayOfStockData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stockCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StockPrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TradingDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CeilingPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FloorPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BasicPrice" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="BoardType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BoardName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoardLot" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStockPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockPriceResult" type="tns:StockPrice" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockFee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stockCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tradingVolume" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockFeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetStockFeeResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentTransactionDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentTransactionDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrentTransactionDateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="receivedBy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StockOrderData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderTime" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderSeq" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderSide" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BoardType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderVolume" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderPrice" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="PCFlag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MatchedVolume" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="MatchedPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="MatchedValue" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FeeRate" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fee" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PublishedVolume" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PublishedPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PublishedValue" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CancelledVolume" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceivedBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApprovedBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStockOrderData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StockOrderData" nillable="true" type="tns:StockOrderData" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrdersResult" type="tns:ArrayOfStockOrderData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderHist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startIndex" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="count" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderHistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderHistResult" type="tns:ArrayOfStockOrderData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotalOrderHist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotalOrderHistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTotalOrderHistResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateStockOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateStockOrder" />
+  </wsdl:message>
+  <wsdl:message name="CreateStockOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateStockOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteStockOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteStockOrder" />
+  </wsdl:message>
+  <wsdl:message name="DeleteStockOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteStockOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockOrderListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockOrderList" />
+  </wsdl:message>
+  <wsdl:message name="GetStockOrderListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockOrderListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockList" />
+  </wsdl:message>
+  <wsdl:message name="GetStockListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockPrice" />
+  </wsdl:message>
+  <wsdl:message name="GetStockPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockFeeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockFee" />
+  </wsdl:message>
+  <wsdl:message name="GetStockFeeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentTransactionDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentTransactionDate" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentTransactionDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentTransactionDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrders" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderHistSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderHist" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderHistSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderHistResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalOrderHistSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTotalOrderHist" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalOrderHistSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTotalOrderHistResponse" />
+  </wsdl:message>
+  <wsdl:portType name="StockOrderServiceSoap">
+    <wsdl:operation name="CreateStockOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Đặt lệnh. Tham số đầu vào: gatewayUser-Tài khoản; gatewayPassword-Mật khẩu; orderDate-Ngày đặt lệnh(dd/MM/yyy)</wsdl:documentation>
+      <wsdl:input message="tns:CreateStockOrderSoapIn" />
+      <wsdl:output message="tns:CreateStockOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStockOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Xoá lệnh. Tham số đầu vào: gatewayUser-Tài khoản; gatewayPassword-Mật khẩu; orderDate-Ngày đặt lệnh(dd/MM/yyy);orderSeq-số tt lệnh</wsdl:documentation>
+      <wsdl:input message="tns:DeleteStockOrderSoapIn" />
+      <wsdl:output message="tns:DeleteStockOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockOrderList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Trả về các lệnh đặt chứng khoán trong ngày</wsdl:documentation>
+      <wsdl:input message="tns:GetStockOrderListSoapIn" />
+      <wsdl:output message="tns:GetStockOrderListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Trả về danh sách chứng khoán</wsdl:documentation>
+      <wsdl:input message="tns:GetStockListSoapIn" />
+      <wsdl:output message="tns:GetStockListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockPrice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Trả về giá chứng khoán</wsdl:documentation>
+      <wsdl:input message="tns:GetStockPriceSoapIn" />
+      <wsdl:output message="tns:GetStockPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockFee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Trả về phí giao dịch chứng khoán. Tham số đầu vào:Mã khách hàng, Mã chứng khoán, Số lượng giao dịch</wsdl:documentation>
+      <wsdl:input message="tns:GetStockFeeSoapIn" />
+      <wsdl:output message="tns:GetStockFeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTransactionDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Trả về ngày giao dịch hiện tại (dd/MM/yyyy). Tham số đầu vào: BranchCode là mã chi nhánh (để trống thì là Hội sở chính</wsdl:documentation>
+      <wsdl:input message="tns:GetCurrentTransactionDateSoapIn" />
+      <wsdl:output message="tns:GetCurrentTransactionDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Trả về Danh sách lệnh trên toàn hệ thống</wsdl:documentation>
+      <wsdl:input message="tns:GetOrdersSoapIn" />
+      <wsdl:output message="tns:GetOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderHist">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">{SHS}-Trả về Danh sách lệnh (P,S,E,M,O,C)từ qúa khứ đến hiện tại, từ Ngày đến Ngày. Lấy Count bản ghi bắt đầu từ StartIndex</wsdl:documentation>
+      <wsdl:input message="tns:GetOrderHistSoapIn" />
+      <wsdl:output message="tns:GetOrderHistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalOrderHist">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">{SHS}-Trả về tổng số lệnh trong qúa khứ, từ Ngày đến Ngày. Lấy Count bản ghi bắt đầu từ StartIndex</wsdl:documentation>
+      <wsdl:input message="tns:GetTotalOrderHistSoapIn" />
+      <wsdl:output message="tns:GetTotalOrderHistSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StockOrderServiceSoap" type="tns:StockOrderServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateStockOrder">
+      <soap:operation soapAction="http://tempuri.org/CreateStockOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStockOrder">
+      <soap:operation soapAction="http://tempuri.org/DeleteStockOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockOrderList">
+      <soap:operation soapAction="http://tempuri.org/GetStockOrderList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockList">
+      <soap:operation soapAction="http://tempuri.org/GetStockList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockPrice">
+      <soap:operation soapAction="http://tempuri.org/GetStockPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockFee">
+      <soap:operation soapAction="http://tempuri.org/GetStockFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTransactionDate">
+      <soap:operation soapAction="http://tempuri.org/GetCurrentTransactionDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <soap:operation soapAction="http://tempuri.org/GetOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderHist">
+      <soap:operation soapAction="http://tempuri.org/GetOrderHist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalOrderHist">
+      <soap:operation soapAction="http://tempuri.org/GetTotalOrderHist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="StockOrderServiceSoap12" type="tns:StockOrderServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateStockOrder">
+      <soap12:operation soapAction="http://tempuri.org/CreateStockOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStockOrder">
+      <soap12:operation soapAction="http://tempuri.org/DeleteStockOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockOrderList">
+      <soap12:operation soapAction="http://tempuri.org/GetStockOrderList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockList">
+      <soap12:operation soapAction="http://tempuri.org/GetStockList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockPrice">
+      <soap12:operation soapAction="http://tempuri.org/GetStockPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockFee">
+      <soap12:operation soapAction="http://tempuri.org/GetStockFee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTransactionDate">
+      <soap12:operation soapAction="http://tempuri.org/GetCurrentTransactionDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <soap12:operation soapAction="http://tempuri.org/GetOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderHist">
+      <soap12:operation soapAction="http://tempuri.org/GetOrderHist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalOrderHist">
+      <soap12:operation soapAction="http://tempuri.org/GetTotalOrderHist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StockOrderService">
+    <wsdl:port name="StockOrderServiceSoap" binding="tns:StockOrderServiceSoap">
+      <soap:address location="http://10.10.1.4:5678/StockOrderService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="StockOrderServiceSoap12" binding="tns:StockOrderServiceSoap12">
+      <soap12:address location="http://10.10.1.4:5678/StockOrderService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Web Fonts  -->
+
+    <title>Vote-template</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap"
+        rel="stylesheet" media="screen"> 
+        ##style##
+</head>
+
+<body>
+    <page size="A4">
+        <div class="container">
+            <header>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="logo" id="logo">
+                                <img class="img-fluid" src="##logo##">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="header-content text-center" id="header-content">
+                                ##header##
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+
+
+            </header>
+            <div class="body">
+              
+                    <div class="report-title text-center">
+                        <div class="text-uppercase title-optional"> ##voteType##</div>
+                        <div class="text-uppercase title"> ##matterName##</div>
+                        <div class="text-description title-name">( ##meetingName##)</div>
+                    </div> 
+              
+                <div class="report-content-info">
+                    <div class="report-content-info-base"> 
+                        <div class="info-item" style="align-items: center;">
+                            <span>Tên đại biểu:</span>
+                            <b>
+                                ##attendeeName##
+                            </b>
+                        </div>
+                        <div class="info-item" style="align-self: flex-end;">
+                            <span>Số CMT/Hộ chiếu/ĐKKD: </span>
+                            <b> ##attendeeIdentity##</b>
+                        </div>
+                    </div>
+                    <div class="info-item"> <span>Địa chỉ/Trụ sở: </span> <span> ##attendeeAddress##</span> </div>
+                </div>
+                <div class="report-content-right">
+                    <table>
+                        <tr class="right-item">
+                            <td>Số lượng cổ phần được quyền biểu quyết</td>
+                            <td>Tổng số quyền biểu quyết(**)</td>
+                        </tr>
+                        <tr class="right-item">
+                            <td><span class="right-item-number"><b> ##attendeeRight##</b> cp</span></td>
+                            <td> <span class="right-item-number"><b> ##attendeeTotalRight##</b> cp</span></td>
+                        </tr>
+                    </table>
+                    <div class="note">
+                        <span class="note-index">**</span> Tổng số quyền biểu quyết = (Số lượng cổ phần được quyền biểu
+                        quyết x Số thành viên được bầu)
+                    </div>
+                </div>
+                <div class="report-note">
+                    <div class="lable">Ghi chú</div>
+                    <div>
+                        <ul>
+                            <li>
+                                Đại biểu lựa chọn tối đa 3 ứng viên BKS, gạch ngang tên những ứng viên không được lựa
+                                chọn.
+                            </li>
+                            <li>Phiếu bầu hợp lệ là những phiếu do Ban tổ chức Đại Hội Cổ Đông phát hành.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="report-table">
+                    <table style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>Mã</th>
+                                <th>Ứng viên ban kiểm soát</th>
+                                <th style="width: 25rem;">Số lượng quyền biểu quyết bầu cho mỗi ứng viên</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> ==rowIndex== </td>
+                                <td class="text-capitalize">==matterName== </td>
+                                <td> </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="report-signingstar">
+                <table>
+                    <tr>
+                        <td style="text-align: left">++qrcode++</td>
+                        <td>
+
+                            <div class="date"> <span> Ngày ##day## tháng ##month## năm ##year##</span> </div>
+                            <div class="title"> <span>Đại biểu</span> </div>
+                            <div class="note"> <span>(Ký và ghi rõ họ tên)</span> </div>
+                            <div class="name"> <span> ##attendeeName##</span> </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </page>
+</body>
+
+</html>

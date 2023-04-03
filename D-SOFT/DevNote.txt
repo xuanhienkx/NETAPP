@@ -1,0 +1,46 @@
+Add-Migration InitialIdentityServerMigration -c PersistedGrantDbContext
+Update-Database -Context PersistedGrantDbContext
+Add-Migration InitialIdentityServerMigration -c ConfigurationDbContext
+Update-Database -Context ConfigurationDbContext
+Add-Migration InitialApsNatIdentityMigration -c AspNetIdentityDbContext
+Update-Database -Context AspNetIdentityDbContext
+
+sudo dotnet run DSoft.IdentityAuthen/bin/Debug/net6.0/DSoft.IdentityAuthen.dll /seed --project DSoft.IdentityAuthen
+
+ dotnet dev-certs https -ep ${HOME}/.aspnet/https/aspnetapp.pfx -p phapnx@dag
+ dotnet dev-certs https -ep %USERPROFILE%\.aspnet\https\aspnetapp.pfx -p phapnx
+dotnet dev-certs https --trust
+
+dotnet dev-certs https -ep ${HOME}/.aspnet/https/aspnetapp.pfx -p phapnx@dag
+dotnet dev-certs https --trust
+
+
+git@gitlab.com:Xuanphap/DSoft.git
+ 
+ dotnet dev-certs https -ep c:\.aspnet\https\dsoft.authen.pfx -p phapnx@1234
+ dotnet dev-certs https -ep c:\.aspnet\https\dsoft.api.pfx -p phapnx@1234
+
+ dotnet dev-certs https -ep ${HOME}/.aspnet/https/dsoft.authen.pfx -p phapnx@1234
+ dotnet dev-certs https -ep ${HOME}/.aspnet/https/dsoft.api.pfx -p phapnx@1234
+
+ Set-ExecutionPolicy Bypass -Scope Process -Force;
+ [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+
+ mkcert -cert-file dsoft.local.crt -key-file dsoft.local.key dsoft.local *.dsoft.local
+
+docker tag dsoft-api dsoft/Api:$version
+docker tag dsoft-authen-sts-identity dsoff/authen-sts-identity:$version
+docker tag dsoft-authen-admin dsoff/authen-admin:$version
+docker tag dsoft-authen-admin-api dsoff/authen-admin-api:$version
+
+Server=localhost;Database=IdentityServer4Admin;User Id=dsoft;Password=Admin@1234;
+;Server=9.9.9.2;Database=DSoftAuthen;User Id=sa;Password=Admin@1234;
+
+mkcert -cert-file dsoft.local.crt -key-file dsoft.local.key dsoft.local *.dsoft.local
+mkcert -pkcs12 dsoft.local.pfx dsoft.local *.dsoft.local
+openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes -keyout private.key -out public.crt -subj "/CN=*.dag.vn" -addext "subjectAltName=DNS:minio.dag.vn" -addext "extendedKeyUsage = serverAuth"
+openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes -keyout dsoft.key -out dsoft.crt  -subj "/CN=*.dsoft.local" -addext "subjectAltName=DNS:localhost,DNS:api.dsoft.local,DNS:sts.dsoft.local,DNS:dsoft.local" -addext "extendedKeyUsage = serverAuth"
+openssl pkcs12 -export -in dsoft.crt -inkey dsoft.key -out dsoft.pfx -name "DSoft - Authenticating"
+certutil -f -user -importpfx Root dsoft.pfx
+

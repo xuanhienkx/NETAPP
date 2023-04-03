@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSReportSouce" targetNamespace="http://tempuri.org/DSReportSouce.xsd" xmlns:mstns="http://tempuri.org/DSReportSouce.xsd" xmlns="http://tempuri.org/DSReportSouce.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSReportSouce" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DSReportSouce" msprop:Generator_DataSetName="DSReportSouce" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PhieuBieuQuyet" msprop:Generator_UserTableName="PhieuBieuQuyet" msprop:Generator_RowDeletedName="PhieuBieuQuyetRowDeleted" msprop:Generator_RowChangedName="PhieuBieuQuyetRowChanged" msprop:Generator_RowClassName="PhieuBieuQuyetRow" msprop:Generator_RowChangingName="PhieuBieuQuyetRowChanging" msprop:Generator_RowEvArgName="PhieuBieuQuyetRowChangeEvent" msprop:Generator_RowEvHandlerName="PhieuBieuQuyetRowChangeEventHandler" msprop:Generator_TableClassName="PhieuBieuQuyetDataTable" msprop:Generator_TableVarName="tablePhieuBieuQuyet" msprop:Generator_RowDeletingName="PhieuBieuQuyetRowDeleting" msprop:Generator_TablePropName="PhieuBieuQuyet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HolderName" msprop:Generator_UserColumnName="HolderName" msprop:Generator_ColumnVarNameInTable="columnHolderName" msprop:Generator_ColumnPropNameInRow="HolderName" msprop:Generator_ColumnPropNameInTable="HolderNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="HolderIdentity" msprop:Generator_UserColumnName="HolderIdentity" msprop:Generator_ColumnVarNameInTable="columnHolderIdentity" msprop:Generator_ColumnPropNameInRow="HolderIdentity" msprop:Generator_ColumnPropNameInTable="HolderIdentityColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="HolderAddress" msprop:Generator_UserColumnName="HolderAddress" msprop:Generator_ColumnVarNameInTable="columnHolderAddress" msprop:Generator_ColumnPropNameInRow="HolderAddress" msprop:Generator_ColumnPropNameInTable="HolderAddressColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Holdercode" msprop:Generator_UserColumnName="Holdercode" msprop:Generator_ColumnVarNameInTable="columnHoldercode" msprop:Generator_ColumnPropNameInRow="Holdercode" msprop:Generator_ColumnPropNameInTable="HoldercodeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="VoteRights" msprop:Generator_UserColumnName="VoteRights" msprop:Generator_ColumnVarNameInTable="columnvoterights" msprop:Generator_ColumnPropNameInRow="voterights" msprop:Generator_ColumnPropNameInTable="voterightsColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

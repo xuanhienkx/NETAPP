@@ -1,0 +1,115 @@
+<div class="d-lg-flex w-lg-100 pb-3">
+    <h4 class="list-title">{{'attendee.list.title' |translate}}</h4>
+    <div class="action d-lg-flex my-auto justify-content-end ml-lg-auto">
+        <div class="mr-1 my-auto mb-lg-0 mb-sm-2 mb-xs-2" data-toggle="tooltip" data-placement="top"
+            title="{{'holder.list.inputsearch' | translate}}">
+            <vip-search *ngIf="canCloseMeetingSession" class="my-auto" [placeholder]="'attendee.list.inputsearch'"
+                (search)="search($event)"></vip-search>
+        </div>
+        <div class="my-auto">
+            <div class="vip-group-btn btn-group ml-3 my-auto">
+                <button nbButton status="primary" size="small" *ngIf="canLockMeetingHolderList"
+                    (click)="lockMeetingHolderList()">
+                    {{'meeting.lock.title' | translate}}
+                </button>
+                <button nbButton status="primary" size="small" *ngIf="canOpenMeetingSession"
+                    (click)="openMeetingSession()">
+                    {{'meeting.open.title' | translate}}
+                </button>
+                <button nbButton status="primary" size="small" *ngIf="canCloseMeetingSession" (click)="edit()">
+                    {{'attendee.add.title' | translate}}
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<nb-card accent="info" status="basic" class="m-0 p-0">
+    <nb-card-header class="py-1 my-auto">
+        <vip-meeting-summary type="attendee"></vip-meeting-summary>
+    </nb-card-header>
+    <nb-card-body class="pt-0">
+        <nb-list nbInfiniteList listenWindowScroll [threshold]="500" (bottomThreshold)="loadNext()"
+            class="mt-0 pt-0 vip-list">
+            <nb-list-item *ngFor="let attendee of items; let idx = index" class="border-bottom">
+                <vip-account-info-item [accountInfo]="attendee" [index]="idx" (itemSelect)="edit(attendee)">
+                    <i *ngIf="attendee.identityUserId" infoStatus class="fas fa-check-circle text-success ml-1"
+                        style="font-size: small; margin-top: 5px; position: absolute;" data-toggle="tooltip"
+                        data-placement="top" title="{{'attendee.list.iconTip.identityUserId' | translate}}"></i>
+
+                    <div class="my-auto info-right-group text-right" rightInfo>
+                        <div *ngIf="attendee?.shares > 0" class="info-right-item"><span
+                                class="description mr-2">{{'attendee.list.header.shared' | translate}}:</span> <span
+                                style="font-size: 0.75rem; font-weight: 600;">{{attendee?.shares | number}}</span>
+                        </div>
+                        <div class="info-right-item"><span
+                                class="description mr-2">{{'attendee.rightInfo.totalVotes' | translate}}:</span>
+                            <span style="font-size: 0.75rem; font-weight: 600;">{{attendee?.totalVotes | number}}</span>
+                        </div>
+                    </div>
+                    <div class="my-auto command-group d-flex justify-content-between" command style="min-width: 120px;">
+                        <a *ngIf="canCloseMeetingSession && mt.electionMatters.length >0" class="command-item" data-toggle="tooltip"
+                            data-placement="top" title="{{'attendee.vote.tooltip' | translate}}"
+                            (click)="vote(attendee)">
+                            <i class="fas fa-vote-yea  text-secondary"></i>
+                        </a>
+                        <a *ngIf="canCloseMeetingSession" class="command-item" data-toggle="tooltip"
+                            data-placement="top" title="{{'attendee.print.tooltip' | translate}}"
+                            (click)="printcard(attendee,false)">
+                            <i class="fas fa-print  text-secondary"></i>
+                        </a>
+                        <a nbButton outline status="info" size="tiny" href="javascript:void(0);"
+                            *ngIf="attendee?.votes && attendee?.votes?.length > 0" (click)="edit(attendee)">
+                            {{'document.list.buttonDetail' | translate}}
+                        </a>
+                        <a class="command-item" data-toggle="tooltip" data-placement="top"
+                            *ngIf="canCloseMeetingSession && (!attendee?.votes || attendee?.votes?.length===0)"
+                            title="{{'attendee.edit.tooltip' | translate}}" (click)="edit(attendee)">
+                            <i class="fas fa-edit text-secondary"></i>
+                        </a>
+                        <a class="command-item" data-toggle="tooltip" data-placement="top"
+                            *ngIf="canCloseMeetingSession && (!attendee?.votes || attendee?.votes?.length===0)"
+                            title="{{'attendee.delete.tooltip' | translate}}" (click)="delete(attendee,idx)">
+                            <i class="fas fa-trash-alt text-secondary"></i>
+                        </a>
+                    </div>
+                </vip-account-info-item>
+            </nb-list-item>
+        </nb-list>
+        <vip-empty-data [isNoData]="!items || items?.length ===0"></vip-empty-data>
+    </nb-card-body>
+</nb-card>
+<!--Scroll to top-->
+<div class="scroll-to-top " [ngClass]="{'show-scrollTop': showScroll}">
+    <button (click)="scrollToTop()" nbButton size="small">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+</div>
+
+<ng-template #voteDialog let-data let-ref="dialogRef">
+    <nb-card class="voteDialog">
+        <nb-card-header>
+            <vip-header-list [title]="'vote.title'">
+            </vip-header-list>
+            <vip-account-right-info type="admin" [account]="data?.attendee">
+            </vip-account-right-info>
+        </nb-card-header>
+        <nb-card-body class="my-0"
+            [ngClass]="data?.attendee?.votes && data?.attendee?.votes.length > 0? 'py-0' : ' pt-0'">
+            <div *ngIf="!data?.attendee?.votes || data?.attendee?.votes?.length === 0 ">
+                <vip-vote-confirm [attendee]="data?.attendee" [items]="data?.items" [mt]="data?.mt">
+                    <button nbButton size="small" type="button" status="basic" class="close-dialog"
+                        (click)="ref.close()">{{'Common.close' |translate}}</button>
+                </vip-vote-confirm>
+            </div>
+            <div *ngIf="data?.attendee?.votes && data?.attendee?.votes.length > 0 ">
+                <vip-vote-result [attendee]="data?.attendee" [items]="data?.items"></vip-vote-result>
+            </div>
+        </nb-card-body>
+        <nb-card-footer *ngIf="data?.attendee?.votes && data?.attendee?.votes.length > 0 ">
+            <button nbButton size="small" type="button" status="basic"
+                (click)="ref.close()">{{'Common.close' |translate}}</button>
+
+        </nb-card-footer>
+    </nb-card>
+</ng-template>

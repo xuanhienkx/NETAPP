@@ -1,0 +1,20 @@
+SwiftTime=20170519 
+NonRep=FALSE 
+DeliveryTime=20170519 
+MsgId=501107 
+Creationtime=20170519 
+PDIndication=FALSE 
+Requestor=o=VSDSVNV0, o=swift 
+Responder=o=VSDKLSXX, o=swift 
+Service=camt.xxx.fisp.rep 
+Priority=Normal
+RequestRef=
+TransferRef=501107
+TransferDescription=501107
+TransferInfo=VSDKLSXX.501107.20170519.501107
+PossibleDuplicate=TRUE
+OrigTransferRef=0177851816
+AckIndicator=FALSE
+LogicalName=KLS'CA014'01+0177851816-03+CVT-03+CVT-04+18052017-09+019-09+019-'19052017'104247'501107.csv
+FileInfo=SwCompression=None
+Size=246

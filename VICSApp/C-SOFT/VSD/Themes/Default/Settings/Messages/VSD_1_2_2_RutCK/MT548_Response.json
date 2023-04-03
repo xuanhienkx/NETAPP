@@ -1,0 +1,304 @@
+[
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "20C",
+        "qualifier": "SEME",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "IntReferenceNumber",
+                "length": 16
+            }
+        ]
+    },
+    {
+        "tag": "23G",
+        "parts": [
+            {
+                "name": "MessageFunctional",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "PREP",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "CreatedDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "LINK" }
+        ]
+    },
+    {
+        "tag": "13A",
+        "qualifier": "LINK",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "LinkMessageId"
+            }
+        ]
+    },
+    {
+        "tag": "20C",
+        "qualifier": "RELA",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "OutReferenceNumber",
+                "length": 16 
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "LINK" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "STAT" }
+        ]
+    },
+    {
+        "tag": "25D",
+        "qualifier": "IPRC",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ConfirmCode",
+				"default":"REJT",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "REAS" }
+        ]
+    },
+    {
+        "tag": "24B",
+        "qualifier": "REJT",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ReasionCode",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "70D",
+        "qualifier": "REAS",
+        "optional": true,
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ErrorMessage",
+                "length": 35,
+                "line": 6
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "REAS" }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "STAT" }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "optional": true,
+        "parts": [
+            { "default": "SETTRAN" }
+        ]
+    },
+    {
+        "tag": "35B",
+        "parts": [
+            {
+				"name": "IsinCode",
+				"length": 12,
+				"optional": true,
+				"start": "ISIN ",
+				"end": "<BrLine>"
+			  },
+			  {
+				"name": "StockCountryCode",
+				"length": 2,
+				"optional": true,
+				"start": "/",
+				"end": "/"
+			  },
+			  {
+				"name": "Code",
+				"end": "<BrLine>"
+			  }
+        ]
+    },
+    {
+        "tag": "36B",
+        "qualifier": "SETT",
+        "part_start": "/",
+        "parts": [
+           {
+			"name": "UnitType",
+			"length": 4
+		  },
+		  {
+			"name": "Quantity",
+			"length": 15,
+			"type": "Integer"
+		  }
+        ]
+    },
+    {
+        "tag": "19A",
+        "qualifier": "SETT",
+        "optional": true,
+        "parts": [
+            {
+                "name": "Currency",
+                "length": 3,
+                "start": "/" 
+            },
+            {
+                "name": "Amount",
+                "length": 15,
+                "type": "Decimal"
+            }
+        ]
+    },
+    {
+        "tag": "95P",
+        "qualifier": "ACOW",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "SettlementParty",
+                "length": 11
+            }
+        ]
+    },
+    {
+        "tag": "97A",
+        "qualifier": "SAFE",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "CustomerNumber",
+                "length": 35
+            }
+        ]
+    },
+    {
+        "tag": "22F",
+        "qualifier": "SETR",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "SettlementType",
+                "length": 4
+            }
+        ]
+
+    },
+    {
+        "tag": "22H",
+        "qualifier": "REDE",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ReceiveIndicator",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "22H",
+        "qualifier": "PAYM",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "PaymentIndicator",
+                "length": 4
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "SETT",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "SettlementDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "70E",
+        "qualifier": "SPRO",
+        "part_start": "/",
+        "optional": true,
+        "parts": [
+            {
+                "name": "Notes",
+                "length": 35,
+                "line": 10
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+        "optional": true,
+        "parts": [
+            { "default": "SETTRAN" }
+        ]
+    }
+]

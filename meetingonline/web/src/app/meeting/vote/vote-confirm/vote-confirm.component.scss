@@ -1,0 +1,15 @@
+@import '../vote.component.scss';
+
+
+.admin-footer{
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    
+    border-top: 1px solid #edf1f7;
+    .admin-button{
+        padding-top: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem; 
+    }
+
+}

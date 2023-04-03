@@ -1,0 +1,261 @@
+﻿/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+    border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+    }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+    margin-right: -21px; /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+
+    .nav-sidebar > li > a {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .nav-sidebar > .active > a,
+    .nav-sidebar > .active > a:hover,
+    .nav-sidebar > .active > a:focus {
+        color: #fff;
+        background-color: #428bca;
+    }
+
+
+/*
+ * Main content
+ */
+
+.main {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+.main .page-header {
+    margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+    .placeholders h4 {
+        margin-bottom: 0;
+    }
+
+.placeholder {
+    margin-bottom: 20px;
+}
+
+    .placeholder img {
+        display: inline-block;
+        border-radius: 50%;
+    }
+
+ 
+
+    
+.gray-bg {
+    background-color: #f3f3f4;
+}
+.white-bg {
+    background-color: #ffffff;
+}
+.navy-bg {
+    background-color: #1ab394;
+    color: #ffffff;
+}
+.blue-bg {
+    background-color: #1c84c6;
+    color: #ffffff;
+}
+.lazur-bg {
+    background-color: #23c6c8;
+    color: #ffffff;
+}
+.yellow-bg {
+    background-color: #f8ac59;
+    color: #ffffff;
+}
+.red-bg {
+    background-color: #ed5565;
+    color: #ffffff;
+}
+.black-bg {
+    background-color: #262626;
+}
+.panel-primary {
+    border-color: #1ab394;
+}
+.panel-primary > .panel-heading {
+    background-color: #1ab394;
+    border-color: #1ab394;
+}
+.panel-success {
+    border-color: #1c84c6;
+}
+.panel-success > .panel-heading {
+    background-color: #1c84c6;
+    border-color: #1c84c6;
+    color: #ffffff;
+}
+.panel-info {
+    border-color: #23c6c8;
+}
+.panel-info > .panel-heading {
+    background-color: #23c6c8;
+    border-color: #23c6c8;
+    color: #ffffff;
+}
+.panel-warning {
+    border-color: #f8ac59;
+}
+.panel-warning > .panel-heading {
+    background-color: #f8ac59;
+    border-color: #f8ac59;
+    color: #ffffff;
+}
+.panel-danger {
+    border-color: #ed5565;
+}
+.panel-danger > .panel-heading {
+    background-color: #ed5565;
+    border-color: #ed5565;
+    color: #ffffff;
+}
+.progress-bar {
+    background-color: #1ab394;
+}
+.progress-small, .progress-small .progress-bar {
+    height: 10px;
+}
+.progress-small, .progress-mini {
+    margin-top: 5px;
+}
+.progress-mini, .progress-mini .progress-bar {
+    height: 5px;
+    margin-bottom: 0;
+}
+.progress-bar-navy-light {
+    background-color: #3dc7ab;
+}
+.progress-bar-success {
+    background-color: #1c84c6;
+}
+.progress-bar-info {
+    background-color: #23c6c8;
+}
+.progress-bar-warning {
+    background-color: #f8ac59;
+}
+.progress-bar-danger {
+    background-color: #ed5565;
+}
+.panel-title {
+    font-size: inherit;
+}
+.jumbotron {
+    border-radius: 6px;
+    padding: 40px;
+}
+.jumbotron h1 {
+    margin-top: 0;
+}
+.text-navy {
+    color: #1ab394;
+}
+.text-primary {
+    color: inherit;
+}
+.text-success {
+    color: #1c84c6;
+}
+.text-info {
+    color: #23c6c8;
+}
+.text-warning {
+    color: #f8ac59;
+}
+.text-danger {
+    color: #ed5565;
+}
+.text-muted {
+    color: #888888;
+}
+.text-white {
+    color: #ffffff;
+}
+.simple_tag {
+    background-color: #f3f3f4;
+    border: 1px solid #e7eaec;
+    border-radius: 2px;
+    color: inherit;
+    display: inline-block;
+    font-size: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 5px 12px;
+}
+.img-shadow {
+    box-shadow: 0 0 3px 0 #919191;
+}

@@ -1,0 +1,12 @@
+<div class="d-lg-flex w-lg-100 pb-3">
+    <h4 class="list-title"> {{'votes-result.title' | translate}}</h4>
+
+</div>
+<nb-card accent="info" status="basic" class="m-0 p-0">
+    <nb-card-header class="py-1 my-auto">
+        <vip-meeting-summary type="attendee"></vip-meeting-summary>
+    </nb-card-header>
+    <nb-card-body class="m-0 py-0">
+        <vip-vote-result [items]="electionMatters" [mt]="mt"></vip-vote-result>
+    </nb-card-body>
+</nb-card>

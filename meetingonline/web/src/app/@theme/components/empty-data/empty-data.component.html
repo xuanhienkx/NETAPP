@@ -1,0 +1,9 @@
+<div class="d-flex my-3 py-3  justify-content-center" *ngIf="isNoData">
+    <div class="m-auto font-italic"  >
+        <div class="m-auto d-flex justify-content-center"><i class="fas fa-exclamation-circle text-warning fa-2x mx-2"></i><span
+                class="my-auto empty-data">{{'Common.emptyData' |translate}}</span></div>
+        <div class="m-auto pt-2 empty-data" >
+            <ng-content select="[note]"></ng-content>
+        </div>
+    </div>
+</div>

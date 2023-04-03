@@ -1,0 +1,51 @@
+<vip-item-list>
+    <div itemlogo *ngIf="accountInfo.email"
+        class="group-logo rounded-circle initials  border  text-secondary border-secondary">
+        {{index+1}}
+    </div>
+    <div itemlogo *ngIf="!accountInfo.email"
+        class="group-logo rounded-circle initials  border text-danger border-danger" data-toggle="tooltip"
+        data-placement="top" title="{{'shares.account-info-item.noEmail' | translate}}">
+        {{index+1}}
+    </div>
+    <div itemInfo class="item-info flex-column">
+        <div class="item-info-top">
+            <div style="position: relative;">
+                <a href="javascript:void(0)" (click)="edit(accountInfo)" *ngIf="allowEdit"
+                    class="text-capitalize text-decoration-none meeting-name font-weight-bold "
+                    [ngClass]="{'text-secondary': accountInfo.email?.value!== null,'text-danger': accountInfo.email?.value === null}">
+                    {{ accountInfo?.displayName}} </a>
+                    <span *ngIf="!allowEdit"  class="text-capitalize text-decoration-none meeting-name font-weight-bold "   [ngClass]="{'text-secondary': accountInfo.email?.value!== null,'text-danger': accountInfo.email?.value === null}">
+                        {{ accountInfo?.displayName}} 
+                    </span>
+                <ng-content select="[infoStatus]"></ng-content>
+            </div>
+        </div>
+        <div class="item-info-bottom mt-1  ">
+            <div *ngIf="accountInfo.address" class="item-info-bottom pr-2 text-capitalize description"
+                data-toggle="tooltip" data-placement="top" title="{{'shares.account-info-item.address' | translate}}">
+                <i class="fas fa-map-marker-alt mr-2" aria-hidden="true"></i>{{accountInfo.address}}
+            </div>
+            <div class="description">
+                <span *ngIf="accountInfo.identityNumber" class="mr-2 text-lowercase" data-toggle="tooltip"
+                    data-placement="top" title="{{'shares.account-info-item.identity' | translate}}">
+                    <i class="far fa-id-card text-secondary mr-1"></i>
+                    {{accountInfo.identityNumber}}
+                </span>
+                <span *ngIf="accountInfo.phoneNumber" class="mx-2 text-lowercase" data-toggle="tooltip"
+                    data-placement="top" title="{{'shares.account-info-item.phone' | translate}}">
+                    <i class="fas fa-phone  text-secondary mr-1"
+                        style="transform: rotate(90deg);"></i>{{accountInfo.phoneNumber}}
+                </span>
+                <span class="mx-2 text-lowercase" *ngIf="accountInfo.email" data-toggle="tooltip" data-placement="top"
+                    title="{{'shares.account-info-item.email' | translate}}">
+                    <i class="far fa-envelope text-secondary mr-1"></i>
+                    {{accountInfo.email}}
+                </span>
+            </div>
+        </div>
+    </div>
+    <ng-content itemInfoCenter select="[itemInfoCenter]"></ng-content>
+    <ng-content rightInfo select="[rightInfo]"></ng-content>
+    <ng-content command select="[command]"></ng-content>
+</vip-item-list>

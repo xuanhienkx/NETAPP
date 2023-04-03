@@ -1,0 +1,54 @@
+<div class="d-lg-flex w-lg-100 pb-3 ">
+    <h4 class="list-title">{{'meetingGroup.list.title' |translate}}</h4>
+    <div class="action d-lg-flex  ml-lg-auto justify-content-lg-between my-auto">
+        <button nbButton status="primary" size="small" (click)="addGroup()">
+            {{'meetingGroup.add.title' | translate}}
+        </button>
+    </div>
+</div>
+<nb-card accent="info" status="basic" class="m-0 p-0">
+    <nb-card-body class="pt-0 mb-0 pb-0">
+        <nb-list class="pt-0 mt-0  vip-list">
+            <nb-list-item *ngFor="let g of groups" class="border-bottom">
+                <div class="d-flex w-100">
+                    <div class="logo-image mr-2">
+                        <div class="group-logo rounded-circle initials border-secondary border text-secondary"
+                            [innerHTML]="g.id | groupLogo">
+
+                        </div>
+                    </div>
+                    <div class="info-container d-flex justify-content-between">
+                        <div class="item-info flex-column my-auto">
+
+                            <div class="item-info-top" style="position: relative;">
+                                <a class="text-reset text-decoration-none meeting-name font-weight-bold"
+                                    [routerLink]="[route(urlRoute.MEETING_GROUP_EDIT)]"
+                                    [queryParams]="{id: g.id}">{{ g.name }}</a>
+                            </div>
+
+                            <!-- <div class="item-info-bottom mt-2 description truncate" [innerHtml]="g.header" style="max-width: 90%;">
+                            </div> -->
+
+                        </div>
+                    </div>
+
+                    <div class="list-item-action ml-auto my-auto">
+                        <a href="javascript:void(0);" class="mx-2" data-toggle="tooltip" data-placement="top"
+                            title="{{'meetingGroup.edit.title' | translate}}"
+                            [routerLink]="[route(urlRoute.MEETING_GROUP_EDIT)]" [queryParams]="{id: g.id}">
+                            <i class="fas fa-edit text-secondary"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="ml-2" data-toggle="tooltip" data-placement="top"
+                            title="{{'meetingGroup.delete.title'| translate}}" (click)="delete(g.id)">
+                            <i class="fas fa-trash-alt text-secondary"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </nb-list-item>
+        </nb-list>
+
+        <vip-empty-data [isNoData]="!groups || groups?.length ===0"></vip-empty-data>
+    </nb-card-body>
+</nb-card>

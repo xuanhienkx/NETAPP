@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="4.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.0.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\CS.Common\CS.Common.csproj" />
+    <ProjectReference Include="..\CS.Core.Data\CS.Domain.Data.csproj" />
+    <ProjectReference Include="..\CS.Domain.Audit\CS.Domain.Audit.csproj" />
+    <ProjectReference Include="..\Cs.Domain.Identity\CS.Domain.Identity.csproj" />
+  </ItemGroup>
+
+</Project>

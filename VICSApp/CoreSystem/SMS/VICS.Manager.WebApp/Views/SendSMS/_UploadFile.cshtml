@@ -1,0 +1,34 @@
+﻿
+@model VICS.Manager.WebApp.Models.UploadFile
+@using (Html.BeginForm("GetFileInput", "SendSms",FormMethod.Post , new { id = "fileUpload", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="input-group">
+        <span class="input-group-btn">
+            <span class="btn btn-primary btn-file">
+                Chọn file…
+               
+                @Html.TextBoxFor(x => x.FilePath, new { type = "file", accept = ".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"})
+            </span>
+        </span>
+        <input type="text" class="form-control" readonly="readonly">
+    </div>
+}
+<script type="text/javascript">
+    $(function() {
+        $("#fileUpload").submit(function (e) {
+            e.preventDefault();
+            var action = $("#fileUpload").attr("action");
+            var formData = new FormData($("#fileUpload")[0]); 
+            $.mbqAjax({
+                type: "POST",
+                url: action,
+                data: formData,
+                //  dataType: "json", //change to your own, else read my note above on enabling the JsonValueProviderFactory in MVC
+                contentType: false,
+                processData: false,
+                targetId: "ListData",
+            });
+        }); //end .submit()
+    });
+</script>

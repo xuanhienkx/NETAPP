@@ -1,0 +1,67 @@
+﻿@using SMS.Common
+@model IList<SMS.Data.Services.EF.Models.SmsSummary>
+@{
+    int totalQty = 0;
+}
+<fieldset>
+    <legend>Summury</legend>
+    <table class="table table-bordered">
+
+        @foreach (var item in Model)
+        {
+            totalQty += item.Quantity;
+            if (item.Type == MobileType.Viettel)
+            {
+                <tr>
+                    <th>@item.Type</th>
+                    <td>@Html.TextBoxFor(m => item.Quantity, new { disabled = "disabled", @class = "text-right" })</td>
+                    <td>@Html.TextBox("VRate", 700, new { @class = "text-right" })</td>
+                    <td>@Html.TextBox("VAmount", item.Quantity * 700, new { disabled = "disabled", @class = "text-right" })</td>
+                </tr>
+            }
+            if (item.Type == MobileType.Vinaphone)
+            {
+                <tr>
+                    <th>@item.Type</th>
+                    <td>@Html.TextBoxFor(m => item.Quantity, new { disabled = "disabled", @class = "text-right" })</td>
+                    <td>@Html.TextBox("VRate", 380, new { @class = "text-right" })</td>
+                    <td>@Html.TextBox("VAmount",item.Quantity * 380, new { disabled = "disabled", @class = "text-right" })</td>
+                </tr>
+            }
+            if (item.Type == MobileType.Mobiphone)
+            {
+                <tr>
+                    <th>@item.Type</th>
+                    <td>@Html.TextBoxFor(m => item.Quantity, new { disabled = "disabled", @class = "text-right" })</td>
+                    <td>@Html.TextBox("VRate", 380, new { @class = "text-right" })</td>
+                    <td>@Html.TextBox("VAmount", item.Quantity * 380, new { disabled = "disabled", @class = "text-right" })</td>
+                </tr>
+            }
+            if (item.Type == MobileType.Gmobile)
+            {
+                <tr>
+                    <th>@item.Type</th>
+                    <td>@Html.TextBoxFor(m => item.Quantity, new { disabled = "disabled", @class = "text-right" })</td>
+                    <td>@Html.TextBox("VRate", 380, new { @class = "text-right" })</td>
+                    <td>@Html.TextBox("VAmount", item.Quantity * 380, new { disabled = "disabled", @class = "text-right" })</td>
+                </tr>
+            }
+            if (item.Type == MobileType.Vietnammobile)
+            {
+                <tr>
+                    <th>@item.Type</th>
+                    <td>@Html.TextBoxFor(m => item.Quantity, new { disabled = "disabled", @class = "text-right" })</td>
+                    <td>@Html.TextBox("VRate", 380, new { @class = "text-right" })</td>
+                    <td>@Html.TextBox("VAmount", item.Quantity * 380, new { disabled = "disabled", @class = "text-right" })</td>
+                </tr>
+            }
+
+        }
+        <tr>
+            <th>Total</th>
+            <td>@Html.TextBox("TalolQty", totalQty, new { disabled = "disabled", @class = "text-right" })</td>
+            <td>@Html.TextBox("TT", null, new { disabled = "disabled" })</td>
+            <td>@Html.TextBox("TotalAmount", 0, new { disabled = "disabled", @class = "text-right" })</td>
+        </tr>
+    </table>
+</fieldset>

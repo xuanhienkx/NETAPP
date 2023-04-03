@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetMarketStatusHOSE">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMarketStatusHOSEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMarketStatusHOSEResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMarketStatusWithDate">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMarketStatusWithDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMarketStatusWithDateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastTradingDaySC">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLastTradingDaySCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastTradingDaySCResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastTradingDaysSU">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLastTradingDaysSUResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastTradingDaysSUResult" type="tns:ArrayOfGWTradingDay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGWTradingDay">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GWTradingDay" nillable="true" type="tns:GWTradingDay" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GWTradingDay">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LastTradingDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastDateCount" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLastTradingDaySU">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLastTradingDaySUResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastTradingDaySUResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getStockCodesByType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stockType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getStockCodesByTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getStockCodesByTypeResult" type="tns:ArrayOfGWStockData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGWStockData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GWStockData" nillable="true" type="tns:GWStockData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GWStockData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Split" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Suspension" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Halt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Delist" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockBoard" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getStockCodes">
+        <s:complexType />
+      </s:element>
+      <s:element name="getStockCodesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getStockCodesResult" type="tns:ArrayOfGWStockData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getStockPricesByType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stockType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getStockPricesByTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getStockPricesByTypeResult" type="tns:ArrayOfGWStockPrice" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGWStockPrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GWStockPrice" nillable="true" type="tns:GWStockPrice" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GWStockPrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StockCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradingDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CeilingPrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BasicPrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="OpenPrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ClosePrice" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="FloorPrice" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getStockPrices">
+        <s:complexType />
+      </s:element>
+      <s:element name="getStockPricesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getStockPricesResult" type="tns:ArrayOfGWStockPrice" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stockcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pricetype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="marketstatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ordertype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderside" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="traderid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="price" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="volume" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="publishedvolume" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="ptordertype" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ordersession" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateOrderResult" type="tns:HOGWValidOutput" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HOGWValidOutput">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PCFlag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Room" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TraderID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsOK" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetMarketStatusHOSESoapIn">
+    <wsdl:part name="parameters" element="tns:GetMarketStatusHOSE" />
+  </wsdl:message>
+  <wsdl:message name="GetMarketStatusHOSESoapOut">
+    <wsdl:part name="parameters" element="tns:GetMarketStatusHOSEResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMarketStatusWithDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMarketStatusWithDate" />
+  </wsdl:message>
+  <wsdl:message name="GetMarketStatusWithDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMarketStatusWithDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastTradingDaySCSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastTradingDaySC" />
+  </wsdl:message>
+  <wsdl:message name="GetLastTradingDaySCSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastTradingDaySCResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastTradingDaysSUSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastTradingDaysSU" />
+  </wsdl:message>
+  <wsdl:message name="GetLastTradingDaysSUSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastTradingDaysSUResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastTradingDaySUSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastTradingDaySU" />
+  </wsdl:message>
+  <wsdl:message name="GetLastTradingDaySUSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastTradingDaySUResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStockCodesByTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:getStockCodesByType" />
+  </wsdl:message>
+  <wsdl:message name="getStockCodesByTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:getStockCodesByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStockCodesSoapIn">
+    <wsdl:part name="parameters" element="tns:getStockCodes" />
+  </wsdl:message>
+  <wsdl:message name="getStockCodesSoapOut">
+    <wsdl:part name="parameters" element="tns:getStockCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStockPricesByTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:getStockPricesByType" />
+  </wsdl:message>
+  <wsdl:message name="getStockPricesByTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:getStockPricesByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStockPricesSoapIn">
+    <wsdl:part name="parameters" element="tns:getStockPrices" />
+  </wsdl:message>
+  <wsdl:message name="getStockPricesSoapOut">
+    <wsdl:part name="parameters" element="tns:getStockPricesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateOrder" />
+  </wsdl:message>
+  <wsdl:message name="ValidateOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateOrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GWConnectorWSSoap">
+    <wsdl:operation name="GetMarketStatusHOSE">
+      <wsdl:input message="tns:GetMarketStatusHOSESoapIn" />
+      <wsdl:output message="tns:GetMarketStatusHOSESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketStatusWithDate">
+      <wsdl:input message="tns:GetMarketStatusWithDateSoapIn" />
+      <wsdl:output message="tns:GetMarketStatusWithDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTradingDaySC">
+      <wsdl:input message="tns:GetLastTradingDaySCSoapIn" />
+      <wsdl:output message="tns:GetLastTradingDaySCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTradingDaysSU">
+      <wsdl:input message="tns:GetLastTradingDaysSUSoapIn" />
+      <wsdl:output message="tns:GetLastTradingDaysSUSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTradingDaySU">
+      <wsdl:input message="tns:GetLastTradingDaySUSoapIn" />
+      <wsdl:output message="tns:GetLastTradingDaySUSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStockCodesByType">
+      <wsdl:input message="tns:getStockCodesByTypeSoapIn" />
+      <wsdl:output message="tns:getStockCodesByTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStockCodes">
+      <wsdl:input message="tns:getStockCodesSoapIn" />
+      <wsdl:output message="tns:getStockCodesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStockPricesByType">
+      <wsdl:input message="tns:getStockPricesByTypeSoapIn" />
+      <wsdl:output message="tns:getStockPricesByTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStockPrices">
+      <wsdl:input message="tns:getStockPricesSoapIn" />
+      <wsdl:output message="tns:getStockPricesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateOrder">
+      <wsdl:input message="tns:ValidateOrderSoapIn" />
+      <wsdl:output message="tns:ValidateOrderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GWConnectorWSSoap" type="tns:GWConnectorWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMarketStatusHOSE">
+      <soap:operation soapAction="http://tempuri.org/GetMarketStatusHOSE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketStatusWithDate">
+      <soap:operation soapAction="http://tempuri.org/GetMarketStatusWithDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTradingDaySC">
+      <soap:operation soapAction="http://tempuri.org/GetLastTradingDaySC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTradingDaysSU">
+      <soap:operation soapAction="http://tempuri.org/GetLastTradingDaysSU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTradingDaySU">
+      <soap:operation soapAction="http://tempuri.org/GetLastTradingDaySU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStockCodesByType">
+      <soap:operation soapAction="http://tempuri.org/getStockCodesByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStockCodes">
+      <soap:operation soapAction="http://tempuri.org/getStockCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStockPricesByType">
+      <soap:operation soapAction="http://tempuri.org/getStockPricesByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStockPrices">
+      <soap:operation soapAction="http://tempuri.org/getStockPrices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateOrder">
+      <soap:operation soapAction="http://tempuri.org/ValidateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GWConnectorWSSoap12" type="tns:GWConnectorWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMarketStatusHOSE">
+      <soap12:operation soapAction="http://tempuri.org/GetMarketStatusHOSE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketStatusWithDate">
+      <soap12:operation soapAction="http://tempuri.org/GetMarketStatusWithDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTradingDaySC">
+      <soap12:operation soapAction="http://tempuri.org/GetLastTradingDaySC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTradingDaysSU">
+      <soap12:operation soapAction="http://tempuri.org/GetLastTradingDaysSU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastTradingDaySU">
+      <soap12:operation soapAction="http://tempuri.org/GetLastTradingDaySU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStockCodesByType">
+      <soap12:operation soapAction="http://tempuri.org/getStockCodesByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStockCodes">
+      <soap12:operation soapAction="http://tempuri.org/getStockCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStockPricesByType">
+      <soap12:operation soapAction="http://tempuri.org/getStockPricesByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStockPrices">
+      <soap12:operation soapAction="http://tempuri.org/getStockPrices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateOrder">
+      <soap12:operation soapAction="http://tempuri.org/ValidateOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GWConnectorWS">
+    <wsdl:port name="GWConnectorWSSoap" binding="tns:GWConnectorWSSoap">
+      <soap:address location="http://localhost:6666/GWConnectorWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GWConnectorWSSoap12" binding="tns:GWConnectorWSSoap12">
+      <soap12:address location="http://localhost:6666/GWConnectorWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

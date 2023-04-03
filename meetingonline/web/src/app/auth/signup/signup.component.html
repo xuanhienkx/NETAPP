@@ -1,0 +1,47 @@
+<h1 id="title" class="title">{{'page.register'| translate}}</h1>
+<form [formGroup]="form" role="form" class="needs-validation col" (ngSubmit)="register(form)" novalidate>
+
+    <div class="form-row">
+        <div class="form-group col">
+            <label class="required font-weight-bold text-dark text-2">{{'Register.displayName.label'| translate}}</label>
+            <input nbInput autofocus fullWidth [status]="f.displayName.dirty ? (f.displayName.invalid  ? 'danger' : 'success') : 'basic'" formControlName="displayName" maxlength="120" />
+            <span class="text-danger text-sm-left" *ngIf="(f.displayName.touched || submitted) && f.displayName.errors?.required">
+                {{'Register.displayName.required'| translate}}
+            </span>
+            <span class="text-danger" *ngIf="(f.displayName.touched || submitted) && f.displayName.errors?.displayNameNotAvailable">
+                {{ 'Register.displayName.valid' | translate }}
+            </span>
+            <span class="text-danger" *ngIf="f.displayName.touched && (f.displayName.errors?.maxlength || f.displayName.errors?.minlength)">
+                {{'Register.displayName.validLength' | translate:{min: 3, max:120} }}
+            </span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+            <label class="required font-weight-bold text-dark text-2">{{'Register.email.label'| translate}}</label>
+            <input nbInput autofocus fullWidth [status]="f.email.dirty ? (f.email.invalid  ? 'danger' : 'success') : 'basic'" maxlength="120" type="text" class="form-control form-control-md" formControlName="email" />
+            <span class="text-danger" *ngIf="(f.email.touched || submitted) && f.email.errors?.required">
+                {{'Register.email.required' | translate}}
+            </span>
+            <span class="text-danger" *ngIf="f.email.touched && f.email.errors?.email">
+                {{'Register.email.valid'| translate}}
+            </span>
+        </div>
+    </div>
+    <div class="form-row">
+        <nb-checkbox id="readOfServiceCheck" [status]="f.readOfServiceCheck.invalid  ? 'danger' : 'success'" formControlName="readOfServiceCheck">
+            <label for="readOfServiceCheck" [innerHTML]="'Register.roleService' | translate:{url: '/home'}" tabindex="-1">
+            </label>
+        </nb-checkbox>
+    </div>
+    <input nbButton fullWidth status="primary" size="medium" type="submit" [disabled]="!form.valid" value="{{ 'Register.registerButton' | translate}}" class="float-right" data-loading-text="Loading..." />
+
+    <div class="form-row d-flex justify-content-between my-5 pt-3 px-2">
+        <a routerLink="{{route(urlRoute.SIGNIN)}}" class="float-left pr-3" tabindex="-1">
+            {{'page.login'| translate}}
+        </a>
+        <a routerLink="{{route(urlRoute.FORGOT)}}" class="float-left" tabindex="-1">
+            {{'page.forgot'| translate}}
+        </a>
+    </div>
+</form>

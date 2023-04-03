@@ -1,0 +1,96 @@
+{
+    "code": "CA005",
+    "name": "CA005- Danh sách người sở hữu chứng khoán lưu ký nhận phân bổ quyền mua",
+    "parameters": [
+         {
+		  "name": "RightNumber",
+		  "start": "CACODE:",
+		  "end": "<BrLine>"
+		},
+		{
+		  "name": "BoardType",
+		  "start": "BRID:"
+		}
+    ],
+    "csvFields": [
+        {
+            "name": "StockCode",
+            "end": ";"
+        },
+        {
+            "name": "HoldQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "RightsQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "Notes",
+            "end": ";"
+        },
+        {
+            "name": "CustomerName",
+            "end": ";"
+        },
+        {
+            "name": "CardIdentity",
+            "end": ";"
+        },
+        {
+            "name": "CardIssuedDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "Address",
+            "end": ";"
+        },
+        {
+            "name": "AccountType",
+            "end": ";"
+        },
+		 {
+            "name": "BusinessType",
+            "end": ";"
+        },
+        {
+            "name": "Nationality",
+            "end": ";"
+        },
+        {
+            "name": "CustomerType",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber",
+            "end": ";"
+        },
+        {
+            "name": "MemberName",
+            "end": ";"
+        },
+        {
+            "name": "MemberBiccode",
+            "end": ";"
+        },
+        {
+            "name": "DepositQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "TotalQuantity",
+            "type": "Integer",
+            "end": ";"
+        }, 
+        {
+            "name": "DocumentRef",
+            "end": ";"
+        }
+
+    ]
+}

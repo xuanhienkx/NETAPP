@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center vip-summary-header my-0">
+        <div class="summary-item"> <label><i
+                                class="fas fa-user-friends"></i>{{'shares.meeting-summary.totalHolder' | translate}}:</label>
+                <span class="item-number">{{summary?.holders | number}}</span> </div>
+        <div class="summary-item"> <label><i
+                                class="fas fa-bookmark"></i>{{'shares.meeting-summary.totalShares' | translate}}:</label>
+                <span class="item-number">{{summary?.shares | number}}</span> </div>
+        <div class="summary-item"> <label><i
+                                class="fas fa-gavel"></i>{{'shares.meeting-summary.totalVoteRight' | translate}}:</label>
+                <span class="item-number">{{summary?.votes | number}}</span> </div>
+        <div *ngIf="type==='holder'" class="summary-item"> <label><i
+                                class="fas fa-user-clock"></i>{{'shares.meeting-summary.totalRegister' | translate}}:</label>
+                <span class="item-number">{{summary?.attendConfirmed | number}}</span>
+        </div>
+        <div *ngIf="type==='attendee'" class="summary-item"> <label><i
+                                class="fas fa-user-tie"></i>{{'shares.meeting-summary.totalAttends' | translate}}:</label>
+                <span class="item-number">{{summary?.checkIn | number}}</span>
+        </div>
+        <div *ngIf="type==='attendee'" class="summary-item"> <label><i
+                class="fas fa-user-tie"></i>{{'shares.meeting-summary.attendedVotes' | translate}}:</label>
+<span class="item-number">{{summary?.checkInVotes | number}}</span>
+</div>
+        <vip-meeting-summary-pie class="mx-4" [type]="type"></vip-meeting-summary-pie>
+</div>

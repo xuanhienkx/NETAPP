@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brokery", "AgencyApp\Brokery.csproj", "{CAE86FE6-34B1-43D1-BC7B-59D4E79BAF77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreWebService", "AgencyWebService\CoreWebService.csproj", "{35EFE604-CB31-4F8E-95BF-8081FCBCFBA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBSCore", "SBSCore\SBSCore.csproj", "{18B62E5F-CA5F-42E9-A0A4-64C649836EE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoseWebService", "HoseWebService\HoseWebService.csproj", "{A07AB94C-6235-46D8-9553-8619E2D0E4A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HnxWebService", "HnxWebService\HnxWebService.csproj", "{B28615CD-ED69-4800-8293-B885EADBD069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProviderDataAcess", "ProviderDataAcess\ProviderDataAcess.csproj", "{834FAA49-F8E5-43C7-91A9-B4C65A83C927}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonDomain", "CommonDomain\CommonDomain.csproj", "{EEF21C4F-E2E3-4D45-BE47-8DF094A78A65}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ntvvn.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AgencyApp\\Brokery.csproj
+		SccProjectName1 = AgencyApp
+		SccLocalPath1 = AgencyApp
+		SccProjectUniqueName2 = CommonDomain\\CommonDomain.csproj
+		SccProjectName2 = CommonDomain
+		SccLocalPath2 = CommonDomain
+		SccProjectUniqueName3 = AgencyWebService\\CoreWebService.csproj
+		SccProjectName3 = AgencyWebService
+		SccLocalPath3 = AgencyWebService
+		SccProjectUniqueName4 = HnxWebService\\HnxWebService.csproj
+		SccProjectName4 = HnxWebService
+		SccLocalPath4 = HnxWebService
+		SccProjectUniqueName5 = HoseWebService\\HoseWebService.csproj
+		SccProjectName5 = HoseWebService
+		SccLocalPath5 = HoseWebService
+		SccProjectUniqueName6 = ProviderDataAcess\\ProviderDataAcess.csproj
+		SccProjectName6 = ProviderDataAcess
+		SccLocalPath6 = ProviderDataAcess
+		SccProjectUniqueName7 = SBSCore\\SBSCore.csproj
+		SccProjectName7 = SBSCore
+		SccLocalPath7 = SBSCore
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAE86FE6-34B1-43D1-BC7B-59D4E79BAF77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE86FE6-34B1-43D1-BC7B-59D4E79BAF77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE86FE6-34B1-43D1-BC7B-59D4E79BAF77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE86FE6-34B1-43D1-BC7B-59D4E79BAF77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35EFE604-CB31-4F8E-95BF-8081FCBCFBA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35EFE604-CB31-4F8E-95BF-8081FCBCFBA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35EFE604-CB31-4F8E-95BF-8081FCBCFBA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35EFE604-CB31-4F8E-95BF-8081FCBCFBA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B62E5F-CA5F-42E9-A0A4-64C649836EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B62E5F-CA5F-42E9-A0A4-64C649836EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B62E5F-CA5F-42E9-A0A4-64C649836EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B62E5F-CA5F-42E9-A0A4-64C649836EE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A07AB94C-6235-46D8-9553-8619E2D0E4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A07AB94C-6235-46D8-9553-8619E2D0E4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A07AB94C-6235-46D8-9553-8619E2D0E4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A07AB94C-6235-46D8-9553-8619E2D0E4A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28615CD-ED69-4800-8293-B885EADBD069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28615CD-ED69-4800-8293-B885EADBD069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28615CD-ED69-4800-8293-B885EADBD069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28615CD-ED69-4800-8293-B885EADBD069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{834FAA49-F8E5-43C7-91A9-B4C65A83C927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{834FAA49-F8E5-43C7-91A9-B4C65A83C927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{834FAA49-F8E5-43C7-91A9-B4C65A83C927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{834FAA49-F8E5-43C7-91A9-B4C65A83C927}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEF21C4F-E2E3-4D45-BE47-8DF094A78A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEF21C4F-E2E3-4D45-BE47-8DF094A78A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF21C4F-E2E3-4D45-BE47-8DF094A78A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEF21C4F-E2E3-4D45-BE47-8DF094A78A65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

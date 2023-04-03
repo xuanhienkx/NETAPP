@@ -1,0 +1,105 @@
+{
+    "code": "CA009",
+    "name": "CA009- Danh sách người sở hữu chứng khoán lưu ký nhận cổ tức bằng tiền",
+    "parameters": [
+         {
+		  "name": "RightNumber",
+		  "start": "CACODE:",
+		  "end": "<BrLine>"
+		},
+		{
+		  "name": "BoardType",
+		  "start": "BRID:"
+		}
+    ],
+    "csvFields": [
+        {
+            "name": "StockCode",
+            "end": ";"
+        },
+        {
+            "name": "MemberBiccode",
+            "end": ";"
+        },
+        {
+            "name": "HoldQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "DepositQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "ValueBeforeTaxes",
+            "type": "Integer",
+            "end": ";"
+        },
+        /*   {
+            "name": "Note",
+            "end": ";"
+        },*/
+        {
+            "name": "TotalQuantity",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "HolderName",
+            "end": ";"
+        },
+        {
+            "name": "IdentityIssued",
+            "end": ";"
+        },
+        {
+            "name": "IdentityIssuedDate",
+            "type": "Date",
+            "format": "dd/MM/yyyy",
+            "end": ";"
+        },
+        {
+            "name": "Address",
+            "end": ";"
+        },
+        {
+            "name": "AccountType",
+            "end": ";"
+        },
+        {
+            "name": "BusinessType",
+            "end": ";"
+        },
+        {
+            "name": "Nationality",
+            "end": ";"
+        },
+        {
+            "name": "HolderType",
+            "end": ";"
+        },
+        {
+            "name": "AccountNumer",
+            "end": ";"
+        },
+        {
+            "name": "MemberName",
+            "end": ";"
+        },
+        {
+            "name": "Tax",
+            "type": "Decimal",
+            "end": ";"
+        },
+        {
+            "name": "Amount",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "DocumentRef",
+            "end": ";"
+        }
+    ]
+}

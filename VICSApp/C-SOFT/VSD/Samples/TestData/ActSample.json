@@ -1,0 +1,10 @@
+{
+  "MessageType": "ACKNAK",
+  "ApplicationIdentifier": "F",
+  "ServiceIdentifier": "21",
+  "SenderBicode": "VSDCTBXXAXXX",
+  "SessionInteger": "0020",
+  "InputSequenceInteger": "000021",
+  "ReceiverDate": "2014-03-14T17:28:37",
+  "AcceptReject": "0"
+}

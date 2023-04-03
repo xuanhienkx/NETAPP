@@ -1,0 +1,224 @@
+{
+  "name": "INDEX",
+  "fileMap": "VNINDEX,VNX,CS_VNX,TRI,INAV,IINDEX",
+  "messages": [
+    {
+      "messageName": "VNINDEX",
+      "patternFormat": "{yyyy}{MM}{dd}_VNINDEX.DAT",
+      "parts": [
+        {
+          "name": "Index",
+          "length": 4,
+          "type": "Integer"
+        },
+        {
+          "name": "TotalTrade",
+          "length": 4,
+          "type": "Integer"
+        },
+        {
+          "name": "TotalShares",
+          "length": 8,
+          "type": "Double"
+        },
+        {
+          "name": "TotalValues",
+          "length": 8,
+          "type": "Double"
+        },
+        {
+          "name": "UpVolume",
+          "length": 8,
+          "type": "Double"
+        },
+        {
+          "name": "DownVolume",
+          "length": 8,
+          "type": "Double"
+        },
+        {
+          "name": "NoChangeVolume",
+          "length": 8,
+          "type": "Double"
+        },
+        {
+          "name": "UpCount",
+          "length": 2,
+          "type": "Short"
+        },
+        {
+          "name": "DownCount",
+          "length": 2,
+          "type": "Short"
+        },
+        {
+          "name": "NoChangeCount",
+          "length": 2,
+          "type": "Short"
+        },
+        {
+          "name": "Time",
+          "length": 4,
+          "type": "Integer"
+        }
+      ]
+    },
+    {
+      "messageName": "VNX",
+      "patternFormat": "{yyyy}{MM}{dd}_VN{num}.DAT",
+      "parts": [
+        {
+          "name": "Index",
+          "length": 4,
+          "type": "Integer"
+        },
+        {
+          "name": "TotalSharesAOM",
+          "length": 8,
+          "type": "Double"
+        },
+        {
+          "name": "TotalValuesAOM",
+          "length": 8,
+          "type": "Double"
+        },
+        {
+          "name": "TotalSharesPT",
+          "length": 8,
+          "type": "Double"
+        },
+        {
+          "name": "TotalValuesPT",
+          "length": 8,
+          "type": "Double"
+        },
+        {
+          "name": "UpCount",
+          "length": 2,
+          "type": "Short"
+        },
+        {
+          "name": "DownCount",
+          "length": 2,
+          "type": "Short"
+        },
+        {
+          "name": "NoChangeCount",
+          "length": 2,
+          "type": "Short"
+        },
+        {
+          "name": "CeilingCount",
+          "length": 2,
+          "type": "Short"
+        },
+        {
+          "name": "FloorCount",
+          "length": 2,
+          "type": "Short"
+        },
+        {
+          "name": "Time",
+          "length": 4,
+          "type": "Integer"
+        }
+      ]
+    },
+    {
+      "messageName": "CS_VNX",
+      "patternFormat": "CS_VN{num}.DAT",
+      "parts": [
+        {
+          "name": "StockNo",
+          "length": 2,
+          "type": "Short"
+        },
+        {
+          "name": "StockSymbol",
+          "length": 8
+        }
+      ]
+    },
+    {
+      "messageName": "TRI",
+      "patternFormat": "{yyyy}{MM}{dd}_TRI.DAT",
+      "parts": [
+        {
+          "name": "IndexSymbol",
+          "length": 11
+        },
+        {
+          "name": "IndexDesc",
+          "length": 25
+        },
+        {
+          "name": "BasedIndexCode",
+          "length": 8
+        },
+        {
+          "name": "Index",
+          "length": 4,
+          "type": "Integer"
+        },
+        {
+          "name": "Time",
+          "length": 4,
+          "type": "Integer"
+        }
+      ]
+    },
+    {
+      "messageName": "INAV",
+      "patternFormat": "{yyyy}{MM}{dd}_INAV.DAT",
+      "parts": [
+        {
+          "name": "StockNo",
+          "length": 2,
+          "type": "short"
+        },
+        {
+          "name": "StockSymbol",
+          "length": 8
+        },
+        {
+          "name": "iNAV",
+          "length": 4,
+          "type": "Integer"
+        },
+        {
+          "name": "Time",
+          "length": 4,
+          "type": "Integer"
+        }
+      ]
+    },
+    {
+      "messageName": "IINDEX",
+      "patternFormat": "{yyyy}{MM}{dd}_IINDEX.DAT",
+      "parts": [
+        {
+          "name": "iIndexSymbol",
+          "length": 20
+        },
+        {
+          "name": "ETFSymbol",
+          "length": 8
+        },
+        {
+          "name": "IndexSymbol",
+          "length": 11
+        },
+        {
+          "name": "iIndex",
+          "length": 4,
+          "type": "Integer"
+        },
+        {
+          "name": "Time",
+          "length": 4,
+          "type": "Integer"
+        }
+      ]
+    }
+  ]
+}

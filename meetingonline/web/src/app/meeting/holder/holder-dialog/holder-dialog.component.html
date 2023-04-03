@@ -1,0 +1,108 @@
+<nb-card class="vip-full-width-dialog">
+    <nb-card-header>
+        <h6 *ngIf="!f.id?.value">{{'holder.form.title.addNew' |translate}}</h6>
+        <h6 *ngIf="f.id?.value">{{'holder.form.title.edit' |translate}}</h6>
+    </nb-card-header>
+    <nb-card-body class="w-100">
+        <form [formGroup]="frm" #fForm="ngForm" (ngSubmit)="onSubmit()" autocomplete="off" novalidate>
+            <div class="form-group">
+                <label for="displayName" class="required">{{'holder.form.name.label' |translate}}</label>
+                <input nbInput autofocus fullWidth class="form-control" fieldSize="small" id="displayName" maxlength="200" formControlName="displayName" [status]="f.displayName.dirty && f.displayName.touched && f.displayName.invalid  ? 'danger' : 'basic'">
+                <div class="text-danger" *ngIf="f.displayName.touched && f.displayName.invalid && f.displayName.errors.required">
+                    {{'holder.form.name.required' |translate}}.</div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6 col-12">
+                    <label for="identity" *ngIf="mt.type === 'GeneralMeeting'" class="required">{{'holder.form.identity.label1' |translate}}</label>
+                    <label for="identity" *ngIf="mt.type !== 'GeneralMeeting'" class="required">{{'holder.form.identity.label2' |translate}}</label>
+
+                    <input nbInput autofocus fullWidth class="form-control" fieldSize="tiny" id="identity" formControlName="identityNumber" placeholder="{{'holder.form.identity.smallDesc' |translate}}" [status]="f.identityNumber.dirty && f.identityNumber.touched && f.identityNumber.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger" *ngIf="f.identityNumber.touched && f.identityNumber.invalid && f.identityNumber.errors.required">
+                        {{'holder.form.identity.required' |translate}}.</div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="identityType" class="required">{{'holder.form.identityType.label' |translate}}</label>
+                    <input nbInput autofocus fullWidth class="form-control" fieldSize="small" id="identityType" maxlength="20" formControlName="identityType" placeholder="{{'holder.form.identityType.smallDesc' |translate}}" [status]="f.identityType.dirty && f.identityType.touched && f.identityType.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger" *ngIf="f.identityType.touched && f.identityType.invalid && f.identityType.errors.required">
+                        {{'holder.form.identityType.required' |translate}}.</div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6 col-12">
+                    <label for="identityIssuedDate" class="required">{{'holder.form.identityIssuedDate.label' |translate}}</label>
+                    <input mask="00/00/0000" nbInput autofocus fullWidth placeholder="dd/MM/yyyy" maxlength="10" class="form-control" fieldSize="small" id="identityIssuedDate" formControlName="identityIssuedDate" [status]="f.identityIssuedDate.dirty && f.identityIssuedDate.touched && f.identityIssuedDate.invalid  ? 'danger' : 'basic'">
+                    <nb-datepicker #datepicker format="dd/MM/yyyy" [max]="max"></nb-datepicker>
+                    <div class="text-danger" *ngIf="f.identityIssuedDate.touched && f.identityIssuedDate.invalid && f.identityIssuedDate.errors.required">
+                        {{'holder.form.identityIssuedDate.required' |translate}}.</div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="identityIssuer" class="required">{{'holder.form.identityIssuer.label' |translate}}</label>
+                    <input nbInput autofocus fullWidth class="form-control" fieldSize="small" id="identityIssuer" maxlength="30" formControlName="identityIssuer" [status]="f.identityIssuer.dirty && f.identityIssuer.touched && f.identityIssuer.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger" *ngIf="f.identityIssuer.touched && f.identityIssuer.invalid && f.identityIssuer.errors.required">
+                        {{'holder.form.identityIssuer.required' |translate}}.</div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="address" class="required">{{'holder.form.address.label' |translate}}</label>
+                <input nbInput autofocus fullWidth class="form-control" fieldSize="small" id="address" formControlName="address" [status]="f.address.dirty && f.address.touched && f.address.invalid  ? 'danger' : 'basic'">
+                <div class="text-danger" *ngIf="f.address.touched && f.address.invalid && f.address.errors.required">
+                    {{'holder.form.address.required' |translate}}.</div>
+                <div class="text-danger" *ngIf="f.address.touched && f.address.invalid && f.address.errors.minlength ">
+                    {{'holder.form.address.minlength' |translate}}.</div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6 col-12">
+                    <label for="phoneNumber" class="required">{{'holder.form.phone.label' |translate}}</label>
+                    <input nbInput autofocus fullWidth class="form-control" fieldSize="small" id="phoneNumber" formControlName="phone" maxlength="15" [status]="f.phone.dirty && f.phone.touched && f.phone.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger" *ngIf="f.phone.touched && f.phone.invalid && f.phone.errors.required">
+                        {{'holder.form.phone.required' |translate}}.</div>
+                    <div class="text-danger" *ngIf="f.phone.touched && f.phone.invalid && f.phone.errors.minlength">
+                        {{'holder.form.phone.minlength' |translate}}.</div>
+
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="emailAddress" class="required">{{'holder.form.email.label' |translate}}</label>
+                    <input type="email" nbInput autofocus fullWidth class="form-control" fieldSize="small" id="emailAddress" formControlName="emailAddress" maxlength="150" [status]="f.emailAddress.dirty && f.emailAddress.touched && f.emailAddress.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger" *ngIf="f.emailAddress.touched && f.emailAddress.invalid && f.emailAddress.errors.required">
+                        {{'holder.form.email.required' |translate}}.</div>
+                    <div class="text-danger mt-2" *ngIf="(f.emailAddress.touched || submitted) && f.emailAddress.errors?.email">
+                        {{'holder.form.email.valid' | translate }}.</div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6 col-12">
+                    <label for="shares" class="required">{{'holder.form.shares.label' |translate}}</label>
+                    <input nbInput autofocus fullWidth type="number" onkeydown="return event.keyCode !== 69" class="form-control number" fieldSize="small" id="shares" formControlName="shares" maxlength="11" min="1" [status]="f.shares.dirty && f.shares.touched && f.shares.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger" *ngIf="f.shares.touched && f.shares.invalid && f.shares.errors.required">
+                        {{'holder.form.shares.requiredMin' |translate}}.</div>
+                    <div class="text-danger" *ngIf="f.shares.touched && f.shares.invalid && f.shares.errors.min">
+                        {{'holder.form.shares.requiredMin' |translate}}.</div>
+
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="ownedVotes" class="required">{{'holder.form.ownedVotes.label' |translate}}</label>
+                    <input nbInput autofocus fullWidth type="number" onkeydown="return event.keyCode !== 69" class="form-control number" fieldSize="small" id="ownedVotes" formControlName="ownedVotes" maxlength="11" min="1" [status]="f.ownedVotes.dirty && f.ownedVotes.touched && f.ownedVotes.invalid  ? 'danger' : 'basic'">
+                    <div class="text-danger" *ngIf="f.ownedVotes.touched && f.ownedVotes.invalid && f.ownedVotes.errors.required">
+                        {{'holder.form.ownedVotes.requiredMin' |translate}}.</div>
+                    <div class="text-danger" *ngIf="f.ownedVotes.touched && f.ownedVotes.invalid && f.ownedVotes.errors.min">
+                        {{'holder.form.ownedVotes.requiredMin' |translate}}.</div>
+                </div>
+            </div>
+
+
+
+        </form>
+    </nb-card-body>
+    <nb-card-footer>
+        <div class="d-flex justify-content-between">
+            <button nbButton size="small" type="button" status="basic" (click)="onClose()">{{'Common.close' |translate}}</button>
+            <div *ngIf="allowEdit">
+                <button (click)="fForm.ngSubmit.emit()" size="small" class="mx-2" nbButton status="primary" [disabled]="!fForm.valid" [class.btn-pulse]="submitted" value="">{{'Common.save' | translate}}</button>
+                <button (click)="onSubmit(true)" class="ml-2" size="small" nbButton status="primary" [disabled]="!fForm.valid" [class.btn-pulse]="submitted" value="">{{'Common.saveAndCreate' | translate}}</button>
+
+            </div>
+        </div>
+    </nb-card-footer>
+</nb-card>

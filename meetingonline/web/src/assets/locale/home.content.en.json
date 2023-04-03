@@ -1,0 +1,17 @@
+{
+    "Common": {
+        "login": "Đăng nhập",
+        "getStartNow": "Bắt Đầu Nào"
+    },
+    "Nav": {
+        "about": "Chúng tôi",
+        "solutions": "Giải pháp",
+        "price": "Bảng giá",
+        "customer": "Khách hàng",
+        "news": "Tin tức"
+    },
+    "Intro": {
+        "title": "<strong>Giải pháp đại hội trực tuyến hàng đầu</strong> đáp ứng nhu cầu tổ chức đại hội cổ đông, đại hội cư dân",
+        "desc": "Giải pháp toàn diện, tiết kiệm chi phí, hiệu quả tức thì cho tổ chức và các đại biểu tham dự đại hội online để lựa chọn các quyết sách và bầu chọn những cá nhân, quyết định quan trọng."
+    }
+}

@@ -1,0 +1,89 @@
+<vip-header-list [title]="'document.list.title'">
+    <div class="command-header-group d-flex justify-content-between" command>
+        <div class="command-header-item flex-grow-1">
+            <vip-search  [placeholder]="'document.list.inputsearch'" (searchInput)="onChangeList($event)"></vip-search> 
+        </div>
+        <button nbButton status="primary" size="small" *ngIf="canContentEdit" class="command-header-item"
+            (click)="editInfo()">
+            {{'document.add.title' | translate}}
+        </button>
+    </div>
+</vip-header-list>
+<nb-card accent="info" status="basic" class="m-0 p-0">
+    <nb-card-body class="pt-0 mb-0 pb-0">
+        <nb-list class="pt-0 mt-0  vip-list" *ngIf="filtered$">
+            <nb-list-item *ngFor="let info of filtered$ | async; let idx = index;">
+                <vip-item-list>
+                    <div itemlogo class="group-logo rounded-circle initials  border  text-secondary border-secondary">
+                        {{info?.name[0]}}
+                    </div>
+                    <div itemInfo class="item-info flex-column">
+                        <div class="item-info-top">
+                            <a href="javascript:void(0)" *ngIf="canContentEdit"
+                                class="text-reset text-decoration-none meeting-name font-weight-bold"
+                                (click)="editInfo(info)">
+                                {{ info?.name }} </a>
+                            <span *ngIf="!canContentEdit"
+                                class="text-reset text-decoration-none meeting-name font-weight-bold">
+                                {{ info?.name }}</span>
+                        </div>
+                        <div class="item-info-bottom mt-1 description ">
+                            <div class="item-info-bottom truncate" [innerHtml]="info?.description"
+                                style="max-width: 35rem">
+                            </div>
+                        </div>
+                    </div>
+                    <div rightInfo class="description d-flex justify-content-end text-right my-auto info-right-group">
+                        <div class="my-auto">
+                            <div *ngIf="info?.attachments && info?.attachments.length > 0">
+                                <i class="fas fa-paperclip text-secondary" style="opacity: 50%;"></i>
+                                {{'document.list.attachmentFile' | translate}}( {{info?.attachments?.length}})
+                            </div>
+
+                        </div>
+                        <div class="my-auto ml-3">
+                            <a nbButton outline status="info" size="tiny" href="javascript:void(0);" 
+                                [nbPopover]="documentDetail" [nbPopoverContext]="{info: info}" nbPopoverTrigger="click"
+                                nbPopoverPlacement="start-bottom">
+                                {{'document.list.buttonDetail' | translate}}
+                            </a>
+                        </div>
+
+                    </div>
+                    <div command class="my-auto command-group" *ngIf="canContentEdit">
+                        <a href="javascript:void(0);" (click)="editInfo(info)" class="command-item"
+                            data-toggle="tooltip" data-placement="top" title="{{'meetingRole.edit' | translate}}">
+                            <i class="fas fa-edit text-secondary"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="command-item" data-toggle="tooltip" data-placement="top"
+                            title="{{'document.button.delete.title' | translate}}" (click)="delete(info, idx)">
+                            <i class="fas fa-trash-alt text-secondary"></i>
+                        </a>
+                    </div>
+                </vip-item-list>
+            </nb-list-item>
+        </nb-list>
+
+        <vip-empty-data [isNoData]="!mt?.contents || mt?.contents?.length ===0"></vip-empty-data>
+    </nb-card-body>
+</nb-card>
+
+<ng-template #documentDetail let-data>
+    <vip-content-detail>
+        <h6 infoHeader>{{data?.info?.name}}</h6>
+        <button buttonEdit nbButton status="info" *ngIf="canContentEdit" size="small" class="ml-3 py-1 float-right"
+            (click)="editInfo(data?.info)">
+            {{'document.edit.title' | translate}}
+        </button>
+        <div descriptionContent class="my-2">
+            <div for="description" class="text-secondary border-bottom">
+                <b>{{'document.form.description.label' |translate}}:</b></div>
+            <div id="description" class="py-2" style="max-width: 60rem; white-space: wrap; min-width: 40rem;"
+                [innerHtml]="data?.info?.description | replaceLineBreaks">
+
+            </div>
+        </div>
+        <vip-document-list documentList [attachments]="data?.info?.attachments" [contentId]="data?.info?.id"
+            [allowEdit]="canContentEdit" (deleteFileInfo)="deleteFile($event)"></vip-document-list>
+    </vip-content-detail>
+</ng-template>

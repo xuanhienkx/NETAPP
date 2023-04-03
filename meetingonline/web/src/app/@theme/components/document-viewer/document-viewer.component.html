@@ -1,0 +1,41 @@
+<nb-card class="vh-100 m-0 p-0" style="width: 95vw;">
+    <nb-card-header>
+        <div class="my-auto  d-flex justify-content-between">
+            <h6 class="my-auto"> <i class="fas fa-paperclip text-secondary mr-3" style="opacity: 50%;"></i>{{fileName}}
+            </h6>
+            <div class=" ml-auto my-auto">
+                <button *ngIf="attachments" nbButton status="primary" size="small" class="my-auto  mr-3" (click)="showList()">
+                    <i class="fas fa-list-ul mr-2"></i> 
+                    <span *ngIf="!isShow"> {{'document-viewer.showList' | translate}}</span>
+                    <span  *ngIf="isShow"> {{'document-viewer.hideList' | translate}}</span>
+                </button>
+                <button nbButton status="primary" size="small" class="my-auto" (click)="close()">
+                    <nb-icon icon="close-circle-outline"></nb-icon>{{'Common.close' | translate}}
+                </button>
+            </div>
+
+        </div>
+    </nb-card-header>
+    <nb-card-body class="d-flex" style="width: 95vw;">
+        <div *ngIf="attachments && isShow" [ngClass]="{'w-20': isShow}">
+            <div *ngFor="let ats of attachments; let idx= index"
+                class="d-flex description justify-content-between w-100 list-hover my-auto py-1 px-2">
+                <div style="cursor: pointer;" data-toggle="tooltip" data-placement="top" class="d-flex"
+                    title="{{'shares.content-detail.view' | translate}}">
+                    <i class="fas fa-paperclip text-secondary" style="opacity: 50%;"></i><div style="width: 10rem;"
+                        class="mx-2 font-weight-light text-truncate" (click)="viewDoc(ats)">{{ats?.name}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto" [ngClass]="{'vw-95': !isShow}">
+            <div *ngIf="isImage; else docViewer" class="d-flex" style="max-width: 99vw; min-width: 30vw;">
+                <img [src]="docUrl" class="img-fluid" class="m-auto" />
+            </div>
+        </div>
+    </nb-card-body>
+</nb-card>
+
+<ng-template #docViewer>
+    <ngx-doc-viewer *ngIf="isPdf" [url]="docUrl" viewer="pdf" style="height: 100vh; width: 90vmax;"></ngx-doc-viewer>
+    <ngx-doc-viewer *ngIf="!isPdf" [url]="docUrl" [viewer]="viewType" style="height: 100vh; width: 90vmax;"></ngx-doc-viewer>
+</ng-template>

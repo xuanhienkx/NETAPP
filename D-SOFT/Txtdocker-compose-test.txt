@@ -1,0 +1,48 @@
+version: '3.4'
+
+services:
+  dsoft.authen:
+    image: dsoft.authen
+    build:
+      context: .
+      dockerfile: src/Authen/DSoft.IdentityAuthen/Dockerfile
+    depends_on:
+       - sqlserver-data
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+        - ASPNETCORE_URLS=https://+:5443;http://+:5003
+        - ASPNETCORE_HTTPS_PORT=5443
+        - ASPNETCORE_Kestrel__Certificates__Default__Password=phapnx@1234 
+        - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/dsoft.authen.pfx
+    ports:
+      - '5003:5003'
+      - '5443:5443'
+    volumes: 
+      - ~/.aspnet/https:/https:ro
+    networks:
+      - digitaloffice
+  dsoft.api:
+    image: dsoft.api
+    build:
+      context: .
+      dockerfile: src/DSoftCore/DSoft.Api/Dockerfile
+    depends_on:
+       - sqlserver-data
+       - mongo-data
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+        - ASPNETCORE_URLS=https://+:5445;http://+:5005
+        - ASPNETCORE_HTTPS_PORT=5445
+        - ASPNETCORE_Kestrel__Certificates__Default__Password=phapnx@1234 
+        - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/dsoft.api.pfx
+    ports:
+      - '5005:5005'
+      - '5445:5445'
+    volumes: 
+      - ~/.aspnet/https:/https:ro
+    networks:
+      - digitaloffice
+networks:
+  digitaloffice:
+    driver: bridge
+

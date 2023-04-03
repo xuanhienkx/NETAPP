@@ -1,0 +1,86 @@
+<nb-card class="vip-full-width-dialog">
+    <nb-card-header>
+        <h6>{{'member.list.form' |translate}}</h6>
+    </nb-card-header>
+    <nb-card-body class=" w-100">
+        <form [formGroup]="frm" #fForm="ngForm" (ngSubmit)="onSubmit()" class="step-container" autocomplete="off" novalidate>
+            <div class="form-group">
+                <div class="d-lg-flex justify-content-between">
+                    <div class="mr-3 my-auto w-100">
+                        <input [nbAutocomplete]="auto" fieldSize="small" nbInput autofocus fullWidth formControlName="name" class="form-control form-control-md" type="text" placeholder="{{'member.name.placeholder' | translate}}" />
+                    </div>
+                    <button type="button" size="small" class="createMember-button ml-auto my-auto" nbButton data-toggle="tooltip" data-placement="top" title="{{'member.dialog.user.add.tooltip' | translate}}" (click)="createMember()">
+                        <i class="fas fa-user-plus text-primary mr-2"></i>{{'member.dialog.user.add.title' | translate}}
+                    </button>
+                </div>
+
+            </div>
+            <div class="form-group d-flex flex-column m-0 p-0">
+
+                <div class="d-flex w-100 mx-2 my-2">
+                    <i class="far fa-user-circle vip-icon dialog-member" [class]="selectedUser ? ' ' : 'vip-required'" data-toggle="tooltip" title="{{'member.name.label' | translate}}"></i>
+                    <div *ngIf="selectedUser" class=" list-info info-container d-flex justify-content-between my-auto mx-2">
+                        <div class="item-info flex-column">
+                            <div class="item-info-top">
+                                <span class="text-capitalize text-decoration-none meeting-name font-weight-bold ">
+                                    {{ selectedUser?.displayName}} </span>
+
+                                <span *ngIf="selectedRoles" class="badge badge-vip font-italic ml-2">{{selectedRoles}}</span>
+                            </div>
+                            <div class="item-info-bottom ">
+                                <div class="item-info-bottom pr-2 text-lowercase description">
+                                    <i class="far fa-envelope text-secondary mr-1"></i> {{selectedUser.email?.value}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group d-flex flex-column m-0 p-0">
+                <label class="label required">{{'member.role.label' | translate}}:</label>
+                <div formArrayName="role" *ngFor="let r of roles; let i=index" class="d-flex flex-column">
+                    <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                        <nb-checkbox [checked]="r.id" [formControlName]="i">{{r.name}}</nb-checkbox>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </nb-card-body>
+    <nb-card-footer>
+        <div class="d-flex justify-content-between">
+            <button nbButton size="small" type="button" status="basic" (click)="onClose()">{{'Common.close' |translate}}</button>
+            <div>
+                <button (click)="fForm.ngSubmit.emit()" size="small" class="mx-2" nbButton status="primary" [disabled]="frm.invalid" [class.btn-pulse]="submitted" value="">{{'Common.save' | translate}}</button>
+                <button (click)="onSubmit(true)" size="small" class="ml-2" nbButton status="primary" [disabled]="frm.invalid" [class.btn-pulse]="submitted" value="">{{'Common.saveAndCreate' | translate}}</button>
+
+            </div>
+        </div>
+    </nb-card-footer>
+</nb-card>
+<nb-autocomplete #auto (selectedChange)="onMemberSelected($event)">
+    <nb-option *ngFor="let op of filteredUser$ | async" [value]="op.userName">
+        <div class="d-flex">
+            <div class="logo-image mr-2">
+                <i class="far fa-user-circle vip-icon dialog-member " style="opacity: 30%;"></i>
+            </div>
+            <div class="info-container d-flex justify-content-between">
+                <div class="item-info flex-column">
+                    <div class="item-info-top" style="position: relative;">
+                        <span class="text-reset text-decoration-none meeting-name font-weight-bold mr-1">
+                            {{ op.displayName }}</span>
+                        <span class="badge badge-vip font-italic">{{buildRoleNames(op?.userName)}}</span>
+                    </div>
+
+                    <div class="item-info-bottom " *ngIf="op.email">
+                        <small class=" text-lowercase description">
+                            <i class="far fa-envelope text-secondary"></i>
+                            {{op.email?.value}}
+                        </small>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nb-option>
+</nb-autocomplete>

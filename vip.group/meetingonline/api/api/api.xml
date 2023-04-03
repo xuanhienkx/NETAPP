@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>api</name>
+    </assembly>
+    <members>
+        <member name="T:api.Controllers.DelegateRequestController">
+            <inheritdoc />
+        </member>
+        <member name="M:api.Controllers.DelegateRequestController.#ctor(MediatR.IMediator,api.common.Shared.Interfaces.ICurrentUser,Microsoft.AspNetCore.Identity.ILookupNormalizer,Microsoft.AspNetCore.Http.IHttpContextAccessor,api.common.Shared.Interfaces.ILocalizer,Microsoft.Extensions.Logging.ILogger{api.common.Shared.Base.BaseController})">
+            <inheritdoc />
+        </member>
+        <member name="M:api.Controllers.DelegateRequestController.CreateRequest(api.domain.Commands.DelegateRequestUpdateCommand)">
+            <summary>
+            User submit to get approval of all his requested delegations for a specific meeting
+            </summary>
+        </member>
+        <member name="M:api.Controllers.DelegateRequestController.RequestDelegate(api.domain.Commands.DelegateRequestResponseCommand)">
+            <summary>
+            Admin submit list of request approval/reject
+            </summary>
+        </member>
+        <member name="M:api.Controllers.DelegateRequestController.GetAllDelegate(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Get all delegations for a meeting for administrator who review before doing approve or reject the request
+            </summary>
+            <param name="meetingId"></param>
+            <param name="size"></param>
+            <param name="index"></param>
+            <param name="searchText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.DelegateRequestController.RequestDelegate(System.String,System.String)">
+            <summary>
+            Get delegation for a mandator when checkin
+            </summary>
+            <param name="meetingId"></param>
+            <param name="delegationId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.DelegateRequestController.CurrentDelegate(System.String)">
+            <summary>
+            Get all delegation request for current login user where user is mandator or delegation
+            </summary>
+            <param name="meetingId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:api.Controllers.MeetingController">
+            <inheritdoc />
+        </member>
+        <member name="M:api.Controllers.MeetingController.#ctor(MediatR.IMediator,api.common.Shared.Interfaces.ICurrentUser,api.common.Shared.Interfaces.ILocalizer,Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.AspNetCore.Identity.ILookupNormalizer,Microsoft.Extensions.Logging.ILogger{api.common.Shared.Base.BaseController})">
+            <inheritdoc />
+        </member>
+        <member name="M:api.Controllers.MeetingController.GetAll(System.Boolean)">
+            <summary>
+            Get all meeting for login user
+            </summary>
+            <param name="isAll">True to include deleted one</param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.Post(api.domain.Commands.MeetingCreateCommand)">
+            <summary>
+            Create new meeting
+            </summary>
+            <param name="meeting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.Put(api.domain.Commands.MeetingUpdateCommand)">
+            <summary>
+            Update meeting
+            </summary>
+            <param name="meeting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.Delete(System.String)">
+            <summary>
+            Delete meeting
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.Get(System.String)">
+            <summary>
+            Get by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.StartMeeting(System.String,api.common.Models.MeetingStatus)">
+            <summary>
+            Set stats of a meeting. Ex: Started -> Lock -> Open -> Close
+            </summary>
+            <param name="id"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.MeetingContent(System.String,api.common.Models.MeetingInfo)">
+            <summary>
+            Update meeting info to meeting
+            </summary>
+            <param name="meetingId"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.MeetingContentWithElection(System.String,api.common.Models.MeetingInfo)">
+            <summary>
+            Update meeting info with flag to update meeting election matter
+            </summary>
+            <param name="meetingId"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.MeetingContent(System.String,System.String)">
+            <summary>
+            Delete a meeting info
+            </summary>
+            <param name="meetingId"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.MeetingContent(System.String,System.String,System.String)">
+            <summary>
+            Delete a attachment for specific meeting info
+            </summary>
+            <param name="meetingId"></param>
+            <param name="contentId"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.MeetingElectionMatter(System.String,api.common.Models.ElectionMatter)">
+            <summary>
+            Update election matter to meeting
+            </summary>
+            <param name="meetingId"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.MeetingElectionMatter(System.String,System.String)">
+            <summary>
+            Delete a election matter from meeting
+            </summary>
+            <param name="meetingId"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.MeetingElectionMatter(System.String,System.String,System.Int32)">
+            <summary>
+            Reorder the election matter
+            </summary>
+            <param name="meetingId"></param>
+            <param name="matterId"></param>
+            <param name="newIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.MeetingElectionMatterMedia(System.String,System.String,System.String)">
+            <summary>
+            Delete an attachment from election matter
+            </summary>
+            <param name="meetingId"></param>
+            <param name="matterId"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.MeetingElectionMatterOption(System.String,System.String,System.String)">
+            <summary>
+            Delete an option from election matter
+            </summary>
+            <param name="meetingId"></param>
+            <param name="matterId"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.GetHolder(System.String,System.String)">
+            <summary>
+            Get a holder from meeting
+            </summary>
+            <param name="meetingId"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.GetCurrentHolder(System.String)">
+            <summary>
+            Get all holder for a meeting
+            </summary>
+            <param name="meetingId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.GetAllHolder(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Get or Search holder from meeting with paging
+            </summary>
+            <param name="meetingId"></param>
+            <param name="size"></param>
+            <param name="index"></param>
+            <param name="searchText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.UploadHolders(System.String,api.common.Models.MediaResource)">
+            <summary>
+            Upload a file with all holders for a meeting
+            </summary>
+            <param name="meetingId"></param>
+            <param name="fileResource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.InsertOrUpdateHolder(System.String,api.common.Models.Holder)">
+            <summary>
+            Update a holder for meeting
+            </summary>
+            <param name="meetingId"></param>
+            <param name="holder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.DeleteHolder(System.String,System.String)">
+            <summary>
+            Delete a holder from meeting
+            </summary>
+            <param name="meetingId"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.HolderConfirmAttend(System.String,System.String,System.Boolean)">
+            <summary>
+            Admin set holder confirm status to attend a meeting (perhaps confirm via telephone)
+            </summary>
+            <param name="meetingId"></param>
+            <param name="holderId"></param>
+            <param name="isConfirmed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.HolderCheckOut(System.String)">
+            <summary>
+            User is a attend confirm to check out online
+            </summary>
+            <param name="meetingId"></param> 
+            <returns></returns>
+            attachments : This is option to face 2, allow attachments when admin setting required attachment when check-in online .
+            
+        </member>
+        <member name="M:api.Controllers.MeetingController.HolderCheckIn(System.String)">
+            <summary>
+            User is a holder confirm to check in online
+            </summary>
+            <param name="meetingId"></param>
+            <returns></returns>
+            attachments : This is option to face 2, allow attachments when admin setting required attachment when check-in online .
+            
+        </member>
+        <member name="M:api.Controllers.MeetingController.GetAllAttendee(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Get/Search attendee for a meeting with paging
+            </summary>
+            <param name="meetingId"></param>
+            <param name="size"></param>
+            <param name="index"></param>
+            <param name="searchText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.GetAttendeeDelegated(System.String)">
+            <summary>
+            Get attendee who is selected as delegation
+            </summary>
+            <param name="meetingId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.InsertOrUpdateAttendee(System.String,api.common.Models.Attendee)">
+            <summary>
+            Update an attendee for meeting
+            </summary>
+            <param name="meetingId"></param>
+            <param name="attendee"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.DeleteAttendee(System.String,System.String)">
+            <summary>
+            Delete an attendee
+            </summary>
+            <param name="meetingId"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.SubmitVotes(System.String,System.String,System.Collections.Generic.IEnumerable{api.common.Models.ElectionVote})">
+            <summary>
+            Admin update vote result for a election matter
+            </summary>
+            <param name="meetingId"></param>
+            <param name="attendeeId"></param>
+            <param name="votes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.CurrentAttendee(System.String)">
+            <summary>
+            Get attendee info for current user if any
+            </summary>
+            <param name="meetingId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.AttendeeOffLinePrint(System.String,System.String)">
+            <summary>
+            Print all file for attendee check-in offline : confirm, card, election, master
+            </summary>
+            <param name="meetingId"></param>
+            <param name="attendeeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingController.AttendeeSubmitVotes(System.String,System.Collections.Generic.IEnumerable{api.common.Models.ElectionVote})">
+            <summary>
+            Attendee submit a vote online
+            </summary>
+            <param name="meetingId"></param>
+            <param name="votes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingRoleController.GetById(System.String)">
+            <summary>
+            Get meeting role
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingRoleController.GetAll(System.Boolean)">
+            <summary>
+            Get all meeting role
+            </summary>
+            <param name="isGetAll">True to get all, including deleted</param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingRoleController.GetByType(api.common.Models.MeetingType,System.Boolean)">
+            <summary>
+            Get all for a specific meeting type
+            </summary>
+            <param name="meetingType"></param>
+            <param name="isGetAll"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingRoleController.Post(api.domain.Commands.MeetingRoleCreateCommand)">
+            <summary>
+            Create a role
+            </summary>
+            <param name="meeting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingRoleController.Put(api.domain.Commands.MeetingRoleUpdateCommand)">
+            <summary>
+            Update a role
+            </summary>
+            <param name="meeting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingRoleController.Block(System.String,System.Boolean)">
+            <summary>
+            Lock the role
+            </summary>
+            <param name="id"></param>
+            <param name="isBlock"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.MeetingRoleController.Delete(System.String)">
+            <summary>
+            Delete a role
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.UserController.Search(System.String,System.Int32)">
+            <summary>
+            Search user by username or email
+            </summary>
+            <param name="userNameOrEmail"></param>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.UserController.SearchByMeeting(System.String,System.Int32)">
+            <summary>
+            Get all the users who can access to a meeting,  including member or viewer
+            </summary>
+            <param name="meetingId"></param>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.UserController.GetMeetingMemberAccess(System.String)">
+            <summary>
+            Get all the member access, who can manage the meeting
+            </summary>
+            <param name="meetingId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.UserController.Language(System.String,System.String)">
+            <summary>
+            User update the language that he wants to 
+            </summary>
+            <param name="id"></param>
+            <param name="lang"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.UserController.MeetingGroup(api.domain.Commands.MeetingGroupUpdateCommand)">
+            <summary>
+            User create his meeting group
+            </summary>
+            <param name="group"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.UserController.MeetingGroup(System.String)">
+            <summary>
+            Delete a meeting group
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.UserController.MeetingAccess(System.String,System.String,api.domain.Commands.MeetingAccessCommand)">
+            <summary>
+            Giving access for user to a meeting
+            </summary>
+            <param name="meetingId"></param>
+            <param name="userId"></param>
+            <param name="access"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.UserController.DeleteMeetingAccess(System.String,System.String)">
+            <summary>
+            Remove access from user to a meeting
+            </summary>
+            <param name="meetingId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api.Controllers.UserController.BlockMeetingAccess(System.String,System.String,System.Boolean)">
+            <summary>
+            Lock the current access for user to meeting
+            </summary>
+            <param name="meetingId"></param>
+            <param name="userId"></param>
+            <param name="isLocked"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

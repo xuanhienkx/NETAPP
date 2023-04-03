@@ -1,0 +1,38 @@
+﻿{
+    "code": "DE164",
+    "name": "DE164 - Thông báo hạch toán chứng khoán",
+    "csvFields": [
+        {
+            "name": "Code",
+            "end": ";"
+        },
+        {
+            "name": "SubAccount",
+            "end": ";"
+        },
+        {
+            "name": "ParValue",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "MemberCode",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber", 
+            "end": ";"
+        },
+        {
+            "name": "SecurityType",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "Quantity",
+            "type": "Integer",
+            "end": ";"
+        }
+
+    ]
+} 

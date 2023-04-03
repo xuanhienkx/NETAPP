@@ -1,0 +1,91 @@
+﻿@using System.Web.Mvc.Ajax
+@model VICS.Manager.WebApp.Models.CustomersViewModel
+
+@{
+    ViewBag.Title = "Index";
+
+} 
+
+<div id="header-page" class="row wrapper border-bottom  page-heading">
+    <div class="col-lg-10">
+        <h2>Danh sách khách hàng</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="/">Trang chủ</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index","Customer")">SMS</a>
+            </li>
+            <li class="active">
+                <strong>Khách hàng</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+        <div class="list-icon">
+            <ul>
+                <li>
+                    <a href="@Url.Action("Create","Customer")" title="tạo mới"><i class="fa fa-plus-circle fa-2x fa-w"></i></a>
+                </li>
+                <li>
+                    <a href="#" title="filter" id="filter-icon" class="isShow"><i class="fa fa-filter fa-2x fa-w"></i></a>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+<div id="filter" class="row">
+    @using (Ajax.BeginForm("List", "Customer", null, new AjaxOptions()
+    {
+        UpdateTargetId = "ListData",
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "get"
+    },new{@id="form-filter"}))
+    {
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-2">CustomerId</div>
+                <div class="col-lg-4">@Html.TextBoxFor(m => m.CustomerId, new { @class = "form-control" })</div>
+                <div class="col-lg-2">Điện thoại</div>
+                <div class="col-lg-4">@Html.TextBoxFor(m => m.Mobile, new { @class = "form-control" })</div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">Email</div>
+                <div class="col-lg-4">@Html.TextBoxFor(m => m.Email, new { @class = "form-control" })</div>
+                <div class="col-lg-2">IsClose</div>
+                <div class="col-lg-4">@Html.CheckBoxFor(m => m.IsClose)</div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="middle-box">
+                <input id="submit-search" class="btn btn-primary" type="submit" value="Tìm "> 
+                <input id="reset-search" class="btn btn-default" type="reset" value="Refesh"> 
+            </div> 
+        </div>
+    }
+</div>
+<div class="row"></div>
+<div id="ListData" class="row"> 
+    @Html.Action("List", "Customer")
+    @ViewBag.Data
+</div>
+
+<script type="text/javascript">
+    $("#filter-icon").click(function () {
+        if ($(this).hasClass("isShow")) {
+            $(this).removeClass("isShow").addClass("isHide");
+            $(this).find(".fa-filter").addClass("text-navy");
+            $("#filter").show();
+        } else {
+            $(this).removeClass("isHide").addClass("isShow");
+            $(this).find(".fa-filter").removeClass("text-navy");
+            $("#filter").hide();
+        } 
+    });
+    $("#reset-search").click(function (e) {
+        e.preventDefault();
+        $("#form-filter").trigger("reset");
+        $("#submit-search").click();
+    });
+</script>

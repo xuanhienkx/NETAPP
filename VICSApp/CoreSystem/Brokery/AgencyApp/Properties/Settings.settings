@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Brokery.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DefaultRowBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DefaultSelectedRowBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">ControlLight</Value>
+    </Setting>
+    <Setting Name="AlternateRowBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">MintCream</Value>
+    </Setting>
+    <Setting Name="AlternateSelectedRowBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Control</Value>
+    </Setting>
+    <Setting Name="AgencyLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Tp. Hà Nội</Value>
+    </Setting>
+    <Setting Name="Report_Footer1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Người lập biểu</Value>
+    </Setting>
+    <Setting Name="Report_Footer2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Kế toán trưởng</Value>
+    </Setting>
+    <Setting Name="Report_Footer3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Giám đốc</Value>
+    </Setting>
+    <Setting Name="AgencyName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Chi nhánh: Tầng 4, Hà Thành Plaza, 102 Thái Thịnh, Đống Đa, Hà Nội Tel:(84-4) 35148766 - Fax:(84-4) 35148768</Value>
+    </Setting>
+    <Setting Name="AgencyAddressAndTelephone" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="AgencyApp_AgencyWebService_GateWay" Type="(Web Service URL)" Scope="User">
+      <Value Profile="(Default)">http://gw.vics.com.vn/sbscore.net40/Brokery.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

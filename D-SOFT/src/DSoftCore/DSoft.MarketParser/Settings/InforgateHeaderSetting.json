@@ -1,0 +1,24 @@
+[
+  {
+    "name": "BeginString",
+    "tag": 8
+  },
+  {
+    "name": "BodyLength",
+    "tag": 9
+  },
+  {
+    "name": "Type",
+    "tag": 35
+  },
+  {
+    "name": "SenderCompId",
+    "tag": 49
+  },
+  {
+    "name": "SendingTime",
+    "tag": 52,
+    "type": "Date",
+    "Format": "yyyyMMdd-HH:mm:ss"
+  }
+]

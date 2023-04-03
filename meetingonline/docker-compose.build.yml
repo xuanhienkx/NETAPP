@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+    skylar-api:
+        image: skylartech/api:latest
+        restart: always
+        build:
+            context: ./api
+            dockerfile: ./api/Dockerfile
+        environment:
+            #- ASPNETCORE_URLS=http://+:5000;https://+:5001
+            - ASPNETCORE_URLS=http://+:5000;
+        ports:
+            - 8800:5000
+        volumes:
+            - ~/assets:/usr/share/assets
+
+    skylar-web:
+        image: skylartech/web:latest
+        restart: always
+        build:
+            context: ./web
+            dockerfile: Dockerfile
+            args:
+                - env=prod
+        ports:
+            - 80:8080
+        volumes:
+            - ~/assets:/usr/share/nginx/html/web/media
+

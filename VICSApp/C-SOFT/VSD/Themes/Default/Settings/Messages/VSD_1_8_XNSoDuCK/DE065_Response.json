@@ -1,0 +1,96 @@
+﻿{
+    "code": "DE065",
+    "name": "DE065- Thông tin số dư tài khoản lưu ký chứng khoán chi tiết của NĐT",
+    "parameters": [{
+            "name": "RefDocNumber",
+            "start": "TXNUM:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "StockCodeFrom",
+            "start": "FRSICODE:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "StockCodeTo",
+            "start": "TOSICODE",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "BoardType",
+            "start": "BRID:",
+            "end": "<BrLine>"
+        },
+        {
+            "name": "ReportDate",
+            "type": "Date",
+            "format": "yyyyMMdd",
+            "start": "DATE_T:"
+        }
+    ],
+    "csvFields": [{
+            "name": "PinNumber",
+            "type": "Integer",
+            "end": ";"
+        },
+        {
+            "name": "ShortName",
+            "end": ";"
+        },
+        {
+            "name": "FullName",
+            "end": ";"
+        },
+        {
+            "name": "CardIdentity",
+            "end": ";"
+        },
+        {
+            "name": "MemberBiccode",
+            "end": ";"
+        },
+        {
+            "name": "MemberName",
+            "end": ";"
+        },
+        {
+            "name": "StockCode",
+            "end": ";"
+        },
+        {
+            "name": "StockName",
+            "end": ";"
+        },
+        {
+            "name": "CardIssuedDate",
+            "end": ";",
+            "format": "yyyyMMdd",
+            "type": "Date"
+        },
+        {
+            "name": "Nationality",
+            "end": ";"
+        },
+        {
+            "name": "CustomerNumber",
+            "end": ";"
+        },
+        {
+            "name": "StockBangGl",
+            "end": ";"
+        },
+        {
+            "name": "AccountType",
+            "end": ";"
+        },
+        {
+            "name": "Quantity",
+            "end": ";",
+            "type": "Integer"
+        },
+        {
+            "name": "Notes",
+            "end": "<BrLine>"
+        }
+    ]
+}

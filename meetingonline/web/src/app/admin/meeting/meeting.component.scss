@@ -1,0 +1,37 @@
+@import '../../@theme/styles/themes';
+@import '../meeting/meeting-list/meeting-list.component.scss';
+@include nb-install-component() {
+    @include meetingList-Style();
+     :host {
+        display: flex;
+        .info-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        @include nb-ltr(margin-left, 0.5rem);
+        @include nb-rtl(margin-right, 0.5rem);
+    }
+    .truncate-overflow {
+        --max-lines: 3;
+        position: relative;
+        // max-height: calc(var(--lh) * var(--max-lines));
+        max-width: calc(var(--lh));
+        overflow: hidden;
+        padding-right: 1rem;
+        /* space for ellipsis */
+    }
+    .truncate-overflow::after {
+        position: absolute;
+        content: "...";
+        inset-block-end: 0;
+        /* "bottom" */
+        inset-inline-end: 0;
+        /* "right" */
+    }
+    .truncate-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

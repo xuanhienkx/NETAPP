@@ -1,0 +1,133 @@
+<div class="d-lg-flex w-lg-100 pb-3 justify-content-between">
+    <h4 class="list-title">{{ 'info.title' |translate}}</h4>
+
+    <div class="d-flex justify-content-between" *ngIf="holder">
+        <span *ngIf="canCheckOut" class="description my-auto py-2  mr-3" [translate]="'delegateInfo.checkIn.desc'"
+            [translateParams]="{date: holder?.checkedInDate?.value | date:'dd/MM/yyyy', time: holder?.checkedInDate?.value | date:'HH:mm'}">
+        </span>
+        <button nbButton status="primary" size="small" *ngIf="canCheckIn" class="ml-3 my-auto" (click)="checkIn()">
+            {{'info.checkIn.title' | translate}}
+        </button>
+        <button nbButton status="primary" size="small" class="ml-3 my-auto" *ngIf="canCheckOut" (click)="checkOut()">
+            {{'info.checkOut.title' | translate}}
+        </button>
+        <button nbButton status="info" size="small" *ngIf="canDelegate" class="ml-3 my-auto" (click)="delegate()">
+            {{'delegateInfo.delegated.title' | translate}}
+        </button>
+    </div>
+
+</div>
+<vip-account-right-info [type]="'holder'" class="mb-3" *ngIf="holder"  [account]="holder"></vip-account-right-info>
+<nb-card accent="info" status="basic" class="mx-0 px-0">
+    <nb-card-body class="pt-0 mb-0 pb-0">
+        <div class="meeting-info my-3">
+            <div class="info-group">
+                <div class="info-lable">Tên hội nghị:</div>
+                <div class="info-detail">{{mt?.name}}</div>
+            </div>
+            <div class="info-group">
+                <div class="info-lable">Địa điểm tổ chức:</div>
+                <div class="info-detail">{{mt?.address}}</div>
+            </div>
+            <div class="info-group">
+                <div class="info-lable">Loại hội nghị:</div>
+                <div class="info-detail"> <strong class="badge badge-primary p-2 my-auto">{{meetingTypeName}}</strong>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="info-group">
+                        <div class="info-lable">Ngày tổ chức:</div>
+                        <div class="info-detail">{{mt?.openedDate?.value | date:'dd/MM/yyyy'}}</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-lable" *ngIf="isGeneralMeeting">{{'info.holder.totalHolder' | translate }}:
+                        </div>
+                        <div class="info-lable" *ngIf="!isGeneralMeeting">{{'info.holder.totalApartment' | translate }}:
+                        </div>
+                        <div class="info-detail"><b>{{mt?.summary?.holders | number:'1.0-0'}} </b></div>
+                    </div>
+                </div>
+                <div class="col-6" *ngIf="isGeneralMeeting">
+                    <div class="info-group">
+                        <div class="info-lable">{{'info.holder.totalShared' | translate }}:</div>
+                        <div class="info-detail"><b>{{mt?.summary?.shares | number:'1.0-0'}} </b></div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-lable">{{'info.holder.totalRight' | translate }}:</div>
+                        <div class="info-detail"><b>{{mt?.summary?.votes | number:'1.0-0'}} </b></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nb-card-body>
+</nb-card>
+
+<nb-card accent="info" class="w-100" *ngIf=mt?.summary>
+    <nb-card-header class="d-flex justify-content-between">
+        <div>{{'info.holder.title' | translate }}</div>
+
+    </nb-card-header>
+    <nb-card-body>
+
+        <div class="row right-for">
+            <div class="col-4">
+                <vip-meeting-summary-pie class="w-100" type="full" [value]="poweredVotes"></vip-meeting-summary-pie>
+            </div>
+            <div class="col-3 d-flex">
+                <div class="m-auto">
+                    <div class="border ratio-zone d-flex flex-column">
+                        <div class="border-bottom ratio-title py-2">{{'info.holder.attendeeRatio' | translate }}</div>
+                        <div class="ratio">
+                            <div class="m-auto">
+                                <b>{{mt?.summary?.checkInVotes*100/mt?.summary?.votes | number:'1.0-2'}} </b>%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 d-flex">
+                <div class="m-auto">
+                    <div class="meeting-rigth-info  w-100">
+                        <div class="d-flex justify-content-lg-between info-group">
+                            <div class="info-lable">{{'info.holder.attendee' | translate }}</div>
+                            <div class="info-detail"><b>{{mt?.summary?.checkIn | number:'1.0-0'}} </b></div>
+                        </div>
+                        <div class="d-flex justify-content-lg-between info-group">
+                            <div class="info-lable">{{'info.holder.totalAttendeeHolder' | translate }}</div>
+                            <div class="info-detail"><b>{{mt?.summary?.holderCheckIn | number:'1.0-0'}} </b></div>
+                        </div>
+                        <div class="d-flex justify-content-lg-between info-group">
+                            <div class="info-lable">{{'info.holder.onlineCheckIn' | translate }}</div>
+                            <div class="info-detail"><b>{{mt?.summary?.onlineCheckIn | number:'1.0-0'}} </b></div>
+                        </div>
+                        <div class="d-flex justify-content-lg-between info-group">
+                            <div class="info-lable">{{'info.holder.delegation' | translate }}</div>
+                            <div class="info-detail">
+                                <b>{{mt?.summary?.checkIn - (mt?.summary?.holderCheckIn + mt?.summary?.onlineCheckIn) | number:'1.0-0'}}
+                                </b></div>
+                        </div>
+                        <div class="d-flex justify-content-lg-between info-group">
+                            <div class="info-lable">{{'info.holder.attendeeVotes' | translate }}</div>
+                            <div class="info-detail"><b>{{mt?.summary?.checkInVotes | number:'1.0-0'}} </b></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </nb-card-body>
+</nb-card>
+<nb-card accent="primary" *ngIf="canOpenMeetingSession">
+    <nb-card-body>
+        <div class="d-flex justify-content-between">
+            <span>{{'meeting.open.desc' | translate}}</span>
+            <button nbButton status="primary" size="small" class="my-lg-auto" (click)="openMeetingSession()">
+                {{'meeting.open.title' | translate}}
+            </button>
+        </div>
+    </nb-card-body>
+</nb-card>

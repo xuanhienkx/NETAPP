@@ -1,0 +1,15 @@
+<nb-card class="mb-0" style="min-width: 20rem">
+    <nb-card-header class="m-0">
+        <div class="d-lg-flex w-lg-100">
+            <ng-content select="[infoHeader]"></ng-content>
+            <div class="action ml-auto ">
+                <ng-content select="[buttonEdit]"> </ng-content>
+            </div>
+        </div>
+
+    </nb-card-header>
+    <nb-card-body class="m-0" style="max-height: 90vh; overflow: auto;">
+        <ng-content select="[descriptionContent]"></ng-content>
+        <ng-content select="[documentList]"></ng-content>
+    </nb-card-body>
+</nb-card>

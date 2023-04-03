@@ -1,0 +1,46 @@
+<!-- Form -->
+<form id="demo-form" class="contact-form white-popup-block mfp-hide" action="php/contact-form.php" method="POST">
+    <div class="form-row mt-2">
+        <div class="col-sm-12">
+            <h2 class="font-weight-bold text-center text-7 mb-4">Get a Quote</h2>
+        </div>
+    </div>
+
+    <div class="contact-form-success alert alert-success d-none mt-4" id="contactSuccess">
+        <strong>Success!</strong> Your message has been sent to us.
+    </div>
+
+    <div class="contact-form-error alert alert-danger d-none mt-4" id="contactError">
+        <strong>Error!</strong> There was an error sending your message.
+        <span class="mail-error-message text-1 d-block" id="mailErrorMessage"></span>
+    </div>
+
+    <div class="custom-form-style-1 custom-form-style-1-rounded">
+        <div class="form-row">
+            <div class="form-group col mb-2">
+                <input type="text" name="name" class="form-control" value="" placeholder="NAME*" data-msg-required="Please enter your name." required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col mb-2">
+                <input type="email" name="Email" class="form-control" value="" placeholder="EMAIL*" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col mb-2">
+                <input type="text" name="website" class="form-control" value="" placeholder="WEBSITE*" data-msg-required="Please enter your website address." required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                <input type="text" name="company" class="form-control" value="" placeholder="COMPANY NAME*" data-msg-required="Please enter your company name." required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col mb-0">
+                <input type="submit" class="btn btn-primary btn-outline btn-rounded font-weight-semibold text-center text-4 btn-py-2 w-100 mb-3" value="Submit" data-loading-text="Loading...">
+            </div>
+        </div>
+    </div>
+
+</form>

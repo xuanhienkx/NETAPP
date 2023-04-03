@@ -1,0 +1,173 @@
+﻿#side-menu > li > ul > li > a.active {
+    background-color: #428bca;
+    color: #fff;
+}
+
+#side-menu > li > ul > li > a {
+    padding-left: 30px;
+}
+
+.page-heading {
+    border-top: 0 none;
+    padding: 0 10px 20px;
+    margin-bottom: 20px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e7eaec !important;
+}
+
+.breadcrumb {
+    /*background-color: ;*/
+    background: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+    .breadcrumb > li a {
+        color: inherit;
+    }
+
+    .breadcrumb > .active {
+        color: inherit;
+    }
+
+#header-page {
+    background-color: #428bca;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.fa-w {
+    color: #ffffff;
+}
+
+.fa-green {
+    color: green;
+}
+
+#filter {
+    border-radius: 5px;
+    background-color: #e7eaec;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    line-height: 25px;
+    padding: 5px;
+}
+
+    #filter div {
+        padding: 5px 10px;
+    }
+
+.list-icon {
+    position: relative;
+    padding-top: 35px;
+}
+
+    .list-icon > ul {
+        list-style: none;
+    }
+
+        .list-icon > ul > li {
+            display: inline;
+            padding: 5px 15px;
+        }
+
+.form-control {
+    width: 99% !important;
+}
+/*mbq custom theme dialog*/
+.validation-summary-errors ul li {
+    list-style: none;
+}
+
+.jconfirm.mbqlight {
+    z-index: 1111 !important;
+}
+
+    .jconfirm.mbqlight .jconfirm-bg {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .jconfirm.mbqlight .jconfirm-box {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        overflow: hidden;
+        /*margin-top: 60px !important;*/
+    }
+
+        .jconfirm.mbqlight .jconfirm-box div.title {
+            font-weight: inherit;
+            background-color: #337ab7;
+            border-bottom: solid 2px #337ab7;
+            color: #FFF;
+        }
+
+    .jconfirm.mbqlight.error .jconfirm-box div.title {
+        background-color: #CE4E33;
+    }
+
+    .jconfirm.mbqlight .jconfirm-box .closeIcon .glyphicon-remove {
+        color: #fff;
+    }
+
+    .jconfirm.mbqlight .jconfirm-box > .buttons {
+        float: right;
+        padding: 1px 8px 9px 7px;
+    }
+
+
+    .jconfirm.mbqlight .jconfirm-box .buttons button {
+        border: none;
+        background-image: none;
+        /*text-transform: uppercase;*/
+        font-size: 12px;
+        /*font-weight: bold;*/
+        padding: 10px;
+        text-shadow: none;
+        -webkit-transition: background .1s;
+        transition: background .1s;
+        color: white;
+        margin-top: 7px;
+    }
+
+        .jconfirm.mbqlight .jconfirm-box .buttons button.btn-default {
+            box-shadow: none;
+            color: #333;
+        }
+
+    .jconfirm.mbqlight .jconfirm-box > .mbq-buttons {
+        margin: -20px auto;
+    }
+
+    .jconfirm.mbqlight .jconfirm-box div.content {
+        max-height: 370px;
+        margin: 10px auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ddd !important;
+    }
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}

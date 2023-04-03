@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  sqlserverdb:
+   container_name: sqlserverdb
+   environment: 
+      SA_PASSWORD: '${DB_PASSWORD:-Admin@1234}'
+      ACCEPT_EULA: 'Y'
+   restart: always
+   volumes:
+      - mysql_data:/var/lib/sqlserver/data
+   ports:
+      - "1435:1433"
+  mysqldb: 
+    environment: 
+        MYSQL_ROOT_PASSWORD: '${DB_PASSWORD:-Admin@1234}'
+    restart: always
+    volumes:
+        - sqlserver_data:/var/lib/mysql
+    ports:
+        - "3306:3306"

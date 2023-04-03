@@ -1,0 +1,102 @@
+150450 >>> main(): Login to server.
+150450 >>> processLogin() : Verifying login information.
+150450 >>> ProcessLogin() : processLogin() : Connected. Ready to receive data from server
+150450 >>> main(): Process messages.
+151739 >>> send_MsgControl() : ACK Error java.net.SocketException: Socket is closed
+151739 >>> main(): ThreadDataTranmission has been detroyed after finised its tasks.
+151749 >>> main(): Login to server.
+151749 >>> processLogin() : Verifying login information.
+151749 >>> processLogin() : This user is in use
+151749 >>> main(): User connected already.
+151749 >>> main(): Try to connect again in 15 seconds.
+151805 >>> main(): Login to server.
+151805 >>> processLogin() : Verifying login information.
+151805 >>> ProcessLogin() : processLogin() : Connected. Ready to receive data from server
+151805 >>> main(): Process messages.
+153408 >>> processMsgData() : Server and Client offset are different.
+153408 >>> processMsgData() : Current Message Size is: 29
+153408 >>> send_MsgControl() : ACK Error java.net.SocketException: Socket is closed
+153408 >>> main(): ThreadDataTranmission has been detroyed after finised its tasks.
+153418 >>> main(): Login to server.
+153418 >>> processLogin() : Verifying login information.
+153418 >>> processLogin() : This user is in use
+153418 >>> main(): User connected already.
+153418 >>> main(): Try to connect again in 15 seconds.
+153433 >>> main(): Login to server.
+153433 >>> processLogin() : Verifying login information.
+153433 >>> processLogin() : This user is in use
+153433 >>> main(): User connected already.
+153433 >>> main(): Try to connect again in 15 seconds.
+153448 >>> main(): Login to server.
+153448 >>> processLogin() : Verifying login information.
+153449 >>> ProcessLogin() : processLogin() : Connected. Ready to receive data from server
+153449 >>> main(): Process messages.
+154123 >>> processMsgData() : Timeout. Unable to receive enough package data
+154123 >>> send_MsgControl() : ACK Error java.net.SocketException: Socket is closed
+154123 >>> main(): ThreadDataTranmission has been detroyed after finised its tasks.
+154133 >>> main(): Login to server.
+154133 >>> processLogin() : Verifying login information.
+154133 >>> ProcessLogin() : processLogin() : Connected. Ready to receive data from server
+154133 >>> main(): Process messages.
+161624 >>> processMsgData() : Timeout. Unable to receive enough package data
+161624 >>> send_MsgControl() : ACK Error java.net.SocketException: Socket is closed
+161624 >>> main(): ThreadDataTranmission has been detroyed after finised its tasks.
+161634 >>> main(): Login to server.
+161634 >>> processLogin() : Verifying login information.
+161635 >>> processLogin() : This user is in use
+161635 >>> main(): User connected already.
+161635 >>> main(): Try to connect again in 15 seconds.
+161650 >>> main(): Login to server.
+161650 >>> processLogin() : Verifying login information.
+161650 >>> ProcessLogin() : processLogin() : Connected. Ready to receive data from server
+161650 >>> main(): Process messages.
+165123 >>> processMsgData() : Timeout. Unable to receive enough package data
+165123 >>> send_MsgControl() : ACK Error java.net.SocketException: Socket is closed
+165123 >>> main(): ThreadDataTranmission has been detroyed after finised its tasks.
+165133 >>> main(): Login to server.
+165133 >>> processLogin() : Verifying login information.
+165134 >>> processLogin() : This user is in use
+165134 >>> main(): User connected already.
+165134 >>> main(): Try to connect again in 15 seconds.
+165149 >>> main(): Login to server.
+165149 >>> processLogin() : Verifying login information.
+165149 >>> processLogin() : This user is in use
+165149 >>> main(): User connected already.
+165149 >>> main(): Try to connect again in 15 seconds.
+165204 >>> main(): Login to server.
+165204 >>> processLogin() : Verifying login information.
+165204 >>> ProcessLogin() : processLogin() : Connected. Ready to receive data from server
+165204 >>> main(): Process messages.
+165345 >>> processMsgData() : Server and Client offset are different.
+165345 >>> processMsgData() : Current Message Size is: 52
+165345 >>> send_MsgControl() : ACK Error java.net.SocketException: Socket is closed
+165345 >>> main(): ThreadDataTranmission has been detroyed after finised its tasks.
+165355 >>> main(): Login to server.
+165355 >>> processLogin() : Verifying login information.
+165355 >>> processLogin() : This user is in use
+165355 >>> main(): User connected already.
+165355 >>> main(): Try to connect again in 15 seconds.
+165410 >>> main(): Login to server.
+165410 >>> processLogin() : Verifying login information.
+165410 >>> processLogin() : This user is in use
+165410 >>> main(): User connected already.
+165410 >>> main(): Try to connect again in 15 seconds.
+165425 >>> main(): Login to server.
+165425 >>> processLogin() : Verifying login information.
+165426 >>> ProcessLogin() : processLogin() : Connected. Ready to receive data from server
+165426 >>> main(): Process messages.
+171519 >>> send_MsgControl() : ACK Error java.net.SocketException: Socket is closed
+171519 >>> main(): ThreadDataTranmission has been detroyed after finised its tasks.
+171529 >>> main(): Login to server.
+171529 >>> processLogin() : Verifying login information.
+171529 >>> processLogin() : This user is in use
+171529 >>> main(): User connected already.
+171529 >>> main(): Try to connect again in 15 seconds.
+171544 >>> main(): Login to server.
+171544 >>> processLogin() : Verifying login information.
+171544 >>> ProcessLogin() : processLogin() : Connected. Ready to receive data from server
+171544 >>> main(): Process messages.
+171550 >>> processSC() Market closed.
+171550 >>> processSC() Start auto-control process.
+171550 >>> send_MsgControl() : ACK Error java.net.SocketException: Socket is closed
+171550 >>> main(): ThreadDataTranmission has been detroyed after finised its tasks.

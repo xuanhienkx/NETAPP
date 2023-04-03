@@ -1,0 +1,126 @@
+<form [formGroup]="frm" #fForm="ngForm" (ngSubmit)="onSubmit()" autocomplete="off" novalidate>
+    <div class="page-vote-body">
+        <section *ngFor="let item of items; let idx = index; let isfirst = first;" class="election-matters-item"
+            [ngClass]="{'first': isfirst}" formArrayName="items">
+            <div class="w-100 row" [formGroupName]="idx">
+                <div class="col-lg-7 col-md-6">
+                    <div class="election-matters-content">
+                        <div class="my-auto">
+                            <h6 class="section-item-title">{{idx + 1}}. {{item?.name}}</h6>
+                        </div>
+                        <div class="section-item-body ">
+                            <div id="description" style="white-space: wrap; min-width: 40rem;"
+                                [innerHtml]="item?.description | replaceLineBreaks">
+
+                            </div>
+                            <vip-document-list [attachments]="item?.attachments" isNoCommand></vip-document-list>
+                        </div>
+                        <div class="content-item-index">
+                            <span class="index">
+                                {{idx+1}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 d-flex  mx-0 px-0">
+                    <div class="election-matters-vote">
+                        <div *ngIf="!item.optional">
+                            <div class="border-bottom">
+                                <h6>{{'vote.voteTitle' | translate}}</h6>
+                            </div>
+                            <div class="w-100  mt-2">
+                                <nb-radio-group formControlName="option" class="d-md-flex justify-content-between mx-2"
+                                    [name]="item.id">
+                                    <nb-radio *ngFor="let opt of item.options" [value]="opt">
+                                        {{opt.name | translate}}
+                                    </nb-radio>
+                                </nb-radio-group>
+                            </div>
+                        </div>
+                        <!-- optional election -->
+                        <div *ngIf="item.optional">
+                            <div class="w-100 border-bottom">
+                                <div class="d-md-flex justify-content-between">
+                                    <div class=" flex-grow-1 my-auto">
+                                        <h6>{{'vote.electionTitle' | translate}}</h6>
+                                    </div>
+                                    <div class="d-flex justify-content-between ml-auto">
+                                        <label class="description">{{'vote.totalVotes.title' | translate }}</label>
+                                        <span
+                                            class="ml-2 font-weight-bold">{{ item?.taken * attendee?.totalVotes | number}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-100 mt-2">
+                                <div class="d-md-flex justify-content-between">
+                                    <div class="my-auto">
+                                        <label class="description">{{'vote.taken.title' | translate }}</label>
+                                        <span
+                                            class="ml-2 font-weight-bold">{{ item?.taken }}/{{item?.options.length}}</span>
+                                    </div>
+                                    <div class="my-auto">
+                                        <nb-toggle id="{{item.id}}" class="ml-2 my-auto" formControlName="selectAll">
+                                            <label class="my-auto" *ngIf="votes.value[idx].selectAll"
+                                                for="{{item.id}}">{{'vote.equalizeElection' | translate }}</label>
+                                            <label class="my-auto" *ngIf="!votes.value[idx].selectAll"
+                                                for="{{item.id}}">{{'vote.manuallyElection' | translate }}</label>
+                                        </nb-toggle>
+                                    </div>
+                                </div>
+                                <div *ngFor="let op of item?.options; let idx2 = index" formArrayName="options"
+                                    class="d-md-flex justify-content-between w-100 list-hover my-auto py-1 px-2">
+                                    <div class="d-flex flex-grow-1">
+                                        <label for="{{op.id}}" class="mr-2 text-capitalize my-auto">{{idx2 + 1}}.
+                                            {{op?.name}}</label>
+                                    </div>
+                                    <div class=" ml-auto d-flex justify-content-between my-auto" [formGroupName]="idx2">
+                                        <input nbInput autofocus formControlName="votes" type="number"
+                                            onkeydown="return event.keyCode !== 69" min="1"
+                                            class="form-control mx-2 text-right  my-auto" fieldSize="small"
+                                            maxlength="10" placeholder="{{'vote.electionVotes' | translate}}"
+                                            style="width: 8rem;" />
+
+                                        <nb-checkbox id="{{op.id}}" status="basic" class="ml-2  my-auto"
+                                            formControlName="selector">
+                                        </nb-checkbox>
+                                    </div>
+                                </div>
+                                <div class="mt-2 d-md-flex vote-warning-zone"
+                                    [ngClass]="votes.controls[idx].get('votes').invalid || votes.controls[idx].get('taken').invalid ? 'errors' : 'warning'">
+                                    <div class="my-auto  icon-vote p-2 ">
+                                        <i class="fas fa-exclamation-triangle fa-2x"></i>
+                                    </div>
+                                    <div class="text-error my-auto mx-2">
+                                        <span *ngIf="votes.controls[idx].get('votes').valid && votes.controls[idx].get('taken').valid "
+                                         translate [translateParams]="{total: item?.taken * attendee?.totalVotes | number,taken:item?.taken}">
+                                            vote.totalVotes.warning
+                                        </span> 
+                                        <span translate="vote.taken.minError"
+                                            *ngIf="votes.controls[idx].get('taken').invalid && votes.controls[idx].get('taken').errors?.min"></span>
+                                        <span translate="vote.taken.maxError"
+                                            [translateParams]="votes.controls[idx].get('taken').errors.max"
+                                            *ngIf="votes.controls[idx].get('taken').invalid && votes.controls[idx].get('taken').errors?.max"></span>
+
+                                        <span translate="vote.totalVotes.minError"
+                                            *ngIf="votes.controls[idx].get('votes').invalid && votes.controls[idx].get('votes').errors?.min"></span>
+                                        <span translate="vote.totalVotes.maxError"
+                                            [translateParams]="votes.controls[idx].get('votes').errors.max"
+                                            *ngIf="votes.controls[idx].get('votes').invalid && votes.controls[idx].get('votes').errors?.max">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div [ngClass]="{'admin-footer': !isOnline}">
+            <div class="d-flex justify-content-between w-100" [ngClass]="{'admin-button': !isOnline}">
+                <ng-content select=".close-dialog"></ng-content>
+                <button type="submit" size="small" class="ml-auto" nbButton status="primary" [disabled]="!fForm.valid"
+                    [class.btn-pulse]="submitted" value="">{{'vote.submit.title' | translate}}</button>
+            </div>
+        </div>
+    </div>
+</form>

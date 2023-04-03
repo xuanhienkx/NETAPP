@@ -1,0 +1,157 @@
+[
+    {
+        "tag": "20",
+        "parts": [
+            {
+                "name": "ReferenceNumber",
+                "length": 16
+            }
+        ]
+    },
+    {
+        "tag": "12",
+        "parts": [
+            {
+                "name": "SubMessageType",
+                "length": 3
+            }
+        ]
+    },
+    {
+        "tag": "77E",
+        "parts": [
+            {
+                "name": "Proprietary",
+                "length": 73,
+                "default": "ISIN"
+            }
+        ]
+    },
+    {
+        "tag": "16R",
+        "type": "Open",
+        "parts": [
+            { "default": "GENL" }
+        ]
+    },
+    {
+        "tag": "23G",
+        "parts": [
+            {
+                "name": "MessageFunction",
+                "length": 4,
+                "default": "NEWM"
+            }
+        ]
+    },
+    {
+        "tag": "98A",
+        "qualifier": "PREP",
+        "part_start": "/",
+        "optional": true,
+        "parts": [
+            {
+                "name": "CreatedDate",
+                "length": 8,
+                "type": "Date",
+                "format": "yyyyMMdd"
+            }
+        ]
+    },
+    {
+        "tag": "35B",
+        "parts": [
+            {
+                "name": "IsinCode",
+                "length": 12,
+                "optional": true,
+                "start": "ISIN ",
+                "end": "<BrLine>"
+            },
+            {
+                "name": "CountryCode",
+                "length": 2,
+                "optional": true,
+                "start": "/",
+                "end": "/"
+            },
+            {
+                "name": "Code",
+                "end": "<BrLine>"
+            }
+        ]
+    },
+    {
+        "tag": "94B",
+        "qualifier": "PLIS", 
+        "parts": [
+            {
+			    "start":"/",
+                "name": "PlaceListing",
+                "length": 4
+            },
+            {
+				"start":"/",
+                "name": "BoardCode",
+                "optional": true,
+                "length": 4, 
+            },
+            {  
+                "name": "BoardType",
+                "optional": true,
+                "end": "<BrLine>"
+            }
+        ]
+    },
+	{ 
+		"tag": "94D",
+        "qualifier": "LOCA",
+		"part_start": "/", 
+		"optional": true,		
+        "parts": [
+		 {
+			    "start":"/",
+                "name": "LocalContryCode",
+				"optional": true,
+                "length": 2
+            },
+            { 
+                "name": "LocalCodeNumber",
+                "optional": true,
+                "end": "<BrLine>" 
+            },
+		]
+	},
+    {
+        "tag": "70E",
+        "qualifier": "FIAN",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "Name",
+                "length": 35,
+                "line": 10
+            }
+        ]
+    },
+    {
+        "tag": "92A",
+        "qualifier": "RATE",
+        "part_start": "/",
+        "parts": [
+            {
+                "name": "ForginRate",
+                "length": 15,
+                "tyep": "Integer"
+            }
+        ]
+    },
+    {
+        "tag": "16S",
+        "type": "Close",
+
+        "parts": [
+            { "default": "GENL" }
+        ]
+    }
+]

@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CheckAndHoldBalanceWhenModifyHNXOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderSeq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="price" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="volume" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckAndHoldBalanceWhenModifyHNXOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckAndHoldBalanceWhenModifyHNXOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTradingOrderWhenModifyHNXOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="buyerOrderSeq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sellerOrderSeq" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="price" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="volume" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTradingOrderWhenModifyHNXOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTradingOrderWhenModifyHNXOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateBankAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BankCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CifPrefix" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateBankAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateBankAccountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bornDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardIdentity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardIssuer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domesticForeign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BrokerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TradeCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateCustomerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateStockOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderSide" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stockCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderVolume" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderPrice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stopPrice" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="icebergVolume" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tradeCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="receivedBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="approveBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateStockOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateStockOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContigenDay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetContigenDayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContigenDayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentTransactionDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentTransactionDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrentTransactionDateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentTradingSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stockCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="boardType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentTradingSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrentTradingSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerBalanceInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerBalanceInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerBalanceInformationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerDebitLimit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerDebitLimitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerDebitLimitResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerTransactionDay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerTransactionDayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerTransactionDayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDayCredit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stockCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDayCreditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDayCreditResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMoneyAmount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMoneyAmountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMoneyAmountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMoneyDayT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="T" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMoneyDayTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMoneyDayTResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMoneyTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMoneyTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMoneyTransactionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="receivedBy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrdersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockDayT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="T" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockDayTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockDayTResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockEnquiry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockEnquiryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockEnquiryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockListResult" type="tns:ArrayOfStockData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStockData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StockData" nillable="true" type="tns:StockData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StockData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BoardType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParValue" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockNameViet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStockPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stockCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockPriceResult" type="tns:StockPrice" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StockPrice">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BasicPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoardLot" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BoardName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BoardType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CeilingPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FloorPrice" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradingDate" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetStockTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockTransactionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradingOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradingOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTradingOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionDay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionDayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionDayResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionDayHist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionDayHistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionDayHistResult" type="tns:ArrayOfCustomerTransactionDay" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCustomerTransactionDay">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomerTransactionDay" nillable="true" type="tns:CustomerTransactionDay" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomerTransactionDay">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DayBalance" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DayAvailBalance" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CIF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerBranchCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EntryCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsGenerateEntry" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaskCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransSeq" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserApprove" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserEnter" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WithApproved" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="OrderAgentDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderSeq" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OrderAgentDeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderAgentDeleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportCustomerBuyHoldAmount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="boardType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportCustomerBuyHoldAmountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportCustomerBuyHoldAmountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportCustomerSellPendingAmount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="boardType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportCustomerSellPendingAmountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportCustomerSellPendingAmountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TradingResultGetDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gatewayPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TradingResultGetDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TradingResultGetDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckAndHoldBalanceWhenModifyHNXOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckAndHoldBalanceWhenModifyHNXOrder" />
+  </wsdl:message>
+  <wsdl:message name="CheckAndHoldBalanceWhenModifyHNXOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckAndHoldBalanceWhenModifyHNXOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTradingOrderWhenModifyHNXOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTradingOrderWhenModifyHNXOrder" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTradingOrderWhenModifyHNXOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTradingOrderWhenModifyHNXOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateBankAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateBankAccount" />
+  </wsdl:message>
+  <wsdl:message name="CreateBankAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateBankAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateStockOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateStockOrder" />
+  </wsdl:message>
+  <wsdl:message name="CreateStockOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateStockOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetContigenDaySoapIn">
+    <wsdl:part name="parameters" element="tns:GetContigenDay" />
+  </wsdl:message>
+  <wsdl:message name="GetContigenDaySoapOut">
+    <wsdl:part name="parameters" element="tns:GetContigenDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentTransactionDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentTransactionDate" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentTransactionDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentTransactionDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentTradingSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentTradingSession" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentTradingSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentTradingSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerBalanceInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerBalanceInformation" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerBalanceInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerBalanceInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerDebitLimitSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerDebitLimit" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerDebitLimitSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerDebitLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerTransactionDaySoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerTransactionDay" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerTransactionDaySoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerTransactionDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDayCreditSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDayCredit" />
+  </wsdl:message>
+  <wsdl:message name="GetDayCreditSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDayCreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMoneyAmountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMoneyAmount" />
+  </wsdl:message>
+  <wsdl:message name="GetMoneyAmountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMoneyAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMoneyDayTSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMoneyDayT" />
+  </wsdl:message>
+  <wsdl:message name="GetMoneyDayTSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMoneyDayTResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMoneyTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMoneyTransaction" />
+  </wsdl:message>
+  <wsdl:message name="GetMoneyTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMoneyTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrders" />
+  </wsdl:message>
+  <wsdl:message name="GetOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockDayTSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockDayT" />
+  </wsdl:message>
+  <wsdl:message name="GetStockDayTSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockDayTResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockEnquirySoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockEnquiry" />
+  </wsdl:message>
+  <wsdl:message name="GetStockEnquirySoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockEnquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockList" />
+  </wsdl:message>
+  <wsdl:message name="GetStockListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockPrice" />
+  </wsdl:message>
+  <wsdl:message name="GetStockPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockTransaction" />
+  </wsdl:message>
+  <wsdl:message name="GetStockTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTradingOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTradingOrder" />
+  </wsdl:message>
+  <wsdl:message name="GetTradingOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTradingOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionDaySoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransactionDay" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionDaySoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionDayHistSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransactionDayHist" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionDayHistSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionDayHistResponse" />
+  </wsdl:message>
+  <wsdl:message name="OrderAgentDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:OrderAgentDelete" />
+  </wsdl:message>
+  <wsdl:message name="OrderAgentDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:OrderAgentDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportCustomerBuyHoldAmountSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportCustomerBuyHoldAmount" />
+  </wsdl:message>
+  <wsdl:message name="ReportCustomerBuyHoldAmountSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportCustomerBuyHoldAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportCustomerSellPendingAmountSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportCustomerSellPendingAmount" />
+  </wsdl:message>
+  <wsdl:message name="ReportCustomerSellPendingAmountSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportCustomerSellPendingAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="TradingResultGetDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:TradingResultGetDetail" />
+  </wsdl:message>
+  <wsdl:message name="TradingResultGetDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:TradingResultGetDetailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CommonServiceSoap">
+    <wsdl:operation name="CheckAndHoldBalanceWhenModifyHNXOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Kiểm tra phong tỏa tiền mua khi sửa lệnh. Tham số đầu vào: gatewayUser-Tài khoản; gatewayPassword-Mật khẩu; orderNo-số hiệu lệnh</wsdl:documentation>
+      <wsdl:input message="tns:CheckAndHoldBalanceWhenModifyHNXOrderSoapIn" />
+      <wsdl:output message="tns:CheckAndHoldBalanceWhenModifyHNXOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTradingOrderWhenModifyHNXOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Kiểm tra phong tỏa chứng khoán khi sửa lệnh [KL được cập nhật và trạng thái được chuyển sang O]. Tham số đầu vào: gatewayUser-Tài khoản; gatewayPassword-Mật khẩu; orderNo-số hiệu lệnh</wsdl:documentation>
+      <wsdl:input message="tns:UpdateTradingOrderWhenModifyHNXOrderSoapIn" />
+      <wsdl:output message="tns:UpdateTradingOrderWhenModifyHNXOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateBankAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">21. Mở tài khoản ngân hàng</wsdl:documentation>
+      <wsdl:input message="tns:CreateBankAccountSoapIn" />
+      <wsdl:output message="tns:CreateBankAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">19. Tạo mới khách hàng</wsdl:documentation>
+      <wsdl:input message="tns:CreateCustomerSoapIn" />
+      <wsdl:output message="tns:CreateCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateStockOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">09. Đặt lệnh. Tham số đầu vào: gatewayUser-Tài khoản; gatewayPassword-Mật khẩu; orderDate-Ngày đặt lệnh(dd/MM/yyy)</wsdl:documentation>
+      <wsdl:input message="tns:CreateStockOrderSoapIn" />
+      <wsdl:output message="tns:CreateStockOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContigenDay">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">07. Lấy lịch sử giao dịch chứng khoán của khách hàng. Tham số đầu vào fromDate và toDate có định dạng (dd/MM/yyyy)</wsdl:documentation>
+      <wsdl:input message="tns:GetContigenDaySoapIn" />
+      <wsdl:output message="tns:GetContigenDaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTransactionDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">15. Trả về ngày giao dịch hiện tại (dd/MM/yyyy). Tham số đầu vào: BranchCode là mã chi nhánh (để trống thì là Hội sở chính</wsdl:documentation>
+      <wsdl:input message="tns:GetCurrentTransactionDateSoapIn" />
+      <wsdl:output message="tns:GetCurrentTransactionDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTradingSession">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lấy trạng thái giao dịch hiện tại của chứng khoán</wsdl:documentation>
+      <wsdl:input message="tns:GetCurrentTradingSessionSoapIn" />
+      <wsdl:output message="tns:GetCurrentTradingSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">01. Lấy thông tin của khách hàng</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerSoapIn" />
+      <wsdl:output message="tns:GetCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerBalanceInformation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">17. Lấy thông tin tổng hợp về tiền của KH</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerBalanceInformationSoapIn" />
+      <wsdl:output message="tns:GetCustomerBalanceInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDebitLimit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">16. Lấy số tiền có thể đặt lệnh của khách hàng</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerDebitLimitSoapIn" />
+      <wsdl:output message="tns:GetCustomerDebitLimitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerTransactionDay">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">20. Lấy các giao dịch phát sinh trong ngày</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerTransactionDaySoapIn" />
+      <wsdl:output message="tns:GetCustomerTransactionDaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDayCredit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">02. Lấy số tiền và chứng khoán giao dịch trong ngày. Tham số đầu vào transactionDate có định dạng (dd/MM/yyyy)</wsdl:documentation>
+      <wsdl:input message="tns:GetDayCreditSoapIn" />
+      <wsdl:output message="tns:GetDayCreditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMoneyAmount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">11. Lấy số tiền có thể đặt lệnh của khách hàng</wsdl:documentation>
+      <wsdl:input message="tns:GetMoneyAmountSoapIn" />
+      <wsdl:output message="tns:GetMoneyAmountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMoneyDayT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">24. Lấy phát tiền trong ngày T</wsdl:documentation>
+      <wsdl:input message="tns:GetMoneyDayTSoapIn" />
+      <wsdl:output message="tns:GetMoneyDayTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMoneyTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">22. Lấy các phát sinh nợ có tài khoản khách hàng</wsdl:documentation>
+      <wsdl:input message="tns:GetMoneyTransactionSoapIn" />
+      <wsdl:output message="tns:GetMoneyTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">08. Truy vấn thông tin lệnh trong ngày</wsdl:documentation>
+      <wsdl:input message="tns:GetOrdersSoapIn" />
+      <wsdl:output message="tns:GetOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockDayT">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">23. Lấy phát sinh chứng khoán trong ngày T</wsdl:documentation>
+      <wsdl:input message="tns:GetStockDayTSoapIn" />
+      <wsdl:output message="tns:GetStockDayTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockEnquiry">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">05. Lấy số chứng khoán sở hữu của khách hàng. Tham số đầu vào transactionDate có định dạng (dd/MM/yyyy)</wsdl:documentation>
+      <wsdl:input message="tns:GetStockEnquirySoapIn" />
+      <wsdl:output message="tns:GetStockEnquirySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">13. Trả về danh sách chứng khoán</wsdl:documentation>
+      <wsdl:input message="tns:GetStockListSoapIn" />
+      <wsdl:output message="tns:GetStockListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockPrice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">14. Trả về giá chứng khoán</wsdl:documentation>
+      <wsdl:input message="tns:GetStockPriceSoapIn" />
+      <wsdl:output message="tns:GetStockPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">25. Lấy xuất nhập chứng khoán</wsdl:documentation>
+      <wsdl:input message="tns:GetStockTransactionSoapIn" />
+      <wsdl:output message="tns:GetStockTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradingOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">12. Lấy lịch sử lệnh giao dịch của khách hàng. Tham số đầu vào fromDate và toDate có định dạng (dd/MM/yyyy)</wsdl:documentation>
+      <wsdl:input message="tns:GetTradingOrderSoapIn" />
+      <wsdl:output message="tns:GetTradingOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionDay">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">06. Lấy lịch sử giao dịch tiền của khách hàng. Tham số đầu vào fromDate và toDate có định dạng (dd/MM/yyyy)</wsdl:documentation>
+      <wsdl:input message="tns:GetTransactionDaySoapIn" />
+      <wsdl:output message="tns:GetTransactionDaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionDayHist">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">07. Lấy lịch sử giao dịch tiền của khách hàng. Tham số đầu vào fromDate và toDate có định dạng (dd/MM/yyyy)</wsdl:documentation>
+      <wsdl:input message="tns:GetTransactionDayHistSoapIn" />
+      <wsdl:output message="tns:GetTransactionDayHistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderAgentDelete">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">10. Xoá lệnh chưa duyệt từ đại lý. Tham số đầu vào: gatewayUser-Tài khoản; gatewayPassword-Mật khẩu; orderDate-Ngày đặt lệnh(dd/MM/yyy);orderSeq-số tt lệnh</wsdl:documentation>
+      <wsdl:input message="tns:OrderAgentDeleteSoapIn" />
+      <wsdl:output message="tns:OrderAgentDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportCustomerBuyHoldAmount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">04. Liệt kê các khoản tiền bị phong tỏa do mua CK. Tham số đầu vào orderDate có định dạng (dd/MM/yyyy)</wsdl:documentation>
+      <wsdl:input message="tns:ReportCustomerBuyHoldAmountSoapIn" />
+      <wsdl:output message="tns:ReportCustomerBuyHoldAmountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportCustomerSellPendingAmount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">03. Liệt kê các khoản tiền bán CK chờ thanh toán. Tham số đầu vào orderDate có định dạng (dd/MM/yyyy)</wsdl:documentation>
+      <wsdl:input message="tns:ReportCustomerSellPendingAmountSoapIn" />
+      <wsdl:output message="tns:ReportCustomerSellPendingAmountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TradingResultGetDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">18. Tra cứu thông tin khớp lệnh chi tiết của KH</wsdl:documentation>
+      <wsdl:input message="tns:TradingResultGetDetailSoapIn" />
+      <wsdl:output message="tns:TradingResultGetDetailSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CommonServiceSoap" type="tns:CommonServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckAndHoldBalanceWhenModifyHNXOrder">
+      <soap:operation soapAction="http://tempuri.org/CheckAndHoldBalanceWhenModifyHNXOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTradingOrderWhenModifyHNXOrder">
+      <soap:operation soapAction="http://tempuri.org/UpdateTradingOrderWhenModifyHNXOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBankAccount">
+      <soap:operation soapAction="http://tempuri.org/CreateBankAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <soap:operation soapAction="http://tempuri.org/CreateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateStockOrder">
+      <soap:operation soapAction="http://tempuri.org/CreateStockOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContigenDay">
+      <soap:operation soapAction="http://tempuri.org/GetContigenDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTransactionDate">
+      <soap:operation soapAction="http://tempuri.org/GetCurrentTransactionDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTradingSession">
+      <soap:operation soapAction="http://tempuri.org/GetCurrentTradingSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <soap:operation soapAction="http://tempuri.org/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerBalanceInformation">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerBalanceInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDebitLimit">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerDebitLimit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerTransactionDay">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerTransactionDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDayCredit">
+      <soap:operation soapAction="http://tempuri.org/GetDayCredit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoneyAmount">
+      <soap:operation soapAction="http://tempuri.org/GetMoneyAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoneyDayT">
+      <soap:operation soapAction="http://tempuri.org/GetMoneyDayT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoneyTransaction">
+      <soap:operation soapAction="http://tempuri.org/GetMoneyTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <soap:operation soapAction="http://tempuri.org/GetOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockDayT">
+      <soap:operation soapAction="http://tempuri.org/GetStockDayT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockEnquiry">
+      <soap:operation soapAction="http://tempuri.org/GetStockEnquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockList">
+      <soap:operation soapAction="http://tempuri.org/GetStockList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockPrice">
+      <soap:operation soapAction="http://tempuri.org/GetStockPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockTransaction">
+      <soap:operation soapAction="http://tempuri.org/GetStockTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradingOrder">
+      <soap:operation soapAction="http://tempuri.org/GetTradingOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionDay">
+      <soap:operation soapAction="http://tempuri.org/GetTransactionDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionDayHist">
+      <soap:operation soapAction="http://tempuri.org/GetTransactionDayHist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderAgentDelete">
+      <soap:operation soapAction="http://tempuri.org/OrderAgentDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportCustomerBuyHoldAmount">
+      <soap:operation soapAction="http://tempuri.org/ReportCustomerBuyHoldAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportCustomerSellPendingAmount">
+      <soap:operation soapAction="http://tempuri.org/ReportCustomerSellPendingAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradingResultGetDetail">
+      <soap:operation soapAction="http://tempuri.org/TradingResultGetDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CommonServiceSoap12" type="tns:CommonServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckAndHoldBalanceWhenModifyHNXOrder">
+      <soap12:operation soapAction="http://tempuri.org/CheckAndHoldBalanceWhenModifyHNXOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTradingOrderWhenModifyHNXOrder">
+      <soap12:operation soapAction="http://tempuri.org/UpdateTradingOrderWhenModifyHNXOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBankAccount">
+      <soap12:operation soapAction="http://tempuri.org/CreateBankAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomer">
+      <soap12:operation soapAction="http://tempuri.org/CreateCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateStockOrder">
+      <soap12:operation soapAction="http://tempuri.org/CreateStockOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContigenDay">
+      <soap12:operation soapAction="http://tempuri.org/GetContigenDay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTransactionDate">
+      <soap12:operation soapAction="http://tempuri.org/GetCurrentTransactionDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTradingSession">
+      <soap12:operation soapAction="http://tempuri.org/GetCurrentTradingSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerBalanceInformation">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerBalanceInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerDebitLimit">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerDebitLimit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerTransactionDay">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerTransactionDay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDayCredit">
+      <soap12:operation soapAction="http://tempuri.org/GetDayCredit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoneyAmount">
+      <soap12:operation soapAction="http://tempuri.org/GetMoneyAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoneyDayT">
+      <soap12:operation soapAction="http://tempuri.org/GetMoneyDayT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoneyTransaction">
+      <soap12:operation soapAction="http://tempuri.org/GetMoneyTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <soap12:operation soapAction="http://tempuri.org/GetOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockDayT">
+      <soap12:operation soapAction="http://tempuri.org/GetStockDayT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockEnquiry">
+      <soap12:operation soapAction="http://tempuri.org/GetStockEnquiry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockList">
+      <soap12:operation soapAction="http://tempuri.org/GetStockList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockPrice">
+      <soap12:operation soapAction="http://tempuri.org/GetStockPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockTransaction">
+      <soap12:operation soapAction="http://tempuri.org/GetStockTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradingOrder">
+      <soap12:operation soapAction="http://tempuri.org/GetTradingOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionDay">
+      <soap12:operation soapAction="http://tempuri.org/GetTransactionDay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionDayHist">
+      <soap12:operation soapAction="http://tempuri.org/GetTransactionDayHist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderAgentDelete">
+      <soap12:operation soapAction="http://tempuri.org/OrderAgentDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportCustomerBuyHoldAmount">
+      <soap12:operation soapAction="http://tempuri.org/ReportCustomerBuyHoldAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportCustomerSellPendingAmount">
+      <soap12:operation soapAction="http://tempuri.org/ReportCustomerSellPendingAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradingResultGetDetail">
+      <soap12:operation soapAction="http://tempuri.org/TradingResultGetDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommonService">
+    <wsdl:port name="CommonServiceSoap" binding="tns:CommonServiceSoap">
+      <soap:address location="http://test.vics.com.vn:8080/common.net4.v1/CommonService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CommonServiceSoap12" binding="tns:CommonServiceSoap12">
+      <soap12:address location="http://test.vics.com.vn:8080/common.net4.v1/CommonService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

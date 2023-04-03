@@ -1,0 +1,166 @@
+[
+  {
+    "tag": "20",
+    "parts": [
+      {
+        "name": "OutReferenceNumber",
+        "length": 16,
+        "format": "D16",
+        "type": "Integer"
+      }
+    ]
+  },
+  {
+    "tag": "12",
+    "parts": [
+      {
+        "name": "SubMessageType",
+        "format": "D3",
+        "type": "Integer",
+        "default": "5"
+      }
+    ]
+  },
+  {
+    "tag": "77E",
+    "parts": [
+      {
+        "default": "BALANCE",
+        "end": "<BrLine>"
+      },
+      {
+        "default": "RPTID",
+        "end": ":"
+      },
+      {
+        "default": "ReportCode",
+        "length": 78,
+        "line": 10,
+        "end": "<BrLine>"
+      },
+      {
+        "default": "TXNUM",
+        "end": ":"
+      },
+      {
+        "name": "OrigTransferRef",
+        "end": "<BrLine>",
+        "length": 78
+      },
+      {
+        "default": "TRANDATE",
+        "end": ":"
+      },
+      {
+        "name": "SettlementDate",
+        "type": "Date",
+        "format": "yyyyMMdd",
+        "end": "<BrLine>"
+      },
+      {
+        "default": "BRID",
+        "end": ":"
+      },
+      {
+        "name": "BoardType",
+        "type": "Integer",
+        "format": "D4" 
+      }
+    ]
+  },
+  {
+    "tag": "16R",
+    "type": "Open",
+    "parts": [
+      {
+        "default": "GENL"
+      }
+    ]
+  },
+  {
+    "tag": "23G",
+    "parts": [
+      {
+        "name": "MessageFunction",
+        "length": 4,
+        "default": "NEWM"
+      }
+    ]
+  },
+  {
+    "tag": "98A",
+    "qualifier": "PREP",
+    "part_start": "/",
+    "optional": true,
+    "parts": [
+      {
+        "name": "RequestDate",
+        "length": 8,
+        "type": "Date",
+        "format": "yyyyMMdd"
+      }
+    ]
+  },
+  {
+    "tag": "16R",
+    "type": "Open",
+    "optional": true,
+    "parts": [
+      {
+        "default": "LINK"
+      }
+    ]
+  },
+  {
+    "tag": "20C",
+    "qualifier": "PREV",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "PreviousReference",
+        "length": 16
+      }
+    ]
+  },
+  {
+    "tag": "16S",
+    "type": "Close",
+    "optional": true,
+    "parts": [
+      {
+        "default": "LINK"
+      }
+    ]
+  },
+  {
+    "tag": "20C",
+    "qualifier": "STAT",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "OrigTransferRef",
+        "length": 16
+      }
+    ]
+  },
+  {
+    "tag": "25D",
+    "qualifier": "STAT",
+    "part_start": "/",
+    "parts": [
+      {
+        "name": "ConfirmType",
+        "length": 4
+      }
+    ]
+  },
+  {
+    "tag": "16S",
+    "type": "Close",
+    "parts": [
+      {
+        "default": "GENL"
+      }
+    ]
+  }
+]

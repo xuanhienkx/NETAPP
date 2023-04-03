@@ -1,0 +1,20 @@
+2009/01/06-10:22:06 Start Program ...
+2009/01/06-10:22:06 Load Setting Parameters From File(Setting.bin) 
+2009/01/06-10:22:06 Setting Parameters read from File
+2009/01/06-10:22:06 Load Transmission Data From File(TransmissionD.bin) 
+2009/01/06-10:22:06 Transmission Data read from File
+2009/01/06-10:22:06 Load ReTransmission Infor From File(ReTransmission.bin) 
+2009/01/06-10:22:06 ReTransmission Infor read from File
+2009/01/06-10:22:06 Load Possible ReTransmission Infor From File(ReTransmission.bin) 
+2009/01/06-10:22:06 Possible ReTransmission Infor read from File
+2009/01/06-10:22:06 Load Unsent Data From File(UnSentData.bin) 
+2009/01/06-10:22:06 Unsent Data read from File
+2009/01/06-10:22:06 Broker start with seq_no(16), seq_start(10), seq_ack(61)
+2009/01/06-10:22:06 Packet[0], seq_no = 14
+2009/01/06-10:22:06 Packet[1], seq_no = 15
+2009/01/06-10:22:06 Packet[2], seq_no = 9
+2009/01/06-10:22:06 Packet[3], seq_no = 10
+2009/01/06-10:22:06 Packet[4], seq_no = 11
+2009/01/06-10:22:06 Packet[5], seq_no = 12
+2009/01/06-10:22:06 Packet[6], seq_no = 13
+2009/01/06-10:22:06 Broker start with broadcast seq_no(1)

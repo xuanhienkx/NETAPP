@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 26.5, 23.5" name="GWStockDB">
+  <DataContextMoniker Name="/GWStockDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4494bdd4-fc3d-49e2-913a-2470fe2340d8" absoluteBounds="0.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_1C" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5457ce4b-3af8-472b-8e1b-39d12f949124" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f92ec500-f545-438d-927c-94e63fa1dc97" absoluteBounds="3.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_TS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17a9112e-189a-4a1b-af89-40039a30ee6f" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9e4fbb31-c7e4-4f89-84c3-b92f35f4d694" absoluteBounds="0.75, 3.75, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_1D" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1273573e-caf4-43d2-aa2e-51d003e4ba51" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="85400f0d-97d4-48bb-a697-6a31034f5c32" absoluteBounds="3.75, 3.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_1E" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f68a018f-0921-4a8a-8448-6675b3c09cf3" absoluteBounds="3.765, 4.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="34400fd7-7528-4cac-b799-af92a35be156" absoluteBounds="6.75, 0.75, 2, 5.2323225911458326">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_1F" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f76f83f-72e7-43b1-b97a-1db735084d39" absoluteBounds="6.765, 1.21, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cec5bcff-e398-4b02-84f9-976857f22177" absoluteBounds="6.75, 6.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_1G" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a9a35948-d190-4cb4-a18d-31d6d23b1a50" absoluteBounds="6.765, 7.21, 1.9700000000000002, 3.9031168619791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca326385-e6ed-465a-8033-bbf0611b694d" absoluteBounds="0.75, 7.75, 2, 4.2708154296875005">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_1I" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93e3a332-a9fc-4f6b-ab31-fdb5a8fd39c9" absoluteBounds="0.765, 8.21, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c0eaa1e-095a-4e62-b4d3-61f6b772436e" absoluteBounds="9.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_2B" />
+      <nestedChildShapes>
+        <elementListCompartment Id="29f5d791-fb8d-4557-82df-040622e0ba2a" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1cf49f43-3474-44f7-8c4f-0179ad0a2c1e" absoluteBounds="9.75, 3.75, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_2C" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ca804fd-61b5-4387-ab94-c859e47d8ab3" absoluteBounds="9.765, 4.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b9b6e39-c0bc-42a6-a007-0e6bb90ef534" absoluteBounds="9.75, 6.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_2D" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50db1ba1-4d9a-4741-a226-a4ee656c9645" absoluteBounds="9.765, 7.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dc33cbc0-8fa0-49db-a8ca-c5df965730e5" absoluteBounds="9.75, 10.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_2E" />
+      <nestedChildShapes>
+        <elementListCompartment Id="26010e25-ccb7-496f-85bf-066af8a1001e" absoluteBounds="9.765, 11.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b98ae7b-9ba8-4d98-b11e-14ac21b4989c" absoluteBounds="3.75, 11.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_2F" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9baeaa48-d945-4a34-8a23-f2b79200c81d" absoluteBounds="3.765, 12.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87cb0592-e942-4b18-ab71-9c75d4e3e5a1" absoluteBounds="12.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_2G" />
+      <nestedChildShapes>
+        <elementListCompartment Id="603afb38-75b4-4278-bd16-439c1ffb74c6" absoluteBounds="12.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e5d6b506-7e6d-4983-9d00-c29cf71096d0" absoluteBounds="12.75, 3.75, 2, 3.1170068359374996">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_2I" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8e7b539-cf7a-488d-aba6-e38d8384a04c" absoluteBounds="12.765, 4.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5cf7748b-d904-4f33-a7d3-d7f69d0aff2c" absoluteBounds="12.75, 7.75, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_2L" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88c81380-7e57-4c9b-ba0d-2dc380177426" absoluteBounds="12.765, 8.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a753cd66-fd45-427d-aeef-45f6dc109ccd" absoluteBounds="12.75, 11.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_3A" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b61ff828-bef4-44ff-adad-8b3d075dc905" absoluteBounds="12.765, 12.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="28efc86c-e7b4-4acb-bdc1-c319804e731d" absoluteBounds="6.75, 14.75, 2, 3.6939111328125023">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_3B" />
+      <nestedChildShapes>
+        <elementListCompartment Id="822804ef-d1db-4de9-82aa-276689b8faf8" absoluteBounds="6.765, 15.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7b51360a-6635-499a-a6df-df490a2364b7" absoluteBounds="9.75, 14.75, 2, 2.73240397135417">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_3C" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8de1cfa-1997-4db8-ace9-c3fc6a84cca1" absoluteBounds="9.765, 15.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a4a33ef-793e-4702-9833-01d5f53d29fd" absoluteBounds="12.75, 14.75, 2, 2.15549967447917">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_3D" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e836478e-15e1-4c07-a3ba-a110d2a6e943" absoluteBounds="12.765, 15.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0086e254-1ec3-484b-a39e-326ad244b956" absoluteBounds="15.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_RN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1c244b9-df77-400e-95a7-881008395246" absoluteBounds="15.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bfb94634-1656-430c-89c8-a9ef4b81b979" absoluteBounds="0.75, 15.75, 2, 2.73240397135417">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_RP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c754388f-7f17-4cd5-a310-b926fa66950d" absoluteBounds="0.765, 16.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="79534d43-2850-452a-b13a-ef15371fca88" absoluteBounds="15.75, 3.75, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOGW_RQ" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a358c609-b9eb-4b76-88e7-1ed8b200c0b1" absoluteBounds="15.765, 4.21, 1.9700000000000002, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3203e35e-4f2e-4848-9683-050bf8c1c5e4" absoluteBounds="15.75, 6.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_AA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="97f7343a-1e85-423a-b90b-d412a2a033e2" absoluteBounds="15.765, 7.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="60ec99d8-d28f-4e93-8e36-904eaa986b1a" absoluteBounds="15.75, 10.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_BR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c4680d55-c697-4e6d-beaa-79821760948c" absoluteBounds="15.765, 11.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f83b2b8-776b-4eaa-9137-9a3cc2cc667b" absoluteBounds="15.75, 14.75, 2, 2.15549967447917">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_BS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="45514323-5515-41e6-9d9f-9585858b0afa" absoluteBounds="15.765, 15.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16f9cb23-14a3-4f9e-875e-a42eed41e79c" absoluteBounds="12.75, 17.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_CO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f361a7b9-a077-4ea2-ba04-f9281daf2b67" absoluteBounds="12.765, 18.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="788950e7-4226-48df-b4a0-5c3ceb7645d2" absoluteBounds="15.75, 17.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_DC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d9076bed-3911-4be5-83b0-428a803dc8c0" absoluteBounds="15.765, 18.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5f3f1440-9eec-47f4-ac38-35deb9e08d9c" absoluteBounds="18.75, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_GA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="38569017-b1e9-4f54-9993-77fb272d75cc" absoluteBounds="18.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0fd15bd3-e3e4-44ce-8334-e0789ba69cf5" absoluteBounds="18.75, 3.75, 2, 4.2708154296875005">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_IU" />
+      <nestedChildShapes>
+        <elementListCompartment Id="761ff0e1-d36f-43e8-8f6e-7be88ceb1514" absoluteBounds="18.765, 4.21, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="343e6f3f-b445-434f-af8d-f50988cfecf7" absoluteBounds="3.75, 18.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_LO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96580039-a902-4048-a3a0-4a7dba02a8a0" absoluteBounds="3.765, 19.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="815e76e6-8df9-4e59-86de-5eaaf0206210" absoluteBounds="6.75, 18.75, 2, 2.73240397135417">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_LS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="110670d6-d5bc-490c-9e0d-14d780a58e29" absoluteBounds="6.765, 19.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b232103f-e0f1-4b14-944e-926f1db71ab8" absoluteBounds="18.75, 8.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_NH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54013c15-fb6c-4ec7-b74b-f7ab0d076e4f" absoluteBounds="18.765, 9.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b9c7470b-144e-4535-8d92-56705162fbce" absoluteBounds="18.75, 11.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_NS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f47e0008-1ea3-48c1-afda-55ea3ee7b328" absoluteBounds="18.765, 12.21, 1.9700000000000002, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f2b9e23-4751-4ab0-859d-73860bf8a0c0" absoluteBounds="18.75, 14.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_OL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dbef4e26-e11d-4069-aa79-999907145e29" absoluteBounds="18.765, 15.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="24dcbec9-a627-45e7-9aea-abbd65f95621" absoluteBounds="18.75, 17.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_OS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f272178c-8f0b-4231-a9ea-e3ca8e1a8a89" absoluteBounds="18.765, 18.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7b17d2d7-c5f4-481a-926b-515f8fd1c5b9" absoluteBounds="9.75, 20.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_PD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72784fef-d0c4-4100-a0f7-489987e1fe38" absoluteBounds="9.765, 21.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66557747-0aba-4d0e-b504-7c425781ab8c" absoluteBounds="12.75, 20.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_PO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1913f231-f365-46a5-b675-109b3617fedb" absoluteBounds="12.765, 21.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b5e14216-edb0-4bf0-981f-ff22a4e0312c" absoluteBounds="15.75, 20.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_SC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e40c4705-6a55-47d0-91ea-be845f77d139" absoluteBounds="15.765, 21.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="222985f9-631a-4b66-abc6-10d7287e1b14" absoluteBounds="18.75, 20.75, 2, 2.15549967447917">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_SI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e8b153c-3639-4c69-86df-bbad9df7bc8f" absoluteBounds="18.765, 21.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23862334-77b3-4ee3-97cf-664d25b49297" absoluteBounds="21.75, 0.75, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_SR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc0d845b-4327-4127-ab3c-95cce9d33202" absoluteBounds="21.765, 1.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39d1930b-8ff6-4d34-9726-be352ee901bc" absoluteBounds="24.25, 4.75, 2, 5.6169254557291648">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_SS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a183dc1-2327-4e06-bc13-ffba7219c8b7" absoluteBounds="24.265, 5.2100000000000009, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b1bde9bb-9318-4df9-aea5-926a96b2f3aa" absoluteBounds="21.75, 4.75, 2, 7.9245426432291648">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_SU" />
+      <nestedChildShapes>
+        <elementListCompartment Id="adc75fb4-f956-4f38-ac66-053a76ac0b00" absoluteBounds="21.765, 5.21, 1.9700000000000002, 7.3645426432291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d046ec9-e48c-4b14-a5c9-1010bee82bb5" absoluteBounds="21.75, 12.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_TC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b3479c5-2266-487f-a9c1-628f739cc0c5" absoluteBounds="21.765, 13.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e87a64b0-4062-4b9e-b678-eba4f2da7dc1" absoluteBounds="21.75, 15.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_TP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="71e29f2b-928e-4ebf-a4a9-8aa329291e6c" absoluteBounds="21.765, 16.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a39f0d88-bf50-41c9-a325-d78b881e274c" absoluteBounds="21.75, 19.75, 2, 2.15549967447917">
+      <DataClassMoniker Name="/GWStockDBDataContext/HOSE_TR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ecc76baf-f61f-491d-a720-382488ab26b0" absoluteBounds="21.765, 20.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

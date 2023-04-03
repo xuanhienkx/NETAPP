@@ -1,0 +1,33 @@
+<div class="d-lg-flex w-lg-100 pb-3 border-bottom">
+    <h4 class="list-title">{{ 'profile.title' |translate}}</h4>
+</div>
+<div class="d-flex justify-content-between pt-3">
+
+    <form novalidate (ngSubmit)="submit()" #fr="ngForm" [formGroup]="frm" autocomplete="off">
+        <div class="form-group d-flex flex-column">
+            <label for="language" class="label">{{'profile.language.label' | translate}}:</label>
+            <nb-toggle formControlName="vi">
+                <span class="text-success" *ngIf="f.vi.value; else english">{{'profile.language.vi' | translate}}</span>
+                <ng-template #english>
+                    <span class="text-success">{{'profile.language.en' | translate}}</span>
+                </ng-template>
+            </nb-toggle>
+        </div>
+    </form>
+
+    <div>
+
+        <div style="height: 100px; width: 100px;background-color: blue;" *allow="['@MODERATOR', 'testing_permission3']">
+            MODERATOR
+        </div>
+        <div style="height: 100px; width: 100px;background-color:red;" *allow="['@ADMIN']">
+            ADMIN
+        </div>
+        <div style="height: 100px; width: 100px;background-color: green;">
+
+        </div>
+        <div style="height: 100px; width: 100px;background-color: orange;">
+
+        </div>
+    </div>
+</div>

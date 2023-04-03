@@ -1,0 +1,562 @@
+{
+  "dateFormat": "dd/MM/yyyy",
+  "nameLength": 8,
+  "fileMap": "Datapath.MAP",
+  "messages": [
+    {
+      "messageName": "Security",
+      "updateType": "Override",
+      "parts": [
+        {
+          "name": "StockNo",
+          "length": 2,
+          "type": "Integer",
+          "desc": "Mã chứng khoán dạng số"
+        },
+        {
+          "name": "StockSynbol",
+          "length": 8,
+          "type": "String",
+          "desc": "Mã chứng khoán dạng chuỗi"
+        },
+        {
+          "name": "StockType",
+          "length": 1,
+          "type": "String",
+          "desc": "Loại chứng khoán (S: Cổ phiếu, D: Trái phiếu, U: Chứng chỉ quỹ, E: Sản phẩm ETF, W: Sản phẩm Covered Warrant)"
+        },
+        {
+          "name": "Ceiling",
+          "length": 4,
+          "type": "Decimal",
+          "desc": "Giá trần"
+        },
+        {
+          "name": "Floor",
+          "length": 4,
+          "type": "Decimal",
+          "desc": "Giá sàn"
+
+        },
+        {
+          "name": "BiglotValue",
+          "length": 8,
+          "type": "Decimal",
+          "desc": "-"
+
+        },
+        {
+          "name": "StockName",
+          "length": 25,
+          "type": "String",
+          "desc": "Tên đầy đủ của chứng khoán"
+
+        },
+        {
+          "name": "SectorNo",
+          "length": 1,
+          "type": "String",
+          "desc": ""
+
+        },
+        {
+          "name": "Designated",
+          "length": 1,
+          "type": "String",
+          "desc": ""
+
+        },
+        {
+          "name": "Suspension",
+          "length": 1,
+          "type": "String",
+          "desc": "Chứng khoán bị tam ngưng giao dịch (Null: Giao dịch bình thường, S bị tạm ngưng)"
+
+        },
+        {
+          "name": "Delist",
+          "length": 1,
+          "type": "String",
+          "desc": "Chứng khoán bị huỷ niêm yết (Null: Giao dịch bình thường, D bị huỷ niêm yết)"
+
+        },
+        {
+          "name": "HaltResumeFlag",
+          "length": 1,
+          "type": "String",
+          "desc": "CK bị ngưng hoặc giao dịch trở lại trong phiên giao dịch (Null: Giao dịch bình thường, H: Bị ngưng giao dịch trong phiên, A: Bị ngưng giao dịch khớp lệnh trong phiên, P: ngưng giao dịch thoả thuận)"
+
+        },
+        {
+          "name": "Split",
+          "length": 1,
+          "type": "String",
+          "desc": "CK thực hiện chia tách cổ phiếu (S: thực hiên, null: Không thực hiện)"
+
+        },
+        {
+          "name": "Benefit",
+          "length": 1,
+          "type": "String",
+          "desc": "CK thực hiện quyền và chia cổ tức (A: Phát hành thêm & chia cổ tức, D: Chia cổ tức, R: Thực hiện quyền, null: Không thực hiện)"
+
+        },
+        {
+          "name": "Meeting",
+          "length": 1,
+          "type": "String",
+          "desc": "TCNY tổ chức đại hội cổ đông (M: tổ chức đại hội cổ đông, null: không"
+
+        },
+        {
+          "name": "Notice",
+          "length": 1,
+          "type": "String",
+          "desc": "TCNY bị yêu cầu cung cấp thông tin quan trong trong phiên giao dịch (P: chờ thông tin cần cung cấp, null: không, R: Đã cung cấp thông tin)"
+
+        },
+        {
+          "name": "ClientlDRequest",
+          "length": 1,
+          "type": "String",
+          "desc": ""
+
+        },
+        {
+          "name": "CouponRate",
+          "length": 2,
+          "type": "Integer",
+          "desc": ""
+
+        },
+        {
+          "name": "IssueDate",
+          "length": 6,
+          "type": "String",
+          "desc": "Ngày phát hành"
+
+        },
+        {
+          "name": "MatureDate",
+          "length": 6,
+          "type": "String",
+          "desc": ""
+
+        },
+        {
+          "name": "AvrPrice",
+          "length": 4,
+          "type": "Integer",
+          "desc": "Giá bình quân gia quyền của các mức giá khớp"
+
+        },
+        {
+          "name": "ParValue",
+          "length": 2,
+          "type": "Integer",
+          "desc": "Mệnh giá phát hành"
+
+        }
+
+      ]
+    },
+    {
+      "messageName": "SecurityOL",
+      "updateType": "Override",
+      "parts": [
+        {
+          "name": "StockNo",
+          "length": 2,
+          "type": "Integer",
+          "Desc": "Mã chứng khoán dạng số"
+        },
+        {
+          "name": "StockSymbol",
+          "length": 8,
+          "Desc": "Mã chứng khoán dạng chuỗi"
+        },
+        {
+          "name": "StockType ",
+          "length": 1,
+          "Desc": "Loại chứng khoán (S: cổ phiếu, D: Trái phiếu, U: chứng chỉ quỹ, E: Sản phẩm ETF, W: Sản phẩm Covered Warrant)"
+        }
+
+      ]
+    },
+    {
+      "messageName": "Put_AD",
+      "parts": [
+        {
+          "name": "TradeId",
+          "length": 2,
+          "type": "Integer",
+          "Desc": "Số hiệu giao dịch do máy chủ cấp"
+        },
+        {
+          "name": "StockNo",
+          "length": 2,
+          "type": "Integer",
+          "Desc": "Mã chứng khoán dạng số"
+        },
+        {
+          "name": "Vol",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Khối lượng"
+        },
+        {
+          "name": "Price",
+          "length": 8,
+          "type": "Decimal",
+          "Desc": "Giá"
+        },
+        {
+          "name": "FirmNo",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Số hiệu Broker đăng quảng cáo"
+        },
+        {
+          "name": "Side",
+          "length": 1,
+          "Desc": "Bên mua/bán"
+        },
+        {
+          "name": "Board",
+          "length": 1,
+          "Desc": "Bảng giao dịch B: BigLotBoard."
+        },
+        {
+          "name": "Time",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Thời gian đăng quảng cáo"
+        },
+        {
+          "name": "Flag",
+          "length": 1,
+          "Desc": "Tình trạng quảng cáo (A: Quảng cáo được đăng, C: Quảng cáo bị huỷ"
+        }
+      ]
+    },
+    {
+      "messageName": "PUT_EXEC",
+      "parts": [
+        {
+          "name": "ConfirmNo",
+          "length": 8,
+          "type": "Integer",
+          "Desc": "Mã xác nhận lệnh khớp"
+        },
+        {
+          "name": "StockNo",
+          "length": 2,
+          "type": "Integer",
+          "Desc": "Mã chứng khoán dạng số"
+        },
+        {
+          "name": "Vol",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Khối lượng"
+        },
+        {
+          "name": "Price",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Giá"
+        },
+        {
+          "name": "Board",
+          "length": 1,
+          "Desc": "Bảng giao dịch B: BigLotBoard."
+        }
+      ]
+    },
+    {
+      "messageName": "Put_DC",
+      "parts": [
+        {
+          "name": "ConfirmNo",
+          "length": 8,
+          "type": "Integer",
+          "Desc": "Mã xác nhận lệnh khớp"
+        },
+        {
+          "name": "StockNo",
+          "length": 2,
+          "type": "Integer",
+          "Desc": "Mã chứng khoán dạng số"
+        },
+        {
+          "name": "Vol",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Khối lượng"
+        },
+        {
+          "name": "Price",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Giá"
+        },
+        {
+          "name": "Board",
+          "length": 1,
+          "Desc": "Bảng giao dịch B: BigLotBoard."
+        }
+      ]
+    },
+    {
+      "messageName": "LE",
+      "parts": [
+        {
+          "name": "StockNo",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Mã chứng khoán dạng số"
+        },
+        {
+          "name": "Price",
+          "length": 4,
+          "type": "Decimal",
+          "Desc": "Giá khớp"
+        },
+        {
+          "name": "AccumulatedVol",
+          "length": 4,
+          "type": "Decimal",
+          "Desc": "Tổng khối lượng khớp"
+        },
+        {
+          "name": "AccumulatedVal",
+          "length": 8,
+          "type": "Decimal",
+          "Desc": "Tổng giá trị khớp"
+        },
+        {
+          "name": "Highest",
+          "length": 4,
+          "type": "Decimal",
+          "Desc": "Giá khớp cao nhất"
+        },
+        {
+          "name": "Lowest",
+          "length": 4,
+          "type": "Decimal",
+          "Desc": "Giá khớp thấp nhất"
+        },
+        {
+          "name": "Time",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Giá khớp thấp nhất"
+        }
+      ]
+    },
+    {
+      "messageName": "LS",
+      "parts": [
+        {
+          "name": "ConfirmNo",
+          "length": 8,
+          "type": "Integer",
+          "Desc": "Mã xác nhận lệnh khớp"
+        },
+        {
+          "name": "StockNo",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Mã chứng khoán dạng số"
+        },
+        {
+          "name": "MatchedVol",
+          "length": 8,
+          "type": "Integer",
+          "Desc": "Khối lượng khớp"
+        },
+        {
+          "name": "Price",
+          "length": 4,
+          "type": "Decimal",
+          "Desc": "Giá khớp"
+        },
+        {
+          "name": "Side",
+          "length": 1,
+          "Desc": "Bên mua/bán"
+        }
+      ]
+    },
+    {
+      "messageName": "LO",
+      "parts": [
+        {
+          "name": "ConfirmNo",
+          "length": 8,
+          "type": "Integer",
+          "Desc": "Mã xác nhận lệnh khớp"
+        },
+        {
+          "name": "StockNo",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Mã chứng khoán dạng số"
+        },
+        {
+          "name": "MatchedVol",
+          "length": 8,
+          "type": "Integer",
+          "Desc": "Khối lượng khớp lô lẻ"
+        },
+        {
+          "name": "Price",
+          "length": 4,
+          "type": "Decimal",
+          "Desc": "Giá khớp lô lẽ"
+        },
+        {
+          "name": "Side",
+          "length": 1,
+          "Desc": "Bên mua/bán"
+        }
+
+      ]
+    },
+    {
+      "messageName": "Market_Stat",
+      "parts": [
+        {
+          "name": "ControlCode",
+          "length": 1,
+          "Desc": "Trạng thái thị trường"
+        },
+        {
+          "name": "Time",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Thời gian máy chủ"
+        }
+
+      ]
+    },
+    {
+      "messageName": "NewList",
+      "parts": [
+        {
+          "name": "StockNo",
+          "length": 2,
+          "type": "Integer",
+          "Desc": "Mã chứng khoán dạng số"
+        },
+        {
+          "name": "StockSymbol",
+          "length": 8,
+          "Desc": "Mã chứng khoán dạng chuỗi"
+        },
+        {
+          "name": "StockType ",
+          "length": 1,
+          "Desc": "Loại chứng khoán (S: cổ phiếu, D: Trái phiếu, U: chứng chỉ quỹ, E: Sản phẩm ETF, W: Sản phẩm Covered Warrant)"
+        },
+        {
+          "name": "StockName",
+          "length": 25,
+          "Desc": "Tên đầy đủ của chứng khoán"
+        },
+        {
+          "name": "SectorNo ",
+          "length": 2,
+          "Desc": "-"
+        }
+
+      ]
+    },
+    {
+      "messageName": "DeList",
+      "parts": [
+        {
+          "name": "StockNo",
+          "length": 2,
+          "type": "Integer",
+          "Desc": "Mã chứng khoán dạng số"
+        },
+        {
+          "name": "StockSymbol",
+          "length": 8,
+          "Desc": "Mã chứng khoán dạng chuỗi"
+        },
+        {
+          "name": "StockType ",
+          "length": 1,
+          "Desc": "Loại chứng khoán (S: cổ phiếu, D: Trái phiếu, U: chứng chỉ quỹ, E: Sản phẩm ETF, W: Sản phẩm Covered Warrant)"
+        },
+        {
+          "name": "StockName",
+          "length": 25,
+          "Desc": "Tên đầy đủ của chứng khoán"
+        },
+        {
+          "name": "SectorNo ",
+          "length": 2,
+          "type": "Integer",
+          "Desc": "-",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "messageName": "Froom",
+      "parts": [
+        {
+          "name": "StockNo",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Mã chứng khoán dạng số"
+        },
+        {
+          "name": "TotalRoom",
+          "length": 8,
+          "type": "Integer",
+          "Desc": "Tổng room NĐTNN được phép mua"
+        },
+        {
+          "name": "CurrentRoom",
+          "length": 8,
+          "type": "Integer",
+          "Desc": "Room  còn lại NĐTNN được phép mua"
+        },
+        {
+          "name": "BuyVolume",
+          "length": 8,
+          "type": "Integer",
+          "Desc": "Tổng khối lượng nước ngoài mua"
+        },
+        {
+          "name": "SellVolume",
+          "length": 8,
+          "type": "Integer",
+          "Desc": "Tổng khối lượng nước ngoài Bán"
+        }
+
+      ]
+    },
+    {
+      "messageName": "OS",
+      "parts": [
+        {
+          "name": "StockNo",
+          "length": 4,
+          "type": "Integer",
+          "Desc": "Mã chứng khoán dạng số"
+        },
+        {
+          "name": "Price",
+          "length": 4,
+          "type": "Decimal",
+          "Desc": "Giá"
+        }
+      ]
+    }
+  ]
+}

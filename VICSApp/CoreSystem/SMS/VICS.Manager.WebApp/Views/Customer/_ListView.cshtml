@@ -1,0 +1,45 @@
+﻿@using VicsManageWeb.Common.UI.Grid
+@model VICS.Manager.WebApp.Models.CustomersViewModel
+
+@{
+    // update this field on client side
+    Model.ActionName = "List";
+    Model.ControllerName = "Customer";
+    Model.UpdateTargetId = "ListData";
+}
+
+
+@Html.PagedGrid("articleGrid", Model,
+    columns =>
+    {
+        /*Hidden id column*/
+        columns.Add(o => o.Id)
+            .Encoded(false)
+            .Sanitized(false)
+            .Titled("Tài khoản")
+            .RenderValueAs(c => Html.ActionLink(c.Id, "Edit", "Customer", new { id = c.Id }, null).ToString())
+            .Sortable(true);
+
+        /* Adding "Headline" column: */
+        columns.Add(o => o.CustomerName)
+        .Titled("Tên")
+        .Sortable(true)
+        .Css("text-left");
+
+        /* Adding "Status" column: */
+        columns.Add(o => o.Email)
+        .Titled("Email")
+        .Sortable(true);
+
+        /* Adding "CreatedDate" column: */
+        columns.Add(o => o.Mobile)
+        .Titled("Điện thoại")
+        .SetWidth(80)
+        .Sortable(true);
+
+        columns.Add(o => o.IsClose)
+        .Titled("Trạng thái")
+        .RenderValueAs(o => String.Format("{0}", o.IsClose ? "Đóng" : "Mở"))
+        .SetWidth(100)
+        .Sortable(true);
+    })

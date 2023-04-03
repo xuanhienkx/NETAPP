@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HOGW_CoreConnector.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Rabbit_Adapter_SBS_SBSGateway_CommonService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://testserver.vics.com.vn/gateway/sbsgateway30/CommonService.asmx</Value>
+    </Setting>
+    <Setting Name="HOGW_CoreConnector_PTConnectorWS_PTConnectorWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://test-hsx.vics.vn/HosePTConnector/PTConnectorWS.asmx</Value>
+    </Setting>
+    <Setting Name="HOGW_CoreConnector_CoreConnectorWS_CoreConnectorWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://test-hsx.vics.vn/CoreConnector/CoreConnectorWS.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

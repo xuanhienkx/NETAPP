@@ -1,0 +1,123 @@
+<nb-card class="full-width-dialog-meber">
+    <nb-card-header>
+        <h6>{{'matter.form.title' |translate}}</h6>
+    </nb-card-header>
+    <nb-card-body class=" w-100">
+        <form [formGroup]="frm" #tForm="ngForm" (ngSubmit)="submit()" autocomplete="off" novalidate>
+            <div class="form-group d-flex flex-column">
+                <label for="name" class="required">{{'matter.form.name.label' |translate}}</label>
+                <input nbInput fieldSize="small" autofocus fullWidth class="form-control" id="name"
+                    placeholder="{{'matter.form.name.smallDesc' |translate}}" formControlName="name"
+                    [status]="f.name.dirty && f.name.touched && f.name.invalid  ? 'danger' : 'basic'">
+
+                <span class="text-danger"
+                    *ngIf="f.name.touched && f.name.invalid && f.name.errors.required">{{'matter.form.name.required' |translate}}.</span>
+            </div>
+            <div class="form-group  d-flex flex-column">
+                <label for="description">{{'matter.form.description.label' |translate}}</label>
+                <textarea rows="5" nbInput autofocus fullWidth class="form-control" id="description"
+                    formControlName="description">
+        </textarea>
+            </div>
+            <div class="form-group d-flex justify-content-between">
+                <nb-toggle id="optional" formControlName="optional">
+                    <span class="text-primary"
+                        *ngIf="f.optional.value; else lockedSpan">{{'matter.form.optional.isActive' | translate}}</span>
+                    <ng-template #lockedSpan>
+                        <span class="text-secondary">
+                            {{'matter.form.optional.isDeative' |translate}}</span>
+                    </ng-template>
+                </nb-toggle>
+                <div class="ml-auto d-flex my-auto justify-content-end" *ngIf="f.optional.value">
+                    <label for="taken" class="my-auto">{{'matter.form.taken.label' |translate}}</label>
+                    <input nbInput autofocus formControlName="taken" type="number" id="taken"
+                        onkeydown="return event.keyCode !== 69" min="1" class="form-control ml-2 text-right  my-auto"
+                        fieldSize="small" maxlength="2" style="width: 7rem;" />
+                    <span class="text-danger"
+                        *ngIf="f.taken.touched && f.taken.invalid && f.name.errors.min">{{'matter.form.taken.required' |translate}}.</span>
+
+                </div>
+            </div>
+
+            <div class="form-group" *ngIf="f.optional.value">
+                <label for="memberName" class="label required">{{'matter.form.member.label' | translate}}
+                </label>
+                <div class="d-lg-flex justify-content-between" *ngIf="canEdit">
+                    <div class="mr-3 w-100">
+                        <input (keyup.enter)="createMember()" fieldSize="small" nbInput autofocus fullWidth
+                            formControlName="member" id="memberName" class="form-control"
+                            [status]="isMustRequiredMember  ? 'danger' : 'basic'"
+                            placeholder="{{'matter.form.member.smallDesc' |translate}}" />
+
+                    </div>
+                    <button *ngIf="!mbEdit" size="small" type="button" class="createMember-button my-auto" nbButton
+                        data-toggle="tooltip" data-placement="top"
+                        title="{{'matter.form.member.createMemberTip' |translate}}" (click)="createMember()">
+                        <i class="fas fa-user-plus text-primary mr-2"></i>{{'Common.add' | translate}}
+                    </button>
+                    <button *ngIf="mbEdit" size="small" type="button" class="createMember-button  my-auto " nbButton
+                        data-toggle="tooltip" data-placement="top"
+                        title="{{'matter.form.member.createMemberTip' |translate}}" (click)="createMember()">
+                        <i class="fas fa-user-plus text-primary  mr-2"></i>{{'Common.save' | translate}}
+                    </button>
+                </div>
+                <div>
+                    <span class="text-danger" [translate]="'matter.form.member.required'"
+                        [translateParams]="{taken: f.taken.value}" *ngIf="isMustRequiredMember">
+                    </span>
+                </div>
+
+                <div *ngIf="mattermember && mattermember.length > 0" class="mt-2 ml-0 description dragable-list"
+                    cdkDropList (cdkDropListDropped)="itemDroped($event)">
+                    <div class="text-secondary my-auto py-2 ">
+                        <div class="border-bottom"><b> {{'matter.list.infoMember' | translate}}:</b></div>
+                    </div>
+                    <div *ngFor="let op of mattermember; let idx = index"
+                        class="list-hover my-auto py-1 px-2 dragable-box " cdkDrag>
+                        <div class="dragable-custom-placeholder" *cdkDragPlaceholder></div>
+
+                        <div class="d-flex justify-content-between w-100">
+                            <div class="d-flex">
+                                <div style="width: 1.3rem; height: 1.3rem;"
+                                    class="rounded-circle initials border-secondary border text-primary my-auto  text-center">
+                                    <span class="my-auto text-center"
+                                        style="font-size: 0.8rem; font-weight: 500;">{{idx + 1}}</span>
+                                </div>
+                                <span class="mx-2 font-weight-light">{{op?.name}}</span>
+                            </div>
+                            <div class=" ml-3">
+                                <a href="javascript:void(0);" class="ml-2" data-toggle="tooltip" data-placement="top"
+                                    title="{{'Common.delete' | translate}}" (click)="removeMember(op,idx)">
+                                    <i class="fa fa-trash-alt text-secondary" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" ">
+                <vip-upload-file multiple="true" onSubmit="onSubmit" (uploadFinished)="fileUploaderCompleted($event)"
+                    *ngIf="canEdit">
+                </vip-upload-file>
+                <vip-document-list  [attachments]="attachments" [contentId]="f.id.valid"
+                [allowEdit]="canEdit" (deleteFileInfo)="removeFileOnForm($event)"></vip-document-list>  
+            </div>
+
+        </form>
+    </nb-card-body>
+    <nb-card-footer>
+        <div class="d-flex justify-content-between">
+            <button nbButton type="button" size="small" status="basic"
+                (click)="onClose()">{{'Common.close' |translate}}</button>
+
+            <div *ngIf="canEdit">
+                <button (click)="tForm.ngSubmit.emit()" size="small" nbButton status="primary" [disabled]="!tForm.valid"
+                    [class.btn-pulse]="submitted" value="">{{'Common.save' | translate}}</button>
+                <button type="button" nbButton status="primary" size="small" [disabled]="!tForm.valid"
+                    [class.btn-pulse]="submitted" (click)="submit(true)"
+                    class="ml-4">{{'Common.saveAndCreate' | translate}}</button>
+            </div>
+        </div>
+
+    </nb-card-footer>
+</nb-card>

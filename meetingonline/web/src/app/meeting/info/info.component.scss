@@ -1,0 +1,45 @@
+.meeting-info .info-group {
+    display    : flex;
+    line-height: 2.5rem;
+
+    .info-lable {
+        width: 10rem;
+    }
+
+    .info-detail {
+        font-weight: 800;
+    }
+}
+
+.right-for .info-group {
+    display    : flex;
+    line-height: 1.5rem;
+
+    .info-lable {
+        width: 18rem;
+    }
+
+    .info-detail {
+        font-weight: 700;
+    }
+
+}
+
+.ratio-zone {
+    margin    : auto;
+    min-width : 12rem;
+    height    : 12rem;
+    text-align: center;
+
+    .ratio-title {
+        font-weight     : 600;
+        background-color: #f7f9fc;
+    }
+
+    .ratio {
+        font-size  : 2.5rem;
+        font-weight: 800;
+        margin     : auto;
+        display    : flex;
+    }
+}

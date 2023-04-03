@@ -1,0 +1,47 @@
+<div>
+    <div class="d-flex ">
+        <div class="container  m-auto my-drop-zone m-2 p-3 w-100 d-flex" vipDndFileUpload (fileDropped)="onFileDropped($event)" (click)="fileDropRef.click()">
+            <input type="file" #fileDropRef [multiple]="multiple" style="display: none;" (change)="fileBrowseHandler($event.target.files)" [accept]="acceptFileAllow" />
+
+            <div class="m-auto">
+                <div class="m-auto" style="cursor: pointer;">
+                    <i class="fas fa-upload  mr-3 text-info"></i>
+                    <i class="ml-2">{{'fileUpload.title' |translate}}</i>
+                </div>
+                <div class="description m-auto pt-1 text-center">{{uploadDescription |translate}} </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="mt-2" *ngIf="fileItem.length > 0">
+    <div class="info-heard d-flex">
+        <label class="mr-2">{{'fileUpload.totalSelect' | translate}}:</label> {{ fileItem.length }}
+    </div>
+    <div *ngFor="let item of fileItem; let i = index" class="d-flex description  justify-content-between  list-hover my-auto py-1">
+        <div class="my-auto col-11">
+            <div class="d-flex justify-content-between my-auto w-100">
+                <div class=" font-weight-light my-auto">
+                    <i class="fas fa-paperclip text-secondary mr-2" style="opacity: 50%;"></i> {{ item?.file?.name }}
+                </div>
+                <div class="ml-auto my-auto text-right float-right">
+                    <span class="size text-right">
+                        {{ formatBytes(item?.file?.size) }}
+                    </span>
+                </div>
+            </div>
+
+            <div class="ml-auto my-auto w-95" style="margin-left: 1.6rem;">
+                <div class="progress w-95 my-auto ml-4" style="height: 0.5rem !important;">
+                    <div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': item.progress + '%' }" [ngClass]="{'bg-danger':!item.isSuccess}"></div>
+                </div>
+            </div>
+        </div>
+        <div class="my-auto col-1">
+            <a href="javascript:void(0);" class="float-right  text-right" data-toggle="tooltip" data-placement="top" title="{{'Common.delete' | translate}}" (click)="deleteFile(i)">
+                <i class="fa fa-trash-alt text-secondary" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+
+</div>

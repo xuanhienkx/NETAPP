@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/bin
+/obj
+/packages
+/.vs/SSM/v15
+/Logs
+/.vs/config
+/SSM.csproj.user
+/SSM.csproj.vspscc
+/SSM.sln.DotSettings.user
+/SSM.vssscc
+/Properties/PublishProfiles/CustomProfile.pubxml.user
+/.vs/SSM.sqlite
